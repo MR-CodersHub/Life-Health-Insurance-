@@ -1,0 +1,733 @@
+/* ===================================================================
+   WELLSURE - INSURANCE PLANS MARKETPLACE (plans.css)
+   Explore, Compare & Choose Protection • 8 Dedicated Sections
+   Complete Dark / Light Theme & RTL Support
+   =================================================================== */
+
+/* ===================================================================
+   SECTION 01: PLANS HERO – FIND YOUR PERFECT PROTECTION
+   =================================================================== */
+.plans-hero-section {
+  position: relative;
+  background-color: var(--color-cream);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 211, 163, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 90% 70%, rgba(243, 164, 131, 0.28) 0%, transparent 50%);
+  padding-top: clamp(55px, 8vw, 90px);
+  padding-bottom: clamp(55px, 8vw, 90px);
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+[data-theme="dark"] .plans-hero-section {
+  background-color: #141F12;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(64, 103, 27, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 90% 70%, rgba(230, 117, 67, 0.16) 0%, transparent 50%);
+  border-bottom-color: rgba(255, 211, 163, 0.16);
+}
+
+.plans-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(64, 103, 27, 0.1);
+  color: var(--color-olive-deep);
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(64, 103, 27, 0.24);
+  margin-bottom: 20px;
+}
+
+[data-theme="dark"] .plans-hero-eyebrow {
+  background: rgba(255, 211, 163, 0.14);
+  color: #FFD3A3;
+  border-color: rgba(255, 211, 163, 0.3);
+}
+
+.plans-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 4.2vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-olive-deep);
+  margin-bottom: 22px;
+}
+
+[data-theme="dark"] .plans-hero-title {
+  color: #FFFFFF;
+}
+
+.plans-hero-lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+  color: var(--color-text-main);
+  opacity: 0.88;
+  margin-bottom: 34px;
+}
+
+[data-theme="dark"] .plans-hero-lead {
+  color: #CAD7C7;
+}
+
+.plans-hero-img-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--color-card-bg);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 211, 163, 0.4) 0%, rgba(243, 164, 131, 0.2) 60%, rgba(255, 249, 241, 0.95) 100%);
+}
+
+[data-theme="dark"] .plans-hero-img-wrap {
+  border-color: #1F2D1B;
+  background: radial-gradient(circle at 50% 50%, rgba(64, 103, 27, 0.4) 0%, rgba(23, 36, 20, 0.8) 100%);
+}
+
+.plans-hero-family-img {
+  width: 100%;
+  height: clamp(340px, 35vw, 460px);
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.plans-hero-badge {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  right: 22px;
+  background: rgba(23, 36, 20, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 211, 163, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 12px 18px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===================================================================
+   SECTION 02: EXPLORE INSURANCE CATEGORIES – 4 LARGE IMAGE CARDS
+   =================================================================== */
+.plan-category-card {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+}
+
+.plan-category-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-olive-deep);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .plan-category-card {
+  background: #1B2917;
+  border-color: rgba(255, 211, 163, 0.22);
+}
+
+[data-theme="dark"] .plan-category-card:hover {
+  border-color: var(--color-peach);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.plan-cat-img-box {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-cat-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.plan-category-card:hover .plan-cat-img-box img {
+  transform: scale(1.06);
+}
+
+.plan-cat-body {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.plan-cat-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-olive-deep);
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .plan-cat-title {
+  color: #FFFFFF;
+}
+
+.plan-cat-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--color-text-main);
+  opacity: 0.85;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+[data-theme="dark"] .plan-cat-desc {
+  color: #CAD7C7;
+}
+
+.plan-cat-link {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-terracotta);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.plan-category-card:hover .plan-cat-link {
+  color: var(--color-coral);
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .plan-category-card:hover .plan-cat-link {
+  transform: translateX(-4px);
+}
+
+/* ===================================================================
+   SECTION 03: FEATURED INSURANCE PLANS
+   =================================================================== */
+.featured-plan-grid-card {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.featured-plan-grid-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-olive-deep);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .featured-plan-grid-card {
+  background: #1B2917;
+  border-color: rgba(255, 211, 163, 0.22);
+}
+
+[data-theme="dark"] .featured-plan-grid-card:hover {
+  border-color: var(--color-peach);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.featured-plan-img-wrap {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured-plan-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.featured-plan-grid-card:hover .featured-plan-img-wrap img {
+  transform: scale(1.05);
+}
+
+.featured-plan-cat-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--color-terracotta);
+  color: #FFFFFF;
+  font-family: var(--font-accent);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+[dir="rtl"] .featured-plan-cat-badge {
+  left: auto;
+  right: 14px;
+}
+
+.featured-plan-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.featured-plan-carrier {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-olive-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  display: block;
+}
+
+[data-theme="dark"] .featured-plan-carrier {
+  color: #FFD3A3;
+}
+
+.featured-plan-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--color-olive-deep);
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .featured-plan-title {
+  color: #FFFFFF;
+}
+
+.featured-plan-summary {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--color-text-main);
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
+
+[data-theme="dark"] .featured-plan-summary {
+  color: #CAD7C7;
+}
+
+.featured-plan-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.featured-plan-highlights li {
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-main);
+}
+
+[data-theme="dark"] .featured-plan-highlights li {
+  color: #D3E0CE;
+}
+
+.featured-plan-highlights li i {
+  color: var(--color-olive-deep);
+}
+
+[data-theme="dark"] .featured-plan-highlights li i {
+  color: #9ECB72;
+}
+
+.compare-add-btn {
+  background: transparent;
+  border: 1.5px dashed var(--color-border-subtle);
+  color: var(--color-text-main);
+  border-radius: var(--radius-pill);
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.compare-add-btn:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  background: rgba(230, 117, 67, 0.08);
+}
+
+.compare-add-btn.in-compare {
+  background: var(--color-olive-deep);
+  border-color: var(--color-olive-deep);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .compare-add-btn {
+  border-color: rgba(255, 211, 163, 0.25);
+  color: #D3E0CE;
+}
+
+[data-theme="dark"] .compare-add-btn.in-compare {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+}
+
+/* ===================================================================
+   SECTION 04: COMPARE INSURANCE PLANS (TABLE)
+   =================================================================== */
+.plans-compare-table-card {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .plans-compare-table-card {
+  background: #182615;
+  border-color: rgba(255, 211, 163, 0.24);
+}
+
+.plans-compare-table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse;
+}
+
+.plans-compare-table th,
+.plans-compare-table td {
+  box-shadow: none !important;
+}
+
+.plans-compare-table th {
+  background: rgba(64, 103, 27, 0.12);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: var(--color-olive-deep);
+  padding: 18px 22px;
+  border-bottom: 2px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+[data-theme="dark"] .plans-compare-table th {
+  background: rgba(255, 211, 163, 0.12);
+  color: #FFD3A3;
+  border-bottom-color: rgba(255, 211, 163, 0.22);
+}
+
+.plans-compare-table th.col-plan-header {
+  background: rgba(255, 211, 163, 0.35);
+  color: var(--color-olive-deep);
+  border-left: 1.5px solid rgba(64, 103, 27, 0.15);
+  border-right: 1.5px solid rgba(64, 103, 27, 0.15);
+}
+
+[data-theme="dark"] .plans-compare-table th.col-plan-header {
+  background: rgba(230, 117, 67, 0.24);
+  color: #FFFFFF;
+}
+
+.plans-compare-table td {
+  padding: 16px 22px;
+  vertical-align: middle;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  color: var(--color-text-main);
+  background: transparent;
+}
+
+[data-theme="dark"] .plans-compare-table td {
+  border-bottom-color: rgba(255, 211, 163, 0.12);
+  color: #E2ECE0;
+  background: transparent;
+}
+
+[data-theme="dark"] .plans-compare-table td strong {
+  color: #FFFFFF;
+}
+
+.plans-compare-table td.col-plan-data {
+  border-left: 1.5px solid rgba(64, 103, 27, 0.1);
+  border-right: 1.5px solid rgba(64, 103, 27, 0.1);
+  background: rgba(255, 211, 163, 0.08);
+}
+
+[data-theme="dark"] .plans-compare-table td.col-plan-data {
+  background: rgba(255, 211, 163, 0.04);
+}
+
+/* ===================================================================
+   SECTION 05: FIND PLANS THAT MATCH YOUR NEEDS (INTERACTIVE FINDER)
+   =================================================================== */
+.finder-card {
+  background: var(--color-card-bg);
+  border: 2px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: clamp(24px, 4vw, 42px);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .finder-card {
+  background: #182615;
+  border-color: rgba(255, 211, 163, 0.25);
+}
+
+.finder-pill-btn {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.finder-pill-btn:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+}
+
+.finder-pill-btn.active {
+  background: var(--color-olive-deep);
+  border-color: var(--color-olive-deep);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(64, 103, 27, 0.25);
+}
+
+[data-theme="dark"] .finder-pill-btn {
+  background: #1F2E1B;
+  border-color: rgba(255, 211, 163, 0.25);
+  color: #D3E0CE;
+}
+
+[data-theme="dark"] .finder-pill-btn.active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(230, 117, 67, 0.45);
+}
+
+.finder-result-box {
+  background: #F4FAF2;
+  border: 2px solid var(--color-olive-deep);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  margin-top: 30px;
+}
+
+[data-theme="dark"] .finder-result-box {
+  background: #172B15 !important;
+  border-color: #4CAF50 !important;
+  color: #FFFFFF !important;
+}
+
+/* ===================================================================
+   SECTION 06: WHY EXPLORE PLANS THROUGH WELLSURE (DARK OLIVE SECTION)
+   =================================================================== */
+.plans-why-section {
+  background: linear-gradient(135deg, #152212 0%, #20331A 100%);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 211, 163, 0.2);
+  border-bottom: 1px solid rgba(255, 211, 163, 0.2);
+}
+
+.plans-why-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 211, 163, 0.24);
+  border-radius: var(--radius-lg);
+  padding: 32px 26px;
+  height: 100%;
+  transition: all var(--transition-normal);
+}
+
+.plans-why-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-peach);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.plans-why-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(255, 211, 163, 0.15);
+  color: #FFD3A3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* ===================================================================
+   SECTION 07: FAQS ACCORDION
+   =================================================================== */
+.plans-faq-card {
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-card-bg);
+  overflow: hidden;
+  margin-bottom: 14px;
+  transition: all var(--transition-fast);
+}
+
+.plans-faq-card:hover {
+  border-color: var(--color-olive-deep);
+}
+
+[data-theme="dark"] .plans-faq-card {
+  background: #1B2917;
+  border-color: rgba(255, 211, 163, 0.2);
+}
+
+.plans-faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-olive-deep);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+[dir="rtl"] .plans-faq-btn {
+  text-align: right;
+}
+
+[data-theme="dark"] .plans-faq-btn {
+  color: #FFFFFF;
+}
+
+.plans-faq-btn i {
+  color: var(--color-terracotta);
+  font-size: 1.2rem;
+  transition: transform var(--transition-fast);
+}
+
+.plans-faq-btn:not(.collapsed) i {
+  transform: rotate(180deg);
+}
+
+.plans-faq-body {
+  padding: 0 24px 22px 24px;
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+  opacity: 0.88;
+}
+
+[data-theme="dark"] .plans-faq-body {
+  color: #CAD7C7;
+}
+
+/* ===================================================================
+   SECTION 08: FINAL CTA
+   =================================================================== */
+.plans-final-cta-section {
+  background: #FFF5EA;
+  border-top: 1px solid var(--color-border-subtle);
+  padding: clamp(65px, 8vw, 100px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .plans-final-cta-section {
+  background: #131E11;
+  border-top-color: rgba(255, 211, 163, 0.18);
+}
+
+.plans-cta-badge {
+  background: rgba(23, 36, 20, 0.12);
+  color: #172414;
+  border: 1.5px solid rgba(23, 36, 20, 0.25);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+[data-theme="dark"] .plans-cta-badge {
+  background: rgba(255, 211, 163, 0.15) !important;
+  color: #FFD3A3 !important;
+  border-color: rgba(255, 211, 163, 0.35) !important;
+}
+
+.plans-cta-img-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--color-card-bg);
+  background: var(--color-card-bg);
+}
+
+[data-theme="dark"] .plans-cta-img-wrap {
+  border-color: #1F2E1B;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);
+}
+
+.plans-cta-family-img {
+  width: 100%;
+  height: clamp(340px, 35vw, 420px);
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.plans-cta-img-overlay {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  background: rgba(23, 36, 20, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 211, 163, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 12px 18px;
+  box-shadow: var(--shadow-md);
+}

@@ -1,0 +1,1279 @@
+/* ===================================================================
+   WELLSURE - HOME PAGE STYLES (home.css)
+   Hero Inspired by Visual Reference + 9 Structured Sections
+   =================================================================== */
+
+/* ===================================================================
+   SECTION 01: HERO
+   =================================================================== */
+.hero-section {
+  position: relative;
+  background: radial-gradient(circle at 50% 30%, #26351E 0%, #172414 75%, #0F170D 100%);
+  color: #FFFFFF;
+  padding-top: 50px;
+  padding-bottom: 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 211, 163, 0.15);
+}
+
+/* Subtle background glow & decorative lines */
+.hero-glow-1 {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 550px;
+  background: radial-gradient(ellipse at center, rgba(64, 103, 27, 0.45) 0%, rgba(255, 211, 163, 0.08) 45%, transparent 70%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.hero-glow-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to top, rgba(23, 36, 20, 0.95) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* Hero Pill Badge */
+.hero-badge-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 211, 163, 0.1);
+  border: 1px solid rgba(255, 211, 163, 0.28);
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  color: var(--color-peach);
+  font-family: var(--font-accent);
+  font-size: 0.825rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-badge-top i {
+  color: var(--color-coral);
+  font-size: 0.95rem;
+}
+
+/* Hero Heading */
+.hero-title {
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  color: #FFFFFF;
+  max-width: 980px;
+  margin: 0 auto 22px auto;
+  text-align: center;
+}
+
+.hero-title .text-peach {
+  color: var(--color-peach);
+}
+
+.hero-title .headline-pill {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  background: rgba(255, 211, 163, 0.15);
+  border: 1.5px solid var(--color-coral);
+  padding: 4px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.52em;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 8px;
+  gap: 6px;
+  box-shadow: 0 4px 14px rgba(243, 164, 131, 0.25);
+}
+
+.hero-title .headline-pill img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--color-peach);
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 680px;
+  margin: 0 auto 34px auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Hero CTA Group */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+/* Talk to an Advisor Button in Hero - High Visibility in Both Light & Dark Modes */
+.hero-section .btn-ws-outline,
+.hero-actions .btn-ws-outline {
+  color: #FFFFFF !important;
+  border: 2px solid rgba(255, 211, 163, 0.75) !important;
+  background: rgba(255, 211, 163, 0.12) !important;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+.hero-section .btn-ws-outline i,
+.hero-actions .btn-ws-outline i {
+  color: var(--color-peach) !important;
+  font-size: 1.1rem;
+}
+
+.hero-section .btn-ws-outline:hover,
+.hero-actions .btn-ws-outline:hover {
+  background: var(--color-peach) !important;
+  color: #172414 !important;
+  border-color: var(--color-peach) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(255, 211, 163, 0.45);
+}
+
+.hero-section .btn-ws-outline:hover i,
+.hero-actions .btn-ws-outline:hover i {
+  color: #172414 !important;
+}
+
+/* Central Stage with Family Image and Floating Badges */
+.hero-stage {
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+  min-height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* The Family Image */
+.hero-family-wrapper {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  max-width: 780px;
+}
+
+.hero-family-img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+/* ===================================================================
+   FLOATING ELEMENTS (Matching the reference layout)
+   =================================================================== */
+
+/* Left Circular Play / Video Button */
+.hero-float-play {
+  position: absolute;
+  top: 14%;
+  left: 3%;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-play-btn {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-coral) 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 10px 28px rgba(230, 117, 67, 0.45);
+  border: 3px solid rgba(255, 211, 163, 0.35);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.hero-play-btn::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(255, 211, 163, 0.4);
+  animation: rotateSlow 18s linear infinite;
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.hero-play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 34px rgba(230, 117, 67, 0.6);
+}
+
+.hero-play-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-play-label span {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-peach);
+  font-weight: 700;
+}
+
+.hero-play-label strong {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+}
+
+/* Left Statistics Badges */
+.hero-float-left-stats {
+  position: absolute;
+  bottom: 24%;
+  left: 2%;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero-card-glass {
+  background: rgba(38, 53, 30, 0.85);
+  border: 1px solid rgba(255, 211, 163, 0.25);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 250px;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.hero-card-glass:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-peach);
+}
+
+.hero-glass-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 211, 163, 0.15);
+  color: var(--color-peach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.hero-glass-icon.terracotta {
+  background: rgba(230, 117, 67, 0.22);
+  color: var(--color-coral);
+}
+
+.hero-glass-text small {
+  display: block;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.hero-glass-text strong {
+  font-size: 1.15rem;
+  font-family: var(--font-heading);
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+/* Right Side: Rating & Overlapping Avatars */
+.hero-float-right-review {
+  position: absolute;
+  top: 14%;
+  right: 3%;
+  z-index: 6;
+  max-width: 240px;
+}
+
+.hero-review-box {
+  background: rgba(38, 53, 30, 0.88);
+  border: 1px solid rgba(255, 211, 163, 0.28);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.42);
+}
+
+.hero-stars {
+  color: #FFB800;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.hero-review-score {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.hero-review-score span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-avatars-row {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.hero-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--color-olive-dark);
+  margin-left: -8px;
+  object-fit: cover;
+}
+
+.hero-avatar:first-child {
+  margin-left: 0;
+}
+
+[dir="rtl"] .hero-avatar {
+  margin-left: 0;
+  margin-right: -8px;
+}
+
+[dir="rtl"] .hero-avatar:first-child {
+  margin-right: 0;
+}
+
+.hero-avatar-more {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-terracotta);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-olive-dark);
+  margin-left: -8px;
+}
+
+/* Right Side: Floating "Trusted Guidance" badge */
+.hero-float-right-badge {
+  position: absolute;
+  top: 52%;
+  right: 2%;
+  z-index: 6;
+}
+
+.hero-badge-pill {
+  background: rgba(38, 53, 30, 0.9);
+  border: 1px solid var(--color-coral);
+  border-radius: var(--radius-pill);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 0.88rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.hero-badge-pill i {
+  color: var(--color-peach);
+  font-size: 1.1rem;
+}
+
+/* Bottom-right: "Personalized Coverage" and "Dedicated Support" */
+.hero-float-bottom-right {
+  position: absolute;
+  bottom: 12%;
+  right: 4%;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-mini-tag {
+  background: rgba(23, 36, 20, 0.88);
+  border: 1px solid rgba(255, 211, 163, 0.22);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-peach);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-mini-tag i {
+  color: var(--color-terracotta);
+}
+
+/* ===================================================================
+   SECTION 02: TRUSTED PROTECTION
+   =================================================================== */
+.section-trust {
+  background-color: var(--color-olive-dark);
+  border-bottom: 1px solid rgba(255, 211, 163, 0.12);
+  padding: 40px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.trust-item:hover {
+  background: rgba(255, 211, 163, 0.06);
+}
+
+.trust-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 211, 163, 0.12);
+  border: 1px solid rgba(255, 211, 163, 0.25);
+  color: var(--color-peach);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.trust-item:hover .trust-icon {
+  background: var(--color-terracotta);
+  color: #FFFFFF;
+  border-color: var(--color-terracotta);
+  transform: rotate(-5deg);
+}
+
+.trust-content h6 {
+  color: #FFFFFF;
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.trust-content p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.825rem;
+  margin: 0;
+}
+
+.trust-divider {
+  width: 1px;
+  height: 50px;
+  background: rgba(255, 211, 163, 0.15);
+  align-self: center;
+}
+
+/* ===================================================================
+   SECTION 03: EXPLORE OUR COVERAGE
+   =================================================================== */
+.section-coverage {
+  background-color: var(--color-cream);
+}
+
+.coverage-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+[data-theme="dark"] .coverage-card {
+  background-color: #192716;
+  border: 1.5px solid rgba(255, 211, 163, 0.22);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.coverage-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-coral);
+}
+
+[data-theme="dark"] .coverage-card:hover {
+  border-color: var(--color-peach);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+.coverage-img-box {
+  height: 220px;
+  min-height: 220px;
+  max-height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.coverage-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.coverage-card:hover .coverage-img-box img {
+  transform: scale(1.08);
+}
+
+.coverage-badge-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(23, 36, 20, 0.92);
+  color: #FFD3A3 !important;
+  border: 1.5px solid rgba(255, 211, 163, 0.45);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[dir="rtl"] .coverage-badge-pill {
+  left: auto;
+  right: 14px;
+}
+
+.coverage-body {
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.coverage-body h4 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--color-olive-deep);
+}
+
+.coverage-body h4 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.coverage-body h4 a:hover {
+  color: var(--color-terracotta) !important;
+}
+
+[data-theme="dark"] .coverage-body h4 {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .coverage-body h4 a:hover {
+  color: var(--color-peach) !important;
+}
+
+.coverage-body p {
+  color: var(--color-text-muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+[data-theme="dark"] .coverage-body p {
+  color: #CAD7C7 !important;
+}
+
+.coverage-link {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-olive-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-fast);
+  margin-top: auto;
+  text-decoration: none;
+}
+
+[data-theme="dark"] .coverage-link {
+  color: #FFD3A3 !important;
+}
+
+[data-theme="dark"] .coverage-link i {
+  color: #FFD3A3 !important;
+}
+
+.coverage-card:hover .coverage-link {
+  color: var(--color-terracotta);
+  transform: translateX(4px);
+}
+
+[data-theme="dark"] .coverage-card:hover .coverage-link {
+  color: #FFFFFF !important;
+}
+
+[dir="rtl"] .coverage-card:hover .coverage-link {
+  transform: translateX(-4px);
+}
+
+/* ===================================================================
+   SECTION 04: COMPARE INSURANCE PLANS
+   =================================================================== */
+.section-compare {
+  background-color: var(--color-section-alt);
+  position: relative;
+}
+
+.compare-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.compare-tab-btn {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  color: var(--color-text-main);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 22px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.compare-tab-btn:hover {
+  border-color: var(--color-coral);
+  color: var(--color-terracotta);
+}
+
+.compare-tab-btn.active {
+  background: var(--color-olive-dark);
+  color: var(--color-peach);
+  border-color: var(--color-olive-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.compare-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-border-subtle);
+  padding: 32px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.compare-card.featured {
+  border-color: var(--color-terracotta);
+  box-shadow: 0 16px 40px rgba(230, 117, 67, 0.16);
+  transform: scale(1.02);
+}
+
+.compare-card.featured::before {
+  content: 'MOST POPULAR';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-terracotta);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-family: var(--font-accent);
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.08em;
+}
+
+.compare-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.compare-insurer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.insurer-logo-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(64, 103, 27, 0.12);
+  color: var(--color-olive-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.compare-card.featured .insurer-logo-badge {
+  background: rgba(230, 117, 67, 0.15);
+  color: var(--color-terracotta);
+}
+
+.compare-insurer-info h5 {
+  font-size: 1.15rem;
+  margin-bottom: 2px;
+}
+
+.compare-insurer-info span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.compare-price-box {
+  margin: 18px 0;
+  padding: 16px 0;
+  border-top: 1px dashed var(--color-border-subtle);
+  border-bottom: 1px dashed var(--color-border-subtle);
+}
+
+.compare-price {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  line-height: 1;
+}
+
+.compare-price small {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.compare-coverage-amt {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-terracotta);
+  margin-top: 6px;
+}
+
+.compare-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+}
+
+.compare-features li {
+  font-size: 0.88rem;
+  margin-bottom: 11px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--color-text-main);
+}
+
+.compare-features li i {
+  color: var(--color-olive-deep);
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.compare-notice {
+  font-size: 0.76rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: 24px;
+}
+
+/* ===================================================================
+   SECTION 05: WHY CHOOSE WELLSURE
+   =================================================================== */
+.section-why {
+  background-color: var(--color-cream);
+}
+
+.why-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.why-image-wrapper img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.why-image-wrapper:hover img {
+  transform: scale(1.04);
+}
+
+.why-float-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(23, 36, 20, 0.92);
+  border: 1.5px solid var(--color-peach);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+  max-width: 270px;
+}
+
+[dir="rtl"] .why-float-badge {
+  left: auto;
+  right: 24px;
+}
+
+.why-float-badge strong {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-peach);
+  display: block;
+}
+
+.why-float-badge span {
+  font-size: 0.825rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.why-feature-item {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.why-feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(230, 117, 67, 0.12);
+  color: var(--color-terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.why-feature-content h5 {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.why-feature-content p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* ===================================================================
+   SECTION 06: CLAIMS ASSISTANCE
+   =================================================================== */
+.section-claims {
+  background: linear-gradient(135deg, #172414 0%, #26351E 100%);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-claims::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 211, 163, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.claims-step-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 211, 163, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 34px 28px;
+  position: relative;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-normal);
+}
+
+.claims-step-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-peach);
+  background: rgba(255, 211, 163, 0.08);
+}
+
+.claims-step-num {
+  font-family: var(--font-accent);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-peach);
+  opacity: 0.45;
+  position: absolute;
+  top: 20px;
+  right: 24px;
+}
+
+[dir="rtl"] .claims-step-num {
+  right: auto;
+  left: 24px;
+}
+
+.claims-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--color-terracotta) 0%, var(--color-coral) 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 20px rgba(230, 117, 67, 0.35);
+}
+
+.claims-step-card h4 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.claims-step-card p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.925rem;
+  margin: 0;
+}
+
+/* ===================================================================
+   SECTION 07: CLIENT EXPERIENCES
+   =================================================================== */
+.section-reviews {
+  background-color: var(--color-cream);
+}
+
+.testimonial-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.testimonial-card:hover {
+  border-color: var(--color-coral);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.testimonial-quote-icon {
+  font-size: 2.4rem;
+  color: var(--color-peach);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.testimonial-text {
+  font-size: 0.96rem;
+  font-style: italic;
+  color: var(--color-text-main);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: 18px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-peach);
+}
+
+.testimonial-info h6 {
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+}
+
+.testimonial-info span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.testimonial-stars {
+  color: #FFB800;
+  font-size: 0.88rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--color-terracotta);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+/* ===================================================================
+   SECTION 08: INSURANCE INSIGHTS
+   =================================================================== */
+.section-blog {
+  background-color: var(--color-section-alt);
+}
+
+.blog-card {
+  background: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-coral);
+}
+
+.blog-img-box {
+  height: 210px;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.blog-card:hover .blog-img-box img {
+  transform: scale(1.07);
+}
+
+.blog-category-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: var(--color-olive-dark);
+  color: var(--color-peach);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+}
+
+[dir="rtl"] .blog-category-badge {
+  left: auto;
+  right: 12px;
+}
+
+.blog-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blog-body h4 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 12px;
+}
+
+.blog-body p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* ===================================================================
+   SECTION 09: FINAL CTA
+   =================================================================== */
+.section-cta {
+  background: radial-gradient(circle at 30% 50%, #26351E 0%, #172414 100%);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 211, 163, 0.15);
+}
+
+.cta-box {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 211, 163, 0.25);
+  border-radius: var(--radius-xl);
+  padding: clamp(40px, 6vw, 70px);
+  position: relative;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.cta-box::after {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 117, 67, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Video Modal (2-Minute Overview) Styling - High Contrast in Both Themes */
+.modal-content.ws-modal-dark {
+  background: radial-gradient(circle at 50% 20%, #20331B 0%, #152212 80%, #0F180E 100%) !important;
+  border: 1.5px solid rgba(255, 211, 163, 0.35) !important;
+  color: #FFFFFF !important;
+  border-radius: var(--radius-xl) !important;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65) !important;
+}
+
+.modal-content.ws-modal-dark .modal-title {
+  color: #FFD3A3 !important;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.modal-content.ws-modal-dark h4 {
+  color: #FFFFFF !important;
+  font-family: var(--font-heading);
+  font-weight: 800;
+}
+
+.modal-content.ws-modal-dark p {
+  color: #CAD7C7 !important;
+}
+
+.modal-content.ws-modal-dark .btn-ws-outline {
+  color: #FFD3A3 !important;
+  border: 1.5px solid rgba(255, 211, 163, 0.65) !important;
+  background: rgba(255, 211, 163, 0.1) !important;
+  padding: 10px 22px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+}
+
+.modal-content.ws-modal-dark .btn-ws-outline:hover {
+  background: var(--color-peach) !important;
+  color: #172414 !important;
+  border-color: var(--color-peach) !important;
+}
+
+.modal-content.ws-modal-dark .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}

@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details & Advisory | WellSure Insurance Brokerage</title>
+  <meta name="description" content="In-depth insurance policy guide, plan options, transparent advisory, and dedicated claims advocacy from WellSure.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Core & Page Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/service-detail.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="ws-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-shield-check text-peach me-1"></i> Specialized Insurance Advisory &bull; 40+ Certified Underwriters</span>
+        <span class="opacity-50">|</span>
+        <span><i class="bi bi-patch-check-fill text-peach me-1"></i> Fiduciary Client-First Broker Representation</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span>Advisory Desk: <a href="tel:180093557873" class="fw-bold">1-800-WELLSURE</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg ws-navbar sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="ws-brand" href="index.html">
+        <div class="ws-logo-icon">
+          <i class="bi bi-shield-fill-check"></i>
+        </div>
+        <div class="ws-logo-text">
+          <span class="ws-logo-title">Well<span>Sure</span></span>
+          <span class="ws-logo-tagline">Protection. Clarity. Confidence.</span>
+        </div>
+      </a>
+
+      <!-- Mobile Top Actions: RTL, Theme & Hamburger (Visible on Mobile) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none ms-auto">
+        <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">RTL</button>
+        <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="navbar-toggler border-0 text-peach p-0 shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-peach"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Dedicated Portal Links -->
+        <div class="d-lg-none mobile-nav-portals pt-3 mt-2 border-top" style="border-color: rgba(255, 211, 163, 0.2) !important;">
+          <div class="small fw-bold text-uppercase mb-2 text-peach" style="letter-spacing: 0.08em; font-size: 0.76rem;">
+            <i class="bi bi-person-badge me-1"></i> Portals &amp; Authentication
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <a href="login.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-box-arrow-in-right me-1"></i> Login</a>
+            </div>
+            <div class="col-6">
+              <a href="register.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-person-plus me-1"></i> Register</a>
+            </div>
+            <div class="col-12">
+              <a href="client-dashboard.html" class="btn btn-sm w-100 btn-ws-green text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem;"><i class="bi bi-speedometer2 me-2"></i> Client Dashboard</a>
+            </div>
+            <div class="col-12">
+              <a href="admin-dashboard.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem; border-color: var(--color-terracotta) !important; color: var(--color-terracotta) !important;"><i class="bi bi-shield-lock me-2"></i> Admin Dashboard</a>
+            </div>
+            <div class="col-12 mt-2">
+              <a href="contact.html" class="btn btn-ws-primary w-100 justify-content-center py-2"><span>Get Covered</span><i class="bi bi-arrow-up-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ws-nav-controls d-none d-lg-flex">
+          <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle Direction">RTL</button>
+          <div class="dropdown">
+            <button class="ws-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account Menu">
+              <i class="bi bi-person-circle"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end ws-dropdown-menu">
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Dashboard</a></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-ws-primary ms-lg-2">
+            <span>Get Covered</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================================================================
+         SECTION 01: SERVICE HERO – PROTECTION THAT FITS YOUR LIFE
+         Two-column split hero with editorial image and breadcrumbs
+         =================================================================== -->
+    <section class="sd-hero-section">
+      <div class="container position-relative">
+        <div class="row align-items-center g-4 g-lg-5">
+          
+          <!-- LEFT SIDE: Content -->
+          <div class="col-lg-6">
+            <div class="pe-lg-3">
+              <!-- Breadcrumb Navigation -->
+              <nav aria-label="breadcrumb" class="sd-breadcrumb-nav" id="sdBreadcrumb">
+                <a href="index.html">WellSure</a>
+                <span class="sd-breadcrumb-sep">/</span>
+                <a href="services.html">Our Services</a>
+                <span class="sd-breadcrumb-sep">/</span>
+                <span class="text-terracotta" id="sdBreadcrumbCurrent">Life Insurance</span>
+              </nav>
+
+              <!-- Dynamic Service Title -->
+              <h1 class="sd-hero-title" id="sdHeroTitle">
+                Protect What Matters Most. <br>
+                <span class="text-terracotta">Plan for Tomorrow.</span>
+              </h1>
+
+              <!-- Dynamic Description -->
+              <p class="sd-hero-lead" id="sdHeroLead">
+                Your family's future deserves thoughtful protection. Explore life insurance solutions designed to provide financial security, support your loved ones and help you prepare for life's uncertainties.
+              </p>
+
+              <!-- Two Action Buttons -->
+              <div class="sd-hero-actions">
+                <a href="#coverage-options" class="btn btn-ws-primary btn-lg">
+                  <span>Explore Coverage Options</span>
+                  <i class="bi bi-arrow-down ms-1"></i>
+                </a>
+                <a href="contact.html" class="btn btn-ws-green btn-lg">
+                  <i class="bi bi-headset me-1"></i>
+                  <span>Talk to an Advisor</span>
+                </a>
+              </div>
+
+              <!-- Motto -->
+              <div class="about-motto-text">
+                Your people. Your priorities. Your protection.
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: Editorial Family/Advisor Image -->
+          <div class="col-lg-6">
+            <div class="sd-hero-visual">
+              <div class="sd-hero-img-wrap">
+                <img src="assets/images/advisor-consultation.jpg" alt="WellSure Advisory Service" id="sdHeroImg" class="img-fluid">
+              </div>
+
+              <!-- Floating Trust Card -->
+              <div class="sd-float-card">
+                <div class="sd-float-icon">
+                  <i class="bi bi-shield-fill-check"></i>
+                </div>
+                <div class="sd-float-text">
+                  <strong id="sdFloatTitle">Your Future. Better Protected.</strong>
+                  <span id="sdFloatSubtitle">Independent guidance across 40+ carriers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 02: UNDERSTANDING THE SERVICE
+         Image on left, Explanatory content on right + 3 Information Blocks
+         =================================================================== -->
+    <section class="section-py sd-understand-section" id="understanding">
+      <div class="container">
+        
+        <div class="row align-items-center g-4 g-lg-5 mb-5">
+          <!-- Left: Service Visual -->
+          <div class="col-lg-5">
+            <div class="sd-understand-img-wrap">
+              <img src="assets/images/life-insurance.jpg" alt="Understanding Insurance Service" id="sdUnderstandImg" class="img-fluid">
+            </div>
+          </div>
+
+          <!-- Right: Heading & Core Overview -->
+          <div class="col-lg-7">
+            <span class="ws-eyebrow"><i class="bi bi-info-circle-fill me-1"></i> Service Overview</span>
+            <h2 class="ws-section-title" id="sdUnderstandTitle">Understanding Your Protection Options.</h2>
+            <p class="ws-section-lead" id="sdUnderstandLead">
+              Choosing insurance should never feel complicated. At WellSure, we help you understand available coverage, compare policy features and identify solutions that align with your personal and financial priorities.
+            </p>
+            <p class="text-muted" style="line-height: 1.75;" id="sdUnderstandParagraph">
+              We look at your family's unique situation—your debt obligations, children's educational milestones, and lifestyle expenses—to ensure you secure sufficient coverage without paying for unnecessary riders.
+            </p>
+          </div>
+        </div>
+
+        <!-- Three Information Blocks Underneath -->
+        <div class="row g-4">
+          <!-- Block 1: What Is It? -->
+          <div class="col-md-4">
+            <div class="sd-info-block-card">
+              <div class="sd-info-icon-box">
+                <i class="bi bi-journal-text"></i>
+              </div>
+              <h5>What Is It?</h5>
+              <p id="sdInfoWhat">
+                A legal contract that guarantees an agreed financial payout to your designated beneficiaries upon your passing or critical medical event, ensuring total family continuity.
+              </p>
+            </div>
+          </div>
+
+          <!-- Block 2: Why Does It Matter? -->
+          <div class="col-md-4">
+            <div class="sd-info-block-card">
+              <div class="sd-info-icon-box">
+                <i class="bi bi-heart-pulse-fill"></i>
+              </div>
+              <h5>Why Does It Matter?</h5>
+              <p id="sdInfoWhy">
+                Premature loss of income or catastrophic medical events can derail generations of savings. Proper coverage preserves family dignity, mortgages, and children's futures.
+              </p>
+            </div>
+          </div>
+
+          <!-- Block 3: Who Is It For? -->
+          <div class="col-md-4">
+            <div class="sd-info-block-card">
+              <div class="sd-info-icon-box">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h5>Who Is It For?</h5>
+              <p id="sdInfoWho">
+                Primary earners, parents with young dependents, homeowners with mortgages, and business partners needing clear, uninterrupted financial security.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 03: WHAT WE HELP YOU WITH
+         Four Distinct Service Feature Blocks
+         =================================================================== -->
+    <section class="section-py sd-help-section">
+      <div class="container">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-compass me-1"></i> Our Advisory Scope</span>
+          <h2 class="ws-section-title">Guidance at Every Step of Your Insurance Journey.</h2>
+          <p class="ws-section-lead mx-auto">
+            As an independent fiduciary brokerage, our service goes far beyond selling a policy. We represent your interests from initial comparison to claim settlement.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Feature 1: Coverage Comparison -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-help-card">
+              <div class="sd-help-icon-wrap">
+                <i class="bi bi-bar-chart-steps"></i>
+              </div>
+              <h4>Coverage Comparison</h4>
+              <p>Compare available policies, benefits and coverage options across 40+ premier licensed carriers without corporate commission bias.</p>
+            </div>
+          </div>
+
+          <!-- Feature 2: Policy Guidance -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-help-card">
+              <div class="sd-help-icon-wrap">
+                <i class="bi bi-file-earmark-check"></i>
+              </div>
+              <h4>Policy Guidance</h4>
+              <p>Understand policy terms, exclusions and important conditions with plain-English breakdowns before signing paperwork.</p>
+            </div>
+          </div>
+
+          <!-- Feature 3: Application Assistance -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-help-card">
+              <div class="sd-help-icon-wrap">
+                <i class="bi bi-pencil-square"></i>
+              </div>
+              <h4>Application Assistance</h4>
+              <p>Get help understanding application requirements, medical disclosures, and digital KYC documentation for rapid underwriter approval.</p>
+            </div>
+          </div>
+
+          <!-- Feature 4: Claims Support -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-help-card">
+              <div class="sd-help-icon-wrap">
+                <i class="bi bi-shield-fill-check"></i>
+              </div>
+              <h4>Claims Support</h4>
+              <p>Receive dedicated broker representation through the claims process, hospital billing reviews, and expedited benefit settlements.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 04: AVAILABLE COVERAGE OPTIONS
+         Changes Dynamically Based on Selected Service
+         =================================================================== -->
+    <section class="section-py sd-options-section" id="coverage-options">
+      <div class="container">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-layers-fill me-1"></i> Tailored Plans</span>
+          <h2 class="ws-section-title">Find the Coverage That Fits Your Needs.</h2>
+          <p class="ws-section-lead mx-auto">
+            Explore dedicated sub-categories curated to match specific life stages, budgets, and family protection priorities.
+          </p>
+        </div>
+
+        <!-- Dynamic Coverage Cards Container -->
+        <div class="row g-4 justify-content-center" id="sdOptionsGrid">
+          <!-- Populated dynamically via JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 05: OUR SIMPLE PROCESS
+         Horizontal 4-Step Process Timeline
+         =================================================================== -->
+    <section class="section-py sd-process-section">
+      <div class="container">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-diagram-3 me-1"></i> Transparent Methodology</span>
+          <h2 class="ws-section-title">Protection Made Easier, One Step at a Time.</h2>
+          <p class="ws-section-lead mx-auto">
+            We streamlined the traditional insurance confusion into four clear, stress-free advisory milestones.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Step 01 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-process-card">
+              <div class="sd-process-num-circle">01</div>
+              <h5>Understand Your Needs</h5>
+              <p>Discuss your financial goals, family requirements and coverage priorities in a friendly, no-obligation conversation.</p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-process-card">
+              <div class="sd-process-num-circle">02</div>
+              <h5>Compare Your Options</h5>
+              <p>Review available policies, benefits, premiums and exclusions side-by-side with transparent carrier ratings.</p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-process-card">
+              <div class="sd-process-num-circle">03</div>
+              <h5>Choose Your Coverage</h5>
+              <p>Make an informed decision based on your unique household requirements with zero pressure or sales quotas.</p>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-process-card">
+              <div class="sd-process-num-circle">04</div>
+              <h5>Get Continued Support</h5>
+              <p>Receive ongoing assistance with application documentation, annual policy reviews, and lifetime claims guidance.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 06: WHY CHOOSE WELLSURE?
+         Olive Trust Section with 4 Trust-Focused Highlights
+         =================================================================== -->
+    <section class="section-py sd-why-olive-section">
+      <div class="container position-relative" style="z-index: 2;">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow ws-eyebrow-dark mb-3"><i class="bi bi-shield-check me-1"></i> Why Choose WellSure</span>
+          <h2 class="display-6 fw-bold text-white mb-3">More Than Insurance. A Partner in Protection.</h2>
+          <p class="fs-5 text-white-50 mx-auto">
+            Experience the confidence of having an independent intermediary working for your household rather than an insurer's sales quota.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Trust 1: Unbiased Comparisons -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-trust-highlight-card">
+              <div class="sd-trust-icon-box">
+                <i class="bi bi-bar-chart-fill"></i>
+              </div>
+              <h5>Unbiased Comparisons</h5>
+              <p>Understand real differences between available insurance options across top underwriters without corporate favoritism.</p>
+            </div>
+          </div>
+
+          <!-- Trust 2: Personalized Guidance -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-trust-highlight-card">
+              <div class="sd-trust-icon-box">
+                <i class="bi bi-person-heart"></i>
+              </div>
+              <h5>Personalized Guidance</h5>
+              <p>Thoughtful recommendations based strictly on your family's needs, budget limits, and life-stage milestones.</p>
+            </div>
+          </div>
+
+          <!-- Trust 3: Clear Explanations -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-trust-highlight-card">
+              <div class="sd-trust-icon-box">
+                <i class="bi bi-chat-quote-fill"></i>
+              </div>
+              <h5>Clear Explanations</h5>
+              <p>Understand policy features, deductibles, riders, and exclusions without confusing legal jargon or hidden fine print.</p>
+            </div>
+          </div>
+
+          <!-- Trust 4: Ongoing Assistance -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="sd-trust-highlight-card">
+              <div class="sd-trust-icon-box">
+                <i class="bi bi-hand-thumbs-up-fill"></i>
+              </div>
+              <h5>Ongoing Assistance</h5>
+              <p>Enduring support throughout your entire insurance journey, including claim advocacy and annual coverage tune-ups.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 07: FREQUENTLY ASKED QUESTIONS
+         Interactive Accordion with 6 Insurance Questions
+         =================================================================== -->
+    <section class="section-py sd-faq-section">
+      <div class="container">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-question-circle me-1"></i> Questions Worth Understanding</span>
+          <h2 class="ws-section-title">Common Questions About This Coverage.</h2>
+          <p class="ws-section-lead mx-auto">
+            Clear, honest answers to help you navigate your insurance decisions with total confidence.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion sd-accordion" id="sdFaqAccordion">
+              
+              <!-- Question 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqH1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqC1" aria-expanded="true" aria-controls="faqC1">
+                    How do I choose the right insurance policy?
+                  </button>
+                </h2>
+                <div id="faqC1" class="accordion-collapse collapse show" aria-labelledby="faqH1" data-bs-parent="#sdFaqAccordion">
+                  <div class="accordion-body">
+                    Start by evaluating your family's financial obligations—including outstanding loans, living costs, and health requirements. An independent WellSure advisor audits your priorities against 40+ carrier options to find coverage that fits your exact needs without unnecessary riders.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqH2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqC2" aria-expanded="false" aria-controls="faqC2">
+                    What documents are required to apply?
+                  </button>
+                </h2>
+                <div id="faqC2" class="accordion-collapse collapse" aria-labelledby="faqH2" data-bs-parent="#sdFaqAccordion">
+                  <div class="accordion-body">
+                    Typically, you will need government-issued photo identification, proof of address, income verification (such as pay stubs or tax returns for life plans), and basic medical history. Most modern applications are completed 100% digitally in under 20 minutes with e-signatures.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqH3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqC3" aria-expanded="false" aria-controls="faqC3">
+                    Can I compare policies from different insurers?
+                  </button>
+                </h2>
+                <div id="faqC3" class="accordion-collapse collapse" aria-labelledby="faqH3" data-bs-parent="#sdFaqAccordion">
+                  <div class="accordion-body">
+                    Yes. As an independent brokerage, WellSure benchmarks policies side-by-side across top licensed carriers. We evaluate premium costs, network hospital lists, claim settlement ratios, and fine-print exclusions so you can make an objective, well-informed choice.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqH4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqC4" aria-expanded="false" aria-controls="faqC4">
+                    What factors affect insurance premiums?
+                  </button>
+                </h2>
+                <div id="faqC4" class="accordion-collapse collapse" aria-labelledby="faqH4" data-bs-parent="#sdFaqAccordion">
+                  <div class="accordion-body">
+                    Premiums are primarily determined by your age, coverage sum, term duration, lifestyle factors (such as smoking status), and medical history. Locking in coverage earlier generally yields significantly lower lifetime monthly rates.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqH5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqC5" aria-expanded="false" aria-controls="faqC5">
+                    How do policy exclusions and waiting periods work?
+                  </button>
+                </h2>
+                <div id="faqC5" class="accordion-collapse collapse" aria-labelledby="faqH5" data-bs-parent="#sdFaqAccordion">
+                  <div class="accordion-body">
+                    Waiting periods apply to pre-existing conditions or specific planned procedures before benefits become active. Accidental injury is always covered from Day 1. Exclusions outline non-covered events (such as elective cosmetic surgery). We highlight all waiting periods before you commit.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqH6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqC6" aria-expanded="false" aria-controls="faqC6">
+                    How can WellSure help me with claims?
+                  </button>
+                </h2>
+                <div id="faqC6" class="accordion-collapse collapse" aria-labelledby="faqH6" data-bs-parent="#sdFaqAccordion">
+                  <div class="accordion-body">
+                    When you need to file a claim, you never have to deal with the carrier alone. WellSure coordinates with hospital billing desks, compiles attending physician statements, reviews claim paperwork, and advocates directly with the underwriter until your valid benefits are paid.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 08: FINAL CTA – TAKE THE NEXT STEP
+         Warm peach editorial banner with family image & terracotta CTA
+         =================================================================== -->
+    <section class="section-py sd-final-cta-section">
+      <div class="container">
+        <div class="row align-items-center g-4 g-lg-5">
+          
+          <!-- Left: Call to Action Content -->
+          <div class="col-lg-6">
+            <span class="ws-eyebrow mb-3"><i class="bi bi-shield-lock-fill me-1"></i> YOUR PROTECTION JOURNEY STARTS HERE</span>
+            <h2 class="ws-section-title mb-3">Make Protection a Priority, Not a Question.</h2>
+            <p class="ws-section-lead mb-4">
+              Every family's needs are different. Let our team help you explore insurance options and make informed decisions about your future.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="contact.html" class="btn btn-ws-primary btn-lg">
+                <span>Talk to an Advisor</span>
+                <i class="bi bi-arrow-up-right ms-1"></i>
+              </a>
+              <a href="services.html" class="btn btn-ws-outline btn-lg">
+                <span>Explore All Services</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Family Photograph -->
+          <div class="col-lg-6">
+            <div class="sd-cta-img-wrap">
+              <img src="assets/images/home2-family.jpg" alt="WellSure Family Protection" class="img-fluid">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="ws-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 mb-5 align-items-start">
+        
+        <!-- Col 1: Brand & Brokerage Mission -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <a class="ws-brand mb-3 d-inline-flex" href="index.html">
+            <div class="ws-logo-icon"><i class="bi bi-shield-fill-check"></i></div>
+            <div class="ws-logo-text">
+              <span class="ws-logo-title">Well<span>Sure</span></span>
+              <span class="ws-logo-tagline">Protection. Clarity. Confidence.</span>
+            </div>
+          </a>
+          <p class="text-white-50 mb-4 pe-lg-3" style="font-size: 0.94rem; line-height: 1.7;">
+            WellSure is an independent Life & Health Insurance brokerage dedicated to family protection, unbiased plan audits, and lifelong policyholder advocacy across 40+ leading licensed carriers.
+          </p>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge" style="background: rgba(255,211,163,0.12); border: 1px solid rgba(255,211,163,0.28); color: #FFD3A3; padding: 6px 14px; border-radius: 20px; font-size: 0.76rem; font-weight: 700;">
+              <i class="bi bi-award-fill me-1 text-peach"></i> Licensed Fiduciary Intermediary
+            </span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="#" class="ws-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (All Navlinks) -->
+        <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="ws-footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support & Legal (Terms, FAQ, Privacy) -->
+        <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Support & Legal</h5>
+          <ul class="ws-footer-links">
+            <li><a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a></li>
+            <li><a href="services.html#servicesFaqAccordion"><i class="bi bi-question-circle"></i> Frequently Asked Questions</a></li>
+            <li><a href="privacy.html"><i class="bi bi-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="service-detail.html?plan=health#claims"><i class="bi bi-life-preserver"></i> Claims Guidance Desk</a></li>
+            <li><a href="about.html#approach"><i class="bi bi-patch-check"></i> Regulatory Disclosures</a></li>
+            <li><a href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Self-Service Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Office (Address, Phone, Email, Hours) -->
+        <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+          <h5>Contact & Office</h5>
+          
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Headquarters Office:</strong><br>
+              742 Evergreen Terrace, Suite 400<br>
+              Financial District, New York, NY 10001
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong>Toll-Free Brokerage Hotline:</strong><br>
+              <a href="tel:18009355787">1-800-WELLSURE (935-5787)</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Direct Advisory Desk:</strong><br>
+              <a href="mailto:advisory@wellsure.com">advisory@wellsure.com</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>
+              <strong>Advisory Hours:</strong><br>
+              Mon &ndash; Fri: 8:00 AM &ndash; 8:00 PM EST
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright & Compliance -->
+      <div class="ws-footer-bottom pt-4 border-top border-white border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-white-50 small">
+          &copy; 2026 WellSure Insurance Brokerage LLC. All rights reserved. Licensed fiduciary insurance intermediary.
+        </p>
+        <div class="d-flex gap-3 text-white-50 small">
+          <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-white-50 text-decoration-none">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="about.html#approach" class="text-white-50 text-decoration-none">Regulatory Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- WellSure Core Application Scripts for Theme & RTL/LTR -->
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Dynamic Service Detail Content Controller -->
+  <script>
+    const SERVICE_PLANS = {
+      life: {
+        name: "Life Insurance",
+        breadcrumb: "Life Insurance",
+        title: "Protect What Matters Most. <br><span class='text-terracotta'>Plan for Tomorrow.</span>",
+        lead: "Your family's future deserves thoughtful protection. Explore life insurance solutions designed to provide financial security, support your loved ones and help you prepare for life's uncertainties.",
+        heroImg: "assets/images/advisor-consultation.jpg",
+        floatTitle: "Your Future. Better Protected.",
+        floatSubtitle: "Guaranteed death benefit across 40+ carriers",
+        understandImg: "assets/images/life-insurance.jpg",
+        understandTitle: "Understanding Life Insurance Protection.",
+        understandLead: "Choosing life insurance should never feel complicated. At WellSure, we help you understand available coverage, compare policy features and identify solutions that align with your personal and financial priorities.",
+        understandParagraph: "We evaluate your family's unique situation—debt obligations, mortgage balances, children's educational horizons, and replacement income—to ensure you secure sufficient coverage without paying for unnecessary riders.",
+        infoWhat: "A legal contract that guarantees an agreed financial payout to your designated beneficiaries upon your passing or critical medical event, ensuring family continuity.",
+        infoWhy: "Premature loss of income can derail generations of savings. Proper life coverage preserves family dignity, mortgages, and children's college horizons.",
+        infoWho: "Primary household earners, parents with young dependents, homeowners with mortgages, and business partners needing key-person protection.",
+        options: [
+          {
+            title: "Term Life Insurance",
+            badge: "Pure Protection",
+            desc: "Affordable protection for a selected period (10, 20, or 30 years), with a guaranteed death benefit subject to policy terms.",
+            img: "assets/images/life-insurance.jpg",
+            link: "pricing.html?plan=term-life"
+          },
+          {
+            title: "Whole Life Insurance",
+            badge: "Permanent & Cash Value",
+            desc: "Lifelong coverage with policy-specific benefits, guaranteed cash value accumulation, and policy loan borrowing privileges.",
+            img: "assets/images/blog-1.jpg",
+            link: "pricing.html?plan=whole-life"
+          },
+          {
+            title: "Family Protection Plans",
+            badge: "Comprehensive Shield",
+            desc: "Custom-tailored solutions designed around your family's mortgage, college tuition horizons, and income replacement needs.",
+            img: "assets/images/family-health.jpg",
+            link: "pricing.html?plan=family-pack"
+          }
+        ]
+      },
+      health: {
+        name: "Health Insurance",
+        breadcrumb: "Health Insurance",
+        title: "Comprehensive Care for <br><span class='text-terracotta'>Every Healthcare Need.</span>",
+        lead: "Access top-rated medical centers, zero-copay hospitalization, and emergency support. Safeguard your family against catastrophic medical expenses.",
+        heroImg: "assets/images/health-insurance.jpg",
+        floatTitle: "100% Cashless Medical Care",
+        floatSubtitle: "15,000+ top-tier hospital networks",
+        understandImg: "assets/images/health-insurance.jpg",
+        understandTitle: "Understanding Modern Health Coverage.",
+        understandLead: "Choosing health insurance should give you total peace of mind. We help you explore inpatient, outpatient, and preventive options with zero confusing jargon.",
+        understandParagraph: "Medical inflation is rising rapidly. A single hospitalization without adequate coverage can deplete decades of savings. We structure plans with low out-of-pocket deductibles and robust cashless hospital access.",
+        infoWhat: "Direct medical coverage reimbursing hospital bills, surgeries, ICU fees, and day-care procedures through fast cashless authorizations.",
+        infoWhy: "Shields your household from catastrophic medical debt and ensures access to premier physicians and specialists whenever you need them.",
+        infoWho: "Individuals, young couples, growing families, and self-employed professionals seeking high-quality healthcare without financial anxiety.",
+        options: [
+          {
+            title: "Individual Comprehensive Health",
+            badge: "Zero Copay Network",
+            desc: "Access premier medical networks, preventive checkups, and inpatient hospitalization with $0 in-network deductibles.",
+            img: "assets/images/health-insurance.jpg",
+            link: "pricing.html?plan=horizon-elite"
+          },
+          {
+            title: "Family Health Floater Pack",
+            badge: "Multi-Member Shield",
+            desc: "Protect your entire household under a unified limit with maternity, pediatric, and automatic 100% sum restoration.",
+            img: "assets/images/family-health.jpg",
+            link: "pricing.html?plan=shield-guardian"
+          },
+          {
+            title: "Senior Citizen Health Care",
+            badge: "Geriatric Support",
+            desc: "Specialized Medicare & senior plans with day-1 pre-existing waivers, home nursing visits, and annual full-body checkups.",
+            img: "assets/images/home2-family.jpg",
+            link: "pricing.html?plan=senior"
+          },
+          {
+            title: "Critical Illness Lump-Sum",
+            badge: "Direct Cash Benefit",
+            desc: "Immediate tax-free payout upon diagnosis of 40+ major conditions so you can focus 100% on recovery without income stress.",
+            img: "assets/images/critical-illness.jpg",
+            link: "pricing.html?plan=critical"
+          }
+        ]
+      },
+      family: {
+        name: "Family Health Plans",
+        breadcrumb: "Family Health Plans",
+        title: "One Unified Shield for <br><span class='text-terracotta'>Your Entire Household.</span>",
+        lead: "Safeguard parents, children, and dependent elders under a single comprehensive policy with pediatric care, maternity benefits, and emergency restoration.",
+        heroImg: "assets/images/family-health.jpg",
+        floatTitle: "Unified Family Floater",
+        floatSubtitle: "Cover up to 6 members under one limit",
+        understandImg: "assets/images/family-health.jpg",
+        understandTitle: "Understanding Family Floater Protection.",
+        understandLead: "A family floater policy combines the healthcare requirements of multiple family members under a single, cost-effective annual sum insured.",
+        understandParagraph: "Rather than paying separate premiums and maintaining different deductibles for each family member, a floater provides a large shared pool of coverage that automatically restores if utilized.",
+        infoWhat: "A single health policy covering parents and dependent kids with a shared sum insured and unified cashless hospital cards.",
+        infoWhy: "Saves up to 30% in annual premium costs compared to individual policies while delivering higher combined limits for major emergencies.",
+        infoWho: "Married couples, parents with newborns or teenagers, and multi-generational households living under one roof.",
+        options: [
+          {
+            title: "Essential Family Floater",
+            badge: "Core Family Cover",
+            desc: "Covers spouses and up to 2 children with zero hospital copays and free annual health screenings for adults.",
+            img: "assets/images/family-health.jpg",
+            link: "pricing.html?plan=shield-guardian"
+          },
+          {
+            title: "Maternity & Newborn Floater",
+            badge: "Expecting Families",
+            desc: "Includes normal and C-section delivery, prenatal care, newborn ICU cover from Day 1, and first-year vaccinations.",
+            img: "assets/images/blog-3.jpg",
+            link: "pricing.html?plan=maternity"
+          },
+          {
+            title: "Extended 3-Generation Floater",
+            badge: "Multi-Generation",
+            desc: "Enables adding dependent senior parents with specialized cardiac and joint-replacement sub-limit waivers.",
+            img: "assets/images/home2-family.jpg",
+            link: "pricing.html?plan=senior"
+          }
+        ]
+      },
+      critical: {
+        name: "Critical Illness Coverage",
+        breadcrumb: "Critical Illness",
+        title: "Financial Certainty When <br><span class='text-terracotta'>Health Challenges Arise.</span>",
+        lead: "Receive an immediate, tax-free lump-sum payout upon diagnosis of serious medical conditions so you can focus entirely on treatment and recovery.",
+        heroImg: "assets/images/critical-illness.jpg",
+        floatTitle: "Tax-Free Lump-Sum Cash",
+        floatSubtitle: "Paid immediately upon certified diagnosis",
+        understandImg: "assets/images/critical-illness.jpg",
+        understandTitle: "Understanding Critical Illness Insurance.",
+        understandLead: "Unlike standard health insurance which reimburses hospital bills, critical illness insurance pays you a direct cash lump sum to use however you see fit.",
+        understandParagraph: "Use the funds to replace lost income, seek out-of-network experimental treatments, cover travel to specialized cancer institutes, or adapt your home during rehabilitation.",
+        infoWhat: "A living benefit policy paying a guaranteed cash sum (e.g., $100,000 to $500,000) upon diagnosis of stroke, cancer, heart attack, or organ failure.",
+        infoWhy: "Standard health insurance only covers medical bills—it does not replace your lost paycheck or pay your mortgage while you are off work recovering.",
+        infoWho: "Working professionals, family breadwinners, and anyone with a family history of cardiovascular disease or cancer.",
+        options: [
+          {
+            title: "Premier 40-Illness Shield",
+            badge: "Comprehensive Lump-Sum",
+            desc: "Full coverage for 40+ specified illnesses with immediate 100% payout upon diagnosis and zero medical bill receipts required.",
+            img: "assets/images/critical-illness.jpg",
+            link: "pricing.html?plan=critical"
+          },
+          {
+            title: "Cancer Care Standalone",
+            badge: "Targeted Oncology",
+            desc: "Dedicated protection covering early, minor, and advanced stages of cancer with multiple partial payouts and waiver of premium.",
+            img: "assets/images/health-insurance.jpg",
+            link: "pricing.html?plan=critical"
+          },
+          {
+            title: "Cardiac & Stroke Recovery",
+            badge: "Cardiovascular Focus",
+            desc: "Structured specifically for open-heart surgery, angioplasty, pacemaker implants, and stroke rehabilitation therapy.",
+            img: "assets/images/blog-1.jpg",
+            link: "pricing.html?plan=critical"
+          }
+        ]
+      },
+      senior: {
+        name: "Senior Citizen Health Protection",
+        breadcrumb: "Senior Citizen Health",
+        title: "Dignity, Care & Assurance for <br><span class='text-terracotta'>Golden Years.</span>",
+        lead: "Specialized medical protection tailored for seniors with day-1 pre-existing coverage, zero copays, and access to leading geriatric healthcare centers.",
+        heroImg: "assets/images/home2-family.jpg",
+        floatTitle: "Geriatric Priority Care",
+        floatSubtitle: "Pre-existing condition waiver riders",
+        understandImg: "assets/images/home2-family.jpg",
+        understandTitle: "Understanding Senior Healthcare Coverage.",
+        understandLead: "Navigating insurance after age 60 requires expert fiduciary guidance to avoid unexpected hospital co-pays and severe room rent sub-limits.",
+        understandParagraph: "We compare plans that waive standard 2-to-4 year waiting periods on hypertension, diabetes, and joint replacements, ensuring immediate cashless admissions.",
+        infoWhat: "Specialized health plans structured for seniors aged 60+ covering chronic illness management, inpatient hospitalization, and home care.",
+        infoWhy: "Medical emergencies increase with age. A tailored senior plan prevents parental medical costs from straining retirement savings.",
+        infoWho: "Retirees, senior parents, and adult children seeking comprehensive healthcare security for their elderly loved ones.",
+        options: [
+          {
+            title: "Senior Comprehensive PPO",
+            badge: "Zero Copay Hospitalization",
+            desc: "Comprehensive inpatient and ICU coverage with private suite privileges and cashless authorization across 15,000+ hospitals.",
+            img: "assets/images/home2-family.jpg",
+            link: "pricing.html?plan=senior"
+          },
+          {
+            title: "Pre-Existing Day-1 Waiver Shield",
+            badge: "Instant Active Coverage",
+            desc: "Eliminates waiting periods for hypertension, diabetes, cardiac maintenance, and chronic prescription medication.",
+            img: "assets/images/health-insurance.jpg",
+            link: "pricing.html?plan=senior"
+          },
+          {
+            title: "Geriatric Home Recovery Pack",
+            badge: "Post-Hospital Support",
+            desc: "Covers registered home nurse visits, physical therapy, oxygen rentals, and regular at-home physician checkups.",
+            img: "assets/images/advisor-consultation.jpg",
+            link: "pricing.html?plan=senior"
+          }
+        ]
+      },
+      disability: {
+        name: "Income & Disability Shield",
+        breadcrumb: "Income & Disability Shield",
+        title: "Protect Your Greatest Asset: <br><span class='text-terracotta'>Your Earning Power.</span>",
+        lead: "Safeguard your monthly income against unexpected injury or illness with guaranteed tax-free replacement paychecks.",
+        heroImg: "assets/images/blog-1.jpg",
+        floatTitle: "Income Replacement Shield",
+        floatSubtitle: "Up to 70% gross income guaranteed",
+        understandImg: "assets/images/blog-1.jpg",
+        understandTitle: "Understanding Disability Income Protection.",
+        understandLead: "Your most valuable financial asset is your ability to earn an income. If injury or illness prevents you from working, disability insurance pays you directly.",
+        understandParagraph: "Unlike workers' comp which only covers on-the-job injuries, our comprehensive policies cover illnesses and off-work accidents with true own-occupation definitions.",
+        infoWhat: "A policy that pays monthly replacement cash (up to 70% of gross income) if an accident or medical illness prevents you from working.",
+        infoWhy: "Health insurance pays doctor bills, but disability coverage pays your mortgage, groceries, car loans, and family living expenses.",
+        infoWho: "Working professionals, doctors, business owners, and household breadwinners reliant on monthly paychecks.",
+        options: [
+          {
+            title: "Long-Term Income Replacement",
+            badge: "Own-Occupation Standard",
+            desc: "Monthly tax-free benefit paid until age 65 if you cannot perform the substantial duties of your specific professional specialty.",
+            img: "assets/images/blog-1.jpg",
+            link: "pricing.html?plan=disability"
+          },
+          {
+            title: "Short-Term Emergency Disability",
+            badge: "Immediate 14-Day Pay",
+            desc: "Fast-acting cash flow protection covering temporary injuries, recovery from surgery, and short-term rehabilitative absence.",
+            img: "assets/images/life-insurance.jpg",
+            link: "pricing.html?plan=disability"
+          },
+          {
+            title: "Business Overhead Expense Rider",
+            badge: "For Entrepreneurs & Practices",
+            desc: "Reimburses office rent, payroll, utilities, and commercial insurance while the business owner or partner is incapacitated.",
+            img: "assets/images/advisor-consultation.jpg",
+            link: "pricing.html?plan=disability"
+          }
+        ]
+      },
+      "child-secure": {
+        name: "Child Future & Education Secure",
+        breadcrumb: "Child Future & Education",
+        title: "Guaranteed Horizons for <br><span class='text-terracotta'>Your Child's Ambitions.</span>",
+        lead: "Secure your child's higher education, marriage, and career milestones with guaranteed payouts and premium-waiver death benefits.",
+        heroImg: "assets/images/blog-2.jpg",
+        floatTitle: "Guaranteed Future Horizons",
+        floatSubtitle: "Built-in premium waiver protection",
+        understandImg: "assets/images/blog-2.jpg",
+        understandTitle: "Understanding Child Education Planning.",
+        understandLead: "Education costs rise faster than standard inflation. A dedicated child secure plan guarantees university funding even if you are no longer there.",
+        understandParagraph: "Features a crucial Premium Waiver Rider: if a parent passes away prematurely, the insurer waives all future premiums and pays the full maturity sum at college age.",
+        infoWhat: "A milestone-driven financial insurance plan ensuring lump-sum fund releases at ages 18, 21, and 24 for tuition and milestones.",
+        infoWhy: "Guarantees your child's education funds are 100% shielded from market downturns and parental health tragedies.",
+        infoWho: "Parents with infants, toddlers, or school-age children preparing for private university and graduate school costs.",
+        options: [
+          {
+            title: "University Milestone Endowment",
+            badge: "College Funding Guarantee",
+            desc: "Pre-scheduled payouts at ages 18, 19, 20, and 21 aligned with university tuition installments and living allowances.",
+            img: "assets/images/blog-2.jpg",
+            link: "pricing.html?plan=child-secure"
+          },
+          {
+            title: "Global Education Currency Shield",
+            badge: "Study-Abroad Security",
+            desc: "Structured in major global currencies to hedge against inflation and tuition escalations at international universities.",
+            img: "assets/images/family-health.jpg",
+            link: "pricing.html?plan=child-secure"
+          },
+          {
+            title: "Waiver of Premium Guarantee",
+            badge: "Complete Safety Net",
+            desc: "If the policyholder passes away, all future payments are absorbed by the insurer, ensuring full goal achievement.",
+            img: "assets/images/life-insurance.jpg",
+            link: "pricing.html?plan=child-secure"
+          }
+        ]
+      },
+      maternity: {
+        name: "Maternity & Newborn Care",
+        breadcrumb: "Maternity & Newborn Care",
+        title: "Gentle Protection for <br><span class='text-terracotta'>New Beginnings.</span>",
+        lead: "Comprehensive prenatal, delivery, and post-natal coverage with automatic day-one newborn hospitalization and complete pediatric vaccination schedules.",
+        heroImg: "assets/images/blog-3.jpg",
+        floatTitle: "Day-One Newborn Cover",
+        floatSubtitle: "Covers prenatal, delivery & NICU",
+        understandImg: "assets/images/blog-3.jpg",
+        understandTitle: "Understanding Maternity Insurance.",
+        understandLead: "Welcoming a new baby should be filled with joy, not surprise hospital bills. We structure coverage that covers routine deliveries and unexpected neonatal care.",
+        understandParagraph: "Includes coverage for prenatal diagnostic ultrasounds, obstetrician fees, normal/cesarean deliveries, and immediate Day-1 newborn NICU care without separate waiting periods.",
+        infoWhat: "A health insurance policy or floater rider that covers hospital delivery costs, prenatal checkups, post-natal recovery, and infant care.",
+        infoWhy: "Delivery and emergency newborn care costs can exceed $15,000 without dedicated insurance coverage.",
+        infoWho: "Newlyweds and couples planning a pregnancy within the next 12 to 24 months.",
+        options: [
+          {
+            title: "Comprehensive Maternity Floater",
+            badge: "Full Inpatient Delivery",
+            desc: "Covers normal and cesarean deliveries, private suite room charges, anesthesia, and obstetrician consultations.",
+            img: "assets/images/blog-3.jpg",
+            link: "pricing.html?plan=maternity"
+          },
+          {
+            title: "Immediate Day-1 Newborn Shield",
+            badge: "Pediatric & NICU Care",
+            desc: "Zero waiting period for newborn birth anomalies, incubator requirements, and NICU hospitalizations.",
+            img: "assets/images/family-health.jpg",
+            link: "pricing.html?plan=maternity"
+          },
+          {
+            title: "Post-Natal & Vaccination Package",
+            badge: "First-Year Support",
+            desc: "Reimburses mandatory pediatric vaccinations, lactation consultations, and maternal post-delivery checkups.",
+            img: "assets/images/health-insurance.jpg",
+            link: "pricing.html?plan=maternity"
+          }
+        ]
+      }
+    };
+
+    // Initialize Page with Dynamic Content
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let planKey = urlParams.get('plan') || 'life';
+      planKey = planKey.toLowerCase();
+
+      // Normalize common synonyms
+      if (planKey.includes('senior')) planKey = 'senior';
+      else if (planKey.includes('disab')) planKey = 'disability';
+      else if (planKey.includes('child') || planKey.includes('edu')) planKey = 'child-secure';
+      else if (planKey.includes('mat')) planKey = 'maternity';
+      else if (planKey.includes('family')) planKey = 'family';
+      else if (planKey.includes('critical')) planKey = 'critical';
+      else if (planKey.includes('health')) planKey = 'health';
+      else if (!SERVICE_PLANS[planKey]) planKey = 'life';
+
+      const planData = SERVICE_PLANS[planKey];
+
+      // Update Page Title
+      document.title = `${planData.name} Advisory & Coverage | WellSure`;
+
+      // Update Breadcrumb
+      const breadcrumbEl = document.getElementById('sdBreadcrumbCurrent');
+      if (breadcrumbEl) breadcrumbEl.textContent = planData.breadcrumb;
+
+      // Update Hero Section
+      const heroTitleEl = document.getElementById('sdHeroTitle');
+      if (heroTitleEl) heroTitleEl.innerHTML = planData.title;
+
+      const heroLeadEl = document.getElementById('sdHeroLead');
+      if (heroLeadEl) heroLeadEl.textContent = planData.lead;
+
+      const heroImgEl = document.getElementById('sdHeroImg');
+      if (heroImgEl && planData.heroImg) heroImgEl.src = planData.heroImg;
+
+      const floatTitleEl = document.getElementById('sdFloatTitle');
+      if (floatTitleEl) floatTitleEl.textContent = planData.floatTitle;
+
+      const floatSubtitleEl = document.getElementById('sdFloatSubtitle');
+      if (floatSubtitleEl) floatSubtitleEl.textContent = planData.floatSubtitle;
+
+      // Update Section 02 Understanding
+      const understandTitleEl = document.getElementById('sdUnderstandTitle');
+      if (understandTitleEl) understandTitleEl.textContent = planData.understandTitle;
+
+      const understandLeadEl = document.getElementById('sdUnderstandLead');
+      if (understandLeadEl) understandLeadEl.textContent = planData.understandLead;
+
+      const understandParaEl = document.getElementById('sdUnderstandParagraph');
+      if (understandParaEl) understandParaEl.textContent = planData.understandParagraph;
+
+      const understandImgEl = document.getElementById('sdUnderstandImg');
+      if (understandImgEl && planData.understandImg) understandImgEl.src = planData.understandImg;
+
+      const infoWhatEl = document.getElementById('sdInfoWhat');
+      if (infoWhatEl) infoWhatEl.textContent = planData.infoWhat;
+
+      const infoWhyEl = document.getElementById('sdInfoWhy');
+      if (infoWhyEl) infoWhyEl.textContent = planData.infoWhy;
+
+      const infoWhoEl = document.getElementById('sdInfoWho');
+      if (infoWhoEl) infoWhoEl.textContent = planData.infoWho;
+
+      // Update Section 04 Coverage Options Grid
+      const optionsGridEl = document.getElementById('sdOptionsGrid');
+      if (optionsGridEl && planData.options) {
+        optionsGridEl.innerHTML = '';
+        const colClass = planData.options.length === 4 ? 'col-lg-3 col-md-6' : 'col-lg-4 col-md-6';
+
+        planData.options.forEach(opt => {
+          const col = document.createElement('div');
+          col.className = colClass;
+          col.innerHTML = `
+            <div class="sd-coverage-option-card">
+              <div class="sd-coverage-img-wrap">
+                <img src="${opt.img}" alt="${opt.title}">
+                <span class="sd-coverage-badge">${opt.badge}</span>
+              </div>
+              <div class="sd-coverage-body">
+                <h4>${opt.title}</h4>
+                <p>${opt.desc}</p>
+                <a href="${opt.link}" class="sd-coverage-link">
+                  <span>Explore Coverage</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          `;
+          optionsGridEl.appendChild(col);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

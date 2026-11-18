@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | WellSure Life & Health Insurance Brokerage</title>
+  <meta name="description" content="Discover who WellSure is, how we help you choose the right insurance, and why families trust us with their life and health protection.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Core & Page Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="ws-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-shield-check text-peach me-1"></i> WellSure &bull; Independent Licensed Insurance Brokerage</span>
+        <span class="opacity-50">|</span>
+        <span><i class="bi bi-people text-peach me-1"></i> Fiduciary Client Advocacy</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span>Speak to an Advisor: <a href="tel:180093557873" class="fw-bold">1-800-WELLSURE</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg ws-navbar sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="ws-brand" href="index.html">
+        <div class="ws-logo-icon"><i class="bi bi-shield-fill-check"></i></div>
+        <div class="ws-logo-text"><span class="ws-logo-title">Well<span>Sure</span></span><span class="ws-logo-tagline">Protection. Clarity. Confidence.</span></div>
+      </a>
+
+      <!-- Mobile Top Actions: RTL, Theme & Hamburger (Visible on Mobile) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none ms-auto">
+        <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">RTL</button>
+        <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="navbar-toggler border-0 text-peach p-0 shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-peach"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Dedicated Portal Links -->
+        <div class="d-lg-none mobile-nav-portals pt-3 mt-2 border-top" style="border-color: rgba(255, 211, 163, 0.2) !important;">
+          <div class="small fw-bold text-uppercase mb-2 text-peach" style="letter-spacing: 0.08em; font-size: 0.76rem;">
+            <i class="bi bi-person-badge me-1"></i> Portals &amp; Authentication
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <a href="login.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-box-arrow-in-right me-1"></i> Login</a>
+            </div>
+            <div class="col-6">
+              <a href="register.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-person-plus me-1"></i> Register</a>
+            </div>
+            <div class="col-12">
+              <a href="client-dashboard.html" class="btn btn-sm w-100 btn-ws-green text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem;"><i class="bi bi-speedometer2 me-2"></i> Client Dashboard</a>
+            </div>
+            <div class="col-12">
+              <a href="admin-dashboard.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem; border-color: var(--color-terracotta) !important; color: var(--color-terracotta) !important;"><i class="bi bi-shield-lock me-2"></i> Admin Dashboard</a>
+            </div>
+            <div class="col-12 mt-2">
+              <a href="contact.html" class="btn btn-ws-primary w-100 justify-content-center py-2"><span>Get Covered</span><i class="bi bi-arrow-up-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ws-nav-controls d-none d-lg-flex">
+          <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle Direction">RTL</button>
+          <div class="dropdown">
+            <button class="ws-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account Menu">
+              <i class="bi bi-person-circle"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end ws-dropdown-menu">
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Dashboard</a></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-ws-primary ms-lg-2">
+            <span>Get Covered</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================================================================
+         SECTION 01: ABOUT US HERO (Image + Text Split)
+         High Visibility Green Buttons in Light Theme
+         =================================================================== -->
+    <section class="about-hero-section">
+      <!-- Decorative background shapes & accents -->
+      <div class="about-bg-shape-1"></div>
+      <div class="about-bg-circle-peach"></div>
+      <div class="about-bg-circle-terracotta"></div>
+      <div class="about-bg-curved-line"></div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center g-4 g-lg-5">
+          
+          <!-- LEFT SIDE – CONTENT -->
+          <div class="col-lg-6">
+            <div class="about-hero-content">
+              <!-- Small Eyebrow Label -->
+              <div class="d-flex align-items-center flex-wrap gap-2 mb-3">
+                <span class="about-eyebrow mb-0">
+                  <i class="bi bi-shield-check text-terracotta me-1"></i>
+                  ABOUT WELLSURE
+                </span>
+                <span class="about-brand-tag-outline">Independent Brokerage</span>
+              </div>
+
+              <!-- Main Heading with Terracotta Highlight -->
+              <h1 class="about-hero-title">
+                Protection Begins With People. <br>
+                <span class="text-terracotta">Trust Makes It Last.</span>
+              </h1>
+
+              <!-- Supporting Paragraph -->
+              <p class="about-hero-lead">
+                At WellSure, we make insurance decisions easier through clear comparisons, personalized guidance and thoughtful support. Our goal is to help individuals and families find coverage that fits their needs and future.
+              </p>
+
+              <!-- Two Action Buttons with High Visibility & Contrast in Light Theme -->
+              <div class="about-hero-actions">
+                <a href="#who-we-are" class="btn btn-ws-primary btn-lg">
+                  <span>Discover Our Story</span>
+                  <i class="bi bi-arrow-down-right ms-1"></i>
+                </a>
+                <a href="contact.html" class="btn btn-ws-green btn-lg">
+                  <i class="bi bi-chat-dots-fill me-1"></i>
+                  <span>Talk to Our Team</span>
+                </a>
+              </div>
+
+              <!-- Subtle Supporting Motto -->
+              <div class="about-motto-text">
+                Your people. Your priorities. Your protection.
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE – IMAGE (Five-Person Transparent Group Cutout) -->
+          <div class="col-lg-6">
+            <div class="about-hero-visual">
+              
+              <!-- Soft Peach Background Organic Shape -->
+              <div class="about-group-backdrop"></div>
+
+              <!-- Floating Card near Image -->
+              <div class="about-float-card">
+                <div class="about-float-icon">
+                  <i class="bi bi-shield-heart-fill"></i>
+                </div>
+                <div class="about-float-text">
+                  <strong>People First, Always</strong>
+                  <span>Guidance built around your family.</span>
+                </div>
+              </div>
+
+              <!-- Group Cutout Image -->
+              <div class="about-group-wrapper">
+                <img src="assets/images/about-hero-group.png" alt="WellSure Five-Person Family and Team Protection" class="about-group-img">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 02: WHO WE ARE (Two-Column Layout)
+         =================================================================== -->
+    <section class="section-py section-who" id="who-we-are">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Left: Professional Advisor Image -->
+          <div class="col-lg-6">
+            <div class="who-img-wrap">
+              <img src="assets/images/about-team.jpg" alt="WellSure Insurance Advisors Collaborating">
+              <div class="who-badge-overlay">
+                <span class="text-peach fw-bold d-block mb-1"><i class="bi bi-patch-check-fill me-1"></i> Fiduciary Standard</span>
+                <small class="text-white-50">Representing policyholders across top-rated carriers since 2014.</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative & 3 Highlights -->
+          <div class="col-lg-6">
+            <span class="ws-eyebrow"><i class="bi bi-compass me-1"></i> Who We Are</span>
+            <h2 class="ws-section-title">More Than Insurance. We're Your Protection Partner.</h2>
+            <p class="ws-section-lead mb-4">
+              WellSure is an independent brokerage founded to bridge the gap between complex insurance carriers and families seeking peace of mind. We help customers navigate life and health insurance options from leading insurers with unbiased, transparent advice.
+            </p>
+
+            <!-- Highlight 1: Multiple Insurance Options -->
+            <div class="who-highlight-card">
+              <div class="who-highlight-icon">
+                <i class="bi bi-grid-3x3-gap-fill"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Multiple Insurance Options</h5>
+                <p class="text-muted small mb-0">Access top-tier term life, permanent coverage, family health floaters, and critical illness plans from 40+ licensed carriers in one place.</p>
+              </div>
+            </div>
+
+            <!-- Highlight 2: Clear Plan Comparisons -->
+            <div class="who-highlight-card">
+              <div class="who-highlight-icon">
+                <i class="bi bi-sliders"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Clear Plan Comparisons</h5>
+                <p class="text-muted small mb-0">We eliminate confusing legal jargon and highlight premiums, deductibles, waiting periods, and exact coverage exclusions side-by-side.</p>
+              </div>
+            </div>
+
+            <!-- Highlight 3: Personalized Guidance -->
+            <div class="who-highlight-card">
+              <div class="who-highlight-icon">
+                <i class="bi bi-person-check-fill"></i>
+              </div>
+              <div>
+                <h5 class="fw-bold mb-1">Personalized Guidance</h5>
+                <p class="text-muted small mb-0">Every recommendation is tailored to your family's health profile, mortgage obligations, and financial horizons, backed by dedicated claims advocacy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 03: MISSION & VISION (Rich Editorial Cards - High Contrast)
+         No longer blank in light theme - Filled with structured commitments
+         =================================================================== -->
+    <section class="section-py section-mission-vision" id="mission-vision">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-bullseye me-1"></i> Purpose & Direction</span>
+          <h2 class="ws-section-title">Rooted in Purpose. Guided by Vision.</h2>
+          <p class="ws-section-lead mx-auto">
+            Our brokerage exists to bring honesty, clarity, and enduring security to every household we serve.
+          </p>
+        </div>
+
+        <div class="row g-4 g-lg-5">
+          <!-- Card 1: Our Mission -->
+          <div class="col-md-6">
+            <div class="mv-card mission-card">
+              <div class="mv-card-header">
+                <div class="mv-icon-box">
+                  <i class="bi bi-flag-fill"></i>
+                </div>
+                <span class="mv-tag-pill">Pillar 01 &bull; Mission</span>
+              </div>
+              <h3 class="fw-bold mb-3 mv-card-title">Our Mission</h3>
+              
+              <!-- Core Mission Statement Quote -->
+              <div class="mv-quote-statement">
+                "Make insurance easier to understand, compare and choose through transparent guidance."
+              </div>
+
+              <!-- Strategic Action Commitments -->
+              <ul class="mv-commitments-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><strong>100% Unbiased Advice:</strong> We benchmark 40+ leading carriers with zero corporate carrier bias.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><strong>Jargon-Free Audits:</strong> Plain-language explanations of deductibles, riders, and exclusions.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><strong>Fiduciary Standard:</strong> Recommendations structured solely around your household's financial safety.</span>
+                </li>
+              </ul>
+
+              <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                <span class="text-terracotta fw-bold small"><i class="bi bi-patch-check-fill me-1"></i> Transparent Comparisons</span>
+                <span class="badge ws-audit-badge">Zero Carrier Commission Bias</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Our Vision -->
+          <div class="col-md-6">
+            <div class="mv-card vision-card">
+              <div class="mv-card-header">
+                <div class="mv-icon-box">
+                  <i class="bi bi-eye-fill"></i>
+                </div>
+                <span class="mv-tag-pill">Pillar 02 &bull; Vision</span>
+              </div>
+              <h3 class="fw-bold mb-3 mv-card-title">Our Vision</h3>
+
+              <!-- Core Vision Statement Quote -->
+              <div class="mv-quote-statement">
+                "Build a future where every family can make confident and informed protection decisions."
+              </div>
+
+              <!-- Strategic Horizon Commitments -->
+              <ul class="mv-commitments-list">
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><strong>Universal Coverage Security:</strong> Ensuring unforeseen medical crises never deplete family savings.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><strong>Lifetime Claims Advocacy:</strong> Direct broker representation until hospital bills and benefits are settled.</span>
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill"></i>
+                  <span><strong>Generational Peace of Mind:</strong> Protecting children's education and parental retirement with certainty.</span>
+                </li>
+              </ul>
+
+              <div class="mt-auto pt-3 border-top border-light-subtle d-flex justify-content-between align-items-center">
+                <span class="text-success fw-bold small"><i class="bi bi-shield-check me-1"></i> Enduring Family Advocacy</span>
+                <span class="badge ws-audit-badge">15,000+ Protected Households</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 04: WHY CHOOSE WELLSURE? (Four Premium Feature Cards)
+         =================================================================== -->
+    <section class="section-py section-why-features" id="why-choose">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-award me-1"></i> The WellSure Advantage</span>
+          <h2 class="ws-section-title">Insurance Decisions Deserve Better Guidance.</h2>
+          <p class="ws-section-lead mx-auto">
+            Experience the difference of an independent intermediary working for you rather than an insurance carrier quota.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Feature 1: Unbiased Comparisons -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="why-card-premium">
+              <div class="why-card-icon"><i class="bi bi-bar-chart-steps"></i></div>
+              <h5 class="fw-bold mb-2">Unbiased Comparisons</h5>
+              <p class="text-muted small mb-0">Understand available options and compare policy features clearly across leading licensed underwriters.</p>
+            </div>
+          </div>
+
+          <!-- Feature 2: Coverage Clarity -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="why-card-premium">
+              <div class="why-card-icon"><i class="bi bi-search"></i></div>
+              <h5 class="fw-bold mb-2">Coverage Clarity</h5>
+              <p class="text-muted small mb-0">Understand benefits, exclusions and policy conditions before committing to paperwork or payments.</p>
+            </div>
+          </div>
+
+          <!-- Feature 3: Personalized Support -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="why-card-premium">
+              <div class="why-card-icon"><i class="bi bi-person-heart"></i></div>
+              <h5 class="fw-bold mb-2">Personalized Support</h5>
+              <p class="text-muted small mb-0">Get guidance based on individual and family requirements, budget constraints, and life-stage milestones.</p>
+            </div>
+          </div>
+
+          <!-- Feature 4: Claims Assistance -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="why-card-premium">
+              <div class="why-card-icon"><i class="bi bi-life-preserver"></i></div>
+              <h5 class="fw-bold mb-2">Claims Assistance</h5>
+              <p class="text-muted small mb-0">Receive help understanding and navigating the claims process when emergency medical bills or life events occur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 05: OUR APPROACH (Horizontal 4-Step Process)
+         Crisp, high-contrast, fully readable text in dark cards
+         =================================================================== -->
+    <section class="section-py section-approach-timeline" id="approach">
+      <div class="container position-relative" style="z-index: 2;">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow ws-eyebrow-dark"><i class="bi bi-diagram-3 me-1"></i> Our Methodology</span>
+          <h2 class="ws-section-title text-white">A Simpler Way to Find Your Protection.</h2>
+          <p class="ws-section-lead text-white-50 mx-auto">
+            We broke down the complicated insurance maze into four clear, reassuring, and stress-free steps.
+          </p>
+        </div>
+
+        <div class="row g-4 text-start">
+          <!-- Step 1 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="approach-step-card">
+              <div class="approach-step-num">01</div>
+              <h5>Understand Your Needs</h5>
+              <p>Learn about your family's requirements and budget in a friendly, no-pressure discovery consult.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="approach-step-card">
+              <div class="approach-step-num">02</div>
+              <h5>Explore Available Plans</h5>
+              <p>Review suitable life and health insurance options shortlisted from our multi-carrier database.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="approach-step-card">
+              <div class="approach-step-num">03</div>
+              <h5>Compare With Confidence</h5>
+              <p>Understand premiums, coverage, benefits and exclusions laid out in an easy side-by-side view.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="approach-step-card">
+              <div class="approach-step-num">04</div>
+              <h5>Get Ongoing Assistance</h5>
+              <p>Receive application and claims-related guidance for the lifetime of your policy without added costs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 06: OUR INSURANCE PARTNERS (Showcase Grid)
+         Solid Green Shade Buttons with High Contrast & Immediate Visibility
+         =================================================================== -->
+    <section class="section-py section-partners-showcase" id="partners">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-buildings me-1"></i> Industry Network</span>
+          <h2 class="ws-section-title">Connecting You With Insurance Possibilities.</h2>
+          <p class="ws-section-lead mx-auto">
+            We partner with premier life and health carriers to bring you comprehensive choices under one roof.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Partner 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card">
+              <div class="partner-logo-box"><i class="bi bi-hospital-fill"></i></div>
+              <h5 class="fw-bold mb-1">Horizon Health Care</h5>
+              <span class="partner-tag">Health & Medical (Demo)</span>
+              <p class="small text-muted mb-4">Comprehensive PPO & HMO hospital networks with 100% cashless admission privileges.</p>
+              <a href="services.html#compare" class="btn-partner-view">
+                <span>View Plans</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Partner 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card">
+              <div class="partner-logo-box"><i class="bi bi-shield-check"></i></div>
+              <h5 class="fw-bold mb-1">Apex Mutual Life</h5>
+              <span class="partner-tag">Life Insurance (Demo)</span>
+              <p class="small text-muted mb-4">Guaranteed level term and permanent cash-value policies with accelerated living benefits.</p>
+              <a href="services.html#compare" class="btn-partner-view">
+                <span>View Plans</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Partner 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card">
+              <div class="partner-logo-box"><i class="bi bi-people-fill"></i></div>
+              <h5 class="fw-bold mb-1">Shield Guardian Floaters</h5>
+              <span class="partner-tag">Family Health (Demo)</span>
+              <p class="small text-muted mb-4">Single-policy multi-member coverage with pediatric checkups and automatic restoration.</p>
+              <a href="services.html#compare" class="btn-partner-view">
+                <span>View Plans</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Partner 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card">
+              <div class="partner-logo-box"><i class="bi bi-heart-pulse-fill"></i></div>
+              <h5 class="fw-bold mb-1">Summit Critical Shield</h5>
+              <span class="partner-tag">Critical Illness (Demo)</span>
+              <p class="small text-muted mb-4">Direct lump-sum payouts upon covered diagnoses to protect mortgage and family expenses.</p>
+              <a href="services.html#compare" class="btn-partner-view">
+                <span>View Plans</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Partner 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card">
+              <div class="partner-logo-box"><i class="bi bi-bandaid-fill"></i></div>
+              <h5 class="fw-bold mb-1">Metro Care Network</h5>
+              <span class="partner-tag">Major Medical (Demo)</span>
+              <p class="small text-muted mb-4">Affordable low-deductible options with comprehensive prescription formulary support.</p>
+              <a href="services.html#compare" class="btn-partner-view">
+                <span>View Plans</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Partner 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card">
+              <div class="partner-logo-box"><i class="bi bi-safe2-fill"></i></div>
+              <h5 class="fw-bold mb-1">Beacon Life & Annuity</h5>
+              <span class="partner-tag">Permanent Life (Demo)</span>
+              <p class="small text-muted mb-4">Estate liquidity and retirement accumulation solutions backed by A+ rated financial strength.</p>
+              <a href="services.html#compare" class="btn-partner-view">
+                <span>View Plans</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-muted small mt-4 mb-0">
+          *Demonstration partner data shown for layout display purposes. WellSure collaborates with verified state-licensed insurance carriers.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 07: MEET YOUR INSURANCE ADVISORS (Profile Cards)
+         =================================================================== -->
+    <section class="section-py section-advisors-profiles" id="advisors">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-people me-1"></i> Dedicated Professionals</span>
+          <h2 class="ws-section-title">Real People. Thoughtful Guidance.</h2>
+          <p class="ws-section-lead mx-auto">
+            Our licensed advisors adhere strictly to fiduciary ethics. Meet the team who stands in your corner.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Advisor 1: Sarah Jenkins -->
+          <div class="col-lg-3 col-md-6">
+            <div class="advisor-profile-card">
+              <div class="advisor-profile-img">
+                <img src="assets/images/advisor-1.jpg" alt="Sarah Jenkins">
+              </div>
+              <div class="advisor-profile-body">
+                <h5 class="fw-bold mb-1">Sarah Jenkins, CLU&reg;</h5>
+                <span class="text-terracotta small fw-bold d-block mb-2">Senior Health & Family Specialist</span>
+                <div class="advisor-expertise-pills">
+                  <span class="advisor-expertise-pill">Family Floaters</span>
+                  <span class="advisor-expertise-pill">Maternity</span>
+                </div>
+                <p class="small text-muted mb-3 flex-grow-1">
+                  12+ years structuring comprehensive medical networks and pediatric floaters for growing households.
+                </p>
+                <a href="contact.html?advisor=sarah" class="btn btn-ws-green btn-sm w-100 justify-content-center">
+                  <span>Contact Advisor</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advisor 2: Marcus Vance -->
+          <div class="col-lg-3 col-md-6">
+            <div class="advisor-profile-card">
+              <div class="advisor-profile-img">
+                <img src="assets/images/advisor-2.jpg" alt="Marcus Vance">
+              </div>
+              <div class="advisor-profile-body">
+                <h5 class="fw-bold mb-1">Marcus Vance, ChFC&reg;</h5>
+                <span class="text-terracotta small fw-bold d-block mb-2">Term & Permanent Life Director</span>
+                <div class="advisor-expertise-pills">
+                  <span class="advisor-expertise-pill">Term Life</span>
+                  <span class="advisor-expertise-pill">Estate Liquidity</span>
+                </div>
+                <p class="small text-muted mb-3 flex-grow-1">
+                  Expert in high-limit income continuation, debt protection, and key-person insurance strategies.
+                </p>
+                <a href="contact.html?advisor=marcus" class="btn btn-ws-green btn-sm w-100 justify-content-center">
+                  <span>Contact Advisor</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advisor 3: Priya Sharma -->
+          <div class="col-lg-3 col-md-6">
+            <div class="advisor-profile-card">
+              <div class="advisor-profile-img">
+                <img src="assets/images/advisor-3.jpg" alt="Priya Sharma">
+              </div>
+              <div class="advisor-profile-body">
+                <h5 class="fw-bold mb-1">Priya Sharma, FLMI</h5>
+                <span class="text-terracotta small fw-bold d-block mb-2">Health Policy Underwriter</span>
+                <div class="advisor-expertise-pills">
+                  <span class="advisor-expertise-pill">Underwriting</span>
+                  <span class="advisor-expertise-pill">Critical Care</span>
+                </div>
+                <p class="small text-muted mb-3 flex-grow-1">
+                  Navigating pre-existing conditions and matching medical histories with favorable carrier appetite.
+                </p>
+                <a href="contact.html?advisor=priya" class="btn btn-ws-green btn-sm w-100 justify-content-center">
+                  <span>Contact Advisor</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advisor 4: David Sterling -->
+          <div class="col-lg-3 col-md-6">
+            <div class="advisor-profile-card">
+              <div class="advisor-profile-img">
+                <img src="assets/images/advisor-4.jpg" alt="David Sterling">
+              </div>
+              <div class="advisor-profile-body">
+                <h5 class="fw-bold mb-1">David Sterling, AIC</h5>
+                <span class="text-terracotta small fw-bold d-block mb-2">Head of Claims Advocacy</span>
+                <div class="advisor-expertise-pills">
+                  <span class="advisor-expertise-pill">Claims Support</span>
+                  <span class="advisor-expertise-pill">Dispute Resolution</span>
+                </div>
+                <p class="small text-muted mb-3 flex-grow-1">
+                  Former clinical adjuster dedicated to swift, fair hospital pre-authorizations and payout resolution.
+                </p>
+                <a href="contact.html?advisor=david" class="btn btn-ws-green btn-sm w-100 justify-content-center">
+                  <span>Contact Advisor</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-muted small mt-4 mb-0">
+          *Demonstration team profiles shown for layout display purposes until real personnel rosters are published.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 08: FINAL CTA (Dark Olive Banner)
+         =================================================================== -->
+    <section class="section-py section-final-about-cta">
+      <div class="container">
+        <div class="cta-box text-center">
+          <span class="ws-eyebrow ws-eyebrow-dark"><i class="bi bi-shield-lock me-1"></i> YOUR FUTURE, PROTECTED</span>
+          <h2 class="ws-section-title text-white mb-3" style="font-size: clamp(2rem, 3.8vw, 3.2rem);">
+            Your Family Deserves Confidence, Not Confusion.
+          </h2>
+          <p class="text-white-50 max-w-700 mx-auto mb-4" style="font-size: 1.1rem; line-height: 1.7;">
+            Let's explore insurance options that make sense for your life, your needs and your future.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap cta-actions">
+            <a href="contact.html" class="btn btn-ws-primary btn-lg">
+              <span>Get a Free Consultation</span>
+              <i class="bi bi-arrow-up-right ms-1"></i>
+            </a>
+            <a href="services.html" class="btn btn-ws-outline btn-lg">
+              <span>Explore Our Plans</span>
+              <i class="bi bi-shield-check ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reusable Global Footer Component -->
+  <footer class="ws-footer pt-5">
+    <div class="container pt-4">
+      <div class="row g-4 g-lg-5 pb-5 align-items-start">
+        
+        <!-- Col 1: Brand & Fiduciary Intermediary Mission -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <a class="ws-brand mb-3 d-inline-flex" href="index.html">
+            <div class="ws-logo-icon">
+              <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <div class="ws-logo-text">
+              <span class="ws-logo-title">Well<span>Sure</span></span>
+              <span class="ws-logo-tagline">Protection. Clarity. Confidence.</span>
+            </div>
+          </a>
+          <p class="text-white-50 mt-3 pe-lg-4" style="font-size: 0.92rem; line-height: 1.7;">
+            WellSure is an independent Life & Health Insurance brokerage dedicated to family protection, unbiased plan audits, and lifelong policyholder advocacy across 40+ leading licensed carriers.
+          </p>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge" style="background: rgba(255,211,163,0.12); border: 1px solid rgba(255,211,163,0.28); color: #FFD3A3; padding: 6px 14px; border-radius: 20px; font-size: 0.76rem; font-weight: 700;">
+              <i class="bi bi-award-fill me-1 text-peach"></i> Licensed Fiduciary Intermediary
+            </span>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="ws-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (All Navlinks) -->
+        <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="ws-footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support & Legal (Terms, FAQ, Privacy Policy, Disclosures) -->
+        <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Support & Legal</h5>
+          <ul class="ws-footer-links">
+            <li><a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a></li>
+            <li><a href="services.html#servicesFaqAccordion"><i class="bi bi-question-circle"></i> Frequently Asked Questions</a></li>
+            <li><a href="privacy.html"><i class="bi bi-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="service-detail.html?plan=health#claims"><i class="bi bi-life-preserver"></i> Claims Guidance Desk</a></li>
+            <li><a href="about.html#approach"><i class="bi bi-patch-check"></i> Regulatory Disclosures</a></li>
+            <li><a href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Self-Service Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Office (Address, Phone, Email, Hours) -->
+        <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+          <h5>Contact & Office</h5>
+          
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Headquarters Office:</strong><br>
+              742 Evergreen Terrace, Suite 400<br>
+              Financial District, New York, NY 10001
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong>Toll-Free Brokerage Hotline:</strong><br>
+              <a href="tel:18009355787">1-800-WELLSURE (935-5787)</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Direct Advisory Desk:</strong><br>
+              <a href="mailto:advisory@wellsure.com">advisory@wellsure.com</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>
+              <strong>Advisory Hours:</strong><br>
+              Mon &ndash; Fri: 8:00 AM &ndash; 8:00 PM EST
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal & Disclaimer -->
+      <div class="ws-footer-bottom pt-4 border-top border-white border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-white-50 small">
+          &copy; 2026 WellSure Insurance Brokerage LLC. All rights reserved. Licensed fiduciary insurance intermediary.
+        </p>
+        <div class="d-flex gap-3 text-white-50 small">
+          <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-white-50 text-decoration-none">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="about.html#approach" class="text-white-50 text-decoration-none">Regulatory Disclosures</a>
+        </div>
+      </div>
+      <p class="ws-disclaimer mt-3 mb-0 text-white-50 small">
+        <strong>Insurance Brokerage Disclaimer:</strong> WellSure is a licensed independent insurance intermediary. Information provided on this website is for informational and educational purposes only and does not constitute a binding contract or guarantee of coverage.
+      </p>
+    </div>
+  </footer>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

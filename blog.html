@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The WellSure Journal | Insurance Insights & Editorial Guides</title>
+  <meta name="description" content="Explore practical insights, expert guidance and helpful resources to make smarter decisions about life insurance, health coverage and your family's future.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Core & Page Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="ws-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-journal-richtext text-peach me-1"></i> The WellSure Journal &bull; Editorial Insurance Education</span>
+        <span class="opacity-50">|</span>
+        <span><i class="bi bi-shield-check text-peach me-1"></i> Fiduciary Analysis</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span>Editorial Desk: <a href="tel:180093557873" class="fw-bold">1-800-WELLSURE</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg ws-navbar sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="ws-brand" href="index.html">
+        <div class="ws-logo-icon"><i class="bi bi-shield-fill-check"></i></div>
+        <div class="ws-logo-text"><span class="ws-logo-title">Well<span>Sure</span></span><span class="ws-logo-tagline">Protection. Clarity. Confidence.</span></div>
+      </a>
+
+      <!-- Mobile Top Actions: RTL, Theme & Hamburger (Visible on Mobile) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none ms-auto">
+        <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">RTL</button>
+        <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="navbar-toggler border-0 text-peach p-0 shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-peach"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Dedicated Portal Links -->
+        <div class="d-lg-none mobile-nav-portals pt-3 mt-2 border-top" style="border-color: rgba(255, 211, 163, 0.2) !important;">
+          <div class="small fw-bold text-uppercase mb-2 text-peach" style="letter-spacing: 0.08em; font-size: 0.76rem;">
+            <i class="bi bi-person-badge me-1"></i> Portals &amp; Authentication
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <a href="login.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-box-arrow-in-right me-1"></i> Login</a>
+            </div>
+            <div class="col-6">
+              <a href="register.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-person-plus me-1"></i> Register</a>
+            </div>
+            <div class="col-12">
+              <a href="client-dashboard.html" class="btn btn-sm w-100 btn-ws-green text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem;"><i class="bi bi-speedometer2 me-2"></i> Client Dashboard</a>
+            </div>
+            <div class="col-12">
+              <a href="admin-dashboard.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem; border-color: var(--color-terracotta) !important; color: var(--color-terracotta) !important;"><i class="bi bi-shield-lock me-2"></i> Admin Dashboard</a>
+            </div>
+            <div class="col-12 mt-2">
+              <a href="contact.html" class="btn btn-ws-primary w-100 justify-content-center py-2"><span>Get Covered</span><i class="bi bi-arrow-up-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ws-nav-controls d-none d-lg-flex">
+          <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle Direction">RTL</button>
+          <div class="dropdown">
+            <button class="ws-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account Menu">
+              <i class="bi bi-person-circle"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end ws-dropdown-menu">
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Dashboard</a></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-ws-primary ms-lg-2">
+            <span>Get Covered</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================================================================
+         SECTION 01: BLOG HERO – KNOWLEDGE THAT PROTECTS
+         Cream background, large left heading, editorial photo right, floating badge
+         =================================================================== -->
+    <section class="journal-hero-section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          
+          <!-- Left Content Column -->
+          <div class="col-lg-6">
+            <span class="journal-eyebrow">
+              <i class="bi bi-journal-bookmark-fill text-terracotta me-1"></i>
+              01 &bull; THE WELLSURE JOURNAL
+            </span>
+
+            <h1 class="journal-hero-title">
+              Understand Insurance. <br>
+              <span class="text-terracotta">Make Confident Decisions.</span>
+            </h1>
+
+            <p class="journal-hero-lead">
+              Explore practical insights, expert guidance and helpful resources to make smarter decisions about life insurance, health coverage and your family's future.
+            </p>
+
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <a href="#latest-articles" class="btn btn-ws-primary btn-lg">
+                <span>Explore Latest Articles</span>
+                <i class="bi bi-arrow-down-right ms-1"></i>
+              </a>
+              <a href="#explore-topics" class="btn btn-ws-green btn-lg">
+                <i class="bi bi-grid-3x3-gap-fill me-1"></i>
+                <span>Browse Topics</span>
+              </a>
+            </div>
+
+            <div class="journal-motto-text">
+              Insights for a More Confident Tomorrow
+            </div>
+          </div>
+
+          <!-- Right Visual Column -->
+          <div class="col-lg-6">
+            <div class="journal-hero-visual">
+              <div class="journal-hero-img-wrap">
+                <img src="assets/images/about-team.jpg" alt="WellSure Editorial and Advisory Team">
+                
+                <!-- Floating Peach Badge -->
+                <div class="journal-float-badge">
+                  <i class="bi bi-book-half"></i>
+                  <div>
+                    <strong>Knowledge for Every Life Stage</strong>
+                    <span>Researched & verified advisory articles</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 02: FEATURED ARTICLE – EDITOR'S CHOICE
+         Happy Family of Four Cutout + Proportional Balanced Layout
+         =================================================================== -->
+    <section class="section-featured-article" id="featured-article">
+      <div class="container">
+        <div class="featured-journal-card">
+          <div class="row g-0 align-items-center">
+            
+            <!-- Image Column (Authentic Family Cutout with Warm Backdrop - Zero Checkerboard) -->
+            <div class="col-lg-5">
+              <a href="blog-details.html?id=life-guide" class="featured-img-col d-block" aria-label="Read Featured Guide: Life Insurance Explained">
+                <img src="assets/images/hero-family.png" alt="Happy Protected Family with WellSure Insurance">
+              </a>
+            </div>
+
+            <!-- Content Column -->
+            <div class="col-lg-7 p-4 p-md-5">
+              <span class="featured-pill-tag">
+                <i class="bi bi-star-fill text-warning me-1"></i>
+                02 &bull; EDITOR'S CHOICE &bull; LIFE INSURANCE
+              </span>
+
+              <h2 class="featured-title">
+                <a href="blog-details.html?id=life-guide">
+                  Life Insurance Explained: A Complete Guide to Protecting Your Family
+                </a>
+              </h2>
+
+              <p class="featured-excerpt">
+                Learn how life insurance works, understand different coverage options and discover what to consider before choosing a policy.
+              </p>
+
+              <div class="featured-meta">
+                <img src="assets/images/avatar-1.jpg" alt="Editorial Team">
+                <div>
+                  <span class="d-block fw-bold">By WellSure Editorial Team</span>
+                  <small class="text-muted">Nov 15, 2026 &bull; 8 min read</small>
+                </div>
+              </div>
+
+              <a href="blog-details.html?id=life-guide" class="btn btn-ws-primary btn-lg">
+                <span>Read Full Article</span>
+                <i class="bi bi-arrow-up-right ms-1"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 03: EXPLORE TOPICS
+         Functional Category Filters
+         =================================================================== -->
+    <section class="section-explore-topics" id="explore-topics">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-4">
+          <span class="ws-eyebrow"><i class="bi bi-tags-fill me-1"></i> 03 &bull; EXPLORE TOPICS</span>
+          <h2 class="ws-section-title fs-3 mb-2">Explore What Matters to You.</h2>
+          <p class="text-muted small mb-0">Select any category to filter our research and guides instantly.</p>
+        </div>
+
+        <div class="topic-filter-bar" id="topicFilterBar">
+          <button class="topic-btn active" data-category="all">
+            <i class="bi bi-collection-fill"></i>
+            <span>All Topics</span>
+            <span class="topic-count" id="countAll">6</span>
+          </button>
+          <button class="topic-btn" data-category="health">
+            <i class="bi bi-heart-pulse-fill"></i>
+            <span>Health Insurance</span>
+            <span class="topic-count">1</span>
+          </button>
+          <button class="topic-btn" data-category="life">
+            <i class="bi bi-shield-lock-fill"></i>
+            <span>Life Insurance</span>
+            <span class="topic-count">1</span>
+          </button>
+          <button class="topic-btn" data-category="family">
+            <i class="bi bi-people-fill"></i>
+            <span>Family Protection</span>
+            <span class="topic-count">1</span>
+          </button>
+          <button class="topic-btn" data-category="policy">
+            <i class="bi bi-file-earmark-check-fill"></i>
+            <span>Policy Guides</span>
+            <span class="topic-count">1</span>
+          </button>
+          <button class="topic-btn" data-category="claims">
+            <i class="bi bi-life-preserver"></i>
+            <span>Claims & Support</span>
+            <span class="topic-count">1</span>
+          </button>
+          <button class="topic-btn" data-category="tips">
+            <i class="bi bi-lightbulb-fill"></i>
+            <span>Insurance Tips</span>
+            <span class="topic-count">1</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 04: LATEST ARTICLES
+         3-Column Desktop Grid with 6 Responsive Cards + Real-time Search + Pagination
+         =================================================================== -->
+    <section class="section-latest-articles" id="latest-articles">
+      <div class="container">
+        
+        <!-- Header & Real-time Search Toolbar -->
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center gap-4 mb-5">
+          <div>
+            <span class="ws-eyebrow"><i class="bi bi-journal-text me-1"></i> 04 &bull; LATEST ARTICLES</span>
+            <h2 class="ws-section-title mb-0">Fresh Insights for Smarter Protection.</h2>
+          </div>
+
+          <!-- Working Search Bar -->
+          <div class="journal-search-wrap">
+            <i class="bi bi-search journal-search-icon"></i>
+            <input type="text" id="articleSearchInput" class="journal-search-input" placeholder="Search by title, topic or keyword..." aria-label="Search articles">
+          </div>
+        </div>
+
+        <!-- Filter Count & Status Message -->
+        <div class="d-flex justify-content-between align-items-center mb-4 text-muted small">
+          <span id="articlesCountText">Showing 6 curated articles</span>
+          <span id="activeFilterBadge" class="badge bg-secondary-subtle text-dark border">All Topics Active</span>
+        </div>
+
+        <!-- 3-Column Grid with 6 Article Cards -->
+        <div class="row g-4" id="articlesGrid">
+          
+          <!-- Card 1: Health Insurance -->
+          <div class="col-lg-4 col-md-6 article-card-wrapper" data-category="health" data-keywords="health medical hospital coverage benefits exclusions doctor">
+            <article class="journal-card">
+              <a href="blog-details.html?id=understanding-health-insurance" class="journal-card-img-wrap" aria-label="Read Understanding Health Insurance Before You Buy">
+                <img src="assets/images/health-insurance.jpg" alt="Smiling doctor and female patient talking in hospital room">
+                <span class="journal-category-pill">Health Insurance</span>
+              </a>
+              <div class="journal-card-body">
+                <div>
+                  <div class="journal-card-date">
+                    <i class="bi bi-calendar3"></i> Nov 14, 2026 &bull; 6 min read
+                  </div>
+                  <h3 class="journal-card-title">
+                    <a href="blog-details.html?id=understanding-health-insurance">Understanding Health Insurance Before You Buy</a>
+                  </h3>
+                  <p class="journal-card-text">
+                    Learn about coverage, benefits and exclusions before selecting a policy.
+                  </p>
+                </div>
+                <div class="journal-card-footer">
+                  <div class="journal-author-small">
+                    <img src="assets/images/avatar-2.jpg" alt="Dr. Marcus Vance">
+                    <span>Dr. Marcus Vance</span>
+                  </div>
+                  <a href="blog-details.html?id=understanding-health-insurance" class="journal-read-link">
+                    <span>Read Article</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2: Life Insurance -->
+          <div class="col-lg-4 col-md-6 article-card-wrapper" data-category="life" data-keywords="life insurance term permanent family income need calculation">
+            <article class="journal-card">
+              <a href="blog-details.html?id=how-much-life-insurance" class="journal-card-img-wrap" aria-label="Read How Much Life Insurance Does Your Family Need?">
+                <img src="assets/images/family-health.jpg" alt="Happy parents walking with daughter in morning walk">
+                <span class="journal-category-pill">Life Insurance</span>
+              </a>
+              <div class="journal-card-body">
+                <div>
+                  <div class="journal-card-date">
+                    <i class="bi bi-calendar3"></i> Nov 10, 2026 &bull; 7 min read
+                  </div>
+                  <h3 class="journal-card-title">
+                    <a href="blog-details.html?id=how-much-life-insurance">How Much Life Insurance Does Your Family Need?</a>
+                  </h3>
+                  <p class="journal-card-text">
+                    Understand the factors that influence your family's protection needs.
+                  </p>
+                </div>
+                <div class="journal-card-footer">
+                  <div class="journal-author-small">
+                    <img src="assets/images/avatar-1.jpg" alt="Sarah Jenkins">
+                    <span>Sarah Jenkins, CFP&reg;</span>
+                  </div>
+                  <a href="blog-details.html?id=how-much-life-insurance" class="journal-read-link">
+                    <span>Read Article</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3: Family Protection -->
+          <div class="col-lg-4 col-md-6 article-card-wrapper" data-category="family" data-keywords="family protection financial safety net emergency savings budget">
+            <article class="journal-card">
+              <a href="blog-details.html?id=building-safety-net" class="journal-card-img-wrap" aria-label="Read Building a Stronger Financial Safety Net">
+                <img src="assets/images/home2-family.jpg" alt="Family reviewing household financial security">
+                <span class="journal-category-pill">Family Protection</span>
+              </a>
+              <div class="journal-card-body">
+                <div>
+                  <div class="journal-card-date">
+                    <i class="bi bi-calendar3"></i> Nov 05, 2026 &bull; 5 min read
+                  </div>
+                  <h3 class="journal-card-title">
+                    <a href="blog-details.html?id=building-safety-net">Building a Stronger Financial Safety Net</a>
+                  </h3>
+                  <p class="journal-card-text">
+                    Prepare your family for unexpected financial challenges.
+                  </p>
+                </div>
+                <div class="journal-card-footer">
+                  <div class="journal-author-small">
+                    <img src="assets/images/avatar-3.jpg" alt="Elena Rostova">
+                    <span>Elena Rostova, JD</span>
+                  </div>
+                  <a href="blog-details.html?id=building-safety-net" class="journal-read-link">
+                    <span>Read Article</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 4: Policy Guides -->
+          <div class="col-lg-4 col-md-6 article-card-wrapper" data-category="policy" data-keywords="policy guide 7 things check underwriting terms clauses exclusions">
+            <article class="journal-card">
+              <a href="blog-details.html?id=7-things-check-policy" class="journal-card-img-wrap" aria-label="Read 7 Things to Check Before Choosing a Policy">
+                <img src="assets/images/advisor-consultation.jpg" alt="Insurance advisor reviewing policy documents">
+                <span class="journal-category-pill">Policy Guides</span>
+              </a>
+              <div class="journal-card-body">
+                <div>
+                  <div class="journal-card-date">
+                    <i class="bi bi-calendar3"></i> Oct 29, 2026 &bull; 8 min read
+                  </div>
+                  <h3 class="journal-card-title">
+                    <a href="blog-details.html?id=7-things-check-policy">7 Things to Check Before Choosing a Policy</a>
+                  </h3>
+                  <p class="journal-card-text">
+                    Important details to review before making a decision.
+                  </p>
+                </div>
+                <div class="journal-card-footer">
+                  <div class="journal-author-small">
+                    <img src="assets/images/avatar-1.jpg" alt="Sarah Jenkins">
+                    <span>Sarah Jenkins, CFP&reg;</span>
+                  </div>
+                  <a href="blog-details.html?id=7-things-check-policy" class="journal-read-link">
+                    <span>Read Article</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 5: Claims & Support -->
+          <div class="col-lg-4 col-md-6 article-card-wrapper" data-category="claims" data-keywords="claims support process hospital settlement reimbursement paperwork">
+            <article class="journal-card">
+              <a href="blog-details.html?id=simple-claims-guide" class="journal-card-img-wrap" aria-label="Read A Simple Guide to the Insurance Claims Process">
+                <img src="assets/images/critical-illness.jpg" alt="Reviewing insurance claim forms with stethoscope">
+                <span class="journal-category-pill">Claims & Support</span>
+              </a>
+              <div class="journal-card-body">
+                <div>
+                  <div class="journal-card-date">
+                    <i class="bi bi-calendar3"></i> Oct 21, 2026 &bull; 6 min read
+                  </div>
+                  <h3 class="journal-card-title">
+                    <a href="blog-details.html?id=simple-claims-guide">A Simple Guide to the Insurance Claims Process</a>
+                  </h3>
+                  <p class="journal-card-text">
+                    Understand the steps and documents involved in claims.
+                  </p>
+                </div>
+                <div class="journal-card-footer">
+                  <div class="journal-author-small">
+                    <img src="assets/images/avatar-3.jpg" alt="Elena Rostova">
+                    <span>Elena Rostova, JD</span>
+                  </div>
+                  <a href="blog-details.html?id=simple-claims-guide" class="journal-read-link">
+                    <span>Read Article</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 6: Insurance Tips -->
+          <div class="col-lg-4 col-md-6 article-card-wrapper" data-category="tips" data-keywords="insurance tips common mistakes avoid underwriting deductibles pitfalls">
+            <article class="journal-card">
+              <a href="blog-details.html?id=common-insurance-mistakes" class="journal-card-img-wrap" aria-label="Read Common Insurance Mistakes and How to Avoid Them">
+                <img src="assets/images/blog-1.jpg" alt="Financial planning with notebook and documents">
+                <span class="journal-category-pill">Insurance Tips</span>
+              </a>
+              <div class="journal-card-body">
+                <div>
+                  <div class="journal-card-date">
+                    <i class="bi bi-calendar3"></i> Oct 14, 2026 &bull; 5 min read
+                  </div>
+                  <h3 class="journal-card-title">
+                    <a href="blog-details.html?id=common-insurance-mistakes">Common Insurance Mistakes and How to Avoid Them</a>
+                  </h3>
+                  <p class="journal-card-text">
+                    Learn how to avoid common mistakes when choosing coverage.
+                  </p>
+                </div>
+                <div class="journal-card-footer">
+                  <div class="journal-author-small">
+                    <img src="assets/images/avatar-2.jpg" alt="Dr. Marcus Vance">
+                    <span>Dr. Marcus Vance</span>
+                  </div>
+                  <a href="blog-details.html?id=common-insurance-mistakes" class="journal-read-link">
+                    <span>Read Article</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+        </div>
+
+        <!-- No Results State -->
+        <div id="noResultsState" class="text-center py-5 d-none">
+          <i class="bi bi-search fs-1 text-muted d-block mb-3"></i>
+          <h4>No Articles Found</h4>
+          <p class="text-muted">No publications match your filter criteria or search keyword.</p>
+          <button class="btn btn-ws-primary btn-sm" onclick="resetFilters()">Reset All Filters</button>
+        </div>
+
+        <!-- Functional Pagination Controls (Polished High Contrast in Both Themes) -->
+        <nav class="d-flex justify-content-center mt-5" aria-label="Journal article pagination">
+          <ul class="pagination journal-pagination" id="journalPagination">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-label="Previous"><i class="bi bi-chevron-left"></i></a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#" onclick="showPageTwo(event)">2</a></li>
+            <li class="page-item"><a class="page-link" href="#" onclick="showPageTwo(event)" aria-label="Next"><i class="bi bi-chevron-right"></i></a></li>
+          </ul>
+        </nav>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 05: INSURANCE KNOWLEDGE – QUICK READS
+         Horizontal editorial list instead of another card grid
+         =================================================================== -->
+    <section class="section-quick-reads" id="quick-reads">
+      <div class="container">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-lightning-charge-fill me-1"></i> 05 &bull; QUICK READS</span>
+          <h2 class="ws-section-title">Small Reads. Important Decisions.</h2>
+          <p class="ws-section-lead mx-auto">
+            Essential insurance principles distilled into concise 3-to-5 minute reads.
+          </p>
+        </div>
+
+        <div class="max-w-900 mx-auto">
+          
+          <!-- Quick Read 1 -->
+          <div class="quick-read-item">
+            <div>
+              <span class="quick-read-tag">Life Insurance &bull; 4 Min Read</span>
+              <h3 class="quick-read-title">
+                <a href="blog-details.html?id=term-vs-whole-life">Term Life vs Whole Life Insurance</a>
+              </h3>
+              <p class="quick-read-desc">
+                Understand the differences between common life insurance products.
+              </p>
+            </div>
+            <a href="blog-details.html?id=term-vs-whole-life" class="quick-read-cta">
+              <span>Read Guide</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+
+          <!-- Quick Read 2 -->
+          <div class="quick-read-item">
+            <div>
+              <span class="quick-read-tag">Health Coverage &bull; 5 Min Read</span>
+              <h3 class="quick-read-title">
+                <a href="blog-details.html?id=deductibles-copays-explained">Deductibles, Copayments and Coverage Limits Explained</a>
+              </h3>
+              <p class="quick-read-desc">
+                Learn the important terms used in health insurance.
+              </p>
+            </div>
+            <a href="blog-details.html?id=deductibles-copays-explained" class="quick-read-cta">
+              <span>Read Guide</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+
+          <!-- Quick Read 3 -->
+          <div class="quick-read-item">
+            <div>
+              <span class="quick-read-tag">Policy Audits &bull; 3 Min Read</span>
+              <h3 class="quick-read-title">
+                <a href="blog-details.html?id=understanding-policy-exclusions">Understanding Policy Exclusions</a>
+              </h3>
+              <p class="quick-read-desc">
+                Know what your insurance policy may not cover.
+              </p>
+            </div>
+            <a href="blog-details.html?id=understanding-policy-exclusions" class="quick-read-cta">
+              <span>Read Guide</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 06: MEET OUR CONTRIBUTORS
+         Author profiles with credentials and focus areas
+         =================================================================== -->
+    <section class="section-contributors" id="contributors">
+      <div class="container">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-people-fill me-1"></i> 06 &bull; MEET OUR CONTRIBUTORS</span>
+          <h2 class="ws-section-title">Insights From People Who Understand Protection.</h2>
+          <p class="ws-section-lead mx-auto">
+            Our articles are authored and verified by certified fiduciary planners, clinical analysts, and claims advocates.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- Contributor 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contributor-card">
+              <div class="contributor-img-wrap">
+                <img src="assets/images/avatar-1.jpg" alt="Sarah Jenkins">
+              </div>
+              <h4 class="contributor-name">Sarah Jenkins, CFP&reg;</h4>
+              <span class="contributor-role">Insurance Insights &bull; Policy Education</span>
+              <p class="contributor-bio">
+                Over 12 years analyzing life underwriting guidelines, retirement endowments, and estate preservation models for American families.
+              </p>
+              <span class="contributor-stat-badge">
+                <i class="bi bi-journal-check me-1"></i> 45+ Published Guides
+              </span>
+            </div>
+          </div>
+
+          <!-- Contributor 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contributor-card">
+              <div class="contributor-img-wrap">
+                <img src="assets/images/avatar-3.jpg" alt="Elena Rostova">
+              </div>
+              <h4 class="contributor-name">Elena Rostova, JD</h4>
+              <span class="contributor-role">Financial Guidance &bull; Financial Planning</span>
+              <p class="contributor-bio">
+                Specializing in insurance contract law, fiduciary policyholder representation, dispute resolution, and fair hospital claims advocacy.
+              </p>
+              <span class="contributor-stat-badge">
+                <i class="bi bi-shield-check me-1"></i> 38+ Published Guides
+              </span>
+            </div>
+          </div>
+
+          <!-- Contributor 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contributor-card">
+              <div class="contributor-img-wrap">
+                <img src="assets/images/avatar-2.jpg" alt="Dr. Marcus Vance">
+              </div>
+              <h4 class="contributor-name">Dr. Marcus Vance, MD</h4>
+              <span class="contributor-role">Healthcare Insights &bull; Health Coverage</span>
+              <p class="contributor-bio">
+                Physician and healthcare economics researcher providing clinical breakdowns of critical illness diagnostics, HMOs, and hospital networks.
+              </p>
+              <span class="contributor-stat-badge">
+                <i class="bi bi-hospital me-1"></i> 52+ Published Guides
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="text-center text-muted small mt-4 mb-0">
+          *Editorial team profiles shown for demonstration purposes. WellSure content complies with state insurance department education guidelines.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 07: NEWSLETTER SUBSCRIPTION
+         Working Email + Consent Checkbox Form
+         =================================================================== -->
+    <section class="section-journal-newsletter" id="newsletter">
+      <div class="container">
+        <div class="max-w-800 mx-auto journal-news-card text-center">
+          
+          <span class="badge" style="background: rgba(255,211,163,0.18); color: #FFD3A3; border: 1.5px solid rgba(255,211,163,0.35); padding: 6px 16px; border-radius: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.76rem; margin-bottom: 20px; display: inline-block;">
+            <i class="bi bi-envelope-paper-heart me-1"></i> 07 &bull; NEWSLETTER SUBSCRIPTION
+          </span>
+
+          <h2 class="ws-section-title text-white mb-3" style="font-size: clamp(2rem, 3.5vw, 2.8rem);">
+            A Little More Knowledge. A Lot More Confidence.
+          </h2>
+
+          <p class="text-white-50 max-w-600 mx-auto mb-4" style="line-height: 1.75; font-size: 1.05rem;">
+            Get practical insurance insights, helpful guides and useful updates delivered to your inbox.
+          </p>
+
+          <form id="journalNewsletterForm" onsubmit="handleJournalNewsletter(event)">
+            <div class="row g-3 justify-content-center mb-3">
+              <div class="col-md-7 col-sm-8">
+                <input type="email" id="journalEmailInput" class="form-control journal-news-input w-100" placeholder="Enter your email address..." required aria-label="Email Address">
+              </div>
+              <div class="col-md-4 col-sm-4">
+                <button type="submit" class="btn btn-ws-primary btn-lg w-100 justify-content-center">
+                  <span>Subscribe to Newsletter</span>
+                  <i class="bi bi-arrow-up-right ms-1"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Consent Checkbox -->
+            <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
+              <input type="checkbox" id="newsletterConsent" class="form-check-input mt-0" required>
+              <label for="newsletterConsent" class="journal-checkbox-label">
+                I agree to receive newsletters and accept the <a href="privacy.html">privacy policy</a>.
+              </label>
+            </div>
+          </form>
+
+          <!-- Success Alert Message -->
+          <div id="newsletterSuccessMsg" class="alert alert-success d-none mt-4 text-start" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            <strong>Thank you for subscribing!</strong> You have joined 15,000+ families receiving our bi-weekly insurance guides.
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 08: FINAL CTA – YOUR PROTECTION JOURNEY
+         Warm peach background, elegant typography, terracotta CTA
+         =================================================================== -->
+    <section class="section-journal-cta" id="cta">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          
+          <div class="col-lg-7">
+            <span class="badge" style="background: rgba(23,36,20,0.12); color: #172414; border: 1.5px solid rgba(23,36,20,0.25); padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 20px; display: inline-block;">
+              <i class="bi bi-shield-heart-fill text-terracotta me-1"></i> 08 &bull; YOUR PROTECTION JOURNEY
+            </span>
+
+            <h2 class="journal-cta-title">
+              The More You Know, the Better You Protect.
+            </h2>
+
+            <p class="journal-cta-lead">
+              Have questions about life insurance or health coverage? Our team is here to help you explore your options with confidence.
+            </p>
+
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <a href="contact.html" class="btn btn-ws-primary btn-lg">
+                <i class="bi bi-chat-dots-fill me-1"></i>
+                <span>Talk to an Advisor</span>
+              </a>
+              <a href="services.html" class="btn btn-ws-green btn-lg">
+                <i class="bi bi-grid-fill me-1"></i>
+                <span>Explore Insurance Plans</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <div class="journal-cta-img-wrap">
+              <img src="assets/images/home2-family.jpg" alt="Happy family protected with WellSure insurance">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Reusable Global Footer Component -->
+  <footer class="ws-footer pt-5">
+    <div class="container pt-4">
+      <div class="row g-4 g-lg-5 pb-5 align-items-start">
+        
+        <!-- Col 1: Brand & Fiduciary Intermediary Mission -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <a class="ws-brand mb-3 d-inline-flex" href="index.html">
+            <div class="ws-logo-icon">
+              <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <div class="ws-logo-text">
+              <span class="ws-logo-title">Well<span>Sure</span></span>
+              <span class="ws-logo-tagline">Protection. Clarity. Confidence.</span>
+            </div>
+          </a>
+          <p class="text-white-50 mt-3 pe-lg-4" style="font-size: 0.92rem; line-height: 1.7;">
+            WellSure is an independent Life & Health Insurance brokerage dedicated to family protection, unbiased plan audits, and lifelong policyholder advocacy across 40+ leading licensed carriers.
+          </p>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge" style="background: rgba(255,211,163,0.12); border: 1px solid rgba(255,211,163,0.28); color: #FFD3A3; padding: 6px 14px; border-radius: 20px; font-size: 0.76rem; font-weight: 700;">
+              <i class="bi bi-award-fill me-1 text-peach"></i> Licensed Fiduciary Intermediary
+            </span>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="ws-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (All Navlinks) -->
+        <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="ws-footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support & Legal (Terms, FAQ, Privacy Policy, Disclosures) -->
+        <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Support & Legal</h5>
+          <ul class="ws-footer-links">
+            <li><a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a></li>
+            <li><a href="services.html#servicesFaqAccordion"><i class="bi bi-question-circle"></i> Frequently Asked Questions</a></li>
+            <li><a href="privacy.html"><i class="bi bi-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="service-detail.html?plan=health#claims"><i class="bi bi-life-preserver"></i> Claims Guidance Desk</a></li>
+            <li><a href="about.html#approach"><i class="bi bi-patch-check"></i> Regulatory Disclosures</a></li>
+            <li><a href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Self-Service Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Office (Address, Phone, Email, Hours) -->
+        <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+          <h5>Contact & Office</h5>
+          
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Headquarters Office:</strong><br>
+              742 Evergreen Terrace, Suite 400<br>
+              Financial District, New York, NY 10001
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong>Toll-Free Brokerage Hotline:</strong><br>
+              <a href="tel:18009355787">1-800-WELLSURE (935-5787)</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Direct Advisory Desk:</strong><br>
+              <a href="mailto:advisory@wellsure.com">advisory@wellsure.com</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>
+              <strong>Advisory Hours:</strong><br>
+              Mon &ndash; Fri: 8:00 AM &ndash; 8:00 PM EST
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal & Disclaimer -->
+      <div class="ws-footer-bottom pt-4 border-top border-white border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-white-50 small">
+          &copy; 2026 WellSure Insurance Brokerage LLC. All rights reserved. Licensed fiduciary insurance intermediary.
+        </p>
+        <div class="d-flex gap-3 text-white-50 small">
+          <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-white-50 text-decoration-none">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="about.html#approach" class="text-white-50 text-decoration-none">Regulatory Disclosures</a>
+        </div>
+      </div>
+      <p class="ws-disclaimer mt-3 mb-0 text-white-50 small">
+        <strong>Insurance Brokerage Disclaimer:</strong> WellSure is a licensed independent insurance intermediary. Information provided on this website is for informational and educational purposes only and does not constitute a binding contract or guarantee of coverage.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Journal Interactive Filtering & Search Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('#topicFilterBar .topic-btn');
+      const searchInput = document.getElementById('articleSearchInput');
+      const articleCards = document.querySelectorAll('.article-card-wrapper');
+      const noResultsState = document.getElementById('noResultsState');
+      const countText = document.getElementById('articlesCountText');
+      const activeFilterBadge = document.getElementById('activeFilterBadge');
+
+      let currentCategory = 'all';
+      let currentQuery = '';
+
+      function filterArticles() {
+        let visibleCount = 0;
+
+        articleCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+          const title = (card.querySelector('.journal-card-title')?.textContent || '').toLowerCase();
+          const text = (card.querySelector('.journal-card-text')?.textContent || '').toLowerCase();
+
+          const matchesCategory = (currentCategory === 'all' || category === currentCategory);
+          const matchesQuery = (!currentQuery || title.includes(currentQuery) || text.includes(currentQuery) || keywords.includes(currentQuery));
+
+          if (matchesCategory && matchesQuery) {
+            card.style.display = 'block';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Update count & no results
+        if (countText) {
+          countText.textContent = `Showing ${visibleCount} of ${articleCards.length} curated articles`;
+        }
+
+        if (noResultsState) {
+          if (visibleCount === 0) {
+            noResultsState.classList.remove('d-none');
+          } else {
+            noResultsState.classList.add('d-none');
+          }
+        }
+      }
+
+      // Filter Button Clicks
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = btn.getAttribute('data-category');
+
+          if (activeFilterBadge) {
+            const label = btn.querySelector('span')?.textContent || 'All';
+            activeFilterBadge.textContent = `Topic: ${label}`;
+          }
+
+          filterArticles();
+        });
+      });
+
+      // Search Input Listener
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          currentQuery = e.target.value.trim().toLowerCase();
+          filterArticles();
+        });
+      }
+
+      // Global Reset
+      window.resetFilters = function() {
+        currentCategory = 'all';
+        currentQuery = '';
+        if (searchInput) searchInput.value = '';
+        filterButtons.forEach(b => {
+          if (b.getAttribute('data-category') === 'all') b.classList.add('active');
+          else b.classList.remove('active');
+        });
+        if (activeFilterBadge) activeFilterBadge.textContent = 'All Topics Active';
+        filterArticles();
+      };
+
+      // Mock Page 2 Handler
+      window.showPageTwo = function(e) {
+        e.preventDefault();
+        alert('You are viewing all available publications for this cycle. Check back every Monday for new editorial releases!');
+      };
+    });
+
+    // Newsletter submit handler
+    function handleJournalNewsletter(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById('journalEmailInput');
+      const successMsg = document.getElementById('newsletterSuccessMsg');
+      if (emailInput && emailInput.value) {
+        successMsg.classList.remove('d-none');
+        emailInput.value = '';
+        setTimeout(() => {
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+  </script>
+</body>
+</html>

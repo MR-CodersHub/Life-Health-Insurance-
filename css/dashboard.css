@@ -1,0 +1,1201 @@
+/* ===================================================================
+   WELLSURE - USER DASHBOARD (CLIENT PORTAL) STYLES (css/dashboard.css)
+   Modern Fintech Dashboard + Reassuring Insurance Brand Identity
+   Palette: Cream, Peach, Terracotta, Olive, Warm White, Deep Charcoal
+   Fixed Left Sidebar • Top Nav Bar • Modular Grid Tabs • Responsive
+   =================================================================== */
+
+:root {
+  --sidebar-width: 280px;
+  --topbar-height: 76px;
+  --color-dash-bg: #F7F4EE;
+  --color-dash-surface: #FFFFFF;
+  --color-dash-border: rgba(64, 103, 27, 0.14);
+  --color-dash-text: #172414;
+  --color-dash-muted: #5A6D56;
+}
+
+[data-theme="dark"] {
+  --color-dash-bg: #0F170E;
+  --color-dash-surface: #162414;
+  --color-dash-border: rgba(255, 211, 163, 0.2);
+  --color-dash-text: #FFFFFF;
+  --color-dash-muted: #B5C5B1;
+}
+
+/* -------------------------------------------------------------------
+   1. DASHBOARD SHELL & ARCHITECTURE
+   Fixed Left Sidebar • Fluid Main Container • No Global Nav/Footer
+   ------------------------------------------------------------------- */
+body.dashboard-body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dash-bg);
+  color: var(--color-dash-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.dashboard-app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+/* -------------------------------------------------------------------
+   2. FIXED LEFT SIDEBAR
+   Logo Header • Navigation Links • Fiduciary Status • Profile Badge
+   ------------------------------------------------------------------- */
+.dashboard-sidebar-fixed {
+  width: var(--sidebar-width);
+  background: radial-gradient(circle at 15% 10%, #20331B 0%, #152213 75%, #0F170E 100%);
+  color: #FFFFFF;
+  border-right: 1.5px solid rgba(255, 211, 163, 0.15);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  transition: transform var(--transition-normal);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 211, 163, 0.2) transparent;
+}
+
+[dir="rtl"] .dashboard-sidebar-fixed {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1.5px solid rgba(255, 211, 163, 0.15);
+}
+
+/* Brand Header */
+.sidebar-brand-box {
+  padding: 22px 24px;
+  border-bottom: 1px solid rgba(255, 211, 163, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar-brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.sidebar-brand-link .ws-logo-icon {
+  width: 42px;
+  height: 42px;
+  font-size: 1.35rem;
+}
+
+.sidebar-close-btn {
+  background: transparent;
+  border: none;
+  color: #FFD3A3;
+  font-size: 1.4rem;
+  display: none;
+  cursor: pointer;
+}
+
+/* Sidebar Navigation Groups */
+.sidebar-nav-container {
+  padding: 18px 14px;
+  flex-grow: 1;
+}
+
+.sidebar-section-label {
+  font-family: var(--font-accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #FFD3A3;
+  padding: 10px 14px 6px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.85;
+}
+
+.sidebar-nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.sidebar-nav-item {
+  margin-bottom: 4px;
+}
+
+.sidebar-nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  border-radius: var(--radius-md);
+  border: none;
+  background: transparent;
+  color: #E2ECE0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.91rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+[dir="rtl"] .sidebar-nav-btn {
+  text-align: right;
+}
+
+.sidebar-nav-btn-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-nav-btn i {
+  font-size: 1.15rem;
+  color: var(--color-peach);
+  transition: color var(--transition-fast);
+  width: 22px;
+  text-align: center;
+}
+
+.sidebar-nav-btn:hover {
+  background: rgba(255, 211, 163, 0.12);
+  color: #FFFFFF;
+}
+
+.sidebar-nav-btn:hover i {
+  color: #FFA16E;
+}
+
+.sidebar-nav-btn.active {
+  background: var(--color-terracotta);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(230, 117, 67, 0.45);
+}
+
+.sidebar-nav-btn.active i {
+  color: #FFFFFF !important;
+}
+
+.sidebar-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.sidebar-badge.highlight {
+  background: #E67543;
+  color: #FFFFFF;
+}
+
+/* User Profile Badge at Sidebar Bottom */
+.sidebar-user-footer {
+  padding: 16px 18px;
+  border-top: 1px solid rgba(255, 211, 163, 0.12);
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.sidebar-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+.sidebar-avatar-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--color-peach);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.sidebar-user-meta {
+  line-height: 1.25;
+  overflow: hidden;
+}
+
+.sidebar-user-meta strong {
+  display: block;
+  font-size: 0.88rem;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-user-meta small {
+  font-size: 0.74rem;
+  color: #FFD3A3;
+}
+
+.sidebar-logout-btn {
+  background: transparent;
+  border: none;
+  color: #FFA16E;
+  font-size: 1.25rem;
+  padding: 6px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sidebar-logout-btn:hover {
+  background: rgba(230, 117, 67, 0.2);
+  color: #FFFFFF;
+}
+
+/* -------------------------------------------------------------------
+   3. MAIN CONTENT WORKSPACE & TOP BAR
+   Search Bar • Notifications • Theme Toggle • Profile Dropdown
+   ------------------------------------------------------------------- */
+.dashboard-workspace {
+  margin-left: var(--sidebar-width);
+  flex-grow: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+[dir="rtl"] .dashboard-workspace {
+  margin-left: 0;
+  margin-right: var(--sidebar-width);
+}
+
+/* Top Dashboard Bar */
+.dashboard-topbar {
+  height: var(--topbar-height);
+  background-color: var(--color-dash-surface);
+  border-bottom: 1.5px solid var(--color-dash-border);
+  padding: 0 clamp(16px, 3vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+}
+
+.topbar-left-cluster {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sidebar-toggle-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--color-olive-deep);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+[data-theme="dark"] .sidebar-toggle-btn {
+  color: #FFD3A3;
+}
+
+.topbar-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--color-dash-muted);
+}
+
+.topbar-breadcrumb span.active-crumb {
+  color: var(--color-dash-text);
+  font-weight: 700;
+}
+
+/* Topbar Global Search */
+.topbar-search-wrap {
+  flex: 0 1 360px;
+  position: relative;
+}
+
+.topbar-search-input {
+  width: 100%;
+  padding: 10px 16px 10px 42px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-dash-border);
+  background-color: var(--color-dash-bg);
+  color: var(--color-dash-text);
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+}
+
+[dir="rtl"] .topbar-search-input {
+  padding: 10px 42px 10px 16px;
+}
+
+.topbar-search-input:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+  background-color: var(--color-dash-surface);
+  box-shadow: 0 0 0 3px rgba(230, 117, 67, 0.15);
+}
+
+.topbar-search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-dash-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+[dir="rtl"] .topbar-search-icon {
+  left: auto;
+  right: 16px;
+}
+
+/* Topbar Action Controls */
+.topbar-actions-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.topbar-icon-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-dash-border);
+  background: var(--color-dash-surface);
+  color: var(--color-dash-text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.topbar-icon-btn:hover {
+  background: rgba(230, 117, 67, 0.12);
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+  transform: translateY(-1px);
+}
+
+.notification-unread-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E53935;
+  box-shadow: 0 0 0 2px var(--color-dash-surface);
+}
+
+/* Profile Dropdown */
+.topbar-profile-trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px 4px 4px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-dash-border);
+  background: var(--color-dash-surface);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-dash-text);
+  transition: all var(--transition-fast);
+}
+
+.topbar-profile-trigger:hover {
+  border-color: var(--color-terracotta);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.topbar-avatar-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* -------------------------------------------------------------------
+   4. SCROLLABLE MAIN CONTENT BODY
+   Tab Panes (Overview, Policies, Plans, Applications, Claims, etc.)
+   ------------------------------------------------------------------- */
+.dashboard-main-scroll {
+  flex-grow: 1;
+  padding: clamp(20px, 3.5vw, 40px);
+}
+
+.dash-tab-pane {
+  display: none;
+  animation: fadeIn 0.25s ease-in-out forwards;
+}
+
+.dash-tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------------------------------------
+   5. WELCOME HERO SECTION (OVERVIEW)
+   Greeting • Profile Completion Meter • Quick CTAs
+   ------------------------------------------------------------------- */
+.dash-welcome-hero {
+  background: radial-gradient(circle at 80% 20%, rgba(255, 211, 163, 0.35) 0%, rgba(243, 164, 131, 0.15) 50%, var(--color-dash-surface) 90%);
+  border: 1.5px solid var(--color-dash-border);
+  border-radius: var(--radius-xl);
+  padding: clamp(24px, 3.5vw, 36px);
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .dash-welcome-hero {
+  background: radial-gradient(circle at 80% 20%, rgba(64, 103, 27, 0.35) 0%, rgba(230, 117, 67, 0.15) 55%, #162414 100%);
+}
+
+.dash-welcome-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+  font-weight: 800;
+  color: var(--color-olive-deep);
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+[data-theme="dark"] .dash-welcome-title {
+  color: #FFFFFF;
+}
+
+.dash-welcome-lead {
+  font-size: 0.98rem;
+  color: var(--color-dash-muted);
+  max-width: 600px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Profile Completion Meter */
+.profile-completion-box {
+  background: var(--color-dash-surface);
+  border: 1px solid var(--color-dash-border);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .profile-completion-box {
+  background: #1B2917;
+}
+
+.completion-bar-track {
+  width: 130px;
+  height: 8px;
+  background: rgba(64, 103, 27, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .completion-bar-track {
+  background: rgba(255, 211, 163, 0.18);
+}
+
+.completion-bar-fill {
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(90deg, #E67543 0%, #4CAF50 100%);
+  border-radius: 4px;
+}
+
+/* -------------------------------------------------------------------
+   6. FOUR COMPACT STATISTIC CARDS
+   Active Policies • Pending Applications • Open Claims • Renewals
+   ------------------------------------------------------------------- */
+.stat-card-compact {
+  background: var(--color-dash-surface);
+  border: 1.5px solid var(--color-dash-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: all var(--transition-fast);
+  height: 100%;
+}
+
+.stat-card-compact:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-terracotta);
+}
+
+.stat-compact-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.stat-compact-icon.olive {
+  background: rgba(64, 103, 27, 0.12);
+  color: var(--color-olive-deep);
+}
+
+[data-theme="dark"] .stat-compact-icon.olive {
+  background: rgba(141, 229, 95, 0.18);
+  color: #8DE55F;
+}
+
+.stat-compact-icon.terracotta {
+  background: rgba(230, 117, 67, 0.15);
+  color: var(--color-terracotta);
+}
+
+.stat-compact-icon.peach {
+  background: rgba(255, 211, 163, 0.35);
+  color: #B25329;
+}
+
+[data-theme="dark"] .stat-compact-icon.peach {
+  background: rgba(255, 211, 163, 0.2);
+  color: #FFD3A3;
+}
+
+.stat-compact-icon.blue {
+  background: rgba(33, 150, 243, 0.14);
+  color: #1976D2;
+}
+
+.stat-compact-val {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-dash-text);
+  margin-bottom: 2px;
+}
+
+.stat-compact-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-dash-text);
+  margin-bottom: 2px;
+}
+
+.stat-compact-sub {
+  font-size: 0.76rem;
+  color: var(--color-dash-muted);
+}
+
+/* -------------------------------------------------------------------
+   7. POLICY CARDS (HORIZONTAL FORMAT)
+   Insurer Logo • Status Badge • Sum Insured • Renewal Date
+   ------------------------------------------------------------------- */
+.policy-card-horizontal {
+  background: var(--color-dash-surface);
+  border: 1.5px solid var(--color-dash-border);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.policy-card-horizontal:hover {
+  border-color: var(--color-terracotta);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.policy-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-dash-border);
+}
+
+.policy-badge-active {
+  background: rgba(46, 125, 50, 0.12);
+  color: #2E7D32;
+  border: 1px solid rgba(46, 125, 50, 0.3);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .policy-badge-active {
+  background: rgba(76, 175, 80, 0.2);
+  color: #8DE55F;
+  border-color: rgba(76, 175, 80, 0.4);
+}
+
+.policy-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.policy-info-item small {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--color-dash-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 3px;
+}
+
+.policy-info-item strong {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dash-text);
+}
+
+/* -------------------------------------------------------------------
+   8. APPLICATION PROGRESS TRACKER
+   4-Step Timeline: Submitted → Verified → Insurer Review → Issuance
+   ------------------------------------------------------------------- */
+.app-progress-card {
+  background: var(--color-dash-surface);
+  border: 1.5px solid var(--color-dash-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.tracker-timeline-bar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 30px 10px 15px 10px;
+}
+
+.tracker-timeline-bar::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: var(--color-dash-border);
+  z-index: 1;
+}
+
+.tracker-step-node {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 1;
+}
+
+.tracker-step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-dash-surface);
+  border: 3px solid var(--color-dash-border);
+  color: var(--color-dash-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.tracker-step-node.completed .tracker-step-icon {
+  background: #2E7D32;
+  border-color: #2E7D32;
+  color: #FFFFFF;
+}
+
+.tracker-step-node.in-progress .tracker-step-icon {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #FFFFFF;
+  box-shadow: 0 0 0 6px rgba(230, 117, 67, 0.25);
+  animation: pulseNode 2s infinite;
+}
+
+@keyframes pulseNode {
+  0% { box-shadow: 0 0 0 0 rgba(230, 117, 67, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(230, 117, 67, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(230, 117, 67, 0); }
+}
+
+.tracker-step-title {
+  font-family: var(--font-heading);
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-dash-text);
+  margin-bottom: 2px;
+}
+
+.tracker-step-status {
+  font-size: 0.72rem;
+  color: var(--color-dash-muted);
+}
+
+/* -------------------------------------------------------------------
+   9. ADVISOR & MESSAGES CARD (RIGHT COLUMN)
+   Priya Sharma • Status Indicator • Communication Actions
+   ------------------------------------------------------------------- */
+.dash-advisor-card {
+  background: var(--color-dash-surface);
+  border: 1.5px solid var(--color-dash-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.advisor-presence-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.advisor-portrait-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.advisor-portrait-img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-terracotta);
+}
+
+.advisor-online-dot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2E7D32;
+  border: 2px solid var(--color-dash-surface);
+}
+
+/* -------------------------------------------------------------------
+   10. RENEWALS & REMINDERS BOX
+   Countdown Pill • Due Date • Itemized Action
+   ------------------------------------------------------------------- */
+.dash-renewal-card {
+  background: linear-gradient(135deg, rgba(230, 117, 67, 0.08) 0%, rgba(255, 211, 163, 0.12) 100%);
+  border: 1.5px solid rgba(230, 117, 67, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+[data-theme="dark"] .dash-renewal-card {
+  background: linear-gradient(135deg, rgba(230, 117, 67, 0.15) 0%, rgba(26, 40, 23, 0.95) 100%);
+  border-color: rgba(255, 211, 163, 0.35);
+}
+
+/* -------------------------------------------------------------------
+   11. CLAIMS & ASSISTANCE CARD
+   Ref Number • Cashless Status • Pre-Auth Milestone
+   ------------------------------------------------------------------- */
+.dash-claims-summary-card {
+  background: var(--color-dash-surface);
+  border: 1.5px solid var(--color-dash-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* -------------------------------------------------------------------
+   12. DOCUMENTS MANAGEMENT TABLE & FILTER PILLS
+   Policy PDFs • Receipts • Upload Action • Download Action
+   ------------------------------------------------------------------- */
+.dash-doc-table-card {
+  background: var(--color-dash-surface);
+  border: 1.5px solid var(--color-dash-border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.doc-filter-pills-wrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.doc-filter-btn {
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-dash-border);
+  background: transparent;
+  color: var(--color-dash-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.doc-filter-btn:hover {
+  color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+}
+
+.doc-filter-btn.active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #FFFFFF;
+}
+
+/* -------------------------------------------------------------------
+   13. DASHBOARD FOOTER (MINIMAL, CLEAN)
+   No Mega Global Footer! Clean SaaS Links & Fiduciary Intermediary
+   ------------------------------------------------------------------- */
+.dashboard-minimal-footer {
+  padding: 24px 0 10px 0;
+  border-top: 1px solid var(--color-dash-border);
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: gap-3;
+  font-size: 0.82rem;
+  color: var(--color-dash-muted);
+}
+
+.dashboard-minimal-footer a {
+  color: var(--color-dash-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.dashboard-minimal-footer a:hover {
+  color: var(--color-terracotta);
+}
+
+/* -------------------------------------------------------------------
+   14. RESPONSIVE BREAKPOINTS & MOBILE DRAWER
+   Collapsible Hamburger Sidebar on Mobile & Tablet
+   ------------------------------------------------------------------- */
+/* -------------------------------------------------------------------
+   6. RESPONSIVE DASHBOARD LAYOUT & MOBILE DRAWER
+   Collapsible Hamburger Sidebar on Mobile & Tablet • Touch Optimized
+   ------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .dashboard-sidebar-fixed {
+    transform: translateX(-100%);
+    width: clamp(260px, 80vw, 300px);
+    z-index: 1050;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  [dir="rtl"] .dashboard-sidebar-fixed {
+    transform: translateX(100%);
+  }
+
+  .dashboard-sidebar-fixed.show-drawer {
+    transform: translateX(0);
+  }
+
+  .sidebar-close-btn {
+    display: block;
+  }
+
+  .dashboard-workspace {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .sidebar-toggle-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dashboard-topbar {
+    height: 62px;
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .topbar-search-wrap {
+    display: none; /* Compact on mobile */
+  }
+
+  .topbar-actions-cluster {
+    gap: 8px;
+  }
+
+  .dashboard-main-content {
+    padding: 20px 16px;
+  }
+
+  /* Client Welcome Hero Card Mobile */
+  .client-hero-card {
+    padding: 22px 18px;
+    border-radius: var(--radius-lg);
+  }
+
+  .client-hero-title {
+    font-size: 1.5rem;
+  }
+
+  .client-hero-lead {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+
+  .client-hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .client-hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Policy Cards Mobile */
+  .policy-card {
+    border-radius: var(--radius-lg);
+  }
+
+  .policy-card-body {
+    padding: 18px 16px;
+  }
+
+  /* Tracker Timeline Bar Mobile */
+  .tracker-timeline-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 16px;
+  }
+
+  .tracker-timeline-bar::before {
+    display: none;
+  }
+
+  .tracker-step-node {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-align: left;
+    width: 100%;
+  }
+
+  [dir="rtl"] .tracker-step-node {
+    text-align: right;
+  }
+
+  .tracker-step-icon {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  /* Chat Panel Mobile */
+  .chat-messages-box {
+    max-height: 280px;
+    padding: 14px;
+  }
+
+  .chat-bubble {
+    max-width: 88%;
+    font-size: 0.86rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .dashboard-topbar {
+    padding: 0 12px;
+  }
+
+  .topbar-breadcrumb span:not(.active-crumb),
+  .topbar-breadcrumb i {
+    display: none;
+  }
+
+  .topbar-breadcrumb span.active-crumb {
+    font-size: 0.95rem;
+  }
+
+  .topbar-profile-trigger {
+    padding: 3px;
+  }
+
+  .dashboard-main-content {
+    padding: 16px 12px;
+  }
+
+  .client-hero-card {
+    padding: 18px 14px;
+  }
+
+  /* Compact 2x2 Grid for Dashboard Stats on Phones */
+  .stat-card-widget,
+  .stat-card-compact {
+    padding: 12px 10px !important;
+    gap: 12px !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .stat-compact-icon {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.15rem !important;
+    border-radius: 10px !important;
+  }
+
+  .stat-card-widget .stat-card-val,
+  .stat-compact-val {
+    font-size: 1.4rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .stat-card-widget .stat-card-label,
+  .stat-compact-label {
+    font-size: 0.76rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .stat-compact-sub {
+    font-size: 0.7rem !important;
+    display: none; /* Hide subtext on very small screens to keep height tidy */
+  }
+
+  .topbar-icon-btn {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.92rem !important;
+  }
+
+  /* Responsive Chat in Messages Tab */
+  #tabMessages .card {
+    height: clamp(380px, 72vh, 520px) !important;
+  }
+}
+
+/* Universal Table Responsive Touch Scrolling */
+.table-responsive {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
+.table-responsive > .table {
+  min-width: 640px;
+}
+
+/* ===================================================================
+   CLIENT & SHARED DASHBOARD TABLES IN DARK MODE
+   =================================================================== */
+[data-theme="dark"] .table {
+  --bs-table-bg: transparent !important;
+  --bs-table-color: #E2ECE0 !important;
+  --bs-table-hover-bg: rgba(255, 211, 163, 0.08) !important;
+  --bs-table-hover-color: #FFFFFF !important;
+  color: #E2ECE0 !important;
+  border-color: rgba(255, 211, 163, 0.16) !important;
+}
+
+[data-theme="dark"] .table > :not(caption) > * > * {
+  background-color: transparent !important;
+  color: #E2ECE0 !important;
+  border-bottom-color: rgba(255, 211, 163, 0.14) !important;
+}
+
+[data-theme="dark"] .table thead.table-light,
+[data-theme="dark"] .table thead.table-light tr,
+[data-theme="dark"] .table thead.table-light th,
+[data-theme="dark"] thead.table-light {
+  background-color: #121E10 !important;
+  color: #FFD3A3 !important;
+  border-bottom: 2px solid rgba(255, 211, 163, 0.28) !important;
+  font-weight: 700;
+}
+
+[data-theme="dark"] .table tbody tr {
+  background-color: #162414 !important;
+  border-bottom: 1px solid rgba(255, 211, 163, 0.12) !important;
+}
+
+[data-theme="dark"] .table tbody tr:nth-of-type(even) {
+  background-color: #142112 !important;
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover,
+[data-theme="dark"] .table-hover tbody tr:hover > * {
+  background-color: rgba(255, 211, 163, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+/* Dashboard Inner Surface Cards (Replaces bg-white) */
+.dash-inner-card {
+  background: var(--color-dash-surface);
+  border: 1.5px solid var(--color-dash-border);
+}
+
+[data-theme="dark"] .dash-inner-card {
+  background: #142112 !important;
+  border-color: rgba(255, 211, 163, 0.2) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}

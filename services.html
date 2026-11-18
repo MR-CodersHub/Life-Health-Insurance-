@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Services & Brokerage Advisory | WellSure</title>
+  <meta name="description" content="Explore WellSure's comprehensive Life & Health Insurance brokerage services. Unbiased plan comparisons, personalized recommendations, and dedicated claims guidance.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Core & Page Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="ws-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-shield-check text-peach me-1"></i> Independent Brokerage Services &bull; 40+ Certified Underwriters</span>
+        <span class="opacity-50">|</span>
+        <span><i class="bi bi-patch-check-fill text-peach me-1"></i> 100% Unbiased Fiduciary Advocacy</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span>Advisory Desk: <a href="tel:180093557873" class="fw-bold">1-800-WELLSURE</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg ws-navbar sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="ws-brand" href="index.html">
+        <div class="ws-logo-icon">
+          <i class="bi bi-shield-fill-check"></i>
+        </div>
+        <div class="ws-logo-text">
+          <span class="ws-logo-title">Well<span>Sure</span></span>
+          <span class="ws-logo-tagline">Protection. Clarity. Confidence.</span>
+        </div>
+      </a>
+
+      <!-- Mobile Top Actions: RTL, Theme & Hamburger (Visible on Mobile) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none ms-auto">
+        <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">RTL</button>
+        <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="navbar-toggler border-0 text-peach p-0 shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-peach"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Dedicated Portal Links -->
+        <div class="d-lg-none mobile-nav-portals pt-3 mt-2 border-top" style="border-color: rgba(255, 211, 163, 0.2) !important;">
+          <div class="small fw-bold text-uppercase mb-2 text-peach" style="letter-spacing: 0.08em; font-size: 0.76rem;">
+            <i class="bi bi-person-badge me-1"></i> Portals &amp; Authentication
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <a href="login.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-box-arrow-in-right me-1"></i> Login</a>
+            </div>
+            <div class="col-6">
+              <a href="register.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-person-plus me-1"></i> Register</a>
+            </div>
+            <div class="col-12">
+              <a href="client-dashboard.html" class="btn btn-sm w-100 btn-ws-green text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem;"><i class="bi bi-speedometer2 me-2"></i> Client Dashboard</a>
+            </div>
+            <div class="col-12">
+              <a href="admin-dashboard.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem; border-color: var(--color-terracotta) !important; color: var(--color-terracotta) !important;"><i class="bi bi-shield-lock me-2"></i> Admin Dashboard</a>
+            </div>
+            <div class="col-12 mt-2">
+              <a href="contact.html" class="btn btn-ws-primary w-100 justify-content-center py-2"><span>Get Covered</span><i class="bi bi-arrow-up-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ws-nav-controls d-none d-lg-flex">
+          <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle Direction">RTL</button>
+          <div class="dropdown">
+            <button class="ws-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account Menu">
+              <i class="bi bi-person-circle"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end ws-dropdown-menu">
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Dashboard</a></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-ws-primary ms-lg-2">
+            <span>Get Covered</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================================================================
+         SECTION 01: SERVICES HERO – PROTECTION FOR EVERY PART OF LIFE
+         Half-Green & Half-Orange Heading Typography Split
+         =================================================================== -->
+    <section class="services-hero-section">
+      <div class="container position-relative">
+        <div class="row align-items-center g-4 g-lg-5">
+          
+          <!-- LEFT SIDE: Content -->
+          <div class="col-lg-6">
+            <div class="pe-lg-3">
+              <!-- Eyebrow Tag -->
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <span class="ws-eyebrow mb-0">
+                  <i class="bi bi-shield-check text-terracotta me-1"></i>
+                  OUR INSURANCE SERVICES
+                </span>
+                <span class="badge" style="background: rgba(64,103,27,0.1); color: var(--color-olive-deep); border: 1px solid rgba(64,103,27,0.25); border-radius: 20px; font-weight: 700; font-size: 0.72rem; padding: 4px 12px; text-transform: uppercase;">Independent Desk</span>
+              </div>
+
+              <!-- Main Heading: Half White/Olive & Half Terracotta (Consistent with About/Home2) -->
+              <h1 class="services-hero-title">
+                The Right Protection. <br>
+                <span class="text-terracotta">For Every Chapter of Life.</span>
+              </h1>
+
+              <!-- Supporting Paragraph -->
+              <p class="services-hero-lead">
+                From protecting your family's health to securing their financial future, explore insurance solutions with clear comparisons and personalized guidance.
+              </p>
+
+              <!-- Two Action Buttons -->
+              <div class="services-hero-actions">
+                <a href="#explore-services" class="btn btn-ws-primary btn-lg">
+                  <span>Explore Coverage</span>
+                  <i class="bi bi-arrow-down ms-1"></i>
+                </a>
+                <a href="contact.html" class="btn btn-ws-green btn-lg">
+                  <i class="bi bi-headset me-1"></i>
+                  <span>Talk to an Advisor</span>
+                </a>
+              </div>
+
+              <!-- Subtle Supporting Motto -->
+              <div class="about-motto-text">
+                Your people. Your priorities. Your protection.
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: Large Family / Advisor Photograph -->
+          <div class="col-lg-6">
+            <div class="services-hero-visual">
+              <div class="services-hero-img-wrap">
+                <img src="assets/images/advisor-consultation.jpg" alt="WellSure Advisor Consultation" class="img-fluid">
+              </div>
+
+              <!-- Floating Trust Card -->
+              <div class="services-float-card">
+                <div class="services-float-icon">
+                  <i class="bi bi-patch-check-fill"></i>
+                </div>
+                <div class="services-float-text">
+                  <strong>Trusted Brokerage Advice</strong>
+                  <span>Guiding 25,000+ Families Since 2014</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 02: EXPLORE OUR INSURANCE SERVICES
+         8 Full Image-Led Service Cards (2 Rows of 4)
+         =================================================================== -->
+    <section class="section-py section-services-grid" id="explore-services">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-grid-fill me-1"></i> Complete Brokerage Portfolio</span>
+          <h2 class="ws-section-title">Find Coverage That Fits Your Life.</h2>
+          <p class="ws-section-lead mx-auto">
+            Explore our eight core insurance disciplines, each tailored with transparent benefits, zero hidden fees, and dedicated advocacy.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1: Life Insurance -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card-premium">
+              <a href="service-detail.html?plan=life" class="service-card-img-wrap d-block" aria-label="Explore Life Insurance Details">
+                <img src="assets/images/life-insurance.jpg" alt="Life Insurance Coverage">
+                <span class="service-card-num-badge">01</span>
+              </a>
+              <div class="service-card-body">
+                <div>
+                  <h3 class="service-card-title">
+                    <a href="service-detail.html?plan=life" class="text-reset text-decoration-none">Life Insurance</a>
+                  </h3>
+                  <p class="service-card-text">
+                    Protect your family's financial future with coverage designed around your long-term goals and income-replacement needs.
+                  </p>
+                  <div class="service-card-tags">
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Term Life (Up to 30 Yrs)</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Whole Life Cash Value</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Living Benefits</span>
+                  </div>
+                </div>
+                <a href="service-detail.html?plan=life" class="service-explore-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Health Insurance -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card-premium">
+              <a href="service-detail.html?plan=health" class="service-card-img-wrap d-block" aria-label="Explore Health Insurance Details">
+                <img src="assets/images/health-insurance.jpg" alt="Health Insurance Protection">
+                <span class="service-card-num-badge">02</span>
+              </a>
+              <div class="service-card-body">
+                <div>
+                  <h3 class="service-card-title">
+                    <a href="service-detail.html?plan=health" class="text-reset text-decoration-none">Health Insurance</a>
+                  </h3>
+                  <p class="service-card-text">
+                    Comprehensive medical protection ensuring access to top-rated hospitals, low out-of-pocket costs, and zero co-pay options.
+                  </p>
+                  <div class="service-card-tags">
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> 100% Cashless Hospitals</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Zero Co-Pay Network</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Rx & Outpatient Care</span>
+                  </div>
+                </div>
+                <a href="service-detail.html?plan=health" class="service-explore-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Family Health Plans -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card-premium">
+              <a href="service-detail.html?plan=family" class="service-card-img-wrap d-block" aria-label="Explore Family Health Plans Details">
+                <img src="assets/images/family-health.jpg" alt="Family Health Plans">
+                <span class="service-card-num-badge">03</span>
+              </a>
+              <div class="service-card-body">
+                <div>
+                  <h3 class="service-card-title">
+                    <a href="service-detail.html?plan=family" class="text-reset text-decoration-none">Family Health Plans</a>
+                  </h3>
+                  <p class="service-card-text">
+                    Safeguard your entire household under a single comprehensive policy with maternity, pediatric, and emergency restoration.
+                  </p>
+                  <div class="service-card-tags">
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Single-Limit Floater</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Maternity & Pediatric</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Auto-Restoration</span>
+                  </div>
+                </div>
+                <a href="service-detail.html?plan=family" class="service-explore-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Critical Illness Coverage -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card-premium">
+              <a href="service-detail.html?plan=critical" class="service-card-img-wrap d-block" aria-label="Explore Critical Illness Coverage Details">
+                <img src="assets/images/critical-illness.jpg" alt="Critical Illness Coverage">
+                <span class="service-card-num-badge">04</span>
+              </a>
+              <div class="service-card-body">
+                <div>
+                  <h3 class="service-card-title">
+                    <a href="service-detail.html?plan=critical" class="text-reset text-decoration-none">Critical Illness Coverage</a>
+                  </h3>
+                  <p class="service-card-text">
+                    Receive an immediate, tax-free lump-sum payout upon diagnosis of serious medical conditions so you can focus entirely on recovery.
+                  </p>
+                  <div class="service-card-tags">
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> 40+ Covered Illnesses</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Direct Lump-Sum Cash</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Zero Bill Prereqs</span>
+                  </div>
+                </div>
+                <a href="service-detail.html?plan=critical" class="service-explore-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Senior Citizen Health Protection -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card-premium">
+              <a href="service-detail.html?plan=senior" class="service-card-img-wrap d-block" aria-label="Explore Senior Citizen Health Details">
+                <img src="assets/images/home2-family.jpg" alt="Senior Citizen Health Insurance">
+                <span class="service-card-num-badge">05</span>
+              </a>
+              <div class="service-card-body">
+                <div>
+                  <h3 class="service-card-title">
+                    <a href="service-detail.html?plan=senior" class="text-reset text-decoration-none">Senior Citizen Health</a>
+                  </h3>
+                  <p class="service-card-text">
+                    Specialized Medicare & geriatric coverage with reduced waiting periods, pre-existing day-1 riders, and annual home checkups.
+                  </p>
+                  <div class="service-card-tags">
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Day-1 Pre-Existing Riders</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Annual Health Checks</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> 24/7 Geriatric Desk</span>
+                  </div>
+                </div>
+                <a href="service-detail.html?plan=senior" class="service-explore-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Disability & Income Protection -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card-premium">
+              <a href="service-detail.html?plan=disability" class="service-card-img-wrap d-block" aria-label="Explore Income & Disability Shield Details">
+                <img src="assets/images/blog-1.jpg" alt="Disability and Income Shield">
+                <span class="service-card-num-badge">06</span>
+              </a>
+              <div class="service-card-body">
+                <div>
+                  <h3 class="service-card-title">
+                    <a href="service-detail.html?plan=disability" class="text-reset text-decoration-none">Income & Disability Shield</a>
+                  </h3>
+                  <p class="service-card-text">
+                    Safeguard your household's monthly income against sudden injuries or prolonged illness with guaranteed tax-free replacement paychecks.
+                  </p>
+                  <div class="service-card-tags">
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Up to 70% Gross Salary</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Short & Long-Term Cover</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Own-Occupation Rule</span>
+                  </div>
+                </div>
+                <a href="service-detail.html?plan=disability" class="service-explore-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7: Child Education & Future Secure -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card-premium">
+              <a href="service-detail.html?plan=child-secure" class="service-card-img-wrap d-block" aria-label="Explore Child Future & Education Details">
+                <img src="assets/images/blog-2.jpg" alt="Child Education and Future Secure">
+                <span class="service-card-num-badge">07</span>
+              </a>
+              <div class="service-card-body">
+                <div>
+                  <h3 class="service-card-title">
+                    <a href="service-detail.html?plan=child-secure" class="text-reset text-decoration-none">Child Future & Education</a>
+                  </h3>
+                  <p class="service-card-text">
+                    Guaranteed endowment and savings portfolios ensuring your child's higher education and life milestones remain fully funded.
+                  </p>
+                  <div class="service-card-tags">
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Guaranteed Maturity Sum</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Premium Waiver on Death</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> College Milestone Payouts</span>
+                  </div>
+                </div>
+                <a href="service-detail.html?plan=child-secure" class="service-explore-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8: Maternity & Newborn Care -->
+          <div class="col-lg-3 col-md-6">
+            <div class="service-card-premium">
+              <a href="service-detail.html?plan=maternity" class="service-card-img-wrap d-block" aria-label="Explore Maternity & Newborn Care Details">
+                <img src="assets/images/blog-3.jpg" alt="Maternity and Newborn Care Insurance">
+                <span class="service-card-num-badge">08</span>
+              </a>
+              <div class="service-card-body">
+                <div>
+                  <h3 class="service-card-title">
+                    <a href="service-detail.html?plan=maternity" class="text-reset text-decoration-none">Maternity & Newborn Care</a>
+                  </h3>
+                  <p class="service-card-text">
+                    Comprehensive prenatal, delivery, and post-natal protection with automatic day-one newborn hospitalization and full vaccination schedules.
+                  </p>
+                  <div class="service-card-tags">
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Normal & C-Section</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Day-1 Newborn Cover</span>
+                    <span class="service-card-tag"><i class="bi bi-check2"></i> Full Vaccine Schedule</span>
+                  </div>
+                </div>
+                <a href="service-detail.html?plan=maternity" class="service-explore-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 03: WHY CHOOSE OUR INSURANCE GUIDANCE?
+         Two-Column: Left Team Image + Right 4 Feature Rows
+         =================================================================== -->
+    <section class="section-py section-services-why">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-stars me-1"></i> The WellSure Difference</span>
+          <h2 class="ws-section-title">More Clarity. Better Comparisons. Confident Decisions.</h2>
+          <p class="ws-section-lead mx-auto">
+            We work exclusively for policyholders, not insurance carriers. Here is why thousands trust WellSure to guide their protection.
+          </p>
+        </div>
+
+        <div class="row align-items-center g-4 g-lg-5">
+          <!-- Left Column: Large Advisor Image -->
+          <div class="col-lg-5">
+            <div class="services-why-img-wrap">
+              <img src="assets/images/about-team.jpg" alt="WellSure Advisory Team" class="img-fluid">
+              <div class="services-why-overlay-card">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="services-float-icon">
+                    <i class="bi bi-award-fill"></i>
+                  </div>
+                  <div>
+                    <h6 class="mb-0 fw-bold text-white">Fiduciary Standard</h6>
+                    <small class="text-peach opacity-90">100% Unbiased Advice Across 40+ Carriers</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 4 Feature Rows -->
+          <div class="col-lg-7">
+            <!-- Row 1: Unbiased Plan Comparisons -->
+            <div class="services-why-row-item">
+              <div class="services-why-icon-box">
+                <i class="bi bi-bar-chart-steps"></i>
+              </div>
+              <div>
+                <h5>Unbiased Plan Comparisons</h5>
+                <p>We benchmark policies across 40+ leading carriers without corporate commission bias, ensuring you get true value.</p>
+              </div>
+            </div>
+
+            <!-- Row 2: Transparent Policy Information -->
+            <div class="services-why-row-item">
+              <div class="services-why-icon-box">
+                <i class="bi bi-file-earmark-check"></i>
+              </div>
+              <div>
+                <h5>Transparent Policy Information</h5>
+                <p>Plain-English breakdowns of deductibles, exclusions, and waiting periods before you commit to any paperwork or payment.</p>
+              </div>
+            </div>
+
+            <!-- Row 3: Personalized Recommendations -->
+            <div class="services-why-row-item">
+              <div class="services-why-icon-box">
+                <i class="bi bi-person-heart"></i>
+              </div>
+              <div>
+                <h5>Personalized Recommendations</h5>
+                <p>Guidance tailored to your household budget, medical history, and future family milestones rather than canned sales pitches.</p>
+              </div>
+            </div>
+
+            <!-- Row 4: Dedicated Claims Assistance -->
+            <div class="services-why-row-item">
+              <div class="services-why-icon-box">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div>
+                <h5>Dedicated Claims Assistance</h5>
+                <p>End-to-end broker support when filing claims, auditing hospital bills, and expediting payouts when life happens.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 04: TRANSPARENT POLICY MATRIX (Redesigned Insurtech Experience)
+         Segmented Tabs + 3 Insurtech Showcase Cards + Deep Spec Matrix
+         =================================================================== -->
+    <section class="section-py section-services-compare" id="compare-plans">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="text-center max-w-700 mx-auto mb-4">
+          <span class="ws-eyebrow"><i class="bi bi-shuffle me-1"></i> Transparent Policy Matrix</span>
+          <h2 class="ws-section-title">Explore. Compare. Choose With Confidence.</h2>
+          <p class="ws-section-lead mx-auto">
+            Benchmark coverage limits, out-of-pocket costs, and underwriter reliability across premier carrier tiers side by side.
+          </p>
+        </div>
+
+        <!-- Interactive Category Switch Tabs -->
+        <div class="compare-plan-tabs">
+          <button type="button" class="compare-tab-btn active" id="tabBtnHealth" onclick="toggleServiceCompare('health')">
+            <i class="bi bi-heart-pulse-fill text-terracotta"></i>
+            <span>Health Insurance Matrix</span>
+            <span class="badge bg-success-subtle text-success ms-1">3 Plans Shortlisted</span>
+          </button>
+          <button type="button" class="compare-tab-btn" id="tabBtnLife" onclick="toggleServiceCompare('life')">
+            <i class="bi bi-shield-lock-fill text-terracotta"></i>
+            <span>Life Insurance Matrix</span>
+            <span class="badge bg-primary-subtle text-primary ms-1">3 Plans Shortlisted</span>
+          </button>
+        </div>
+
+        <!-- ===============================================================
+             HEALTH PLANS MATRIX VIEW
+             =============================================================== -->
+        <div id="serviceCompareHealth">
+          <!-- 3 Insurtech Showcase Cards -->
+          <div class="row g-4 mb-4">
+            
+            <!-- Health Card 1: Horizon Health Care -->
+            <div class="col-lg-4 col-md-6">
+              <div class="matrix-plan-card">
+                <div class="matrix-card-header">
+                  <div class="matrix-carrier-brand">
+                    <div class="matrix-carrier-icon">
+                      <i class="bi bi-hospital text-terracotta"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold mb-0">Horizon Health</h5>
+                      <small class="text-muted">Horizon PPO Elite</small>
+                    </div>
+                  </div>
+                  <span class="matrix-rating-pill"><i class="bi bi-star-fill text-warning me-1"></i> AM Best: A+</span>
+                </div>
+
+                <div class="matrix-pricing-box">
+                  <div class="d-flex align-items-baseline gap-1">
+                    <span class="matrix-price-num">$68</span>
+                    <span class="small text-muted">/ month (demo)</span>
+                  </div>
+                  <span class="matrix-coverage-cap-pill">
+                    <i class="bi bi-shield-check"></i> $500,000 Maximum Protection
+                  </span>
+                </div>
+
+                <ul class="matrix-features-list">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>100% Cashless Inpatient at 12,500+ Network Hospitals</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>$0 Deductible & Zero Copay for in-network care</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Prescription Drugs Formulary Tier 1-2 Included</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>98.9% Fast-Track Claim Settlement Ratio</span></li>
+                </ul>
+
+                <a href="pricing.html?plan=horizon-elite" class="btn btn-ws-green w-100 justify-content-center mt-auto">
+                  <span>Compare Plan Details</span>
+                  <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Health Card 2: Metro Care Network (Top Broker Pick Highlight) -->
+            <div class="col-lg-4 col-md-6">
+              <div class="matrix-plan-card highlight-card">
+                <span class="matrix-ribbon"><i class="bi bi-star-fill me-1"></i> Top Broker Pick</span>
+                
+                <div class="matrix-card-header">
+                  <div class="matrix-carrier-brand">
+                    <div class="matrix-carrier-icon" style="background: rgba(230, 117, 67, 0.12); color: var(--color-terracotta);">
+                      <i class="bi bi-shield-fill-plus"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold mb-0">Metro Care</h5>
+                      <small class="text-muted">Summit Premier Worldwide</small>
+                    </div>
+                  </div>
+                  <span class="matrix-rating-pill" style="border-color: rgba(230, 117, 67, 0.3); color: var(--color-terracotta);"><i class="bi bi-trophy-fill me-1"></i> AM Best: A++</span>
+                </div>
+
+                <div class="matrix-pricing-box">
+                  <div class="d-flex align-items-baseline gap-1">
+                    <span class="matrix-price-num">$82</span>
+                    <span class="small text-muted">/ month (demo)</span>
+                  </div>
+                  <span class="matrix-coverage-cap-pill" style="background: rgba(230, 117, 67, 0.12); color: var(--color-terracotta);">
+                    <i class="bi bi-shield-check"></i> $750,000 Maximum Protection
+                  </span>
+                </div>
+
+                <ul class="matrix-features-list">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Worldwide Emergency Evacuation & Air Ambulance</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Low $500 Annual Deductible with Zero Inpatient Copay</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Advanced Imaging, MRI & Full Outpatient Diagnostics</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>99.4% Outstanding Claim Settlement Track Record</span></li>
+                </ul>
+
+                <a href="pricing.html?plan=summit-premier" class="btn btn-ws-primary w-100 justify-content-center mt-auto">
+                  <span>Compare Plan Details</span>
+                  <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Health Card 3: Shield Guardian Floaters -->
+            <div class="col-lg-4 col-md-6">
+              <div class="matrix-plan-card">
+                <div class="matrix-card-header">
+                  <div class="matrix-carrier-brand">
+                    <div class="matrix-carrier-icon">
+                      <i class="bi bi-people-fill text-warning"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold mb-0">Shield Guardian</h5>
+                      <small class="text-muted">Family Multi-Pack Floater</small>
+                    </div>
+                  </div>
+                  <span class="matrix-rating-pill"><i class="bi bi-patch-check-fill text-success me-1"></i> AM Best: A</span>
+                </div>
+
+                <div class="matrix-pricing-box">
+                  <div class="d-flex align-items-baseline gap-1">
+                    <span class="matrix-price-num">$115</span>
+                    <span class="small text-muted">/ month (demo)</span>
+                  </div>
+                  <span class="matrix-coverage-cap-pill">
+                    <i class="bi bi-shield-check"></i> $1,000,000 Unified Family Limit
+                  </span>
+                </div>
+
+                <ul class="matrix-features-list">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Unified Multi-Member Floater (Parents + Up to 4 Kids)</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Maternity, Delivery & Immediate Newborn Cover</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Automatic 100% Sum-Insured Restoration Privilege</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Pediatric Checkups & Dental Emergency Included</span></li>
+                </ul>
+
+                <a href="pricing.html?plan=shield-guardian" class="btn btn-ws-green w-100 justify-content-center mt-auto">
+                  <span>Compare Plan Details</span>
+                  <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Deep Spec Comparison Matrix Table -->
+          <div class="matrix-deep-specs-box">
+            <div class="p-3 border-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-table fs-5 text-terracotta"></i>
+                <h6 class="mb-0 fw-bold">Deep Side-by-Side Policy Specification Matrix</h6>
+              </div>
+              <span class="badge ws-audit-badge">Audited Against 40+ Certified Carrier Filings</span>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="table matrix-spec-table mb-0 align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 28%;">Policy Parameter</th>
+                    <th scope="col" style="width: 24%;">Horizon PPO Elite</th>
+                    <th scope="col" style="width: 24%;" class="col-highlight">Metro Care Summit</th>
+                    <th scope="col" style="width: 24%;">Shield Family Pack</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Category 1: Coverage Limits -->
+                  <tr class="category-row">
+                    <td colspan="4"><i class="bi bi-shield-shaded me-1"></i> 1. Coverage Limits & Network</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Annual Maximum Sum</strong></td>
+                    <td>$500,000 / individual</td>
+                    <td class="col-highlight"><strong>$750,000 / individual</strong></td>
+                    <td>$1,000,000 / family aggregate</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Hospital Network Size</strong></td>
+                    <td>12,500+ Hospitals</td>
+                    <td class="col-highlight">18,000+ US & Global</td>
+                    <td>15,000+ Family Centers</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Room Rent Restriction</strong></td>
+                    <td>No Capping (Private Suite)</td>
+                    <td class="col-highlight">No Capping (Deluxe Private)</td>
+                    <td>Standard Private Room</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Day-Care Treatments</strong></td>
+                    <td>540+ Procedures Covered</td>
+                    <td class="col-highlight">All Modern Treatments Covered</td>
+                    <td>400+ Day-Care Surgeries</td>
+                  </tr>
+
+                  <!-- Category 2: Deductibles & Cost Sharing -->
+                  <tr class="category-row">
+                    <td colspan="4"><i class="bi bi-cash-stack me-1"></i> 2. Deductibles & Out-of-Pocket</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Annual Deductible</strong></td>
+                    <td>$0 at In-Network Hospitals</td>
+                    <td class="col-highlight">$500 Annual Deductible</td>
+                    <td>$1,000 Family Aggregate</td>
+                  </tr>
+                  <tr>
+                    <td><strong>In-Network Copayment</strong></td>
+                    <td>0% Copay</td>
+                    <td class="col-highlight">0% Copay</td>
+                    <td>0% (10% on Non-Network)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Prescription Medications</strong></td>
+                    <td>Tier 1-2 Covered ($15 copay)</td>
+                    <td class="col-highlight">Tier 1-4 Covered (90% Paid)</td>
+                    <td>Tier 1-2 Covered</td>
+                  </tr>
+
+                  <!-- Category 3: Waiting Periods -->
+                  <tr class="category-row">
+                    <td colspan="4"><i class="bi bi-hourglass-split me-1"></i> 3. Waiting Periods & Exclusions</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Pre-Existing Conditions</strong></td>
+                    <td>12 Months Standard</td>
+                    <td class="col-highlight">6 Months with Waiver Rider</td>
+                    <td>24 Months</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Accidental Injury Care</strong></td>
+                    <td>Day 1 Immediate (Zero Wait)</td>
+                    <td class="col-highlight">Day 1 Immediate (Zero Wait)</td>
+                    <td>Day 1 Immediate (Zero Wait)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Maternity Waiting</strong></td>
+                    <td>Not Included</td>
+                    <td class="col-highlight">Optional Add-on Rider</td>
+                    <td>24 Months (Full Cover)</td>
+                  </tr>
+
+                  <!-- Category 4: Broker Service & Advocacy -->
+                  <tr class="category-row">
+                    <td colspan="4"><i class="bi bi-patch-check-fill me-1"></i> 4. WellSure Broker Representation</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cashless Approval SLA</strong></td>
+                    <td>&lt; 30 Minutes Guaranteed</td>
+                    <td class="col-highlight">&lt; 15 Minutes Express Desk</td>
+                    <td>&lt; 45 Minutes Standard</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dedicated Claims Concierge</strong></td>
+                    <td>Included (Free Lifetime)</td>
+                    <td class="col-highlight">Included (Priority Desk)</td>
+                    <td>Included (Free Lifetime)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dispute & Appeals Legal Liaison</strong></td>
+                    <td>Full WellSure Representation</td>
+                    <td class="col-highlight">Full WellSure Representation</td>
+                    <td>Full WellSure Representation</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===============================================================
+             LIFE PLANS MATRIX VIEW (Hidden by default, toggled via JS)
+             =============================================================== -->
+        <div id="serviceCompareLife" style="display: none;">
+          <!-- 3 Insurtech Showcase Cards -->
+          <div class="row g-4 mb-4">
+            
+            <!-- Life Card 1: Apex Pure Term 20 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="matrix-plan-card">
+                <div class="matrix-card-header">
+                  <div class="matrix-carrier-brand">
+                    <div class="matrix-carrier-icon">
+                      <i class="bi bi-shield-lock-fill text-terracotta"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold mb-0">Apex Mutual</h5>
+                      <small class="text-muted">Pure Term 20</small>
+                    </div>
+                  </div>
+                  <span class="matrix-rating-pill"><i class="bi bi-star-fill text-warning me-1"></i> AM Best: A+</span>
+                </div>
+
+                <div class="matrix-pricing-box">
+                  <div class="d-flex align-items-baseline gap-1">
+                    <span class="matrix-price-num">$32</span>
+                    <span class="small text-muted">/ month (demo)</span>
+                  </div>
+                  <span class="matrix-coverage-cap-pill">
+                    <i class="bi bi-shield-check"></i> $500,000 Guaranteed Death Benefit
+                  </span>
+                </div>
+
+                <ul class="matrix-features-list">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Level Premium Guaranteed for full 20 Years</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Living Benefit: Accelerated Terminal Illness Payout</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>No Medical Exam Underwriting up to Age 40</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Instant Digital Policy Issuance in 24 Hours</span></li>
+                </ul>
+
+                <a href="pricing.html?plan=apex-term-20" class="btn btn-ws-green w-100 justify-content-center mt-auto">
+                  <span>Compare Plan Details</span>
+                  <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Life Card 2: WellSure Premier Term 30 (Top Broker Pick) -->
+            <div class="col-lg-4 col-md-6">
+              <div class="matrix-plan-card highlight-card">
+                <span class="matrix-ribbon"><i class="bi bi-star-fill me-1"></i> Top Broker Pick</span>
+                
+                <div class="matrix-card-header">
+                  <div class="matrix-carrier-brand">
+                    <div class="matrix-carrier-icon" style="background: rgba(230, 117, 67, 0.12); color: var(--color-terracotta);">
+                      <i class="bi bi-umbrella-fill"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold mb-0">WellSure Select</h5>
+                      <small class="text-muted">Premier Extended Term 30</small>
+                    </div>
+                  </div>
+                  <span class="matrix-rating-pill" style="border-color: rgba(230, 117, 67, 0.3); color: var(--color-terracotta);"><i class="bi bi-trophy-fill me-1"></i> AM Best: A++</span>
+                </div>
+
+                <div class="matrix-pricing-box">
+                  <div class="d-flex align-items-baseline gap-1">
+                    <span class="matrix-price-num">$52</span>
+                    <span class="small text-muted">/ month (demo)</span>
+                  </div>
+                  <span class="matrix-coverage-cap-pill" style="background: rgba(230, 117, 67, 0.12); color: var(--color-terracotta);">
+                    <i class="bi bi-shield-check"></i> $1,000,000 Guaranteed Death Benefit
+                  </span>
+                </div>
+
+                <ul class="matrix-features-list">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Fixed 30-Year Premium Schedule with Zero Hikes</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Accidental Death Double Indemnity Rider Included</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Guaranteed Conversion Option to Permanent Whole Life</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Children's Term Rider Package Included</span></li>
+                </ul>
+
+                <a href="pricing.html?plan=wellsure-premier-30" class="btn btn-ws-primary w-100 justify-content-center mt-auto">
+                  <span>Compare Plan Details</span>
+                  <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Life Card 3: Beacon Whole Life Wealth Builder -->
+            <div class="col-lg-4 col-md-6">
+              <div class="matrix-plan-card">
+                <div class="matrix-card-header">
+                  <div class="matrix-carrier-brand">
+                    <div class="matrix-carrier-icon">
+                      <i class="bi bi-bank text-warning"></i>
+                    </div>
+                    <div>
+                      <h5 class="fw-bold mb-0">Beacon Life</h5>
+                      <small class="text-muted">Whole Life Wealth Builder</small>
+                    </div>
+                  </div>
+                  <span class="matrix-rating-pill"><i class="bi bi-patch-check-fill text-success me-1"></i> AM Best: A</span>
+                </div>
+
+                <div class="matrix-pricing-box">
+                  <div class="d-flex align-items-baseline gap-1">
+                    <span class="matrix-price-num">$95</span>
+                    <span class="small text-muted">/ month (demo)</span>
+                  </div>
+                  <span class="matrix-coverage-cap-pill">
+                    <i class="bi bi-shield-check"></i> $250,000 Cash-Value Permanent
+                  </span>
+                </div>
+
+                <ul class="matrix-features-list">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Lifetime Guaranteed Protection with Zero Expiration</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Guaranteed Cash Value Growth & Policy Loan Access</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Annual Dividend Payouts Reinvested Tax-Deferred</span></li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> <span>Estate Planning & Generational Wealth Shield</span></li>
+                </ul>
+
+                <a href="pricing.html?plan=beacon-whole-life" class="btn btn-ws-green w-100 justify-content-center mt-auto">
+                  <span>Compare Plan Details</span>
+                  <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Deep Spec Comparison Matrix Table for Life Plans -->
+          <div class="matrix-deep-specs-box">
+            <div class="p-3 border-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-table fs-5 text-terracotta"></i>
+                <h6 class="mb-0 fw-bold">Deep Side-by-Side Life Policy Specification Matrix</h6>
+              </div>
+              <span class="badge ws-audit-badge">Audited Against 40+ Certified Carrier Filings</span>
+            </div>
+            
+            <div class="table-responsive">
+              <table class="table matrix-spec-table mb-0 align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 28%;">Policy Parameter</th>
+                    <th scope="col" style="width: 24%;">Apex Pure Term 20</th>
+                    <th scope="col" style="width: 24%;" class="col-highlight">WellSure Premier 30</th>
+                    <th scope="col" style="width: 24%;">Beacon Whole Life</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="category-row">
+                    <td colspan="4"><i class="bi bi-shield-lock me-1"></i> 1. Policy Structure & Term Horizon</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Guaranteed Death Benefit</strong></td>
+                    <td>$500,000 Lump-Sum</td>
+                    <td class="col-highlight"><strong>$1,000,000 Lump-Sum</strong></td>
+                    <td>$250,000 + Cash Value</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Coverage Horizon</strong></td>
+                    <td>20 Years Fixed Term</td>
+                    <td class="col-highlight">30 Years Fixed Term</td>
+                    <td>Lifetime (Up to Age 120)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Cash Value Accumulation</strong></td>
+                    <td>None (Pure Term)</td>
+                    <td class="col-highlight">None (Pure Term)</td>
+                    <td>Guaranteed 3.5% Annual + Dividends</td>
+                  </tr>
+
+                  <tr class="category-row">
+                    <td colspan="4"><i class="bi bi-heart-pulse me-1"></i> 2. Living Benefits & Riders</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Terminal Illness Advance</strong></td>
+                    <td>Up to 50% ($250,000)</td>
+                    <td class="col-highlight">Up to 75% ($750,000)</td>
+                    <td>Up to 100% Full Advance</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Accidental Death Benefit</strong></td>
+                    <td>Optional Add-on Rider</td>
+                    <td class="col-highlight">Included (Double Indemnity)</td>
+                    <td>Optional Add-on Rider</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Conversion Privilege</strong></td>
+                    <td>Within first 10 years</td>
+                    <td class="col-highlight">Anytime before age 65</td>
+                    <td>N/A (Already Permanent)</td>
+                  </tr>
+
+                  <tr class="category-row">
+                    <td colspan="4"><i class="bi bi-file-earmark-medical me-1"></i> 3. Underwriting & Portability</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Medical Exam Requirement</strong></td>
+                    <td>No Exam under Age 40</td>
+                    <td class="col-highlight">No Exam under Age 45</td>
+                    <td>Simplified Medical Underwriting</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Suicide Exclusion Period</strong></td>
+                    <td>First 24 Months</td>
+                    <td class="col-highlight">First 24 Months</td>
+                    <td>First 24 Months</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Policy Loan Access</strong></td>
+                    <td>Not Applicable</td>
+                    <td class="col-highlight">Not Applicable</td>
+                    <td>Yes (Borrow against Cash Value)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Pricing Matrix Link -->
+        <div class="text-center mt-4">
+          <a href="pricing.html" class="btn btn-ws-primary btn-lg">
+            <span>View Full Side-by-Side Pricing Matrix</span>
+            <i class="bi bi-arrow-up-right ms-1"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 05: HOW OUR SERVICE WORKS
+         Horizontal / Vertical 4-Step Timeline
+         =================================================================== -->
+    <section class="section-py section-services-how">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-diagram-3 me-1"></i> Our 4-Step Methodology</span>
+          <h2 class="ws-section-title">Your Journey to Better Protection.</h2>
+          <p class="ws-section-lead mx-auto">
+            A simple, four-step advisory process designed to remove stress and give your family lifelong confidence.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Step 01 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="timeline-step-card">
+              <div class="timeline-number-circle">01</div>
+              <h5>Understand Your Needs</h5>
+              <p>
+                Share your household goals, existing coverage, and budget during a friendly, zero-pressure discovery consultation with a certified advisor.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="timeline-step-card">
+              <div class="timeline-number-circle">02</div>
+              <h5>Discover Suitable Plans</h5>
+              <p>
+                Our automated underwriting engine scans 40+ carrier databases to curate a personalized shortlist matching your exact health and life profile.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="timeline-step-card">
+              <div class="timeline-number-circle">03</div>
+              <h5>Compare Your Options</h5>
+              <p>
+                Review side-by-side matrices detailing deductibles, coverage caps, network hospitals, copays, and exclusions with total transparency.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="timeline-step-card">
+              <div class="timeline-number-circle">04</div>
+              <h5>Get Personalized Guidance</h5>
+              <p>
+                Receive lifetime broker advocacy, fast digital enrollment support, annual policy reviews, and dedicated claims representation without fees.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 06: SUPPORT BEYOND CHOOSING A POLICY
+         Three Structured Cards with Checklists
+         =================================================================== -->
+    <section class="section-py section-services-beyond">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-shield-heart me-1"></i> Lifelong Advocacy</span>
+          <h2 class="ws-section-title">We're Here Beyond the First Decision.</h2>
+          <p class="ws-section-lead mx-auto">
+            Insurance is not a transaction—it is an enduring promise. Our dedicated desk supports you for every year of your policy.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1: Application Support -->
+          <div class="col-lg-4 col-md-6">
+            <div class="beyond-card">
+              <div class="beyond-icon-box">
+                <i class="bi bi-pencil-square"></i>
+              </div>
+              <h4>Application Support</h4>
+              <p>
+                Seamless paperwork processing, digital KYC verification, and direct underwriter liaison to get your policy approved fast.
+              </p>
+              <ul class="beyond-checklist">
+                <li><i class="bi bi-check-circle-fill"></i> Fast digital electronic signature</li>
+                <li><i class="bi bi-check-circle-fill"></i> Pre-submission application review</li>
+                <li><i class="bi bi-check-circle-fill"></i> Underwriting liaison fast-tracking</li>
+                <li><i class="bi bi-check-circle-fill"></i> Medical appointment coordination</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 2: Policy Assistance -->
+          <div class="col-lg-4 col-md-6">
+            <div class="beyond-card">
+              <div class="beyond-icon-box">
+                <i class="bi bi-gear-wide-connected"></i>
+              </div>
+              <h4>Policy Assistance</h4>
+              <p>
+                Ongoing policy maintenance, beneficiary updates, annual coverage reviews, and address changes handled at zero broker cost.
+              </p>
+              <ul class="beyond-checklist">
+                <li><i class="bi bi-check-circle-fill"></i> Annual coverage & deductible audits</li>
+                <li><i class="bi bi-check-circle-fill"></i> Family member addition & changes</li>
+                <li><i class="bi bi-check-circle-fill"></i> Payment schedule flexibility</li>
+                <li><i class="bi bi-check-circle-fill"></i> Tax deduction certificate retrieval</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card 3: Claims Guidance -->
+          <div class="col-lg-4 col-md-6">
+            <div class="beyond-card">
+              <div class="beyond-icon-box">
+                <i class="bi bi-heart-pulse-fill"></i>
+              </div>
+              <h4>Claims Guidance</h4>
+              <p>
+                24/7 emergency claim filing assistance, hospital bill auditing, and relentless advocacy for fair, on-time carrier payouts.
+              </p>
+              <ul class="beyond-checklist">
+                <li><i class="bi bi-check-circle-fill"></i> Immediate cashless hospital authorization</li>
+                <li><i class="bi bi-check-circle-fill"></i> Attending physician statement review</li>
+                <li><i class="bi bi-check-circle-fill"></i> Direct dispute & appeal representation</li>
+                <li><i class="bi bi-check-circle-fill"></i> Emergency travel assistance coordination</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 07: FREQUENTLY ASKED QUESTIONS
+         Interactive Accordion with 6 Insurance Questions
+         =================================================================== -->
+    <section class="section-py section-services-faq">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-question-circle me-1"></i> Clear Answers</span>
+          <h2 class="ws-section-title">Questions About Insurance? We've Got Answers.</h2>
+          <p class="ws-section-lead mx-auto">
+            Everything you need to know about comparing, selecting, and maintaining coverage with WellSure.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion services-accordion" id="servicesFaqAccordion">
+              
+              <!-- FAQ 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                    What is the difference between an insurance broker and an insurance agent?
+                  </button>
+                </h2>
+                <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Independent brokers like WellSure work for <strong>you</strong>, the policyholder—not the insurance company. We evaluate 40+ licensed carriers to find the best policy for your budget and medical history. In contrast, captive insurance agents are direct employees or contracted representatives who can only sell their single parent company's products.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                    Does using WellSure make my insurance premiums more expensive?
+                  </button>
+                </h2>
+                <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    No, absolutely not. Insurance rates are strictly regulated by state insurance commissioners. You pay the exact same legally mandated premium whether you purchase through WellSure or directly from the carrier. However, when working with WellSure, you receive free fiduciary guidance, side-by-side policy audits, and lifelong claims advocacy at zero additional cost.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                    Can I combine life and health insurance into one family package?
+                  </button>
+                </h2>
+                <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Yes. Our advisors frequently structure combined family protection portfolios that pair comprehensive health floater plans with fixed-rate term life coverage. This unified approach eliminates dangerous coverage gaps, optimizes your monthly premium spend, and simplifies policy management under one WellSure dashboard.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                    What happens if my insurance claim is initially denied or delayed by the carrier?
+                  </button>
+                </h2>
+                <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    That is where our advocacy shines. WellSure steps in directly with the underwriter's claims committee. We review the denial rationale, compile additional attending physician statements, correct billing coding discrepancies, and file formal appeals on your behalf until your legitimate benefits are paid.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                    How do I determine how much life insurance coverage my family needs?
+                  </button>
+                </h2>
+                <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    A standard baseline is 10 to 12 times your annual income plus outstanding debts (such as a mortgage or college tuition funds). During your discovery consult, our advisors run a comprehensive Needs Analysis that takes into account your partner's earning capacity, children's educational milestones, and retirement reserves to find the exact sum that ensures total peace of mind.
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="faqHeadingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseSix" aria-expanded="false" aria-controls="faqCollapseSix">
+                    Can I upgrade or adjust my coverage as my family grows?
+                  </button>
+                </h2>
+                <div id="faqCollapseSix" class="accordion-collapse collapse" aria-labelledby="faqHeadingSix" data-bs-parent="#servicesFaqAccordion">
+                  <div class="accordion-body">
+                    Yes. As major life milestones occur—getting married, having children, buying a home, or starting a business—we facilitate policy riders, sum-insured enhancements, and seamless carrier porting without resetting waiting periods where regulatory guidelines permit.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 08: FINAL CTA – OLIVE-GREEN BANNER
+         High Visibility Buttons, Terracotta Primary & Peach Outline
+         =================================================================== -->
+    <section class="section-py section-services-final-cta text-center">
+      <div class="container position-relative" style="z-index: 2;">
+        <span class="ws-eyebrow ws-eyebrow-dark mb-3">
+          <i class="bi bi-shield-lock-fill me-1"></i> YOUR PROTECTION JOURNEY STARTS HERE
+        </span>
+        <h2 class="display-5 fw-bold text-white mb-3 max-w-700 mx-auto">
+          The Right Coverage Begins With the Right Guidance.
+        </h2>
+        <p class="fs-5 text-white-50 max-w-700 mx-auto mb-4">
+          Speak with an independent, licensed WellSure advisor today and explore tailored options for your household in under 15 minutes.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="contact.html" class="btn btn-ws-primary btn-lg">
+            <span>Get a Free Consultation</span>
+            <i class="bi bi-arrow-up-right ms-1"></i>
+          </a>
+          <a href="pricing.html" class="btn btn-ws-outline btn-lg">
+            <span>Compare Plans</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="ws-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 mb-5 align-items-start">
+        
+        <!-- Col 1: Brand & Brokerage Mission -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <a class="ws-brand mb-3 d-inline-flex" href="index.html">
+            <div class="ws-logo-icon"><i class="bi bi-shield-fill-check"></i></div>
+            <div class="ws-logo-text">
+              <span class="ws-logo-title">Well<span>Sure</span></span>
+              <span class="ws-logo-tagline">Protection. Clarity. Confidence.</span>
+            </div>
+          </a>
+          <p class="text-white-50 mb-4 pe-lg-3" style="font-size: 0.94rem; line-height: 1.7;">
+            WellSure is an independent Life & Health Insurance brokerage dedicated to family protection, unbiased plan audits, and lifelong policyholder advocacy across 40+ leading licensed carriers.
+          </p>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge" style="background: rgba(255,211,163,0.12); border: 1px solid rgba(255,211,163,0.28); color: #FFD3A3; padding: 6px 14px; border-radius: 20px; font-size: 0.76rem; font-weight: 700;">
+              <i class="bi bi-award-fill me-1 text-peach"></i> Licensed Fiduciary Intermediary
+            </span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="#" class="ws-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (All Navlinks) -->
+        <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="ws-footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support (Terms, FAQ, Privacy Policy) -->
+        <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Support & Legal</h5>
+          <ul class="ws-footer-links">
+            <li><a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a></li>
+            <li><a href="services.html#servicesFaqAccordion"><i class="bi bi-question-circle"></i> Frequently Asked Questions</a></li>
+            <li><a href="privacy.html"><i class="bi bi-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="service-detail.html?plan=health#claims"><i class="bi bi-life-preserver"></i> Claims Guidance Desk</a></li>
+            <li><a href="about.html#approach"><i class="bi bi-patch-check"></i> Regulatory Disclosures</a></li>
+            <li><a href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Self-Service Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Office (Address, Phone, Email, Hours) -->
+        <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+          <h5>Contact & Office</h5>
+          
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Headquarters Office:</strong><br>
+              742 Evergreen Terrace, Suite 400<br>
+              Financial District, New York, NY 10001
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong>Toll-Free Brokerage Hotline:</strong><br>
+              <a href="tel:18009355787">1-800-WELLSURE (935-5787)</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Direct Advisory Desk:</strong><br>
+              <a href="mailto:advisory@wellsure.com">advisory@wellsure.com</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>
+              <strong>Advisory Hours:</strong><br>
+              Mon &ndash; Fri: 8:00 AM &ndash; 8:00 PM EST
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Copyright & Compliance -->
+      <div class="ws-footer-bottom pt-4 border-top border-white border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-white-50 small">
+          &copy; 2026 WellSure Insurance Brokerage LLC. All rights reserved. Licensed fiduciary insurance intermediary.
+        </p>
+        <div class="d-flex gap-3 text-white-50 small">
+          <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-white-50 text-decoration-none">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="about.html#approach" class="text-white-50 text-decoration-none">Regulatory Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- WellSure Core Application Scripts for Theme & RTL/LTR -->
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Section 04 Interactive Comparison Switcher -->
+  <script>
+    function toggleServiceCompare(type) {
+      const btnHealth = document.getElementById('tabBtnHealth');
+      const btnLife = document.getElementById('tabBtnLife');
+      const tableHealth = document.getElementById('serviceCompareHealth');
+      const tableLife = document.getElementById('serviceCompareLife');
+
+      if (type === 'health') {
+        btnHealth.classList.add('active');
+        btnLife.classList.remove('active');
+        tableHealth.style.display = 'block';
+        tableLife.style.display = 'none';
+      } else {
+        btnLife.classList.add('active');
+        btnHealth.classList.remove('active');
+        tableLife.style.display = 'block';
+        tableHealth.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

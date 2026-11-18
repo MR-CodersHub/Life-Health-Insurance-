@@ -1,0 +1,127 @@
+<!-- WELLSURE REUSABLE NAVBAR COMPONENT -->
+<nav class="navbar navbar-expand-lg ws-navbar sticky-top" id="mainNavbar">
+  <div class="container">
+    <!-- Brand Logo -->
+    <a class="ws-brand" href="index.html">
+      <div class="ws-logo-icon">
+        <i class="bi bi-shield-fill-check"></i>
+      </div>
+      <div class="ws-logo-text">
+        <span class="ws-logo-title">Well<span>Sure</span></span>
+      </div>
+    </a>
+
+    <!-- Mobile Top Actions: RTL, Theme & Hamburger (Visible on Mobile) -->
+    <div class="d-flex align-items-center gap-2 d-lg-none ms-auto">
+      <!-- 1. RTL Toggle Button on Mobile -->
+      <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">
+        RTL
+      </button>
+
+      <!-- 2. Theme Toggle Button on Mobile -->
+      <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+
+      <!-- 3. Mobile Hamburger Toggler -->
+      <button class="navbar-toggler border-0 text-peach p-0 shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-1 text-peach"></i>
+      </button>
+    </div>
+
+    <!-- Center Navigation Links -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="home2.html">Home 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pricing.html">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Mobile Dedicated Portal Links: Login, Register, Client Dash & Admin Dash (Inside Hamburger Menu) -->
+      <div class="d-lg-none mobile-nav-portals pt-3 mt-2 border-top" style="border-color: rgba(255, 211, 163, 0.2) !important;">
+        <div class="small fw-bold text-uppercase mb-2 text-peach" style="letter-spacing: 0.08em; font-size: 0.76rem;">
+          <i class="bi bi-person-badge me-1"></i> Portals &amp; Authentication
+        </div>
+        <div class="row g-2 mb-3">
+          <div class="col-6">
+            <a href="login.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Login
+            </a>
+          </div>
+          <div class="col-6">
+            <a href="register.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;">
+              <i class="bi bi-person-plus me-1"></i> Register
+            </a>
+          </div>
+          <div class="col-12">
+            <a href="client-dashboard.html" class="btn btn-sm w-100 btn-ws-green text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem;">
+              <i class="bi bi-speedometer2 me-2"></i> Client Dashboard
+            </a>
+          </div>
+          <div class="col-12">
+            <a href="admin-dashboard.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem; border-color: var(--color-terracotta) !important; color: var(--color-terracotta) !important;">
+              <i class="bi bi-shield-lock me-2"></i> Admin Dashboard
+            </a>
+          </div>
+          <div class="col-12 mt-2">
+            <a href="contact.html" class="btn btn-ws-primary w-100 justify-content-center py-2">
+              <span>Get Covered</span>
+              <i class="bi bi-arrow-up-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Interactive Controls & CTA (Desktop View) -->
+      <div class="ws-nav-controls d-none d-lg-flex">
+        <!-- 1. Theme Toggle (Light / Dark) -->
+        <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme">
+          <i class="bi bi-moon-stars-fill"></i>
+        </button>
+
+        <!-- 2. Direction Toggle (LTR / RTL) -->
+        <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle Direction">
+          RTL
+        </button>
+
+        <!-- 3. Profile Dropdown -->
+        <div class="dropdown">
+          <button class="ws-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account Menu" title="Account Menu">
+            <i class="bi bi-person-circle"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end ws-dropdown-menu">
+            <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+            <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Dashboard</a></li>
+            <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- 4. CTA Button -->
+        <a href="contact.html" class="btn btn-ws-primary ms-lg-2">
+          <span>Get Covered</span>
+          <i class="bi bi-arrow-up-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

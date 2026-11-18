@@ -1,0 +1,1218 @@
+/* ===================================================================
+   WELLSURE - PRICING & ADVISORY PACKAGES (pricing.css)
+   Transparent Advisory Experience • 8 Dedicated Editorial Sections
+   Complete Dark / Light Theme & RTL Support
+   =================================================================== */
+
+/* ===================================================================
+   SECTION 01: PRICING HERO – CLEAR GUIDANCE, NO SURPRISES
+   =================================================================== */
+.pricing-hero-section {
+  position: relative;
+  background-color: var(--color-cream);
+  background-image: 
+    radial-gradient(circle at 12% 25%, rgba(255, 211, 163, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 88% 65%, rgba(243, 164, 131, 0.28) 0%, transparent 50%);
+  padding-top: clamp(55px, 8vw, 90px);
+  padding-bottom: clamp(55px, 8vw, 90px);
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+[data-theme="dark"] .pricing-hero-section {
+  background-color: #141F12;
+  background-image: 
+    radial-gradient(circle at 12% 25%, rgba(64, 103, 27, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 88% 65%, rgba(230, 117, 67, 0.16) 0%, transparent 50%);
+  border-bottom-color: rgba(255, 211, 163, 0.16);
+}
+
+.pricing-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(64, 103, 27, 0.1);
+  color: var(--color-olive-deep);
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid rgba(64, 103, 27, 0.24);
+  margin-bottom: 20px;
+}
+
+[data-theme="dark"] .pricing-hero-eyebrow {
+  background: rgba(255, 211, 163, 0.14);
+  color: #FFD3A3;
+  border-color: rgba(255, 211, 163, 0.3);
+}
+
+.pricing-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--color-olive-deep);
+  margin-bottom: 22px;
+}
+
+[data-theme="dark"] .pricing-hero-title {
+  color: #FFFFFF;
+}
+
+.pricing-hero-title .text-terracotta {
+  color: var(--color-terracotta) !important;
+}
+
+[data-theme="dark"] .pricing-hero-title .text-terracotta {
+  color: #FFA16E !important;
+  text-shadow: 0 0 24px rgba(255, 161, 110, 0.35);
+}
+
+.pricing-hero-lead {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+  color: var(--color-text-main);
+  opacity: 0.88;
+  margin-bottom: 34px;
+}
+
+[data-theme="dark"] .pricing-hero-lead {
+  color: #CAD7C7;
+}
+
+.hero-advisor-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--color-card-bg);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 211, 163, 0.4) 0%, rgba(243, 164, 131, 0.2) 60%, rgba(255, 249, 241, 0.95) 100%);
+}
+
+[data-theme="dark"] .hero-advisor-wrap {
+  border-color: #1F2D1B;
+  background: radial-gradient(circle at 50% 50%, rgba(64, 103, 27, 0.4) 0%, rgba(23, 36, 20, 0.8) 100%);
+}
+
+.hero-advisor-img {
+  width: 100%;
+  height: clamp(340px, 35vw, 460px);
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+.hero-floating-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: rgba(23, 36, 20, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 211, 163, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 14px 20px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-md);
+}
+
+[dir="rtl"] .hero-floating-badge {
+  direction: rtl;
+}
+
+/* ===================================================================
+   SECTION 02: PRICING APPROACH – 3 FEATURE BLOCKS
+   =================================================================== */
+.approach-feature-card {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 38px 30px;
+  height: 100%;
+  transition: all var(--transition-normal);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.approach-feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-olive-deep);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .approach-feature-card {
+  background: #1B2917;
+  border-color: rgba(255, 211, 163, 0.22);
+}
+
+[data-theme="dark"] .approach-feature-card:hover {
+  border-color: var(--color-peach);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.approach-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(64, 103, 27, 0.12);
+  color: var(--color-olive-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 22px;
+  transition: all var(--transition-fast);
+}
+
+[data-theme="dark"] .approach-icon-box {
+  background: rgba(255, 211, 163, 0.16);
+  color: #FFD3A3;
+}
+
+.approach-feature-card:hover .approach-icon-box {
+  background: var(--color-olive-deep);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .approach-feature-card:hover .approach-icon-box {
+  background: var(--color-terracotta);
+}
+
+.approach-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-olive-deep);
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .approach-title {
+  color: #FFFFFF;
+}
+
+.approach-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-main);
+  opacity: 0.85;
+  margin-bottom: 0;
+}
+
+[data-theme="dark"] .approach-desc {
+  color: #CAD7C7;
+}
+
+/* ===================================================================
+   SECTION 03: ADVISORY PACKAGES – CHOOSE YOUR SUPPORT
+   =================================================================== */
+.billing-toggle-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-card-bg);
+  border: 2px solid var(--color-border-subtle);
+  padding: 6px 10px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 35px;
+}
+
+[data-theme="dark"] .billing-toggle-container {
+  background: #1C2918;
+  border-color: rgba(255, 211, 163, 0.25);
+}
+
+.billing-toggle-btn {
+  border: none;
+  background: transparent;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-text-main);
+  padding: 8px 22px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.billing-toggle-btn.active {
+  background: var(--color-olive-deep);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(64, 103, 27, 0.28);
+}
+
+[data-theme="dark"] .billing-toggle-btn.active {
+  background: var(--color-terracotta);
+  box-shadow: 0 4px 12px rgba(230, 117, 67, 0.4);
+}
+
+.billing-discount-badge {
+  background: rgba(230, 117, 67, 0.15);
+  color: var(--color-terracotta);
+  font-size: 0.76rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.04em;
+}
+
+[data-theme="dark"] .billing-discount-badge {
+  background: rgba(230, 117, 67, 0.25);
+  color: #FFB088;
+}
+
+.advisory-pkg-card {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.advisory-pkg-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .advisory-pkg-card {
+  background: #1B2917;
+  border-color: rgba(255, 211, 163, 0.22);
+}
+
+/* Center Highlight Card (Most Popular - Peach Highlight) */
+.advisory-pkg-card.highlight-popular {
+  border: 2.5px solid var(--color-terracotta);
+  background: #FFF8F1;
+  transform: scale(1.03);
+  z-index: 2;
+  box-shadow: 0 18px 40px rgba(230, 117, 67, 0.16);
+}
+
+.advisory-pkg-card.highlight-popular:hover {
+  transform: scale(1.03) translateY(-8px);
+  box-shadow: 0 24px 50px rgba(230, 117, 67, 0.22);
+}
+
+[data-theme="dark"] .advisory-pkg-card.highlight-popular {
+  background: #22341D;
+  border-color: var(--color-peach);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.pkg-popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-terracotta);
+  color: #FFFFFF;
+  font-family: var(--font-accent);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 12px rgba(230, 117, 67, 0.35);
+  white-space: nowrap;
+}
+
+.pkg-tier-num {
+  font-family: var(--font-accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-terracotta);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.pkg-title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--color-olive-deep);
+  margin-bottom: 10px;
+}
+
+[data-theme="dark"] .pkg-title {
+  color: #FFFFFF;
+}
+
+.pkg-pricing-box {
+  background: rgba(64, 103, 27, 0.05);
+  border: 1px solid rgba(64, 103, 27, 0.12);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 18px;
+}
+
+[data-theme="dark"] .pkg-pricing-box {
+  background: rgba(255, 211, 163, 0.08);
+  border-color: rgba(255, 211, 163, 0.18);
+}
+
+.pkg-price-display {
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--color-olive-deep);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.highlight-popular .pkg-price-display {
+  color: var(--color-terracotta);
+}
+
+[data-theme="dark"] .pkg-price-display {
+  color: #FFD3A3;
+}
+
+.pkg-price-subtext {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  display: block;
+}
+
+[data-theme="dark"] .pkg-price-subtext {
+  color: #CAD7C7;
+}
+
+.pkg-target-audience {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  opacity: 0.85;
+  margin-bottom: 20px;
+  min-height: 48px;
+}
+
+[data-theme="dark"] .pkg-target-audience {
+  color: #CAD7C7;
+}
+
+.pkg-features-header {
+  font-family: var(--font-accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-olive-deep);
+  margin-bottom: 14px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+[data-theme="dark"] .pkg-features-header {
+  color: #FFD3A3;
+  border-top-color: rgba(255, 211, 163, 0.18);
+}
+
+.pkg-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  flex-grow: 1;
+}
+
+.pkg-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: var(--color-text-main);
+}
+
+[data-theme="dark"] .pkg-features-list li {
+  color: #D3E0CE;
+}
+
+.pkg-features-list li i {
+  color: var(--color-olive-deep);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.highlight-popular .pkg-features-list li i {
+  color: var(--color-terracotta);
+}
+
+[data-theme="dark"] .pkg-features-list li i {
+  color: #FFD3A3;
+}
+
+.pricing-footnote-box {
+  background: rgba(64, 103, 27, 0.06);
+  border: 1px solid rgba(64, 103, 27, 0.15);
+  border-radius: var(--radius-lg);
+  padding: 18px 24px;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+}
+
+[data-theme="dark"] .pricing-footnote-box {
+  background: rgba(255, 211, 163, 0.08);
+  border-color: rgba(255, 211, 163, 0.2);
+  color: #CAD7C7;
+}
+
+/* ===================================================================
+   SECTION 04: INSURANCE COST FACTORS
+   =================================================================== */
+.factor-info-block {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+  transition: all var(--transition-fast);
+}
+
+.factor-info-block:hover {
+  transform: translateX(6px);
+  border-color: var(--color-olive-deep);
+}
+
+[dir="rtl"] .factor-info-block:hover {
+  transform: translateX(-6px);
+}
+
+[data-theme="dark"] .factor-info-block {
+  background: #1B2917;
+  border-color: rgba(255, 211, 163, 0.2);
+}
+
+.factor-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: rgba(230, 117, 67, 0.12);
+  color: var(--color-terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.factor-icon.olive {
+  background: rgba(64, 103, 27, 0.12);
+  color: var(--color-olive-deep);
+}
+
+[data-theme="dark"] .factor-icon {
+  background: rgba(230, 117, 67, 0.2);
+  color: #FFB088;
+}
+
+[data-theme="dark"] .factor-icon.olive {
+  background: rgba(255, 211, 163, 0.16);
+  color: #FFD3A3;
+}
+
+.factor-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-olive-deep);
+  margin-bottom: 4px;
+}
+
+[data-theme="dark"] .factor-title {
+  color: #FFFFFF;
+}
+
+.factor-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  opacity: 0.85;
+  margin-bottom: 0;
+}
+
+[data-theme="dark"] .factor-desc {
+  color: #CAD7C7;
+}
+
+/* ===================================================================
+   SECTION 05: COMPARE INSURANCE OPTIONS (TABLE)
+   =================================================================== */
+.compare-advisory-table-card {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme="dark"] .compare-advisory-table-card {
+  background: #182615;
+  border-color: rgba(255, 211, 163, 0.24);
+}
+
+.ws-advisory-table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse;
+}
+
+.ws-advisory-table th {
+  background: rgba(64, 103, 27, 0.08);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: var(--color-olive-deep);
+  padding: 18px 24px;
+  border-bottom: 2px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+[data-theme="dark"] .ws-advisory-table th {
+  background: rgba(255, 211, 163, 0.12);
+  color: #FFD3A3;
+  border-bottom-color: rgba(255, 211, 163, 0.22);
+}
+
+/* Standard Highlight Column */
+.ws-advisory-table th.col-standard-highlight {
+  background: rgba(255, 211, 163, 0.35);
+  color: var(--color-terracotta);
+  border-left: 2px solid var(--color-terracotta);
+  border-right: 2px solid var(--color-terracotta);
+}
+
+[data-theme="dark"] .ws-advisory-table th.col-standard-highlight {
+  background: rgba(230, 117, 67, 0.24);
+  color: #FFD3A3;
+}
+
+.ws-advisory-table td {
+  padding: 16px 24px;
+  vertical-align: middle;
+  font-size: 0.94rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+  color: var(--color-text-main);
+}
+
+[data-theme="dark"] .ws-advisory-table td {
+  border-bottom-color: rgba(255, 211, 163, 0.12);
+  color: #CAD7C7;
+}
+
+.ws-advisory-table td.col-standard-highlight {
+  background: rgba(255, 211, 163, 0.15);
+  border-left: 2px solid rgba(230, 117, 67, 0.3);
+  border-right: 2px solid rgba(230, 117, 67, 0.3);
+  font-weight: 600;
+}
+
+[data-theme="dark"] .ws-advisory-table td.col-standard-highlight {
+  background: rgba(230, 117, 67, 0.12);
+  color: #FFFFFF;
+}
+
+.check-icon-olive {
+  color: var(--color-olive-deep);
+  font-size: 1.15rem;
+}
+
+[data-theme="dark"] .check-icon-olive {
+  color: #9ECB72;
+}
+
+.dash-muted {
+  color: var(--color-text-muted);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* ===================================================================
+   SECTION 06: PERSONALIZED QUOTE CALCULATOR & PAYMENT FLOW
+   =================================================================== */
+.enquiry-tool-card {
+  background: var(--color-card-bg);
+  border: 2px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  padding: clamp(24px, 4vw, 42px);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .enquiry-tool-card {
+  background: #182615;
+  border-color: rgba(255, 211, 163, 0.25);
+}
+
+.enquiry-step-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-olive-deep);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+[data-theme="dark"] .enquiry-step-title {
+  color: #FFD3A3;
+}
+
+.enquiry-pills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.enquiry-pill-btn {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.enquiry-pill-btn:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta);
+}
+
+.enquiry-pill-btn.active {
+  background: var(--color-olive-deep);
+  border-color: var(--color-olive-deep);
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(64, 103, 27, 0.25);
+}
+
+[data-theme="dark"] .enquiry-pill-btn {
+  background: #1F2E1B;
+  border-color: rgba(255, 211, 163, 0.25);
+  color: #D3E0CE;
+}
+
+[data-theme="dark"] .enquiry-pill-btn.active {
+  background: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(230, 117, 67, 0.45);
+}
+
+.enquiry-summary-preview {
+  background: #FFF7EC;
+  border: 1.5px dashed var(--color-terracotta);
+  border-radius: var(--radius-lg);
+  padding: 18px 22px;
+  margin-bottom: 24px;
+}
+
+[data-theme="dark"] .enquiry-summary-preview {
+  background: #1D2E19 !important;
+  border-color: var(--color-peach) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .enquiry-summary-preview strong {
+  color: #FFD3A3 !important;
+}
+
+/* Live Calculated Pricing Card */
+.enquiry-fee-breakdown {
+  background: rgba(64, 103, 27, 0.05);
+  border: 2px solid rgba(64, 103, 27, 0.18);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 26px;
+}
+
+[data-theme="dark"] .enquiry-fee-breakdown {
+  background: #1E2F1B !important;
+  border-color: rgba(255, 211, 163, 0.3) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .enquiry-fee-breakdown strong,
+[data-theme="dark"] .enquiry-fee-breakdown h5 {
+  color: #FFFFFF !important;
+}
+
+/* Form Controls Dark Mode */
+[data-theme="dark"] .enquiry-tool-card .form-control {
+  background-color: #141F12 !important;
+  border-color: rgba(255, 211, 163, 0.3) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .enquiry-tool-card .form-control:focus {
+  background-color: #182615 !important;
+  border-color: var(--color-peach) !important;
+  box-shadow: 0 0 0 3px rgba(255, 211, 163, 0.2) !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .enquiry-tool-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* Custom High-Contrast Quote & Payment Result Card */
+.quote-payment-receipt-card {
+  background: #F4FAF2;
+  border: 2px solid var(--color-olive-deep);
+  border-radius: var(--radius-xl);
+  padding: clamp(24px, 4vw, 36px);
+  margin-top: 32px;
+  box-shadow: var(--shadow-md);
+  text-align: left;
+}
+
+[data-theme="dark"] .quote-payment-receipt-card {
+  background: #172B15 !important;
+  border-color: #4CAF50 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .quote-payment-receipt-card h4,
+[data-theme="dark"] .quote-payment-receipt-card h5,
+[data-theme="dark"] .quote-payment-receipt-card strong {
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] .quote-payment-receipt-card p,
+[data-theme="dark"] .quote-payment-receipt-card .text-muted {
+  color: #CAD7C7 !important;
+}
+
+.payment-method-selector-btn {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.payment-method-selector-btn.active {
+  border-color: var(--color-terracotta);
+  background: rgba(230, 117, 67, 0.1);
+  color: var(--color-terracotta);
+}
+
+[data-theme="dark"] .payment-method-selector-btn {
+  background: #1E2E1B;
+  border-color: rgba(255, 211, 163, 0.25);
+  color: #FFFFFF;
+}
+
+[data-theme="dark"] .payment-method-selector-btn.active {
+  border-color: var(--color-peach);
+  background: rgba(230, 117, 67, 0.25);
+  color: #FFD3A3;
+}
+
+/* ===================================================================
+   SECTION 07: PRICING FAQS
+   =================================================================== */
+.pricing-faq-card {
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--color-card-bg);
+  overflow: hidden;
+  margin-bottom: 14px;
+  transition: all var(--transition-fast);
+}
+
+.pricing-faq-card:hover {
+  border-color: var(--color-olive-deep);
+}
+
+[data-theme="dark"] .pricing-faq-card {
+  background: #1B2917;
+  border-color: rgba(255, 211, 163, 0.2);
+}
+
+.pricing-faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-olive-deep);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+[dir="rtl"] .pricing-faq-btn {
+  text-align: right;
+}
+
+[data-theme="dark"] .pricing-faq-btn {
+  color: #FFFFFF;
+}
+
+.pricing-faq-btn i {
+  color: var(--color-terracotta);
+  font-size: 1.2rem;
+  transition: transform var(--transition-fast);
+}
+
+.pricing-faq-btn:not(.collapsed) i {
+  transform: rotate(180deg);
+}
+
+.pricing-faq-body {
+  padding: 0 24px 22px 24px;
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: var(--color-text-main);
+  opacity: 0.88;
+}
+
+[data-theme="dark"] .pricing-faq-body {
+  color: #CAD7C7;
+}
+
+/* ===================================================================
+   SECTION 08: FINAL CTA – MAKE AN INFORMED CHOICE
+   High-Contrast Dark Mode & Full-Bleed Family Image
+   =================================================================== */
+.pricing-final-cta-section {
+  background: #FFF5EA;
+  border-top: 1px solid var(--color-border-subtle);
+  padding: clamp(65px, 8vw, 100px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .pricing-final-cta-section {
+  background: #131E11;
+  border-top-color: rgba(255, 211, 163, 0.18);
+}
+
+/* Eyebrow Badge in Section 08 - Dark Mode High Contrast */
+.pricing-cta-badge {
+  background: rgba(23, 36, 20, 0.12);
+  color: #172414;
+  border: 1.5px solid rgba(23, 36, 20, 0.25);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+[data-theme="dark"] .pricing-cta-badge {
+  background: rgba(255, 211, 163, 0.15) !important;
+  color: #FFD3A3 !important;
+  border-color: rgba(255, 211, 163, 0.35) !important;
+}
+
+/* Full-bleed Family Photo Frame - Fits Perfectly */
+.pricing-cta-img-wrap {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 4px solid var(--color-card-bg);
+  background: var(--color-card-bg);
+}
+
+[data-theme="dark"] .pricing-cta-img-wrap {
+  border-color: #1F2E1B;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);
+}
+
+.pricing-cta-family-img {
+  width: 100%;
+  height: clamp(340px, 35vw, 420px);
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.pricing-cta-img-overlay {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  background: rgba(23, 36, 20, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255, 211, 163, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 12px 18px;
+  box-shadow: var(--shadow-md);
+}
+
+
+/* Table Overrides for Payment Receipt in Dark Mode */
+[data-theme="dark"] .quote-payment-receipt-card .table {
+  color: #FFFFFF !important;
+  border-color: rgba(255, 211, 163, 0.2) !important;
+}
+
+[data-theme="dark"] .quote-payment-receipt-card .table-light,
+[data-theme="dark"] .quote-payment-receipt-card .table-light th,
+[data-theme="dark"] .quote-payment-receipt-card .table-light td {
+  background-color: #20351D !important;
+  color: #FFD3A3 !important;
+  border-color: rgba(255, 211, 163, 0.25) !important;
+}
+
+[data-theme="dark"] .quote-payment-receipt-card td {
+  background-color: transparent !important;
+  color: #D3E0CE !important;
+  border-color: rgba(255, 211, 163, 0.15) !important;
+}
+
+[data-theme="dark"] .quote-payment-receipt-card tr.table-light.fw-bold td {
+  background-color: #243D21 !important;
+  color: #FFFFFF !important;
+}
+
+/* ===================================================================
+   FEATURED INSURANCE PLANS SECTION (EMBEDDED POPULAR COVERAGE OPTIONS)
+   =================================================================== */
+.featured-plan-grid-card {
+  background: var(--color-card-bg);
+  border: 1.5px solid var(--color-border-subtle);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.featured-plan-grid-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--color-olive-deep);
+  box-shadow: var(--shadow-lg);
+}
+
+[data-theme="dark"] .featured-plan-grid-card {
+  background: #1B2917;
+  border-color: rgba(255, 211, 163, 0.22);
+}
+
+[data-theme="dark"] .featured-plan-grid-card:hover {
+  border-color: var(--color-peach);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+}
+
+.featured-plan-img-wrap {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.featured-plan-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.featured-plan-grid-card:hover .featured-plan-img-wrap img {
+  transform: scale(1.05);
+}
+
+.featured-plan-cat-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--color-terracotta);
+  color: #FFFFFF;
+  font-family: var(--font-accent);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+[dir="rtl"] .featured-plan-cat-badge {
+  left: auto;
+  right: 14px;
+}
+
+.featured-plan-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.featured-plan-carrier {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-olive-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  display: block;
+}
+
+[data-theme="dark"] .featured-plan-carrier {
+  color: #FFD3A3;
+}
+
+.featured-plan-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-olive-deep);
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+
+[data-theme="dark"] .featured-plan-title {
+  color: #FFFFFF;
+}
+
+.featured-plan-summary {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  opacity: 0.85;
+  margin-bottom: 16px;
+}
+
+[data-theme="dark"] .featured-plan-summary {
+  color: #CAD7C7;
+}
+
+.featured-plan-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.featured-plan-highlights li {
+  font-size: 0.86rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-main);
+}
+
+[data-theme="dark"] .featured-plan-highlights li {
+  color: #D3E0CE;
+}
+
+.featured-plan-highlights li i {
+  color: var(--color-olive-deep);
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .featured-plan-highlights li i {
+  color: #9ECB72;
+}
+
+/* Category Filter Buttons in Popular Coverage Section */
+#planFilterButtons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+#planFilterButtons .btn {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.86rem;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
+  border: 1.5px solid rgba(64, 103, 27, 0.25);
+  background: #FFFFFF;
+  color: var(--color-olive-deep) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+#planFilterButtons .btn:hover {
+  background: rgba(64, 103, 27, 0.08);
+  border-color: var(--color-olive-deep);
+  color: var(--color-olive-deep) !important;
+  transform: translateY(-1px);
+}
+
+#planFilterButtons .btn.active,
+#planFilterButtons .btn.btn-ws-primary {
+  background: var(--color-terracotta) !important;
+  border-color: var(--color-terracotta) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 14px rgba(230, 117, 67, 0.4) !important;
+}
+
+[data-theme="dark"] #planFilterButtons .btn {
+  background: #172414;
+  border-color: rgba(255, 211, 163, 0.25);
+  color: #FFD3A3 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] #planFilterButtons .btn:hover {
+  background: rgba(255, 211, 163, 0.12);
+  border-color: rgba(255, 211, 163, 0.4);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] #planFilterButtons .btn.active,
+[data-theme="dark"] #planFilterButtons .btn.btn-ws-primary {
+  background: var(--color-terracotta) !important;
+  border-color: var(--color-terracotta) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 18px rgba(230, 117, 67, 0.6) !important;
+}

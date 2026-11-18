@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In | WellSure Life & Health Insurance</title>
+  <meta name="description" content="Access your WellSure policy dashboard, track claims, review applications, and manage family coverage.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3.3 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Core Stylesheet & Authentication Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Minimal Authentication Header -->
+  <header class="ws-auth-header">
+    <a class="ws-auth-brand" href="index.html" aria-label="WellSure Homepage">
+      <div class="ws-logo-icon">
+        <i class="bi bi-shield-fill-check"></i>
+      </div>
+      <div class="ws-logo-text">
+        <span class="ws-logo-title">Well<span>Sure</span></span>
+      </div>
+    </a>
+
+    <div class="ws-auth-controls">
+      <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+      <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">
+        RTL
+      </button>
+      <a href="index.html" class="auth-home-btn" aria-label="Return to Homepage">
+        <i class="bi bi-house-door-fill"></i>
+        <span>Home</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="auth-split-wrapper">
+    <div class="auth-split-row">
+      
+      <!-- ===================================================================
+           LEFT PANEL: 50% VISUAL STORYTELLING (WELCOME BACK)
+           Deep Olive Canvas • Editorial Family Photography • Key Highlights
+           =================================================================== -->
+      <section class="auth-story-col" aria-label="WellSure Overview">
+        <div class="auth-story-inner">
+          
+          <span class="ws-auth-pill">
+            <i class="bi bi-shield-lock-fill text-terracotta"></i>
+            YOUR WELLNESS AND PROTECTION PARTNER
+          </span>
+
+          <h1 class="ws-auth-story-title">
+            Your protection journey, <br>
+            <span class="text-terracotta">all in one place.</span>
+          </h1>
+
+          <p class="ws-auth-story-lead">
+            Access your insurance plans, track applications, manage documents, and stay updated on your claims with certified fiduciary support.
+          </p>
+
+          <!-- 3 Feature Highlights -->
+          <ul class="auth-feature-list">
+            <li class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <i class="bi bi-hourglass-split"></i>
+              </div>
+              <div class="auth-feature-content">
+                <h6>Track your applications</h6>
+                <p>Monitor real-time progress from carrier underwriting to policy dispatch.</p>
+              </div>
+            </li>
+
+            <li class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <i class="bi bi-file-earmark-lock2-fill"></i>
+              </div>
+              <div class="auth-feature-content">
+                <h6>Manage your policies</h6>
+                <p>Instant digital access to all family contracts, premium schedules & cashless cards.</p>
+              </div>
+            </li>
+
+            <li class="auth-feature-item">
+              <div class="auth-feature-icon">
+                <i class="bi bi-life-preserver"></i>
+              </div>
+              <div class="auth-feature-content">
+                <h6>Get claim assistance</h6>
+                <p>Dedicated 24/7 advocacy desk to handle hospital pre-authorizations and cashless claims.</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Family Lifestyle Photo Frame -->
+          <div class="auth-image-frame d-none d-md-block">
+            <img src="assets/images/home2-family.jpg" alt="Protected Smiling Family with WellSure Insurance">
+            <div class="auth-image-overlay-badge">
+              <i class="bi bi-patch-check-fill"></i>
+              <span>Guiding 25,000+ Families Across India with Salaried Fiduciary Advisors</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           RIGHT PANEL: 50% LOGIN FORM (WARM CREAM BACKDROP)
+           Clean 460px card • Show/Hide Password • Remember Me • OAuth
+           =================================================================== -->
+      <section class="auth-form-col" aria-label="Sign In Form">
+        <div class="auth-form-container">
+          
+          <div class="auth-form-header">
+            <h2 class="auth-form-title">Welcome back!</h2>
+            <p class="auth-form-subtitle">Sign in to continue to your WellSure account.</p>
+          </div>
+
+          <!-- Quick-Fill Demo Pill for Testing -->
+          <div class="auth-demo-pill" onclick="fillDemoCredentials()" title="Click to autofill sample credentials">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-lightning-charge-fill text-terracotta"></i>
+              <span>Demo: <strong>client@wellsure.demo</strong></span>
+            </div>
+            <small>Click to Fill &bull; Demo Ready</small>
+          </div>
+
+          <!-- Alert Notification Box -->
+          <div id="loginAlertBox" class="alert d-none" role="alert"></div>
+
+          <!-- Login Form -->
+          <form id="loginForm" class="needs-validation" novalidate onsubmit="handleLoginSubmit(event)">
+            
+            <!-- Email Address Input -->
+            <div class="auth-input-group">
+              <label for="loginEmail" class="form-label">
+                <span>Email Address <span class="text-danger">*</span></span>
+              </label>
+              <div class="auth-input-wrapper">
+                <i class="bi bi-envelope auth-input-icon"></i>
+                <input 
+                  type="email" 
+                  class="auth-form-control" 
+                  id="loginEmail" 
+                  name="email" 
+                  placeholder="e.g. name@example.com" 
+                  value="client@wellsure.demo" 
+                  required 
+                  autocomplete="email"
+                >
+              </div>
+              <div class="invalid-feedback">Please enter a valid registered email address.</div>
+            </div>
+
+            <!-- Password Input with Show/Hide Toggle -->
+            <div class="auth-input-group">
+              <div class="form-label">
+                <span>Password <span class="text-danger">*</span></span>
+                <a href="forgot-password.html" class="small text-terracotta text-decoration-none fw-bold">Forgot Password?</a>
+              </div>
+              <div class="auth-input-wrapper">
+                <i class="bi bi-key auth-input-icon"></i>
+                <input 
+                  type="password" 
+                  class="auth-form-control" 
+                  id="loginPassword" 
+                  name="password" 
+                  placeholder="Enter your password" 
+                  value="WellSure2026!" 
+                  required 
+                  autocomplete="current-password"
+                >
+                <button 
+                  type="button" 
+                  class="btn-password-toggle" 
+                  onclick="togglePasswordVisibility('loginPassword', this)" 
+                  aria-label="Toggle password visibility"
+                >
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+              <div class="invalid-feedback">Please enter your account password.</div>
+            </div>
+
+            <!-- Remember Me Row -->
+            <div class="d-flex justify-content-between align-items-center mb-4 mt-2">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                <label class="form-check-label small text-muted user-select-none" for="rememberMe">
+                  Remember me on this browser
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Sign In Button -->
+            <button type="submit" class="btn btn-ws-primary w-100 justify-content-center py-3 fs-6" id="btnLoginSubmit">
+              <span>Sign In</span>
+              <i class="bi bi-arrow-up-right ms-2"></i>
+            </button>
+
+            <!-- Social OAuth Divider -->
+            <div class="auth-divider">
+              <span>OR</span>
+            </div>
+
+            <!-- Google Sign-In Button -->
+            <button type="button" class="btn-google-oauth" onclick="handleGoogleSignIn(event)">
+              <svg viewBox="0 0 24 24">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.66v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.15z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.24v3.15C3.26 21.36 7.33 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.24C.45 8.15 0 9.92 0 12s.45 3.85 1.24 5.42l4.04-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.24 6.58l4.04 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              <span>Continue with Google</span>
+            </button>
+
+            <!-- Footer: Link to Register -->
+            <div class="auth-form-footer">
+              Don't have an account? 
+              <a href="register.html">Create Account</a>
+            </div>
+
+          </form>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Essential JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

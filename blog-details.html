@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="docTitle">Article Dossier | The WellSure Journal</title>
+  <meta name="description" id="docDesc" content="In-depth insurance editorial analysis, policy guidance, and family protection strategies from WellSure.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Custom Core & Page Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="ws-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-journal-check text-peach me-1"></i> The WellSure Journal &bull; Editorial Series</span>
+        <span class="opacity-50">|</span>
+        <span><i class="bi bi-shield-check text-peach me-1"></i> 100% Unbiased Fiduciary Analysis</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span>Editorial Desk: <a href="tel:18009355787" class="fw-bold">1-800-WELLSURE</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg ws-navbar sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="ws-brand" href="index.html">
+        <div class="ws-logo-icon"><i class="bi bi-shield-fill-check"></i></div>
+        <div class="ws-logo-text"><span class="ws-logo-title">Well<span>Sure</span></span><span class="ws-logo-tagline">Protection. Clarity. Confidence.</span></div>
+      </a>
+
+      <!-- Mobile Top Actions: RTL, Theme & Hamburger (Visible on Mobile) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none ms-auto">
+        <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">RTL</button>
+        <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="navbar-toggler border-0 text-peach p-0 shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-peach"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Dedicated Portal Links -->
+        <div class="d-lg-none mobile-nav-portals pt-3 mt-2 border-top" style="border-color: rgba(255, 211, 163, 0.2) !important;">
+          <div class="small fw-bold text-uppercase mb-2 text-peach" style="letter-spacing: 0.08em; font-size: 0.76rem;">
+            <i class="bi bi-person-badge me-1"></i> Portals &amp; Authentication
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <a href="login.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-box-arrow-in-right me-1"></i> Login</a>
+            </div>
+            <div class="col-6">
+              <a href="register.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-person-plus me-1"></i> Register</a>
+            </div>
+            <div class="col-12">
+              <a href="client-dashboard.html" class="btn btn-sm w-100 btn-ws-green text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem;"><i class="bi bi-speedometer2 me-2"></i> Client Dashboard</a>
+            </div>
+            <div class="col-12">
+              <a href="admin-dashboard.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem; border-color: var(--color-terracotta) !important; color: var(--color-terracotta) !important;"><i class="bi bi-shield-lock me-2"></i> Admin Dashboard</a>
+            </div>
+            <div class="col-12 mt-2">
+              <a href="contact.html" class="btn btn-ws-primary w-100 justify-content-center py-2"><span>Get Covered</span><i class="bi bi-arrow-up-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ws-nav-controls d-none d-lg-flex">
+          <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle Direction">RTL</button>
+          <div class="dropdown">
+            <button class="ws-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account Menu">
+              <i class="bi bi-person-circle"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end ws-dropdown-menu">
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Dashboard</a></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-ws-primary ms-lg-2">
+            <span>Get Covered</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================================================================
+         SECTION 01: ARTICLE HERO & EDITORIAL HEADER
+         Breadcrumb, Category Tag, Large Title, Meta Bar, Audio Widget, Hero Image
+         =================================================================== -->
+    <section class="journal-hero-section" id="section-01-hero">
+      <div class="container">
+        
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-muted">Home</a></li>
+            <li class="breadcrumb-item"><a href="blog.html" class="text-decoration-none text-muted">The Journal</a></li>
+            <li class="breadcrumb-item active text-dark fw-bold" aria-current="page" id="articleBreadcrumb">Life Insurance Explained</li>
+          </ol>
+        </nav>
+
+        <div class="row align-items-center g-5">
+          <!-- Article Title and Author Meta Column -->
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center gap-2 flex-wrap mb-3">
+              <span class="journal-eyebrow mb-0">
+                <i class="bi bi-journal-text me-1 text-terracotta"></i>
+                01 &bull; EDITORIAL DOSSIER
+              </span>
+              <span class="journal-category-pill position-static" id="articleCategoryName">Life Insurance</span>
+            </div>
+
+            <h1 class="journal-hero-title mb-3" id="articleHeading">
+              Life Insurance Explained: A Complete Guide to Protecting Your Family
+            </h1>
+
+            <p class="journal-hero-lead mb-4" id="articleLead">
+              Learn how life insurance works, understand different coverage options and discover what to consider before choosing a policy.
+            </p>
+
+            <!-- Rich Author & Publishing Meta Bar -->
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 py-3 border-top border-bottom">
+              <div class="d-flex align-items-center gap-3">
+                <img src="assets/images/avatar-1.jpg" id="articleAuthorImg" alt="Author" class="rounded-circle shadow-sm" style="width: 54px; height: 54px; object-fit: cover; border: 2.5px solid var(--color-terracotta);">
+                <div>
+                  <h6 class="mb-0 fw-bold" id="articleAuthorName">Sarah Jenkins, CFP&reg;</h6>
+                  <small class="text-muted" id="articleAuthorRole">Senior Policy Analyst &bull; WellSure Editorial Board</small>
+                </div>
+              </div>
+              <div class="text-muted small" id="articleDateRead">
+                <i class="bi bi-calendar3 me-1"></i> Nov 15, 2026 &bull; <i class="bi bi-clock me-1 ms-2"></i> 8 min read
+              </div>
+            </div>
+
+            <!-- Audio Brief Widget (Listen to Article) -->
+            <div class="article-audio-bar">
+              <button class="audio-play-btn" id="audioPlayBtn" onclick="toggleAudioBrief()" aria-label="Play Audio Summary">
+                <i class="bi bi-play-fill" id="audioIcon"></i>
+              </button>
+              <div>
+                <div class="small fw-bold" style="color: var(--color-olive-deep);" id="audioStatusText">Listen to this guide (6 min audio brief)</div>
+                <div class="d-flex align-items-center gap-2 mt-1">
+                  <div class="audio-progress-track">
+                    <div class="audio-progress-fill" id="audioProgressFill"></div>
+                  </div>
+                  <span class="small text-muted" style="font-size: 0.75rem;">02:30 / 06:45</span>
+                </div>
+              </div>
+              <span class="badge bg-light text-dark border ms-auto d-none d-sm-inline">1.0x Speed</span>
+            </div>
+          </div>
+
+          <!-- Hero Image Column -->
+          <div class="col-lg-5 text-center">
+            <div class="rounded-4 overflow-hidden shadow-sm border border-light-subtle position-relative" style="background: radial-gradient(circle at 50% 65%, rgba(255, 211, 163, 0.45) 0%, rgba(243, 164, 131, 0.2) 60%, rgba(255, 249, 241, 0.95) 100%); padding: 20px;">
+              <img src="assets/images/hero-family.png" id="articleHeroImg" alt="Article Visual Banner" class="img-fluid rounded-3" style="max-height: 400px; object-fit: contain;">
+              <div class="position-absolute bottom-0 start-50 translate-middle-x mb-3">
+                <span class="badge" style="background: rgba(23,36,20,0.85); color: #FFD3A3; padding: 8px 18px; border-radius: 20px; font-weight: 700; font-size: 0.78rem;">
+                  <i class="bi bi-shield-check text-peach me-1"></i> Audited Consumer Dossier
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 02: KEY TAKEAWAYS & EXECUTIVE SUMMARY
+         Callout Box + Fast-Fact Metric Highlights
+         =================================================================== -->
+    <section class="section-py" id="section-02-takeaways" style="background-color: var(--color-section-alt);">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-lightbulb-fill me-1"></i> 02 &bull; EXECUTIVE SUMMARY</span>
+          <h2 class="ws-section-title">Key Fiduciary Takeaways for Families</h2>
+          <p class="ws-section-lead mx-auto">
+            Essential principles every household should understand before signing or committing to coverage.
+          </p>
+        </div>
+
+        <!-- 3 Highlight Metric Cards -->
+        <div class="row g-4 mb-5">
+          <div class="col-md-4">
+            <div class="sd-takeaway-metric-card">
+              <div class="sd-takeaway-number">10x &ndash; 12x</div>
+              <div class="sd-takeaway-label">Recommended Gross Income Multiplier for Family Income Replacement</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sd-takeaway-metric-card">
+              <div class="sd-takeaway-number">0% Copay</div>
+              <div class="sd-takeaway-label">Available In-Network Deductible & Copayment Options Across 40+ Carriers</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sd-takeaway-metric-card">
+              <div class="sd-takeaway-number">100% Tax-Free</div>
+              <div class="sd-takeaway-label">Guaranteed Beneficiary Lump-Sum Payout Under IRS Code Section 101(a)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Takeaways Callout Card -->
+        <div class="article-key-takeaways max-w-900 mx-auto shadow-sm">
+          <h5><i class="bi bi-shield-fill-check me-2 text-terracotta"></i> Core Fiduciary Rules of Thumb</h5>
+          <div class="row g-3" id="takeawaysListContainer">
+            <div class="col-md-6">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-check-circle-fill text-olive-deep mt-1"></i>
+                <span><strong>Lock In Rates While Young:</strong> Premium calculations rely heavily on initial application age. Securing level term coverage early locks in minimal pricing for decades.</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-check-circle-fill text-olive-deep mt-1"></i>
+                <span><strong>Independent vs. Captive:</strong> Captive agents represent single underwriters; independent intermediaries audit 40+ carriers to secure identical coverage at lower rates.</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-check-circle-fill text-olive-deep mt-1"></i>
+                <span><strong>Check Living Benefits Riders:</strong> Ensure your policy includes accelerated terminal and critical illness living benefits at no extra underwriting surcharge.</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex align-items-start gap-2">
+                <i class="bi bi-check-circle-fill text-olive-deep mt-1"></i>
+                <span><strong>Verify Conversion Rights:</strong> Confirm your term contract includes a contractual option to convert to permanent insurance without additional medical exams.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 03: IN-DEPTH EDITORIAL ANALYSIS & DEEP DIVE
+         Structured Typography, Quotes, Broker Advisory Tip
+         =================================================================== -->
+    <section class="section-py" id="section-03-analysis" style="background-color: var(--color-cream);">
+      <div class="container max-w-800">
+        
+        <div class="text-center mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-book-half me-1"></i> 03 &bull; IN-DEPTH ANALYSIS</span>
+          <h2 class="ws-section-title">Understanding Policy Mechanics & Underwriting</h2>
+          <p class="text-muted">A comprehensive breakdown authored by our fiduciary advisory board.</p>
+        </div>
+
+        <!-- Dynamic Article Content Injected by Engine -->
+        <div class="article-content" id="articleBodyContent">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Stylized Fiduciary Pull-Quote -->
+        <blockquote class="my-5 shadow-sm" id="articleBlockquote">
+          "The purpose of life and health insurance is not to enrich financial corporations; it is to build an unbreakable economic fortress around the people you cherish."
+        </blockquote>
+
+        <!-- Broker Advisory Tip Box -->
+        <div class="broker-advisory-tip">
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <i class="bi bi-shield-shaded fs-4 text-terracotta"></i>
+            <h5 class="mb-0 fw-bold" style="color: var(--color-olive-deep);">WellSure Broker Advisory Note</h5>
+          </div>
+          <p class="mb-0 small" style="line-height: 1.7;">
+            Underwriting guidelines vary significantly across insurance carriers. A policyholder with managed high blood pressure or a family history of heart disease may receive a "Standard" rating with one underwriter, yet qualify for a "Preferred Plus" discounted rate with another carrier. WellSure actively benchmarks all certified state filings to match your exact health profile.
+          </p>
+        </div>
+
+        <!-- Tags & Sharing Bar -->
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 py-4 border-top border-bottom my-5">
+          <div class="d-flex gap-2 flex-wrap" id="articleTagsList">
+            <span class="badge bg-light text-dark border">Life Insurance</span>
+            <span class="badge bg-light text-dark border">Family Protection</span>
+            <span class="badge bg-light text-dark border">Policy Audits</span>
+          </div>
+          <div class="d-flex gap-2 align-items-center">
+            <span class="small text-muted me-2">Share this guide:</span>
+            <a href="#" class="ws-social-link" onclick="shareArticle('LinkedIn')" aria-label="Share on LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="ws-social-link" onclick="shareArticle('Twitter')" aria-label="Share on X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="ws-social-link" onclick="shareArticle('Facebook')" aria-label="Share on Facebook"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 04: POLICY SPECIFICATION & DECISION MATRIX
+         Deep Side-by-Side Comparison Table (Clean Dark-Mode Compatible)
+         =================================================================== -->
+    <section class="section-py" id="section-04-matrix" style="background-color: var(--color-section-alt);">
+      <div class="container">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-table me-1"></i> 04 &bull; COMPARATIVE MATRIX</span>
+          <h2 class="ws-section-title">Side-by-Side Policy Specification Breakdown</h2>
+          <p class="ws-section-lead mx-auto">
+            Compare core parameters to determine which structure aligns with your financial timeline.
+          </p>
+        </div>
+
+        <div class="max-w-1000 mx-auto">
+          <div class="sd-detail-matrix-card">
+            <div class="p-3 border-bottom d-flex align-items-center justify-content-between flex-wrap gap-2">
+              <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-sliders fs-5 text-terracotta"></i>
+                <h6 class="mb-0 fw-bold">Comparative Structure Matrix</h6>
+              </div>
+              <span class="badge ws-audit-badge">Audited Across 40+ Certified Underwriters</span>
+            </div>
+
+            <div class="table-responsive">
+              <table class="sd-matrix-table align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 28%;">Parameter</th>
+                    <th scope="col" style="width: 24%;">Pure Level Term</th>
+                    <th scope="col" style="width: 24%;" class="col-feature-pick">Term + Living Benefits <span class="badge bg-warning text-dark ms-1">Recommended</span></th>
+                    <th scope="col" style="width: 24%;">Permanent Whole Life</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Coverage Horizon</strong></td>
+                    <td>10, 20, or 30 Years Fixed</td>
+                    <td class="col-feature-pick"><strong>20 or 30 Years Guaranteed</strong></td>
+                    <td>Lifetime (Up to Age 100+)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Monthly Cost Index</strong></td>
+                    <td>$ &bull; Lowest Premium</td>
+                    <td class="col-feature-pick"><strong>$$ &bull; Optimal Value / Coverage Ratio</strong></td>
+                    <td>$$$$$ &bull; Highest Premium</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Death Benefit Payout</strong></td>
+                    <td>100% Tax-Free Lump Sum</td>
+                    <td class="col-feature-pick"><strong>100% Tax-Free Lump Sum</strong></td>
+                    <td>100% Tax-Free + Cash Value</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Living Accelerated Riders</strong></td>
+                    <td>Optional Add-on Surcharge</td>
+                    <td class="col-feature-pick"><strong>Included (Heart, Cancer, Stroke)</strong></td>
+                    <td>Included as Policy Loan</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Conversion Privileges</strong></td>
+                    <td>Standard Conversion Window</td>
+                    <td class="col-feature-pick"><strong>Full Conversion Without Re-Exam</strong></td>
+                    <td>Permanent by Design</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Optimal Household Goal</strong></td>
+                    <td>Debt & Mortgage Payoff</td>
+                    <td class="col-feature-pick"><strong>Complete Family Income Shield</strong></td>
+                    <td>Estate Tax & Trust Funding</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 05: PRACTICAL ACTION FRAMEWORK & CHECKLIST
+         5 Interactive Checkboxes with Dynamic Progress Tracker
+         =================================================================== -->
+    <section class="section-py" id="section-05-checklist" style="background-color: var(--color-cream);">
+      <div class="container max-w-800">
+        
+        <div class="text-center mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-check2-square me-1"></i> 05 &bull; ACTION FRAMEWORK</span>
+          <h2 class="ws-section-title">5 Essential Steps Before You Sign or Purchase</h2>
+          <p class="text-muted">Follow this fiduciary checklist to guarantee you avoid common underwriting mistakes and hidden exclusions.</p>
+          
+          <!-- Interactive Progress Bar -->
+          <div class="mt-4 max-w-500 mx-auto">
+            <div class="d-flex justify-content-between small text-muted mb-1">
+              <span>Checklist Progress</span>
+              <span id="checklistProgressText" class="fw-bold text-terracotta">1 of 5 Completed (20%)</span>
+            </div>
+            <div class="progress" style="height: 8px; border-radius: 4px; background: rgba(64,103,27,0.15);">
+              <div class="progress-bar bg-terracotta" id="checklistProgressBar" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-items-wrap" id="checklistItemsContainer">
+          
+          <!-- Item 1 (Default completed) -->
+          <div class="checklist-item-card completed" onclick="toggleChecklistItem(this)">
+            <div class="checklist-custom-check"><i class="bi bi-check"></i></div>
+            <div>
+              <h6 class="mb-1 fw-bold">Step 1: Calculate Your Household's True Economic Gap</h6>
+              <p class="mb-0 small text-muted">Use the DIME method (Debt, Income, Mortgage, Education) instead of picking an arbitrary round figure.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="checklist-item-card" onclick="toggleChecklistItem(this)">
+            <div class="checklist-custom-check"><i class="bi bi-check"></i></div>
+            <div>
+              <h6 class="mb-1 fw-bold">Step 2: Disclose Complete Medical History Transparently</h6>
+              <p class="mb-0 small text-muted">Full transparency prevents statutory contestability disputes and guarantees uncompromised claims settlements.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="checklist-item-card" onclick="toggleChecklistItem(this)">
+            <div class="checklist-custom-check"><i class="bi bi-check"></i></div>
+            <div>
+              <h6 class="mb-1 fw-bold">Step 3: Audit Hospital & Preferred Physician Network Tiers</h6>
+              <p class="mb-0 small text-muted">Confirm your local medical facilities are classified as In-Network to eliminate out-of-pocket surprise billings.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="checklist-item-card" onclick="toggleChecklistItem(this)">
+            <div class="checklist-custom-check"><i class="bi bi-check"></i></div>
+            <div>
+              <h6 class="mb-1 fw-bold">Step 4: Select Critical Illness & Premium Waiver Riders</h6>
+              <p class="mb-0 small text-muted">A waiver-of-premium rider keeps your policy active if you become disabled and cannot pay premiums.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="checklist-item-card" onclick="toggleChecklistItem(this)">
+            <div class="checklist-custom-check"><i class="bi bi-check"></i></div>
+            <div>
+              <h6 class="mb-1 fw-bold">Step 5: Name Both Primary and Contingent Beneficiaries</h6>
+              <p class="mb-0 small text-muted">Always specify contingent beneficiaries to ensure insurance proceeds bypass lengthy probate court delays.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 06: AUTHOR BIO & FIDUCIARY ADVISORY BOARD PROFILE
+         Specialist Profile, Reviewer Stamps, Conflict-of-Interest Disclosure
+         =================================================================== -->
+    <section class="section-py" id="section-06-board" style="background-color: var(--color-section-alt);">
+      <div class="container max-w-900">
+        
+        <div class="text-center mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-award-fill me-1"></i> 06 &bull; EDITORIAL INTEGRITY</span>
+          <h2 class="ws-section-title">Written by Specialists. Verified by Fiduciaries.</h2>
+          <p class="ws-section-lead mx-auto">Every article published in The WellSure Journal adheres to strict fiduciary research standards.</p>
+        </div>
+
+        <div class="editorial-board-card">
+          <div class="row g-4 align-items-center">
+            
+            <!-- Author Image & Badges -->
+            <div class="col-md-4 text-center">
+              <img src="assets/images/avatar-1.jpg" id="articleAuthorImgDetail" alt="Lead Author" class="rounded-circle shadow mb-3" style="width: 110px; height: 110px; object-fit: cover; border: 3px solid var(--color-terracotta);">
+              <h5 class="fw-bold mb-1" id="articleAuthorNameDetail">Sarah Jenkins, CFP&reg;</h5>
+              <div class="text-muted small mb-2" id="articleAuthorRoleDetail">Senior Policy Analyst &bull; WellSure Board</div>
+              <span class="badge bg-light text-dark border">45+ Guides Published</span>
+            </div>
+
+            <!-- Author Bio & Editorial Review Seal -->
+            <div class="col-md-8">
+              <div class="mb-3">
+                <span class="fiduciary-seal-badge">
+                  <i class="bi bi-patch-check-fill text-terracotta"></i>
+                  Medically & Fiduciarily Audited
+                </span>
+              </div>
+              <p class="text-muted small mb-3" style="line-height: 1.75;">
+                Sarah Jenkins is a Certified Financial Planner (CFP&reg;) with over 14 years of advisory experience structuring life and health safety nets for working families. All data points in this dossier are cross-referenced with statutory insurance filings and reviewed by Dr. Marcus Vance, MD (Healthcare Desk) and Elena Rostova, JD (Regulatory Compliance).
+              </p>
+              
+              <!-- Fiduciary Pledge -->
+              <div class="p-3 rounded-3" style="background: rgba(64,103,27,0.06); border: 1px solid rgba(64,103,27,0.15);">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-shield-lock-fill text-olive-deep"></i>
+                  <span class="small fw-bold" style="color: var(--color-olive-deep);">100% Unbiased Advocacy Pledge:</span>
+                </div>
+                <div class="small text-muted mt-1" style="font-size: 0.82rem;">
+                  WellSure accepts zero carrier quotas, sales contests, or hidden commissions. Our educational dossiers exist solely to empower consumers with factual, transparent insurance intelligence.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 07: RELATED PUBLICATIONS & KNOWLEDGE HUB
+         3 Responsive Cards Linking Across the Journal
+         =================================================================== -->
+    <section class="section-py" id="section-07-related" style="background-color: var(--color-cream);">
+      <div class="container">
+        
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-collection-fill me-1"></i> 07 &bull; RELATED PUBLICATIONS</span>
+          <h2 class="ws-section-title">Expand Your Insurance Knowledge</h2>
+          <p class="ws-section-lead mx-auto">Explore related guides from our certified editorial board.</p>
+        </div>
+
+        <div class="row g-4" id="relatedArticlesGrid">
+          <!-- Populated Dynamically by JavaScript -->
+        </div>
+
+        <!-- Back to The Journal Link -->
+        <div class="text-center mt-5">
+          <a href="blog.html" class="btn btn-ws-green btn-lg">
+            <i class="bi bi-arrow-left me-1"></i>
+            <span>Browse All Journal Articles</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 08: ADVISORY CONSULTATION & NEWSLETTER DISPATCH
+         Split CTA: Speak with an Advisor + Subscribe to Monthly Digest
+         =================================================================== -->
+    <section class="section-journal-cta" id="section-08-cta">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          
+          <!-- Consultation Column -->
+          <div class="col-lg-6">
+            <span class="journal-cta-badge">
+              <i class="bi bi-shield-heart-fill text-terracotta me-1"></i>
+              08 &bull; TAKE THE NEXT STEP
+            </span>
+
+            <h2 class="journal-cta-title">
+              Have Questions About This Policy? Speak with an Advisor.
+            </h2>
+
+            <p class="journal-cta-lead">
+              Our independent fiduciary brokers review your family's existing coverage, explain fine print, and benchmark 40+ carriers at zero cost.
+            </p>
+
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <a href="contact.html" class="btn btn-ws-primary btn-lg">
+                <i class="bi bi-calendar-check me-1"></i>
+                <span>Book a Free Policy Review</span>
+              </a>
+              <a href="tel:18009355787" class="btn btn-ws-green btn-lg">
+                <i class="bi bi-telephone me-1"></i>
+                <span>1-800-WELLSURE</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Newsletter Column -->
+          <div class="col-lg-6">
+            <div class="journal-news-card p-4 p-md-5 rounded-4 shadow-sm" style="background: rgba(23,36,20,0.92); border: 2px solid rgba(255,211,163,0.3);">
+              <span class="badge bg-warning text-dark mb-3">Bi-Weekly Fiduciary Digest</span>
+              <h3 class="text-white fw-bold mb-2">Get Smarter About Insurance</h3>
+              <p class="text-white-50 small mb-4">
+                Receive practical policy breakdowns and tax-saving insurance strategies directly in your inbox.
+              </p>
+              
+              <form onsubmit="handleJournalDetailNewsletter(event)">
+                <div class="mb-3">
+                  <input type="email" id="detailNewsletterEmail" class="form-control journal-news-input w-100" placeholder="Enter your email address..." required aria-label="Email">
+                </div>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <input type="checkbox" id="detailNewsletterConsent" class="form-check-input mt-0" required>
+                  <label for="detailNewsletterConsent" class="journal-checkbox-label text-white-50 small">
+                    I agree to receive monthly insights and accept the <a href="privacy.html" class="text-peach">privacy policy</a>.
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-ws-primary w-100 justify-content-center">
+                  <span>Subscribe to The Journal</span>
+                  <i class="bi bi-arrow-up-right ms-1"></i>
+                </button>
+              </form>
+
+              <div id="detailNewsletterSuccess" class="alert alert-success d-none mt-3 small mb-0" role="alert">
+                <i class="bi bi-check-circle-fill me-1"></i> Thank you! You're subscribed to the WellSure Journal.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reusable Global Footer Component -->
+  <footer class="ws-footer pt-5">
+    <div class="container pt-4">
+      <div class="row g-4 g-lg-5 pb-5 align-items-start">
+        
+        <!-- Col 1: Brand & Fiduciary Intermediary Mission -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <a class="ws-brand mb-3 d-inline-flex" href="index.html">
+            <div class="ws-logo-icon">
+              <i class="bi bi-shield-fill-check"></i>
+            </div>
+            <div class="ws-logo-text">
+              <span class="ws-logo-title">Well<span>Sure</span></span>
+              <span class="ws-logo-tagline">Protection. Clarity. Confidence.</span>
+            </div>
+          </a>
+          <p class="text-white-50 mt-3 pe-lg-4" style="font-size: 0.92rem; line-height: 1.7;">
+            WellSure is an independent Life & Health Insurance brokerage dedicated to family protection, unbiased plan audits, and lifelong policyholder advocacy across 40+ leading licensed carriers.
+          </p>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge" style="background: rgba(255,211,163,0.12); border: 1px solid rgba(255,211,163,0.28); color: #FFD3A3; padding: 6px 14px; border-radius: 20px; font-size: 0.76rem; font-weight: 700;">
+              <i class="bi bi-award-fill me-1 text-peach"></i> Licensed Fiduciary Intermediary
+            </span>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="ws-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (All Navlinks) -->
+        <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="ws-footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support & Legal (Terms, FAQ, Privacy Policy, Disclosures) -->
+        <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Support & Legal</h5>
+          <ul class="ws-footer-links">
+            <li><a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a></li>
+            <li><a href="services.html#servicesFaqAccordion"><i class="bi bi-question-circle"></i> Frequently Asked Questions</a></li>
+            <li><a href="privacy.html"><i class="bi bi-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="service-detail.html?plan=health#claims"><i class="bi bi-life-preserver"></i> Claims Guidance Desk</a></li>
+            <li><a href="about.html#approach"><i class="bi bi-patch-check"></i> Regulatory Disclosures</a></li>
+            <li><a href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Self-Service Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Office (Address, Phone, Email, Hours) -->
+        <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+          <h5>Contact & Office</h5>
+          
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Headquarters Office:</strong><br>
+              742 Evergreen Terrace, Suite 400<br>
+              Financial District, New York, NY 10001
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong>Toll-Free Brokerage Hotline:</strong><br>
+              <a href="tel:18009355787">1-800-WELLSURE (935-5787)</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Direct Advisory Desk:</strong><br>
+              <a href="mailto:advisory@wellsure.com">advisory@wellsure.com</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>
+              <strong>Advisory Hours:</strong><br>
+              Mon &ndash; Fri: 8:00 AM &ndash; 8:00 PM EST
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal & Disclaimer -->
+      <div class="ws-footer-bottom pt-4 border-top border-white border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-white-50 small">
+          &copy; 2026 WellSure Insurance Brokerage LLC. All rights reserved. Licensed fiduciary insurance intermediary.
+        </p>
+        <div class="d-flex gap-3 text-white-50 small">
+          <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-white-50 text-decoration-none">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="about.html#approach" class="text-white-50 text-decoration-none">Regulatory Disclosures</a>
+        </div>
+      </div>
+      <p class="ws-disclaimer mt-3 mb-0 text-white-50 small">
+        <strong>Insurance Brokerage Disclaimer:</strong> WellSure is a licensed independent insurance intermediary. Information provided on this website is for informational and educational purposes only and does not constitute a binding contract or guarantee of coverage.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Dynamic Article Engine Script -->
+  <script>
+    const BLOG_ARTICLES = {
+      "life-guide": {
+        title: "Life Insurance Explained: A Complete Guide to Protecting Your Family",
+        category: "Life Insurance",
+        breadcrumb: "Life Insurance Explained",
+        lead: "Learn how life insurance works, understand different coverage options and discover what to consider before choosing a policy.",
+        authorName: "Sarah Jenkins, CFP®",
+        authorRole: "Senior Policy Analyst • WellSure Editorial Board",
+        authorImg: "assets/images/avatar-1.jpg",
+        date: "Nov 15, 2026",
+        readTime: "8 min read",
+        heroImg: "assets/images/hero-family.png",
+        tags: ["Life Insurance", "Term Life", "Whole Life", "Family Protection"],
+        content: `
+          <p>When families sit down at our advisory desk, the central question is almost universal: <em>"How do we know if we have enough life insurance to truly protect our household if something unexpected happens?"</em></p>
+          
+          <p>Insurance policies are contracts designed to deliver certainty. At its core, life insurance replaces your economic value—the future paychecks, mortgage payments, college tuitions, and living support that your family relies upon daily.</p>
+
+          <h2>1. Term Life vs. Permanent Whole Life: The Fundamental Distinction</h2>
+          <p><strong>Term Life Insurance</strong> provides coverage for a defined window—usually 10, 20, or 30 years. It pays a fixed, guaranteed death benefit to your beneficiaries tax-free if you pass away while the term is active. Because it contains no cash value investment feature, premiums are exceptionally affordable.</p>
+          <p><strong>Permanent / Whole Life Insurance</strong> covers you for your entire lifetime and accumulates tax-deferred cash value that you can borrow against in later years. It is best suited for estate tax planning, generational inheritance transfers, or funding special needs trusts.</p>
+
+          <h2>2. How WellSure Benchmarks Policy Underwriters</h2>
+          <p>Unlike captive carrier agents who can only offer products from a single company, an independent broker evaluates 40+ licensed underwriters simultaneously. We analyze AM Best financial strength ratings, historical claims payout timelines, and specific underwriting guidelines regarding family health history.</p>
+
+          <h2>3. Ensuring Adequate Living Benefit Protection</h2>
+          <p>Modern term life insurance contracts include accelerated death benefit riders that allow you to access up to 80% of your policy benefit during your lifetime if diagnosed with a qualifying terminal, chronic, or critical illness.</p>
+        `
+      },
+      "understanding-health-insurance": {
+        title: "Understanding Health Insurance Before You Buy",
+        category: "Health Insurance",
+        breadcrumb: "Health Insurance Fundamentals",
+        lead: "Learn about coverage, benefits and exclusions before selecting a policy for you or your household.",
+        authorName: "Dr. Marcus Vance, MD",
+        authorRole: "Healthcare Advisory Consultant • WellSure",
+        authorImg: "assets/images/avatar-2.jpg",
+        date: "Nov 14, 2026",
+        readTime: "6 min read",
+        heroImg: "assets/images/health-insurance.jpg",
+        tags: ["Health Insurance", "Deductibles", "Hospital Networks", "PPO vs HMO"],
+        content: `
+          <p>Choosing a health insurance plan should give you total peace of mind, not confusion. Yet millions of Americans find themselves navigating a labyrinth of deductibles, copayments, formulary tiers, and network boundaries.</p>
+
+          <h2>1. Deductibles, Co-Insurance & Out-of-Pocket Maximums</h2>
+          <p>Your <strong>deductible</strong> is the initial amount you must pay out-of-pocket for medical services each calendar year before your insurer begins contributing. After meeting your deductible, <strong>coinsurance</strong> takes over—typically an 80/20 split where the insurer pays 80% and you pay 20%.</p>
+          <p>Your <strong>Out-of-Pocket Maximum</strong> represents your absolute safety ceiling: once your total deductible, copays, and coinsurance reach this number, the insurance carrier pays 100% of all covered medical services for the remainder of the year.</p>
+
+          <h2>2. Choosing Between HMO, PPO, and HDHP Structures</h2>
+          <p>PPO (Preferred Provider Organization) plans offer the greatest physician flexibility without needing primary care physician referrals. HDHP (High Deductible Health Plans) paired with Health Savings Accounts (HSAs) provide triple-tax-advantaged healthcare savings.</p>
+        `
+      },
+      "how-much-life-insurance": {
+        title: "How Much Life Insurance Does Your Family Need?",
+        category: "Life Insurance",
+        breadcrumb: "Calculating Life Insurance Need",
+        lead: "Understand the key factors that influence your family's protection needs and long-term financial security.",
+        authorName: "Sarah Jenkins, CFP®",
+        authorRole: "Senior Policy Analyst • WellSure",
+        authorImg: "assets/images/avatar-1.jpg",
+        date: "Nov 10, 2026",
+        readTime: "7 min read",
+        heroImg: "assets/images/family-health.jpg",
+        tags: ["Life Insurance", "Financial Planning", "DIME Method", "Family Security"],
+        content: `
+          <p>One of the most frequent miscalculations in personal finance is arbitrarily choosing a round life insurance number—such as $250,000 or $500,000—without auditing what that capital actually accomplishes over 20 years.</p>
+
+          <h2>The DIME Calculation Method</h2>
+          <p>At WellSure, we utilize the proven <strong>DIME methodology</strong> to calculate accurate, customized protection goals:</p>
+          <ul>
+            <li><strong>D – Debt & Final Obligations:</strong> Add all consumer debt, credit cards, auto loans, and funeral costs ($15,000 - $25,000).</li>
+            <li><strong>I – Income Replacement:</strong> Multiply the primary earner's annual salary by the number of years required until children reach financial independence (typically 10 to 15 years).</li>
+            <li><strong>M – Mortgage Balance:</strong> Include the entire payoff figure of the family home mortgage to ensure loved ones remain permanently housed.</li>
+            <li><strong>E – Education Horizons:</strong> Project college tuition and living allowances for each child ($100,000 to $200,000 per dependent).</li>
+          </ul>
+        `
+      },
+      "building-safety-net": {
+        title: "Building a Stronger Financial Safety Net",
+        category: "Family Protection",
+        breadcrumb: "Financial Safety Net",
+        lead: "Prepare your family for unexpected financial challenges through integrated coverage, emergency reserves, and smart planning.",
+        authorName: "Elena Rostova, JD",
+        authorRole: "Fiduciary & Regulatory Specialist • WellSure",
+        authorImg: "assets/images/avatar-3.jpg",
+        date: "Nov 05, 2026",
+        readTime: "5 min read",
+        heroImg: "assets/images/home2-family.jpg",
+        tags: ["Family Protection", "Emergency Fund", "Disability", "Asset Shielding"],
+        content: `
+          <p>A true financial safety net is not just a savings account; it is a layered ecosystem designed to protect your household from medical crises, disability, and sudden loss of income.</p>
+
+          <h2>Layer 1: Liquid Emergency Capital</h2>
+          <p>Maintain 3 to 6 months of non-negotiable living expenses in a high-yield savings account or money market fund. This shields against short-term interruptions without needing to borrow or liquidate retirement holdings.</p>
+
+          <h2>Layer 2: Comprehensive Health & Disability Shield</h2>
+          <p>Health insurance pays the doctors; disability insurance pays you. If a prolonged illness prevents you from earning an income, long-term disability protection delivers monthly income replacement up to 70% of gross salary.</p>
+
+          <h2>Layer 3: Pure Term Life Foundation</h2>
+          <p>Term life ensures your family's future stays on course regardless of premature tragedy. It protects your partner's retirement safety and your children's higher education.</p>
+        `
+      },
+      "7-things-check-policy": {
+        title: "7 Things to Check Before Choosing a Policy",
+        category: "Policy Guides",
+        breadcrumb: "7 Things to Check Before Buying",
+        lead: "Important details to review before making a decision on any life or health insurance policy.",
+        authorName: "Sarah Jenkins, CFP®",
+        authorRole: "Senior Policy Analyst • WellSure",
+        authorImg: "assets/images/avatar-1.jpg",
+        date: "Oct 29, 2026",
+        readTime: "8 min read",
+        heroImg: "assets/images/advisor-consultation.jpg",
+        tags: ["Policy Guides", "Checklist", "Underwriting", "Fine Print"],
+        content: `
+          <p>Before putting pen to paper or digitally signing an insurance contract, reviewing these seven critical parameters can save thousands of dollars and prevent claims rejections.</p>
+
+          <h2>The 7 Essential Audit Checks</h2>
+          <ol>
+            <li><strong>Insurer Financial Solvency:</strong> Verify the underwriter maintains an A or A+ rating from AM Best or Fitch Ratings.</li>
+            <li><strong>Specific Exclusions Clauses:</strong> Read the exact conditions and hazardous activities that are excluded from payouts.</li>
+            <li><strong>Waiting Periods & Moratoriums:</strong> Clarify whether pre-existing conditions carry a 6-month, 12-month, or 24-month waiting duration.</li>
+            <li><strong>Guaranteed Level Premiums:</strong> Confirm whether rates remain strictly fixed for the entire term or are subject to carrier reviews.</li>
+            <li><strong>Hospital Cashless Turnaround SLA:</strong> Inquire about average pre-authorization response times for emergency hospital admissions.</li>
+            <li><strong>Living Benefits & Accelerated Riders:</strong> Check if chronic or terminal illness diagnosis unlocks death benefits early.</li>
+            <li><strong>Conversion Flexibility:</strong> Confirm whether term coverage can be transitioned into permanent whole life without physical exams.</li>
+          </ol>
+        `
+      },
+      "simple-claims-guide": {
+        title: "A Simple Guide to the Insurance Claims Process",
+        category: "Claims & Support",
+        breadcrumb: "Insurance Claims Guide",
+        lead: "Understand the steps and documents involved in filing, tracking, and settling insurance claims smoothly.",
+        authorName: "Elena Rostova, JD",
+        authorRole: "Fiduciary & Regulatory Specialist • WellSure",
+        authorImg: "assets/images/avatar-3.jpg",
+        date: "Oct 21, 2026",
+        readTime: "6 min read",
+        heroImg: "assets/images/critical-illness.jpg",
+        tags: ["Claims & Support", "Reimbursement", "Hospital Billing", "Advocacy"],
+        content: `
+          <p>Filing an insurance claim during a medical emergency or family loss can feel overwhelming. Understanding the workflow beforehand ensures swift processing with zero unnecessary delays.</p>
+
+          <h2>Cashless Hospital Claims vs. Reimbursement Claims</h2>
+          <p><strong>Cashless Processing:</strong> Available at in-network hospitals. You present your WellSure insurance card at the admission desk; the hospital's third-party administrator coordinates directly with the insurer to settle approved expenses.</p>
+          <p><strong>Reimbursement Processing:</strong> Used when admitted to an out-of-network clinic. You settle the hospital bill upon discharge, retain all original receipts and medical summaries, and submit a formal claim dossier within 30 days.</p>
+        `
+      },
+      "common-insurance-mistakes": {
+        title: "Common Insurance Mistakes and How to Avoid Them",
+        category: "Insurance Tips",
+        breadcrumb: "Common Mistakes to Avoid",
+        lead: "Learn how to avoid common pitfalls when choosing coverage to protect your family's budget and future.",
+        authorName: "Dr. Marcus Vance, MD",
+        authorRole: "Healthcare Advisory Consultant • WellSure",
+        authorImg: "assets/images/avatar-2.jpg",
+        date: "Oct 14, 2026",
+        readTime: "5 min read",
+        heroImg: "assets/images/blog-1.jpg",
+        tags: ["Insurance Tips", "Common Mistakes", "Underwriting", "Best Practices"],
+        content: `
+          <p>Even financially savvy consumers often fall into predictable insurance traps. Here are three widespread misconceptions and how to navigate around them:</p>
+
+          <h2>1. Relying Exclusively on Employer-Provided Coverage</h2>
+          <p>Group life insurance through work typically only provides 1x or 2x your salary—far below the 10x minimum required by growing families. More critically, if you change employers, get laid off, or leave the workforce, employer coverage evaporates immediately.</p>
+
+          <h2>2. Non-Disclosure of Medical History</h2>
+          <p>Failing to disclose high blood pressure, past surgeries, or smoking status during application can result in policy cancellation or claim denial during the statutory contestability period.</p>
+
+          <h2>3. Waiting for "The Right Time" to Buy</h2>
+          <p>Insurance premiums increase with every year of age and any new medical diagnosis. Securing coverage early locks in preferred underwriting brackets for decades.</p>
+        `
+      },
+      "term-vs-whole-life": {
+        title: "Term Life vs Whole Life Insurance: Quick Guide",
+        category: "Life Insurance",
+        breadcrumb: "Term vs Whole Life",
+        lead: "Understand the differences between common life insurance products in this 4-minute quick read.",
+        authorName: "Sarah Jenkins, CFP®",
+        authorRole: "Senior Policy Analyst • WellSure",
+        authorImg: "assets/images/avatar-1.jpg",
+        date: "Oct 08, 2026",
+        readTime: "4 min read",
+        heroImg: "assets/images/advisor-consultation.jpg",
+        tags: ["Life Insurance", "Term Life", "Whole Life", "Quick Reads"],
+        content: `
+          <p>Here is the concise breakdown of Term Life versus Whole Life insurance:</p>
+          <ul>
+            <li><strong>Duration:</strong> Term lasts for a specific timeframe (10, 20, or 30 years). Whole life lasts forever until age 100+.</li>
+            <li><strong>Cost:</strong> Term is pure insurance and costs 5x to 15x less than whole life. Whole life builds cash value and carries much higher premiums.</li>
+            <li><strong>Best For:</strong> Term is optimal for family income replacement, mortgages, and child tuition. Whole life is optimal for high-net-worth estate liquidity and generational trusts.</li>
+          </ul>
+        `
+      },
+      "deductibles-copays-explained": {
+        title: "Deductibles, Copayments and Coverage Limits Explained",
+        category: "Health Insurance",
+        breadcrumb: "Healthcare Terms Explained",
+        lead: "Learn the essential terms used in health insurance policies so you know exactly what you pay.",
+        authorName: "Dr. Marcus Vance, MD",
+        authorRole: "Healthcare Advisory Consultant • WellSure",
+        authorImg: "assets/images/avatar-2.jpg",
+        date: "Sep 28, 2026",
+        readTime: "5 min read",
+        heroImg: "assets/images/health-insurance.jpg",
+        tags: ["Health Insurance", "Deductibles", "Copay", "Glossary"],
+        content: `
+          <p>Three terms govern almost every dollar you pay for healthcare:</p>
+          <ul>
+            <li><strong>Deductible:</strong> What you pay out of pocket before insurance chips in.</li>
+            <li><strong>Copayment (Copay):</strong> A flat dollar fee (e.g., $25 for specialist visits) paid at point of service.</li>
+            <li><strong>Coverage Limits:</strong> The maximum monetary payout your policy will provide for inpatient stays or specific surgeries.</li>
+          </ul>
+        `
+      },
+      "understanding-policy-exclusions": {
+        title: "Understanding Policy Exclusions: What Is Not Covered",
+        category: "Policy Guides",
+        breadcrumb: "Policy Exclusions",
+        lead: "Know what your insurance policy may not cover to prevent surprise out-of-pocket medical bills.",
+        authorName: "Elena Rostova, JD",
+        authorRole: "Fiduciary & Regulatory Specialist • WellSure",
+        authorImg: "assets/images/avatar-3.jpg",
+        date: "Sep 15, 2026",
+        readTime: "3 min read",
+        heroImg: "assets/images/critical-illness.jpg",
+        tags: ["Policy Guides", "Exclusions", "Audit", "Consumer Protection"],
+        content: `
+          <p>Every insurance policy includes an exclusions schedule. Common universal exclusions include:</p>
+          <ul>
+            <li>Elective cosmetic procedures without medical necessity.</li>
+            <li>Experimental unapproved clinical therapies.</li>
+            <li>Self-inflicted injuries or conditions resulting from illicit activities.</li>
+            <li>Pre-existing conditions during their initial mandatory waiting periods.</li>
+          </ul>
+        `
+      }
+    };
+
+    // Load Dynamic Content on Page Load
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let articleId = urlParams.get('id') || 'life-guide';
+
+      // Fallback if not found
+      if (!BLOG_ARTICLES[articleId]) {
+        articleId = 'life-guide';
+      }
+
+      const article = BLOG_ARTICLES[articleId];
+
+      // Update Page Title and Meta Description
+      document.title = `${article.title} | The WellSure Journal`;
+      const descEl = document.getElementById('docDesc');
+      if (descEl) descEl.setAttribute('content', article.lead);
+
+      // Section 01: Hero Fields
+      document.getElementById('articleBreadcrumb').textContent = article.breadcrumb || article.title;
+      document.getElementById('articleCategoryName').textContent = article.category;
+      document.getElementById('articleHeading').textContent = article.title;
+      document.getElementById('articleLead').textContent = article.lead;
+      document.getElementById('articleAuthorName').innerHTML = article.authorName;
+      document.getElementById('articleAuthorRole').textContent = article.authorRole;
+      document.getElementById('articleAuthorImg').src = article.authorImg;
+      document.getElementById('articleDateRead').innerHTML = `<i class="bi bi-calendar3 me-1"></i> ${article.date} &bull; <i class="bi bi-clock me-1 ms-2"></i> ${article.readTime}`;
+      document.getElementById('articleHeroImg').src = article.heroImg;
+      document.getElementById('articleHeroImg').alt = article.title;
+
+      // Section 03: Body Content
+      document.getElementById('articleBodyContent').innerHTML = article.content;
+
+      // Section 03: Tags
+      const tagsContainer = document.getElementById('articleTagsList');
+      if (tagsContainer && article.tags) {
+        tagsContainer.innerHTML = article.tags.map(t => `<span class="badge bg-light text-dark border me-1">${t}</span>`).join('');
+      }
+
+      // Section 06: Author Detail Card
+      document.getElementById('articleAuthorImgDetail').src = article.authorImg;
+      document.getElementById('articleAuthorNameDetail').innerHTML = article.authorName;
+      document.getElementById('articleAuthorRoleDetail').textContent = article.authorRole;
+
+      // Section 07: Related Articles
+      const relatedContainer = document.getElementById('relatedArticlesGrid');
+      if (relatedContainer) {
+        const keys = Object.keys(BLOG_ARTICLES).filter(k => k !== articleId).slice(0, 3);
+        relatedContainer.innerHTML = keys.map(k => {
+          const item = BLOG_ARTICLES[k];
+          return `
+            <div class="col-lg-4 col-md-6">
+              <article class="journal-card h-100 d-flex flex-column">
+                <a href="blog-details.html?id=${k}" class="journal-card-img-wrap" style="height: 190px;">
+                  <img src="${item.heroImg}" alt="${item.title}">
+                  <span class="journal-category-pill">${item.category}</span>
+                </a>
+                <div class="journal-card-body p-4 d-flex flex-column flex-grow-1">
+                  <div class="journal-card-date small mb-2 text-muted">
+                    <i class="bi bi-calendar3 me-1"></i> ${item.date} &bull; ${item.readTime}
+                  </div>
+                  <h4 class="fs-6 fw-bold mb-3">
+                    <a href="blog-details.html?id=${k}" class="text-reset text-decoration-none">${item.title}</a>
+                  </h4>
+                  <p class="small text-muted mb-4 flex-grow-1" style="line-height: 1.6;">
+                    ${item.lead.length > 100 ? item.lead.substring(0, 97) + '...' : item.lead}
+                  </p>
+                  <a href="blog-details.html?id=${k}" class="journal-read-link mt-auto">
+                    <span>Read Article</span>
+                    <i class="bi bi-arrow-up-right"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+          `;
+        }).join('');
+      }
+    });
+
+    // Audio Brief Playback Simulation
+    let isPlaying = false;
+    function toggleAudioBrief() {
+      const btn = document.getElementById('audioPlayBtn');
+      const icon = document.getElementById('audioIcon');
+      const statusText = document.getElementById('audioStatusText');
+      const progressFill = document.getElementById('audioProgressFill');
+      
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        icon.className = 'bi bi-pause-fill';
+        statusText.innerHTML = '<span class="text-terracotta fw-bold">Playing Audio Brief... (03:15 / 06:45)</span>';
+        progressFill.style.width = '65%';
+      } else {
+        icon.className = 'bi bi-play-fill';
+        statusText.innerHTML = 'Listen to this guide (6 min audio brief)';
+        progressFill.style.width = '42%';
+      }
+    }
+
+    // Section 05: Checklist Item Interactive Toggle
+    function toggleChecklistItem(el) {
+      el.classList.toggle('completed');
+      updateChecklistProgress();
+    }
+
+    function updateChecklistProgress() {
+      const allItems = document.querySelectorAll('.checklist-item-card');
+      const completedItems = document.querySelectorAll('.checklist-item-card.completed');
+      const count = completedItems.length;
+      const total = allItems.length;
+      const percent = Math.round((count / total) * 100);
+
+      const textEl = document.getElementById('checklistProgressText');
+      const barEl = document.getElementById('checklistProgressBar');
+
+      if (textEl) {
+        textEl.textContent = `${count} of ${total} Completed (${percent}%)`;
+      }
+      if (barEl) {
+        barEl.style.width = `${percent}%`;
+        barEl.setAttribute('aria-valuenow', percent);
+      }
+    }
+
+    // Newsletter Submission in Details Section 08
+    function handleJournalDetailNewsletter(e) {
+      e.preventDefault();
+      const successEl = document.getElementById('detailNewsletterSuccess');
+      const emailInput = document.getElementById('detailNewsletterEmail');
+      if (emailInput && emailInput.value) {
+        successEl.classList.remove('d-none');
+        emailInput.value = '';
+      }
+    }
+
+    function shareArticle(platform) {
+      alert(`Sharing this guide to ${platform}! URL: ${window.location.href}`);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellSure Home 2 | Modern Insurtech & Family Protection Platform</title>
+  <meta name="description" content="Discover flexible life and health insurance designed for every stage of your life. Interactive plan discovery, comparisons, and claims advocacy.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Core & Page Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/home2.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="ws-topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="bi bi-shield-check text-peach me-1"></i> WellSure Insurtech Discovery &bull; 40+ Licensed Insurers</span>
+        <span class="opacity-50">|</span>
+        <span><i class="bi bi-lightning-charge text-peach me-1"></i> Instant Transparent Comparisons</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span>Advisory Desk: <a href="tel:180093557873" class="fw-bold">1-800-WELLSURE</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg ws-navbar sticky-top" id="mainNavbar">
+    <div class="container">
+      <a class="ws-brand" href="index.html">
+        <div class="ws-logo-icon">
+          <i class="bi bi-shield-fill-check"></i>
+        </div>
+        <div class="ws-logo-text">
+          <span class="ws-logo-title">Well<span>Sure</span></span>
+        </div>
+      </a>
+
+      <!-- Mobile Top Actions: RTL, Theme & Hamburger (Visible on Mobile) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none ms-auto">
+        <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">RTL</button>
+        <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+        <button class="navbar-toggler border-0 text-peach p-0 shadow-none ms-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1 text-peach"></i>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Dedicated Portal Links -->
+        <div class="d-lg-none mobile-nav-portals pt-3 mt-2 border-top" style="border-color: rgba(255, 211, 163, 0.2) !important;">
+          <div class="small fw-bold text-uppercase mb-2 text-peach" style="letter-spacing: 0.08em; font-size: 0.76rem;">
+            <i class="bi bi-person-badge me-1"></i> Portals &amp; Authentication
+          </div>
+          <div class="row g-2 mb-3">
+            <div class="col-6">
+              <a href="login.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-box-arrow-in-right me-1"></i> Login</a>
+            </div>
+            <div class="col-6">
+              <a href="register.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2" style="font-size: 0.85rem;"><i class="bi bi-person-plus me-1"></i> Register</a>
+            </div>
+            <div class="col-12">
+              <a href="client-dashboard.html" class="btn btn-sm w-100 btn-ws-green text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem;"><i class="bi bi-speedometer2 me-2"></i> Client Dashboard</a>
+            </div>
+            <div class="col-12">
+              <a href="admin-dashboard.html" class="btn btn-sm w-100 btn-ws-outline text-center justify-content-center py-2 d-flex align-items-center" style="font-size: 0.88rem; border-color: var(--color-terracotta) !important; color: var(--color-terracotta) !important;"><i class="bi bi-shield-lock me-2"></i> Admin Dashboard</a>
+            </div>
+            <div class="col-12 mt-2">
+              <a href="contact.html" class="btn btn-ws-primary w-100 justify-content-center py-2"><span>Get Covered</span><i class="bi bi-arrow-up-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ws-nav-controls d-none d-lg-flex">
+          <button class="ws-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Theme"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="ws-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle Direction">RTL</button>
+          <div class="dropdown">
+            <button class="ws-icon-btn dropdown-toggle no-caret" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Account Menu">
+              <i class="bi bi-person-circle"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end ws-dropdown-menu">
+              <li><a class="dropdown-item" href="login.html"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="bi bi-person-plus"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Dashboard</a></li>
+              <li><a class="dropdown-item" href="admin-dashboard.html"><i class="bi bi-shield-lock"></i> Admin Dashboard</a></li>
+            </ul>
+          </div>
+          <a href="contact.html" class="btn btn-ws-primary ms-lg-2">
+            <span>Get Covered</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===================================================================
+         SECTION 01: HERO – PROTECTION THAT MOVES WITH YOUR LIFE
+         Split-Screen: Content Left, Father Tossing Daughter Image Right
+         =================================================================== -->
+    <section class="h2-hero-section">
+      <div class="h2-hero-organic-shape"></div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center g-4 g-lg-5">
+          
+          <!-- LEFT: Content -->
+          <div class="col-lg-6">
+            <div class="h2-hero-content">
+              <!-- Small Badge -->
+              <span class="h2-hero-badge">
+                <i class="bi bi-stars text-terracotta me-1"></i>
+                Coverage for Every Life Stage
+              </span>
+
+              <!-- Heading -->
+              <h1 class="h2-hero-title">
+                Protection That Moves <br>
+                <span class="text-terracotta">With Your Life.</span>
+              </h1>
+
+              <!-- Description -->
+              <p class="h2-hero-lead">
+                Simple, flexible insurance designed to protect what matters most &ndash; your health, your home and your family's future.
+              </p>
+
+              <!-- Two Buttons -->
+              <div class="h2-hero-actions">
+                <a href="#featured-plans" class="btn btn-ws-primary btn-lg">
+                  <span>Get a Quote</span>
+                  <i class="bi bi-arrow-up-right ms-1"></i>
+                </a>
+                <a href="#category-selector" class="btn btn-ws-outline-green btn-lg">
+                  <i class="bi bi-search me-1"></i>
+                  <span>Explore Coverage</span>
+                </a>
+              </div>
+
+              <!-- Reassurance Indicator -->
+              <div class="d-flex align-items-center gap-3 pt-2">
+                <div class="d-flex align-items-center text-warning" style="font-size: 0.95rem;">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <small class="text-muted fw-bold">4.9 / 5 &bull; Trusted by 15,000+ Protected Households</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Joyful Father Tossing Daughter Cutout -->
+          <div class="col-lg-6">
+            <div class="h2-hero-visual">
+              
+              <!-- Floating Plan Finder Card -->
+              <div class="h2-hero-finder-card">
+                <div class="h2-finder-header">
+                  <div class="h2-finder-icon">
+                    <i class="bi bi-sliders"></i>
+                  </div>
+                  <div>
+                    <h6>Quick Plan Match</h6>
+                    <span>Fast Instant Comparison</span>
+                  </div>
+                </div>
+                <div class="p-2 rounded-3 bg-light border mb-2 small text-muted">
+                  <div class="d-flex justify-content-between mb-1">
+                    <span>Family Floater:</span>
+                    <strong class="text-success">$500,000</strong>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span>Est. Monthly:</span>
+                    <strong class="text-terracotta">$74 / mo</strong>
+                  </div>
+                </div>
+                <a href="#featured-plans" class="btn btn-ws-green btn-sm w-100 justify-content-center">
+                  <span>View Recommended</span>
+                </a>
+              </div>
+
+              <!-- Father and Daughter Image Wrapper -->
+              <div class="h2-hero-img-wrap">
+                <img src="assets/images/home2-father-daughter.png" alt="Joyful Father Tossing Daughter - Family Protection" class="h2-hero-img">
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 02: FIND YOUR RIGHT COVERAGE (Signature Feature)
+         Four Interactive Selection Cards
+         =================================================================== -->
+    <section class="section-py section-h2-selector" id="category-selector">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-compass me-1"></i> Interactive Selection</span>
+          <h2 class="ws-section-title">What Would You Like to Protect?</h2>
+          <p class="ws-section-lead mx-auto">
+            Choose what matters most to your household today. We curate verified policies tailored to your budget and life stage.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1: My Health -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="h2-select-card active" onclick="window.location.href='service-detail.html?plan=health'">
+              <div class="h2-select-icon">
+                <i class="bi bi-hospital-fill"></i>
+              </div>
+              <h4>My Health</h4>
+              <p>Comprehensive medical care, zero copays, hospital networks & prescription drugs.</p>
+              <span class="btn btn-ws-green btn-sm w-100 justify-content-center">Explore Health Plans</span>
+            </div>
+          </div>
+
+          <!-- Card 2: My Family -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="h2-select-card" onclick="window.location.href='service-detail.html?plan=family'">
+              <div class="h2-select-icon">
+                <i class="bi bi-people-fill"></i>
+              </div>
+              <h4>My Family</h4>
+              <p>Unified floater policies covering parents and dependent kids under one limit.</p>
+              <span class="btn btn-ws-outline-green btn-sm w-100 justify-content-center">Explore Family Floater</span>
+            </div>
+          </div>
+
+          <!-- Card 3: My Life -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="h2-select-card" onclick="window.location.href='service-detail.html?plan=life'">
+              <div class="h2-select-icon">
+                <i class="bi bi-shield-lock-fill"></i>
+              </div>
+              <h4>My Life</h4>
+              <p>Fixed-rate term life up to 30 years with guaranteed tax-free death benefits.</p>
+              <span class="btn btn-ws-outline-green btn-sm w-100 justify-content-center">Explore Life Plans</span>
+            </div>
+          </div>
+
+          <!-- Card 4: Critical Illness -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="h2-select-card" onclick="window.location.href='service-detail.html?plan=critical'">
+              <div class="h2-select-icon">
+                <i class="bi bi-heart-pulse-fill"></i>
+              </div>
+              <h4>Critical Illness</h4>
+              <p>Direct cash lump-sum upon major diagnosis to replace income during recovery.</p>
+              <span class="btn btn-ws-outline-green btn-sm w-100 justify-content-center">Explore Critical Care</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 03: INSURANCE MADE SIMPLE (3 Steps to Confidence)
+         =================================================================== -->
+    <section class="section-py section-h2-steps" id="how-it-works">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-lightning-charge me-1"></i> Simple Process</span>
+          <h2 class="ws-section-title">From Confusion to Confidence in Three Steps.</h2>
+          <p class="ws-section-lead mx-auto">
+            A guided experience that puts you in control without confusing jargon or high-pressure sales calls.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Step 1 -->
+          <div class="col-md-4">
+            <div class="h2-step-box">
+              <div class="h2-step-number">01</div>
+              <h4>Explore</h4>
+              <p>Discover plans that match your needs. Tell us your priorities and let our database filter top policies.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="col-md-4">
+            <div class="h2-step-box">
+              <div class="h2-step-number">02</div>
+              <h4>Compare</h4>
+              <p>Understand benefits and premiums. Review plain-English terms, exclusions, and deductibles side-by-side.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="col-md-4">
+            <div class="h2-step-box">
+              <div class="h2-step-number">03</div>
+              <h4>Choose</h4>
+              <p>Move forward with confidence. Complete your digital enrollment backed by dedicated lifetime claims support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 04: FEATURED INSURANCE PLANS (Tabs + Showcase)
+         =================================================================== -->
+    <section class="section-py section-h2-featured-plans" id="featured-plans">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-4">
+          <span class="ws-eyebrow"><i class="bi bi-shield-check me-1"></i> Curated Tiers</span>
+          <h2 class="ws-section-title">Explore Plans Worth Considering.</h2>
+          <p class="ws-section-lead mx-auto">
+            Sample demonstration plans vetted for high claims payout ratios and comprehensive benefits.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="h2-plan-tabs">
+          <button class="h2-plan-tab-btn active" id="tabBtnHealth" onclick="toggleH2Plans('health')">Health Insurance</button>
+          <button class="h2-plan-tab-btn" id="tabBtnLife" onclick="toggleH2Plans('life')">Life Insurance</button>
+        </div>
+
+        <!-- HEALTH PLANS CONTAINER -->
+        <div class="row g-4 justify-content-center" id="containerHealthPlans">
+          <!-- Health Plan 1: Essential -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h2-featured-plan-card">
+              <div>
+                <span class="h2-plan-tier-label">Tier 01 &bull; Starter Individual</span>
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="who-highlight-icon"><i class="bi bi-hospital"></i></div>
+                  <div>
+                    <h5 class="h2-plan-title">Horizon Essential PPO</h5>
+                    <span class="h2-plan-carrier">Horizon Health &bull; Individual Network</span>
+                  </div>
+                </div>
+                <div class="h2-plan-pricing-box">
+                  <div class="h2-plan-amount">$48 <small>/ mo (demo)</small></div>
+                  <span class="h2-plan-limit-badge"><i class="bi bi-shield-check me-1"></i> $500,000 Max Benefit</span>
+                </div>
+                <ul class="h2-plan-features">
+                  <li><i class="bi bi-check-circle-fill"></i> <span>100% Cashless Inpatient Hospitalization</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>$20 Primary & Specialist Doctor Copay</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Annual Preventive Health Screening</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Free 24/7 Virtual Telehealth Consults</span></li>
+                </ul>
+              </div>
+              <a href="pricing.html?plan=horizon-essential" class="btn btn-ws-green w-100 justify-content-center mt-auto">
+                <span>Compare Plan Details</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Health Plan 2: Family Shield (Top Broker Pick) -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h2-featured-plan-card badge-popular">
+              <span class="h2-plan-popular-ribbon"><i class="bi bi-star-fill me-1"></i> TOP BROKER PICK</span>
+              <div>
+                <span class="h2-plan-tier-label" style="background: rgba(230, 117, 67, 0.12); color: var(--color-terracotta);">Tier 02 &bull; Family Advantage</span>
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="who-highlight-icon text-terracotta"><i class="bi bi-people-fill"></i></div>
+                  <div>
+                    <h5 class="h2-plan-title">Shield Family Guardian</h5>
+                    <span class="h2-plan-carrier">Shield Mutual &bull; Unified Family Floater</span>
+                  </div>
+                </div>
+                <div class="h2-plan-pricing-box">
+                  <div class="h2-plan-amount text-terracotta">$112 <small>/ mo (demo)</small></div>
+                  <span class="h2-plan-limit-badge" style="background: rgba(230, 117, 67, 0.15); color: var(--color-terracotta);"><i class="bi bi-shield-fill-check me-1"></i> $1,000,000 Combined Family Limit</span>
+                </div>
+                <ul class="h2-plan-features">
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Parents + up to 3 Children Included</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Maternity, Delivery & Pediatric Care</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Automatic Full Limit Restoration</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Zero Co-pay at 14,000+ Tier 1 Hospitals</span></li>
+                </ul>
+              </div>
+              <a href="pricing.html?plan=shield-guardian" class="btn btn-ws-primary w-100 justify-content-center mt-auto">
+                <span>Compare Plan Details</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Health Plan 3: Premier Health -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h2-featured-plan-card">
+              <div>
+                <span class="h2-plan-tier-label">Tier 03 &bull; Global Premier</span>
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="who-highlight-icon"><i class="bi bi-heart-pulse-fill"></i></div>
+                  <div>
+                    <h5 class="h2-plan-title">Summit Premier Health</h5>
+                    <span class="h2-plan-carrier">Metro Care &bull; Comprehensive Medical</span>
+                  </div>
+                </div>
+                <div class="h2-plan-pricing-box">
+                  <div class="h2-plan-amount">$82 <small>/ mo (demo)</small></div>
+                  <span class="h2-plan-limit-badge"><i class="bi bi-shield-check me-1"></i> $750,000 Annual Maximum</span>
+                </div>
+                <ul class="h2-plan-features">
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Global Worldwide Emergency Assistance</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Low $500 Annual Deductible</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Advanced Imaging & Full Outpatient Diagnostics</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Prescription Tier 1 & Tier 2 Formulary Included</span></li>
+                </ul>
+              </div>
+              <a href="pricing.html?plan=summit-premier" class="btn btn-ws-green w-100 justify-content-center mt-auto">
+                <span>Compare Plan Details</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- LIFE PLANS CONTAINER (Hidden by default, toggled via JS) -->
+        <div class="row g-4 justify-content-center" id="containerLifePlans" style="display: none;">
+          <!-- Life Plan 1: Apex Term 20 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h2-featured-plan-card">
+              <div>
+                <span class="h2-plan-tier-label">Tier 01 &bull; Fixed 20-Year Term</span>
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="who-highlight-icon"><i class="bi bi-shield-check"></i></div>
+                  <div>
+                    <h5 class="h2-plan-title">Apex Term 20</h5>
+                    <span class="h2-plan-carrier">Apex Mutual &bull; Pure Protection</span>
+                  </div>
+                </div>
+                <div class="h2-plan-pricing-box">
+                  <div class="h2-plan-amount">$32 <small>/ mo (demo)</small></div>
+                  <span class="h2-plan-limit-badge"><i class="bi bi-shield-check me-1"></i> $500,000 Guaranteed Death Benefit</span>
+                </div>
+                <ul class="h2-plan-features">
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Level Guaranteed Premiums for 20 Years</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Living Benefit: Accelerated Terminal Illness</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>No Medical Exam Under Age 40</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Instant Digital Policy Issuance</span></li>
+                </ul>
+              </div>
+              <a href="pricing.html?plan=apex-term-20" class="btn btn-ws-green w-100 justify-content-center mt-auto">
+                <span>Compare Plan Details</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Life Plan 2: Premier 30 (Top Broker Pick) -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h2-featured-plan-card badge-popular">
+              <span class="h2-plan-popular-ribbon"><i class="bi bi-star-fill me-1"></i> TOP BROKER PICK</span>
+              <div>
+                <span class="h2-plan-tier-label" style="background: rgba(230, 117, 67, 0.12); color: var(--color-terracotta);">Tier 02 &bull; Extended Family Term</span>
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="who-highlight-icon text-terracotta"><i class="bi bi-umbrella-fill"></i></div>
+                  <div>
+                    <h5 class="h2-plan-title">WellSure Premier 30</h5>
+                    <span class="h2-plan-carrier">WellSure Select &bull; Extended 30-Yr Guarantee</span>
+                  </div>
+                </div>
+                <div class="h2-plan-pricing-box">
+                  <div class="h2-plan-amount text-terracotta">$52 <small>/ mo (demo)</small></div>
+                  <span class="h2-plan-limit-badge" style="background: rgba(230, 117, 67, 0.15); color: var(--color-terracotta);"><i class="bi bi-shield-fill-check me-1"></i> $1,000,000 Guaranteed Benefit</span>
+                </div>
+                <ul class="h2-plan-features">
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Guaranteed Level Rate for Full 30 Years</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Guaranteed Conversion to Permanent Coverage</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Waiver of Premium on Total Disability</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Child Protection Rider Option</span></li>
+                </ul>
+              </div>
+              <a href="pricing.html?plan=wellsure-term-30" class="btn btn-ws-primary w-100 justify-content-center mt-auto">
+                <span>Compare Plan Details</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Life Plan 3: Beacon Whole Life -->
+          <div class="col-lg-4 col-md-6">
+            <div class="h2-featured-plan-card">
+              <div>
+                <span class="h2-plan-tier-label">Tier 03 &bull; Permanent Cash Value</span>
+                <div class="d-flex align-items-center gap-3 mb-2">
+                  <div class="who-highlight-icon"><i class="bi bi-safe2-fill"></i></div>
+                  <div>
+                    <h5 class="h2-plan-title">Beacon Permanent Whole</h5>
+                    <span class="h2-plan-carrier">Beacon Life &bull; Wealth Accumulation</span>
+                  </div>
+                </div>
+                <div class="h2-plan-pricing-box">
+                  <div class="h2-plan-amount">$115 <small>/ mo (demo)</small></div>
+                  <span class="h2-plan-limit-badge"><i class="bi bi-shield-check me-1"></i> $250,000 + Growing Cash Value</span>
+                </div>
+                <ul class="h2-plan-features">
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Lifelong Permanent Insurance Coverage</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Guaranteed Tax-Deferred Cash Growth</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Annual Dividend Eligibility with A+ Carriers</span></li>
+                  <li><i class="bi bi-check-circle-fill"></i> <span>Policy Loan Privileges for Family Emergencies</span></li>
+                </ul>
+              </div>
+              <a href="pricing.html?plan=beacon-whole" class="btn btn-ws-green w-100 justify-content-center mt-auto">
+                <span>Compare Plan Details</span>
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center text-muted small mt-4 mb-0">
+          *Sample plan data displayed for layout comparison purposes. Exact premium rates are filed and regulated by state insurance commissions.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 05: COVERAGE FOR EVERY LIFE STAGE
+         Four Horizontal Image-Led Cards
+         =================================================================== -->
+    <section class="section-py section-h2-life-stages" id="life-stages">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-calendar3 me-1"></i> Life Transitions</span>
+          <h2 class="ws-section-title">Every Stage Deserves the Right Protection.</h2>
+          <p class="ws-section-lead mx-auto">
+            As your family expands and financial horizons shift, your coverage should adapt seamlessly.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Stage 1 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="h2-stage-card">
+              <div class="h2-stage-img-wrap">
+                <img src="assets/images/life-insurance.jpg" alt="Starting Your Journey">
+              </div>
+              <div class="h2-stage-body">
+                <h4>Starting Your Journey</h4>
+                <p>Early career professionals securing initial term life and low-deductible health plans.</p>
+                <a href="services.html" class="btn btn-ws-outline-green btn-sm w-100 justify-content-center">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="h2-stage-card">
+              <div class="h2-stage-img-wrap">
+                <img src="assets/images/family-health.jpg" alt="Growing Your Family">
+              </div>
+              <div class="h2-stage-body">
+                <h4>Growing Your Family</h4>
+                <p>New parents combining floater health policies with mortgage-protection term life.</p>
+                <a href="services.html" class="btn btn-ws-outline-green btn-sm w-100 justify-content-center">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="h2-stage-card">
+              <div class="h2-stage-img-wrap">
+                <img src="assets/images/health-insurance.jpg" alt="Protecting Your Parents">
+              </div>
+              <div class="h2-stage-body">
+                <h4>Protecting Your Parents</h4>
+                <p>Senior comprehensive hospital care, critical illness riders, and chronic disease support.</p>
+                <a href="services.html" class="btn btn-ws-outline-green btn-sm w-100 justify-content-center">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="col-lg-3 col-sm-6">
+            <div class="h2-stage-card">
+              <div class="h2-stage-img-wrap">
+                <img src="assets/images/critical-illness.jpg" alt="Planning Your Future">
+              </div>
+              <div class="h2-stage-body">
+                <h4>Planning Your Future</h4>
+                <p>Estate planning, permanent policy cash value, and legacy transfer strategies.</p>
+                <a href="services.html" class="btn btn-ws-outline-green btn-sm w-100 justify-content-center">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 06: WHY FAMILIES CHOOSE WELLSURE (Trust Pillars)
+         =================================================================== -->
+    <section class="section-py section-h2-why" id="why-wellsure">
+      <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+          <span class="ws-eyebrow"><i class="bi bi-award me-1"></i> Fiduciary Standard</span>
+          <h2 class="ws-section-title">A Better Insurance Experience Starts Here.</h2>
+          <p class="ws-section-lead mx-auto">
+            Here is why policyholders choose WellSure over captive agents and automated quote mills.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6">
+            <div class="why-card-premium">
+              <div class="why-card-icon"><i class="bi bi-sliders"></i></div>
+              <h5 class="fw-bold mb-2">Unbiased Comparisons</h5>
+              <p class="text-muted small mb-0">Explore options with clear information benchmarked across 40+ leading carriers.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="why-card-premium">
+              <div class="why-card-icon"><i class="bi bi-search"></i></div>
+              <h5 class="fw-bold mb-2">Complete Transparency</h5>
+              <p class="text-muted small mb-0">Understand benefits and exclusions before committing to paperwork or premium payments.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="why-card-premium">
+              <div class="why-card-icon"><i class="bi bi-person-heart"></i></div>
+              <h5 class="fw-bold mb-2">Personal Guidance</h5>
+              <p class="text-muted small mb-0">Support based on your requirements, with licensed advisors assigned directly to your family.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-6">
+            <div class="why-card-premium">
+              <div class="why-card-icon"><i class="bi bi-life-preserver"></i></div>
+              <h5 class="fw-bold mb-2">Claims Assistance</h5>
+              <p class="text-muted small mb-0">Guidance when you need it most. We manage hospital authorizations and claim paperwork.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 07: YOUR INSURANCE JOURNEY DASHBOARD
+         Interactive Insurtech Portal Mockup
+         =================================================================== -->
+    <section class="section-py section-h2-dashboard-preview" id="dashboard-preview">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Left: Narrative -->
+          <div class="col-lg-5">
+            <span class="ws-eyebrow ws-eyebrow-dark"><i class="bi bi-speedometer2 me-1"></i> Digital Client Portal</span>
+            <h2 class="ws-section-title text-white mb-3">Your Policies. Your Progress. One Place.</h2>
+            <p class="text-white-50 mb-4" style="line-height: 1.75; font-size: 1.05rem;">
+              Say goodbye to lost policy folders and scattered renewal notices. The WellSure Client Dashboard provides transparent access to your household protection, active quotes, claims progress, and annual reviews in real time.
+            </p>
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="d-flex align-items-center gap-2 text-white">
+                <i class="bi bi-check-circle-fill text-peach"></i>
+                <span>Instant digital access to all family policy contracts</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 text-white">
+                <i class="bi bi-check-circle-fill text-peach"></i>
+                <span>One-click claims filing with dedicated broker tracking</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 text-white">
+                <i class="bi bi-check-circle-fill text-peach"></i>
+                <span>Automated annual renewal rate lock verification</span>
+              </div>
+            </div>
+            <a href="client-dashboard.html" class="btn btn-ws-primary btn-lg">
+              <span>Explore Client Dashboard</span>
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+
+          <!-- Right: Dashboard Mockup Frame -->
+          <div class="col-lg-7">
+            <div class="h2-dashboard-mockup-frame">
+              <div class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom border-secondary">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="badge bg-success-subtle text-success border border-success-subtle">Active Portal &bull; Eleanor Vance</span>
+                </div>
+                <small class="text-white-50">Last synced: Just now</small>
+              </div>
+
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <div class="h2-dash-widget">
+                    <small class="text-white-50 d-block">Active Policies</small>
+                    <strong class="text-white fs-4">2 Active</strong>
+                    <div class="small text-peach mt-1">Health &bull; Term Life 30</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="h2-dash-widget">
+                    <small class="text-white-50 d-block">Application Tracking</small>
+                    <strong class="text-warning fs-4">In Review</strong>
+                    <div class="small text-white-50 mt-1">Critical Care $100k</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Claims Status Widget -->
+              <div class="h2-dash-widget mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="text-white fw-bold">Recent Claim: Memorial Pediatric Clinic</span>
+                  <span class="badge bg-success">Paid & Settled</span>
+                </div>
+                <small class="text-white-50">$420.00 cashless settlement processed through Horizon Health.</small>
+              </div>
+
+              <!-- Renewal Alert -->
+              <div class="p-3 rounded-3" style="background: rgba(255, 211, 163, 0.1); border: 1px dashed rgba(255, 211, 163, 0.3);">
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="small text-peach fw-bold"><i class="bi bi-bell-fill me-1"></i> Renewal Alert: Dec 15, 2026</span>
+                  <span class="badge bg-light text-dark">Zero Rate Increase Verified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 08: KNOWLEDGE THAT PROTECTS (Blog Editorial Grid)
+         =================================================================== -->
+    <section class="section-py section-h2-knowledge" id="insights">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+          <div>
+            <span class="ws-eyebrow"><i class="bi bi-journal-text me-1"></i> Policy Education</span>
+            <h2 class="ws-section-title mb-0">Make Smarter Decisions With Better Knowledge.</h2>
+          </div>
+          <div class="mt-3 mt-md-0">
+            <a href="blog.html" class="btn btn-ws-green">
+              <span>Explore All Articles</span>
+              <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Article 1 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-img-box">
+                <img src="assets/images/blog-1.jpg" alt="Life Insurance: What Every Family Should Know">
+                <span class="blog-category-badge">Life Insurance</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-date"><i class="bi bi-calendar3"></i> <span>Nov 12, 2026 &bull; 6 min read</span></div>
+                <h4>Life Insurance: What Every Family Should Know.</h4>
+                <p>Understand death benefit multipliers, level term horizons, and how to structure policy beneficiaries properly.</p>
+                <a href="blog-details.html?id=1" class="coverage-link mt-auto">
+                  <span>Read Article</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-img-box">
+                <img src="assets/images/blog-2.jpg" alt="Understanding Health Insurance Coverage">
+                <span class="blog-category-badge">Health Coverage</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-date"><i class="bi bi-calendar3"></i> <span>Nov 08, 2026 &bull; 5 min read</span></div>
+                <h4>Understanding Health Insurance Coverage.</h4>
+                <p>Why hospital networks, prescription formularies, and maximum out-of-pocket limits matter more than just monthly cost.</p>
+                <a href="blog-details.html?id=2" class="coverage-link mt-auto">
+                  <span>Read Article</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <div class="blog-img-box">
+                <img src="assets/images/blog-3.jpg" alt="Five Things to Compare Before Choosing a Plan">
+                <span class="blog-category-badge">Plan Comparisons</span>
+              </div>
+              <div class="blog-body">
+                <div class="blog-date"><i class="bi bi-calendar3"></i> <span>Nov 02, 2026 &bull; 7 min read</span></div>
+                <h4>Five Things to Compare Before Choosing a Plan.</h4>
+                <p>The essential checklist to audit waiting periods, pre-existing conditions, copayments, and restoration clauses.</p>
+                <a href="blog-details.html?id=3" class="coverage-link mt-auto">
+                  <span>Read Article</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SECTION 09: FINAL CTA – YOUR FUTURE STARTS WITH ONE DECISION
+         =================================================================== -->
+    <section class="section-py section-h2-final-cta">
+      <div class="container">
+        <div class="cta-box text-center">
+          <span class="ws-eyebrow ws-eyebrow-dark"><i class="bi bi-shield-lock me-1"></i> WELLSURE PROTECTION</span>
+          <h2 class="ws-section-title text-white mb-3" style="font-size: clamp(2rem, 3.8vw, 3.2rem);">
+            Make Today a Little More Secure for Tomorrow.
+          </h2>
+          <p class="text-white-50 max-w-700 mx-auto mb-4" style="font-size: 1.1rem; line-height: 1.7;">
+            Explore your options, compare with confidence and find guidance for every important stage of life.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap cta-actions">
+            <a href="contact.html" class="btn btn-ws-primary btn-lg">
+              <span>Get Your Free Quote</span>
+              <i class="bi bi-arrow-up-right ms-1"></i>
+            </a>
+            <a href="contact.html" class="btn btn-ws-outline btn-lg">
+              <i class="bi bi-chat-dots me-1"></i>
+              <span>Talk to an Advisor</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Reusable Global Footer Component -->
+  <footer class="ws-footer pt-5">
+    <div class="container pt-4">
+      <div class="row g-4 g-lg-5 pb-5 align-items-start">
+        
+        <!-- Col 1: Brand & Fiduciary Intermediary Mission -->
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <a class="ws-brand mb-3 d-inline-flex" href="index.html">
+            <div class="ws-logo-icon"><i class="bi bi-shield-fill-check"></i></div>
+            <div class="ws-logo-text"><span class="ws-logo-title">Well<span>Sure</span></span><span class="ws-logo-tagline">Protection. Clarity. Confidence.</span></div>
+          </a>
+          <p class="text-white-50 mt-3 pe-lg-4" style="font-size: 0.92rem; line-height: 1.7;">
+            WellSure is an independent Life & Health Insurance brokerage dedicated to family protection, unbiased plan audits, and lifelong policyholder advocacy across 40+ leading licensed carriers.
+          </p>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <span class="badge" style="background: rgba(255,211,163,0.12); border: 1px solid rgba(255,211,163,0.28); color: #FFD3A3; padding: 6px 14px; border-radius: 20px; font-size: 0.76rem; font-weight: 700;">
+              <i class="bi bi-award-fill me-1 text-peach"></i> Licensed Fiduciary Intermediary
+            </span>
+          </div>
+          <div class="d-flex gap-2 mt-4">
+            <a href="#" class="ws-social-link" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="ws-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (All Navlinks) -->
+        <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Quick Links</h5>
+          <ul class="ws-footer-links">
+            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="home2.html"><i class="bi bi-chevron-right"></i> Home 2</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
+            <li><a href="services.html"><i class="bi bi-chevron-right"></i> Services</a></li>
+            <li><a href="pricing.html"><i class="bi bi-chevron-right"></i> Pricing</a></li>
+            <li><a href="blog.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
+            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support & Legal (Terms, FAQ, Privacy Policy, Disclosures) -->
+        <div class="col-lg-3 col-md-4 col-6 mb-4 mb-lg-0">
+          <h5>Support & Legal</h5>
+          <ul class="ws-footer-links">
+            <li><a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a></li>
+            <li><a href="services.html#servicesFaqAccordion"><i class="bi bi-question-circle"></i> Frequently Asked Questions</a></li>
+            <li><a href="privacy.html"><i class="bi bi-shield-check"></i> Privacy Policy</a></li>
+            <li><a href="service-detail.html?plan=health#claims"><i class="bi bi-life-preserver"></i> Claims Guidance Desk</a></li>
+            <li><a href="about.html#approach"><i class="bi bi-patch-check"></i> Regulatory Disclosures</a></li>
+            <li><a href="client-dashboard.html"><i class="bi bi-speedometer2"></i> Client Self-Service Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Office (Address, Phone, Email, Hours) -->
+        <div class="col-lg-3 col-md-4 mb-4 mb-lg-0">
+          <h5>Contact & Office</h5>
+          
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Headquarters Office:</strong><br>
+              742 Evergreen Terrace, Suite 400<br>
+              Financial District, New York, NY 10001
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <div>
+              <strong>Toll-Free Brokerage Hotline:</strong><br>
+              <a href="tel:18009355787">1-800-WELLSURE (935-5787)</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Direct Advisory Desk:</strong><br>
+              <a href="mailto:advisory@wellsure.com">advisory@wellsure.com</a>
+            </div>
+          </div>
+
+          <div class="ws-footer-contact-item">
+            <i class="bi bi-clock-fill"></i>
+            <div>
+              <strong>Advisory Hours:</strong><br>
+              Mon &ndash; Fri: 8:00 AM &ndash; 8:00 PM EST
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal & Disclaimer -->
+      <div class="ws-footer-bottom pt-4 border-top border-white border-opacity-10 d-flex flex-wrap justify-content-between align-items-center gap-3">
+        <p class="mb-0 text-white-50 small">
+          &copy; 2026 WellSure Insurance Brokerage LLC. All rights reserved. Licensed fiduciary insurance intermediary.
+        </p>
+        <div class="d-flex gap-3 text-white-50 small">
+          <a href="privacy.html" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <span>&bull;</span>
+          <a href="terms.html" class="text-white-50 text-decoration-none">Terms of Service</a>
+          <span>&bull;</span>
+          <a href="about.html#approach" class="text-white-50 text-decoration-none">Regulatory Disclosures</a>
+        </div>
+      </div>
+      <p class="ws-disclaimer mt-3 mb-0 text-white-50 small">
+        <strong>Insurance Brokerage Disclaimer:</strong> WellSure is a licensed independent insurance intermediary. Information provided on this website is for informational and educational purposes only and does not constitute a binding contract or guarantee of coverage.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Application Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Featured Plans Tab Switcher -->
+  <script>
+    function toggleH2Plans(type) {
+      const btnHealth = document.getElementById('tabBtnHealth');
+      const btnLife = document.getElementById('tabBtnLife');
+      const containerHealth = document.getElementById('containerHealthPlans');
+      const containerLife = document.getElementById('containerLifePlans');
+
+      if (type === 'health') {
+        btnHealth.classList.add('active');
+        btnLife.classList.remove('active');
+        containerHealth.style.display = 'flex';
+        containerLife.style.display = 'none';
+      } else {
+        btnLife.classList.add('active');
+        btnHealth.classList.remove('active');
+        containerLife.style.display = 'flex';
+        containerHealth.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+</html>

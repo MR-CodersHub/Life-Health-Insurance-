@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Operations Control Center | WellSure Brokerage</title>
+  <meta name="description" content="Central administration and broker back-office for managing client records, policy portfolios, carrier plans, claims advocacy, and staff advisors.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3.3 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Core Stylesheets, Shared Dashboard Stylesheet & Admin Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-app-layout">
+    
+    <!-- ===================================================================
+         1. FIXED DARK OLIVE SIDEBAR (MAIN MENU & MANAGEMENT)
+         Same Architecture as Client Dashboard • CRM & Operations Navigation
+         =================================================================== -->
+    <aside class="dashboard-sidebar-fixed" id="adminSidebar" aria-label="Admin Portal Navigation">
+      
+      <!-- Brand Box (Links to live Home page) -->
+      <div class="sidebar-brand-box">
+        <a class="sidebar-brand-link" href="index.html" aria-label="WellSure Homepage">
+          <div class="ws-logo-icon">
+            <i class="bi bi-shield-lock-fill"></i>
+          </div>
+          <div class="ws-logo-text">
+            <span class="ws-logo-title text-white">Well<span class="text-terracotta">Sure</span></span>
+            <span class="ws-logo-tagline text-white-50">Admin Center</span>
+          </div>
+        </a>
+        <button type="button" class="sidebar-close-btn" id="adminSidebarClose" aria-label="Close Admin Navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Container -->
+      <div class="sidebar-nav-container">
+        
+        <!-- SECTION 1: MAIN MENU -->
+        <div class="sidebar-section-label">
+          <span>Main Menu</span>
+          <i class="bi bi-three-dots"></i>
+        </div>
+
+        <ul class="sidebar-nav-menu">
+          <!-- 01: Dashboard -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn active" data-target-tab="tabAdminDashboard" data-tab-title="Dashboard Overview">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-speedometer2"></i>
+                <span>Dashboard</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 02: Customers -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminCustomers" data-tab-title="Customer Management">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-people-fill"></i>
+                <span>Customers</span>
+              </div>
+              <span class="sidebar-badge">2,480</span>
+            </button>
+          </li>
+
+          <!-- 03: Insurance Plans -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminPlans" data-tab-title="Insurance Plans Catalogue">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-journal-medical"></i>
+                <span>Insurance Plans</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 04: Applications -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminApplications" data-tab-title="Application Processing">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-file-earmark-check-fill"></i>
+                <span>Applications</span>
+              </div>
+              <span class="sidebar-badge highlight">126</span>
+            </button>
+          </li>
+
+          <!-- 05: Claims Management -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminClaims" data-tab-title="Claims Advocacy Desk">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-life-preserver"></i>
+                <span>Claims Management</span>
+              </div>
+              <span class="sidebar-badge">38</span>
+            </button>
+          </li>
+
+          <!-- 06: Advisors & Agents -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminAdvisors" data-tab-title="Advisors &amp; Staff">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-person-badge-fill"></i>
+                <span>Advisors &amp; Agents</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 07: Enquiries & Leads -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminEnquiries" data-tab-title="Enquiries &amp; CRM Leads">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-funnel-fill"></i>
+                <span>Enquiries &amp; Leads</span>
+              </div>
+              <span class="sidebar-badge highlight">64</span>
+            </button>
+          </li>
+
+          <!-- 08: Documents -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminDocuments" data-tab-title="Documents Repository">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-folder2-open"></i>
+                <span>Documents</span>
+              </div>
+            </button>
+          </li>
+        </ul>
+
+        <!-- SECTION 2: MANAGEMENT -->
+        <div class="sidebar-section-label mt-4">
+          <span>Management</span>
+          <i class="bi bi-sliders"></i>
+        </div>
+
+        <ul class="sidebar-nav-menu">
+          <!-- 09: Appointments -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminAppointments" data-tab-title="Appointments &amp; Schedule">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-calendar-check-fill"></i>
+                <span>Appointments</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 10: Payments & Renewals -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminPayments" data-tab-title="Payments &amp; Renewals">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-cash-stack"></i>
+                <span>Payments &amp; Renewals</span>
+              </div>
+              <span class="sidebar-badge">22 Due</span>
+            </button>
+          </li>
+
+          <!-- 11: Reports & Analytics -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminReports" data-tab-title="Reports &amp; Analytics">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-graph-up-arrow"></i>
+                <span>Reports &amp; Analytics</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 12: Blog Management -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminBlog" data-tab-title="Website CMS &amp; Blog">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-newspaper"></i>
+                <span>Blog Management</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 13: Notifications -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminNotifications" data-tab-title="System Alerts">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-bell-fill"></i>
+                <span>Notifications</span>
+              </div>
+              <span class="sidebar-badge highlight">6</span>
+            </button>
+          </li>
+
+          <!-- 14: Settings -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAdminSettings" data-tab-title="System Settings">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-gear-fill"></i>
+                <span>Settings</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 15: Logout -->
+          <li class="sidebar-nav-item">
+            <a href="login.html" class="sidebar-nav-btn text-danger" onclick="handleAdminLogout(event)">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-box-arrow-right text-danger"></i>
+                <span>Logout</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- Admin Profile Footer in Sidebar -->
+      <div class="sidebar-user-footer">
+        <div class="sidebar-user-info">
+          <div class="stat-compact-icon terracotta" style="width: 42px; height: 42px; font-size: 1.25rem;">
+            <i class="bi bi-shield-lock-fill"></i>
+          </div>
+          <div class="sidebar-user-meta">
+            <strong>Super Admin</strong>
+            <small>Fiduciary Desk Officer</small>
+          </div>
+        </div>
+        <button type="button" class="sidebar-logout-btn" onclick="handleAdminLogout(event)" title="Sign Out">
+          <i class="bi bi-power"></i>
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- ===================================================================
+         2. WORKSPACE CONTAINER (TOPBAR & MAIN CONTENT)
+         =================================================================== -->
+    <div class="dashboard-workspace">
+      
+      <!-- Topbar Header (No Global Navbar) -->
+      <header class="dashboard-topbar">
+        
+        <!-- Left: Mobile Toggle & Breadcrumbs -->
+        <div class="topbar-left-cluster">
+          <button type="button" class="sidebar-toggle-btn" id="adminSidebarToggle" aria-label="Toggle Navigation Drawer">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="topbar-breadcrumb">
+            <i class="bi bi-shield-lock text-terracotta"></i>
+            <span>Control Center</span>
+            <i class="bi bi-chevron-right small text-muted"></i>
+            <span class="active-crumb" id="adminBreadcrumbCurrent">Dashboard</span>
+          </div>
+        </div>
+
+        <!-- Center: Universal Admin Search -->
+        <div class="topbar-search-wrap">
+          <i class="bi bi-search topbar-search-icon"></i>
+          <input 
+            type="text" 
+            class="topbar-search-input admin-table-search" 
+            id="topbarAdminSearch" 
+            placeholder="Search customers, policies, claims, advisors..." 
+            aria-label="Universal Admin Search"
+          >
+        </div>
+
+        <!-- Right: Date Filter, Notifications & Profile -->
+        <div class="topbar-actions-cluster">
+          
+          <!-- Date Filter Picker -->
+          <div class="d-none d-xl-flex align-items-center gap-2 px-3 py-1 rounded-pill admin-topbar-date small">
+            <i class="bi bi-calendar-event text-terracotta"></i>
+            <span class="fw-bold">Today: Nov 18, 2026</span>
+          </div>
+
+          <!-- Notification Bell -->
+          <div class="dropdown">
+            <button class="topbar-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="System Alerts">
+              <i class="bi bi-bell"></i>
+              <span class="notification-unread-dot"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg p-2 rounded-3" style="width: 330px; font-size: 0.88rem;">
+              <li class="dropdown-header fw-bold text-olive d-flex justify-content-between align-items-center">
+                <span>System Alerts</span>
+                <span class="badge bg-danger text-white rounded-pill">6 Actions</span>
+              </li>
+              <li><hr class="dropdown-divider my-1"></li>
+              <li>
+                <a class="dropdown-item p-2 rounded-2" href="#" data-target-tab="tabAdminApplications">
+                  <strong class="d-block text-terracotta small"><i class="bi bi-exclamation-circle me-1"></i> 126 Pending Applications</strong>
+                  <span class="small text-muted">Medical review approvals required for Care Health batch.</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item p-2 rounded-2" href="#" data-target-tab="tabAdminClaims">
+                  <strong class="d-block text-warning-emphasis small"><i class="bi bi-hospital me-1"></i> Cashless Pre-Auth Triggered</strong>
+                  <span class="small text-muted">Apollo Hospital Greams Road claim #CLM-49102 pending document verification.</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Theme Toggle Button -->
+          <button class="topbar-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Direction Toggle -->
+          <button class="topbar-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">
+            RTL
+          </button>
+
+          <!-- Admin Avatar Dropdown -->
+          <div class="dropdown">
+            <div class="topbar-profile-trigger" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/images/advisor-1.jpg" alt="Admin Avatar" class="topbar-avatar-small">
+              <span class="d-none d-md-inline small fw-bold">Admin Desk</span>
+              <i class="bi bi-chevron-down small text-muted"></i>
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg rounded-3 py-2">
+              <li class="px-3 py-2 border-bottom">
+                <strong class="d-block">Super Admin</strong>
+                <small class="text-muted">operations@wellsure.internal</small>
+              </li>
+              <li><a class="dropdown-item" href="#" data-target-tab="tabAdminSettings"><i class="bi bi-shield-check me-2"></i> Role Permissions</a></li>
+              <li><a class="dropdown-item" href="index.html" target="_blank"><i class="bi bi-box-arrow-up-right me-2"></i> Live Website ↗</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="login.html" onclick="handleAdminLogout(event)"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </header>
+
+      <!-- ===================================================================
+           3. MAIN SCROLLABLE CONTENT (14 DEDICATED ADMIN TABS)
+           =================================================================== -->
+      <main class="dashboard-main-scroll">
+        
+        <!-- =================================================================
+             TAB 01: DASHBOARD (OVERVIEW ANALYTICS & RECENT ACTIVITY)
+             Six KPI Cards • 2-Column CRM Layout • Chart Distribution
+             ================================================================= -->
+        <section class="dash-tab-pane active" id="tabAdminDashboard">
+          
+          <!-- Welcome Banner -->
+          <div class="dash-welcome-hero mb-4">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+              <div>
+                <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill fw-bold mb-2">
+                  <i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i> Brokerage Operations Live
+                </span>
+                <h1 class="dash-welcome-title mb-1">Welcome back, Admin!</h1>
+                <p class="dash-welcome-lead mb-0">Here's what's happening across your WellSure platform today.</p>
+              </div>
+              <div class="d-flex gap-2">
+                <button type="button" class="btn btn-ws-primary btn-sm" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+                  <i class="bi bi-person-plus-fill me-1"></i> Add Customer
+                </button>
+                <button type="button" class="btn btn-ws-outline-green btn-sm" data-bs-toggle="modal" data-bs-target="#addPlanModal">
+                  <i class="bi bi-plus-circle me-1"></i> New Plan
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02. SIX KPI CARDS AS REQUESTED -->
+          <div class="row g-3 g-xl-4 mb-4">
+            
+            <!-- KPI 1: Total Customers -->
+            <div class="col-xl-2 col-md-4 col-sm-6">
+              <div class="admin-kpi-card admin-searchable-row" data-target-tab="tabAdminCustomers">
+                <div class="admin-kpi-top">
+                  <div class="admin-kpi-icon olive"><i class="bi bi-people-fill"></i></div>
+                  <span class="badge bg-success-subtle text-success">+12%</span>
+                </div>
+                <div>
+                  <div class="admin-kpi-val">2,480</div>
+                  <div class="admin-kpi-label">Total Customers</div>
+                  <div class="admin-kpi-trend positive"><i class="bi bi-arrow-up-right"></i> +12% this month</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- KPI 2: Active Policies -->
+            <div class="col-xl-2 col-md-4 col-sm-6">
+              <div class="admin-kpi-card admin-searchable-row" data-target-tab="tabAdminPlans">
+                <div class="admin-kpi-top">
+                  <div class="admin-kpi-icon blue"><i class="bi bi-shield-check"></i></div>
+                  <span class="badge bg-primary-subtle text-primary">In Force</span>
+                </div>
+                <div>
+                  <div class="admin-kpi-val">1,845</div>
+                  <div class="admin-kpi-label">Active Policies</div>
+                  <div class="admin-kpi-trend muted">Across all customers</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- KPI 3: Pending Applications -->
+            <div class="col-xl-2 col-md-4 col-sm-6">
+              <div class="admin-kpi-card admin-searchable-row" data-target-tab="tabAdminApplications">
+                <div class="admin-kpi-top">
+                  <div class="admin-kpi-icon terracotta"><i class="bi bi-file-earmark-text"></i></div>
+                  <span class="badge bg-danger-subtle text-danger">Action</span>
+                </div>
+                <div>
+                  <div class="admin-kpi-val">126</div>
+                  <div class="admin-kpi-label">Pending Applications</div>
+                  <div class="admin-kpi-trend warning"><i class="bi bi-clock-history"></i> Requires review</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- KPI 4: Open Claims -->
+            <div class="col-xl-2 col-md-4 col-sm-6">
+              <div class="admin-kpi-card admin-searchable-row" data-target-tab="tabAdminClaims">
+                <div class="admin-kpi-top">
+                  <div class="admin-kpi-icon amber"><i class="bi bi-life-preserver"></i></div>
+                  <span class="badge bg-warning-subtle text-warning-emphasis">Cashless</span>
+                </div>
+                <div>
+                  <div class="admin-kpi-val">38</div>
+                  <div class="admin-kpi-label">Open Claims</div>
+                  <div class="admin-kpi-trend warning"><i class="bi bi-arrow-repeat"></i> Awaiting updates</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- KPI 5: New Enquiries -->
+            <div class="col-xl-2 col-md-4 col-sm-6">
+              <div class="admin-kpi-card admin-searchable-row" data-target-tab="tabAdminEnquiries">
+                <div class="admin-kpi-top">
+                  <div class="admin-kpi-icon peach"><i class="bi bi-chat-quote-fill"></i></div>
+                  <span class="badge bg-warning-subtle text-warning-emphasis">CRM</span>
+                </div>
+                <div>
+                  <div class="admin-kpi-val">64</div>
+                  <div class="admin-kpi-label">New Enquiries</div>
+                  <div class="admin-kpi-trend warning"><i class="bi bi-telephone"></i> Needs follow-up</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- KPI 6: Upcoming Renewals -->
+            <div class="col-xl-2 col-md-4 col-sm-6">
+              <div class="admin-kpi-card admin-searchable-row" data-target-tab="tabAdminPayments">
+                <div class="admin-kpi-top">
+                  <div class="admin-kpi-icon purple"><i class="bi bi-calendar-event"></i></div>
+                  <span class="badge bg-secondary-subtle text-secondary">30 Days</span>
+                </div>
+                <div>
+                  <div class="admin-kpi-val">22</div>
+                  <div class="admin-kpi-label">Upcoming Renewals</div>
+                  <div class="admin-kpi-trend muted">Next 30 days</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- TWO-COLUMN CORE LAYOUT: APPLICATIONS/CLAIMS ON LEFT • PIPELINE/FEED ON RIGHT -->
+          <div class="row g-4 align-items-start">
+            
+            <!-- LEFT COLUMN (8 COLS): APPLICATIONS & RECENT OPERATIONS TABLE -->
+            <div class="col-lg-8">
+              
+              <!-- Recent Applications Queue Table -->
+              <div class="admin-data-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h5 class="fw-bold mb-1 text-olive">Recent Applications &amp; Underwriting Status</h5>
+                    <p class="small text-muted mb-0">Active client submissions requiring broker audit and underwriter escalation.</p>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-ws-outline-green" data-target-tab="tabAdminApplications">
+                    View All 126 &rarr;
+                  </button>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle mb-0" id="dashRecentAppsTable">
+                    <thead class="table-light">
+                      <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                        <th>App ID</th>
+                        <th>Customer</th>
+                        <th>Coverage Plan</th>
+                        <th>Carrier</th>
+                        <th>Status</th>
+                        <th class="text-end">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody style="font-size: 0.86rem;">
+                      <!-- Row 1 -->
+                      <tr id="row-APP-89214" class="admin-searchable-row">
+                        <td><strong class="text-terracotta">#APP-89214</strong></td>
+                        <td>
+                          <strong>Alex Morgan</strong>
+                          <small class="d-block text-muted">alex@example.com</small>
+                        </td>
+                        <td>Senior Health Plan</td>
+                        <td>Metro Care</td>
+                        <td class="status-tag-cell"><span class="badge-status-review">Under Review</span></td>
+                        <td class="text-end">
+                          <button type="button" class="btn btn-sm btn-success me-1" onclick="handleApproveApplication('APP-89214')" title="Approve Application"><i class="bi bi-check-lg"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-danger" onclick="handleRejectApplication('APP-89214')" title="Decline Application"><i class="bi bi-x-lg"></i></button>
+                        </td>
+                      </tr>
+
+                      <!-- Row 2 -->
+                      <tr id="row-APP-89215" class="admin-searchable-row">
+                        <td><strong class="text-terracotta">#APP-89215</strong></td>
+                        <td>
+                          <strong>Pooja Venkat</strong>
+                          <small class="d-block text-muted">pooja.v@gmail.com</small>
+                        </td>
+                        <td>Family Floater (₹15L)</td>
+                        <td>Care Health</td>
+                        <td class="status-tag-cell"><span class="badge-status-submitted">Submitted</span></td>
+                        <td class="text-end">
+                          <button type="button" class="btn btn-sm btn-success me-1" onclick="handleApproveApplication('APP-89215')"><i class="bi bi-check-lg"></i></button>
+                          <button type="button" class="btn btn-sm btn-outline-danger" onclick="handleRejectApplication('APP-89215')"><i class="bi bi-x-lg"></i></button>
+                        </td>
+                      </tr>
+
+                      <!-- Row 3 -->
+                      <tr id="row-APP-89216" class="admin-searchable-row">
+                        <td><strong class="text-terracotta">#APP-89216</strong></td>
+                        <td>
+                          <strong>Rohan Mehra</strong>
+                          <small class="d-block text-muted">rohan.mehra@techcorp.in</small>
+                        </td>
+                        <td>Term Life Shield (₹1 Cr)</td>
+                        <td>HDFC Life</td>
+                        <td class="status-tag-cell"><span class="badge-status-docs">Docs Required</span></td>
+                        <td class="text-end">
+                          <button type="button" class="btn btn-sm btn-primary me-1" onclick="alert('Dispatched SMS/Email notification requesting 3-month salary slips.');"><i class="bi bi-envelope"></i></button>
+                        </td>
+                      </tr>
+
+                      <!-- Row 4 -->
+                      <tr id="row-APP-89217" class="admin-searchable-row">
+                        <td><strong class="text-terracotta">#APP-89217</strong></td>
+                        <td>
+                          <strong>Ananya Sundaram</strong>
+                          <small class="d-block text-muted">ananya@sundaram.org</small>
+                        </td>
+                        <td>Critical Illness Lump-Sum</td>
+                        <td>Tata AIG</td>
+                        <td class="status-tag-cell"><span class="badge-status-approved">Approved</span></td>
+                        <td class="text-end">
+                          <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="handleApproveApplication('APP-89217')">Issue Bond</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Open Claims Assistance Queue -->
+              <div class="admin-data-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h5 class="fw-bold mb-1 text-olive">Emergency Cashless Claims Assistance Queue</h5>
+                    <p class="small text-muted mb-0">Live hospital TPA pre-authorizations monitored by WellSure advocates.</p>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-ws-outline-green" data-target-tab="tabAdminClaims">
+                    View All 38 Claims &rarr;
+                  </button>
+                </div>
+
+                <div class="table-responsive">
+                  <table class="table table-hover align-middle mb-0">
+                    <thead class="table-light">
+                      <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                        <th>Claim ID</th>
+                        <th>Hospital &amp; City</th>
+                        <th>Insurer</th>
+                        <th>Sanctioned Amount</th>
+                        <th>Advocate Status</th>
+                      </tr>
+                    </thead>
+                    <tbody style="font-size: 0.86rem;">
+                      <tr class="admin-searchable-row">
+                        <td><strong class="text-terracotta">#CLM-49102</strong></td>
+                        <td><strong>Apollo Hospital, Chennai</strong><small class="d-block text-muted">Patient: Alex Morgan</small></td>
+                        <td>Care Health</td>
+                        <td><strong class="text-success">₹85,000 (Pre-Auth Approved)</strong></td>
+                        <td><span class="badge bg-success-subtle text-success">Awaiting Discharge Invoices</span></td>
+                      </tr>
+                      <tr class="admin-searchable-row">
+                        <td><strong class="text-terracotta">#CLM-49103</strong></td>
+                        <td><strong>Fortis Hospital, Bengaluru</strong><small class="d-block text-muted">Patient: Deepa Sharma</small></td>
+                        <td>Star Health</td>
+                        <td><strong class="text-terracotta">₹1,20,000 (Under Review)</strong></td>
+                        <td><span class="badge bg-warning-subtle text-warning-emphasis">Query Response Dispatched</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN (4 COLS): LEAD FUNNEL PIPELINE & ACTIVITY AUDIT -->
+            <div class="col-lg-4">
+              
+              <!-- CRM Lead Pipeline Widget -->
+              <div class="pipeline-funnel-card admin-searchable-row">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <h6 class="fw-bold text-olive mb-0">CRM Lead Pipeline</h6>
+                  <button type="button" class="btn btn-sm btn-link text-terracotta fw-bold p-0 text-decoration-none" data-target-tab="tabAdminEnquiries">Details &rarr;</button>
+                </div>
+                <small class="text-muted d-block mb-3">Live enquiry conversion progression</small>
+
+                <div class="pipeline-funnel-grid">
+                  <div class="pipeline-stage-box">
+                    <div class="pipeline-stage-count text-olive">64</div>
+                    <div class="pipeline-stage-name">New Leads</div>
+                    <div class="pipeline-stage-sub">Incoming</div>
+                  </div>
+                  <div class="pipeline-stage-box">
+                    <div class="pipeline-stage-count text-terracotta">42</div>
+                    <div class="pipeline-stage-name">Contacted</div>
+                    <div class="pipeline-stage-sub">Phone/Email</div>
+                  </div>
+                  <div class="pipeline-stage-box">
+                    <div class="pipeline-stage-count text-primary">28</div>
+                    <div class="pipeline-stage-name">Consultation</div>
+                    <div class="pipeline-stage-sub">Meet Active</div>
+                  </div>
+                  <div class="pipeline-stage-box">
+                    <div class="pipeline-stage-count text-success">18</div>
+                    <div class="pipeline-stage-name">Converted</div>
+                    <div class="pipeline-stage-sub">Policyholders</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Activity Audit Trail Feed -->
+              <div class="admin-data-card admin-searchable-row">
+                <h6 class="fw-bold text-olive mb-3">Live System Audit &amp; Activity</h6>
+                
+                <ul class="admin-audit-feed">
+                  <li class="audit-feed-item">
+                    <span class="audit-node-dot green"></span>
+                    <div class="audit-feed-content">
+                      <strong>New Customer Onboarded</strong>
+                      <p class="small text-muted mb-0">Liam Henderson registered and confirmed OTP verification.</p>
+                      <span class="audit-feed-time">10 minutes ago</span>
+                    </div>
+                  </li>
+
+                  <li class="audit-feed-item">
+                    <span class="audit-node-dot amber"></span>
+                    <div class="audit-feed-content">
+                      <strong>Claim Status Updated</strong>
+                      <p class="small text-muted mb-0">Apollo Hospital cashless pre-auth of ₹85,000 sanctioned for #CLM-49102.</p>
+                      <span class="audit-feed-time">32 minutes ago</span>
+                    </div>
+                  </li>
+
+                  <li class="audit-feed-item">
+                    <span class="audit-node-dot blue"></span>
+                    <div class="audit-feed-content">
+                      <strong>Advisor Assigned</strong>
+                      <p class="small text-muted mb-0">Priya Sharma allocated to 4 new family floater leads from Chennai.</p>
+                      <span class="audit-feed-time">1 hour ago</span>
+                    </div>
+                  </li>
+
+                  <li class="audit-feed-item">
+                    <span class="audit-node-dot green"></span>
+                    <div class="audit-feed-content">
+                      <strong>Policy Renewal Monitored</strong>
+                      <p class="small text-muted mb-0">Care Health renewal notice dispatched to Eleanor Vance (#WS-2481).</p>
+                      <span class="audit-feed-time">2 hours ago</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- =================================================================
+             TAB 02: CUSTOMERS MANAGEMENT (CRUD & PROFILES)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminCustomers">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Customer Records Management</h3>
+              <p class="text-muted small mb-0">Manage all registered WellSure customers, policyholders, and KYC records.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" data-bs-toggle="modal" data-bs-target="#addCustomerModal">
+              <i class="bi bi-person-plus-fill me-1"></i> Add Customer Manually
+            </button>
+          </div>
+
+          <div class="admin-data-card">
+            <!-- Filter Bar -->
+            <div class="admin-table-filter-bar">
+              <div class="admin-search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" class="admin-table-search" data-table-target="customersTable" placeholder="Search customer name, email, ID...">
+              </div>
+              <div class="d-flex gap-2">
+                <select class="form-select form-select-sm admin-status-filter" data-table-target="customersTable">
+                  <option value="all" selected>All Account Statuses</option>
+                  <option value="active">Active Members</option>
+                  <option value="pending">Pending KYC</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0" id="customersTable">
+                <thead class="table-light">
+                  <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Registered</th>
+                    <th>Active Policies</th>
+                    <th>Status</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.86rem;">
+                  <tr class="admin-searchable-row">
+                    <td><strong class="text-terracotta">#WS-CUST-1048</strong></td>
+                    <td><strong>Alex Morgan</strong></td>
+                    <td>client@wellsure.demo</td>
+                    <td>+91 98400 12345</td>
+                    <td>15 Dec 2025</td>
+                    <td><span class="badge bg-success text-white">2 Policies</span></td>
+                    <td class="status-tag-cell"><span class="badge-status-approved">Active</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border me-1" onclick="alert('Viewing Alex Morgan verified dossier and policy bonds...');" title="View Customer Profile"><i class="bi bi-eye"></i></button>
+                      <button type="button" class="btn btn-sm btn-light border" onclick="alert('Opening customer edit window...');" title="Edit Customer Details"><i class="bi bi-pencil"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr class="admin-searchable-row">
+                    <td><strong class="text-terracotta">#WS-CUST-1049</strong></td>
+                    <td><strong>Pooja Venkat</strong></td>
+                    <td>pooja.v@gmail.com</td>
+                    <td>+91 98840 55432</td>
+                    <td>10 Nov 2026</td>
+                    <td><span class="badge bg-warning text-dark">1 Pending</span></td>
+                    <td class="status-tag-cell"><span class="badge-status-review">Pending KYC</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border me-1" onclick="alert('Viewing profile...');"><i class="bi bi-eye"></i></button>
+                      <button type="button" class="btn btn-sm btn-light border" onclick="alert('Editing...');"><i class="bi bi-pencil"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr class="admin-searchable-row">
+                    <td><strong class="text-terracotta">#WS-CUST-1050</strong></td>
+                    <td><strong>Rohan Mehra</strong></td>
+                    <td>rohan.mehra@techcorp.in</td>
+                    <td>+91 97110 99882</td>
+                    <td>12 Nov 2026</td>
+                    <td><span class="badge bg-secondary text-white">0 Policies</span></td>
+                    <td class="status-tag-cell"><span class="badge-status-approved">Active</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border me-1"><i class="bi bi-eye"></i></button>
+                      <button type="button" class="btn btn-sm btn-light border"><i class="bi bi-pencil"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 03: INSURANCE PLANS MANAGEMENT (CATALOGUE & AVAILABILITY)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminPlans">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Insurance Plans Management</h3>
+              <p class="text-muted small mb-0">Maintain verified insurer products, brochures, category associations, and publish statuses.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" data-bs-toggle="modal" data-bs-target="#addPlanModal">
+              <i class="bi bi-plus-circle me-1"></i> Add New Insurance Plan
+            </button>
+          </div>
+
+          <div class="row g-4">
+            <!-- Plan 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm p-4 rounded-4 h-100" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-success-subtle text-success">Health Insurance</span>
+                  <button type="button" class="btn btn-sm btn-success py-1 px-3 rounded-pill fw-bold" onclick="handleTogglePlanStatus('PLAN-H1', this)">Published (Active)</button>
+                </div>
+                <h5 class="fw-bold text-olive mb-1">Care Comprehensive Health Cover</h5>
+                <small class="text-muted d-block mb-3">Carrier: <strong>Care Health Insurance Co.</strong></small>
+                <div class="p-3 rounded-3 mb-3 border" style="background: var(--color-dash-bg);">
+                  <div class="small d-flex justify-content-between mb-1">
+                    <span class="text-muted">Eligible Category:</span> <strong>Family Floater &bull; Individuals</strong>
+                  </div>
+                  <div class="small d-flex justify-content-between">
+                    <span class="text-muted">Brochure Attached:</span> <strong>Care_Brochure_2026.pdf</strong>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 mt-auto">
+                  <button type="button" class="btn btn-sm btn-light border flex-grow-1" onclick="alert('Opening plan editor...');"><i class="bi bi-pencil me-1"></i> Edit Plan</button>
+                  <button type="button" class="btn btn-sm btn-outline-danger" onclick="alert('Archived plan.');"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm p-4 rounded-4 h-100" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-warning-subtle text-warning-emphasis">Term Life</span>
+                  <button type="button" class="btn btn-sm btn-success py-1 px-3 rounded-pill fw-bold" onclick="handleTogglePlanStatus('PLAN-L1', this)">Published (Active)</button>
+                </div>
+                <h5 class="fw-bold text-olive mb-1">Horizon Pure Risk Shield</h5>
+                <small class="text-muted d-block mb-3">Carrier: <strong>HDFC Life Insurance Co.</strong></small>
+                <div class="p-3 rounded-3 mb-3 border" style="background: var(--color-dash-bg);">
+                  <div class="small d-flex justify-content-between mb-1">
+                    <span class="text-muted">Eligible Category:</span> <strong>Pure Term &bull; Level Death Benefit</strong>
+                  </div>
+                  <div class="small d-flex justify-content-between">
+                    <span class="text-muted">Brochure Attached:</span> <strong>HDFC_Pure_Risk_Dossier.pdf</strong>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 mt-auto">
+                  <button type="button" class="btn btn-sm btn-light border flex-grow-1" onclick="alert('Opening plan editor...');"><i class="bi bi-pencil me-1"></i> Edit Plan</button>
+                  <button type="button" class="btn btn-sm btn-outline-danger" onclick="alert('Archived plan.');"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm p-4 rounded-4 h-100" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-info-subtle text-info-emphasis">Senior Citizen</span>
+                  <button type="button" class="btn btn-sm btn-success py-1 px-3 rounded-pill fw-bold" onclick="handleTogglePlanStatus('PLAN-S1', this)">Published (Active)</button>
+                </div>
+                <h5 class="fw-bold text-olive mb-1">Golden Age Senior Shield</h5>
+                <small class="text-muted d-block mb-3">Carrier: <strong>Metro Care Insurance</strong></small>
+                <div class="p-3 rounded-3 mb-3 border" style="background: var(--color-dash-bg);">
+                  <div class="small d-flex justify-content-between mb-1">
+                    <span class="text-muted">Eligible Category:</span> <strong>Seniors Aged 60–85</strong>
+                  </div>
+                  <div class="small d-flex justify-content-between">
+                    <span class="text-muted">Brochure Attached:</span> <strong>Metro_Senior_Terms.pdf</strong>
+                  </div>
+                </div>
+                <div class="d-flex gap-2 mt-auto">
+                  <button type="button" class="btn btn-sm btn-light border flex-grow-1" onclick="alert('Opening plan editor...');"><i class="bi bi-pencil me-1"></i> Edit Plan</button>
+                  <button type="button" class="btn btn-sm btn-outline-danger" onclick="alert('Archived plan.');"><i class="bi bi-trash"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 04: APPLICATIONS MANAGEMENT (WORKFLOW & AUDIT)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminApplications">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Application Processing &amp; Verification</h3>
+              <p class="text-muted small mb-0">Full workflow: Submitted &rarr; Under Review &rarr; Approved &rarr; Issued &bull; Request missing docs or reassign.</p>
+            </div>
+            <button type="button" class="btn btn-ws-outline-green" onclick="alert('Batch sync initiated with carrier API endpoints.');">
+              <i class="bi bi-arrow-repeat me-1"></i> Sync Carrier Underwriting
+            </button>
+          </div>
+
+          <div class="admin-data-card">
+            <div class="admin-table-filter-bar">
+              <div class="admin-search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" class="admin-table-search" data-table-target="allAppsTable" placeholder="Filter applications...">
+              </div>
+              <select class="form-select form-select-sm admin-status-filter" data-table-target="allAppsTable">
+                <option value="all">All Statuses (126)</option>
+                <option value="under review">Under Review</option>
+                <option value="submitted">Submitted</option>
+                <option value="approved">Approved</option>
+                <option value="issued">Issued</option>
+                <option value="docs required">Docs Required</option>
+              </select>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0" id="allAppsTable">
+                <thead class="table-light">
+                  <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                    <th>App ID</th>
+                    <th>Customer Name</th>
+                    <th>Insurance Type</th>
+                    <th>Insurer</th>
+                    <th>Submission Date</th>
+                    <th>Assigned Advisor</th>
+                    <th>Status</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.86rem;">
+                  <tr id="row-APP-89214" class="admin-searchable-row">
+                    <td><strong class="text-terracotta">#APP-89214</strong></td>
+                    <td><strong>Alex Morgan</strong></td>
+                    <td>Senior Health Insurance</td>
+                    <td>Metro Care</td>
+                    <td>Nov 10, 2026</td>
+                    <td>Priya Sharma</td>
+                    <td class="status-tag-cell"><span class="badge-status-review">Under Review</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-success me-1" onclick="handleApproveApplication('APP-89214')"><i class="bi bi-check-lg"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-danger" onclick="handleRejectApplication('APP-89214')"><i class="bi bi-x-lg"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr id="row-APP-89215" class="admin-searchable-row">
+                    <td><strong class="text-terracotta">#APP-89215</strong></td>
+                    <td><strong>Pooja Venkat</strong></td>
+                    <td>Family Floater Health</td>
+                    <td>Care Health</td>
+                    <td>Nov 12, 2026</td>
+                    <td>Kavitha R.</td>
+                    <td class="status-tag-cell"><span class="badge-status-submitted">Submitted</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-success me-1" onclick="handleApproveApplication('APP-89215')"><i class="bi bi-check-lg"></i></button>
+                      <button type="button" class="btn btn-sm btn-outline-danger" onclick="handleRejectApplication('APP-89215')"><i class="bi bi-x-lg"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr id="row-APP-89216" class="admin-searchable-row">
+                    <td><strong class="text-terracotta">#APP-89216</strong></td>
+                    <td><strong>Rohan Mehra</strong></td>
+                    <td>Pure Term Life (₹1 Cr)</td>
+                    <td>HDFC Life</td>
+                    <td>Nov 14, 2026</td>
+                    <td>Priya Sharma</td>
+                    <td class="status-tag-cell"><span class="badge-status-docs">Docs Required</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-primary" onclick="alert('Requested 3-month salary slips from Rohan Mehra.');"><i class="bi bi-send"></i> Request Docs</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 05: CLAIMS MANAGEMENT (CENTRALIZED TRACKING)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminClaims">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Claims Advocacy &amp; Assistance Desk</h3>
+              <p class="text-muted small mb-0">Record insurer communications, track hospital cashless approvals, and support policyholders.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" onclick="alert('Opening claim assistance record ticket...');">
+              <i class="bi bi-plus-circle me-1"></i> Register Hospital Claim
+            </button>
+          </div>
+
+          <div class="admin-data-card">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                    <th>Claim Ref ID</th>
+                    <th>Customer Name</th>
+                    <th>Policy Ref</th>
+                    <th>Category</th>
+                    <th>Submitted</th>
+                    <th>Insurer</th>
+                    <th>Assigned Advocate</th>
+                    <th>Current Status</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.86rem;">
+                  <tr class="admin-searchable-row">
+                    <td><strong class="text-terracotta">#CLM-49102</strong></td>
+                    <td>Alex Morgan</td>
+                    <td>CARE-FLTR-2481</td>
+                    <td>Hospitalization Cashless</td>
+                    <td>Nov 08, 2026</td>
+                    <td>Care Health</td>
+                    <td>Kavitha R.</td>
+                    <td class="status-tag-cell"><span class="badge-status-approved">Pre-Auth Granted</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Viewing Apollo Hospital TPA communications and pre-auth authorization vouchers...');">View Dossier</button>
+                    </td>
+                  </tr>
+                  <tr class="admin-searchable-row">
+                    <td><strong class="text-terracotta">#CLM-49103</strong></td>
+                    <td>Deepa Sharma</td>
+                    <td>STAR-HLTH-8812</td>
+                    <td>Planned Surgery</td>
+                    <td>Nov 11, 2026</td>
+                    <td>Star Health</td>
+                    <td>Priya Sharma</td>
+                    <td class="status-tag-cell"><span class="badge-status-review">Query Under Review</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Viewing claim dossier...');">View Dossier</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 06: ADVISORS & AGENTS DIRECTORY
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminAdvisors">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Advisors &amp; Staff Directory</h3>
+              <p class="text-muted small mb-0">Monitor staff case allocations, client ratings, active consultations, and licenses.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" onclick="alert('Opening Add Advisor Form...');">
+              <i class="bi bi-person-plus-fill me-1"></i> Add New Advisor
+            </button>
+          </div>
+
+          <div class="row g-4">
+            <!-- Advisor 1: Priya Sharma -->
+            <div class="col-lg-4 col-md-6">
+              <div class="admin-advisor-card">
+                <div class="admin-advisor-header">
+                  <img src="assets/images/advisor-3.jpg" alt="Priya Sharma" class="admin-advisor-avatar">
+                  <div>
+                    <h6 class="fw-bold text-olive mb-1">Priya Sharma &bull; CLU&reg;</h6>
+                    <small class="text-muted d-block">Senior Fiduciary Broker</small>
+                    <span class="badge bg-success-subtle text-success">Active &bull; Available</span>
+                  </div>
+                </div>
+
+                <div class="advisor-workload-grid">
+                  <div class="advisor-workload-item">
+                    <small>Customers</small>
+                    <strong>142</strong>
+                  </div>
+                  <div class="advisor-workload-item">
+                    <small>Active Apps</small>
+                    <strong class="text-terracotta">18</strong>
+                  </div>
+                  <div class="advisor-workload-item">
+                    <small>Open Claims</small>
+                    <strong>6</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2 mt-auto">
+                  <button type="button" class="btn btn-sm btn-ws-primary flex-grow-1" onclick="alert('Assigning pending client leads to Priya Sharma...');">Assign Customers</button>
+                  <button type="button" class="btn btn-sm btn-light border" onclick="alert('Viewing advisor schedule...');"><i class="bi bi-calendar-event"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Advisor 2: Rajesh Nair -->
+            <div class="col-lg-4 col-md-6">
+              <div class="admin-advisor-card">
+                <div class="admin-advisor-header">
+                  <img src="assets/images/advisor-2.jpg" alt="Rajesh Nair" class="admin-advisor-avatar">
+                  <div>
+                    <h6 class="fw-bold text-olive mb-1">Rajesh Nair &bull; ChFC&reg;</h6>
+                    <small class="text-muted d-block">Term Life Specialist</small>
+                    <span class="badge bg-success-subtle text-success">Active &bull; Available</span>
+                  </div>
+                </div>
+
+                <div class="advisor-workload-grid">
+                  <div class="advisor-workload-item">
+                    <small>Customers</small>
+                    <strong>118</strong>
+                  </div>
+                  <div class="advisor-workload-item">
+                    <small>Active Apps</small>
+                    <strong class="text-terracotta">14</strong>
+                  </div>
+                  <div class="advisor-workload-item">
+                    <small>Open Claims</small>
+                    <strong>4</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2 mt-auto">
+                  <button type="button" class="btn btn-sm btn-ws-primary flex-grow-1" onclick="alert('Assigning customers...');">Assign Customers</button>
+                  <button type="button" class="btn btn-sm btn-light border"><i class="bi bi-calendar-event"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Advisor 3: Kavitha R. -->
+            <div class="col-lg-4 col-md-6">
+              <div class="admin-advisor-card">
+                <div class="admin-advisor-header">
+                  <img src="assets/images/advisor-4.jpg" alt="Kavitha R." class="admin-advisor-avatar">
+                  <div>
+                    <h6 class="fw-bold text-olive mb-1">Kavitha R. &bull; Advocate</h6>
+                    <small class="text-muted d-block">Claims Advocacy Lead</small>
+                    <span class="badge bg-success-subtle text-success">Active &bull; Available</span>
+                  </div>
+                </div>
+
+                <div class="advisor-workload-grid">
+                  <div class="advisor-workload-item">
+                    <small>Customers</small>
+                    <strong>96</strong>
+                  </div>
+                  <div class="advisor-workload-item">
+                    <small>Active Apps</small>
+                    <strong class="text-terracotta">9</strong>
+                  </div>
+                  <div class="advisor-workload-item">
+                    <small>Open Claims</small>
+                    <strong class="text-danger">15</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2 mt-auto">
+                  <button type="button" class="btn btn-sm btn-ws-primary flex-grow-1" onclick="alert('Assigning claims...');">Assign Customers</button>
+                  <button type="button" class="btn btn-sm btn-light border"><i class="bi bi-calendar-event"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 07: ENQUIRIES & LEAD MANAGEMENT (CRM PIPELINE)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminEnquiries">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Enquiries &amp; Lead Management (CRM)</h3>
+              <p class="text-muted small mb-0">Convert website inquiries into lifelong customer relationships.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" onclick="alert('Exporting lead dossier in CSV format...');">
+              <i class="bi bi-file-earmark-spreadsheet me-1"></i> Export Leads (CSV)
+            </button>
+          </div>
+
+          <div class="admin-data-card">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                    <th>Lead Name</th>
+                    <th>Contact</th>
+                    <th>Insurance Interest</th>
+                    <th>Lead Source</th>
+                    <th>Priority</th>
+                    <th>Assigned Advisor</th>
+                    <th>Stage</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.86rem;">
+                  <tr class="admin-searchable-row">
+                    <td><strong>Suresh Krishnan</strong></td>
+                    <td>suresh.k@gmail.com<br><small class="text-muted">+91 98400 99881</small></td>
+                    <td>Family Health Floater (₹25L)</td>
+                    <td>Pricing Page Tool</td>
+                    <td><span class="badge bg-danger text-white">High Priority</span></td>
+                    <td>Priya Sharma</td>
+                    <td><span class="badge bg-warning text-dark">Contacted</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-ws-primary" onclick="alert('Connecting phone call via cloud PBX...');"><i class="bi bi-telephone-fill"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr class="admin-searchable-row">
+                    <td><strong>Meera Nambiar</strong></td>
+                    <td>meera.nambiar@corp.in<br><small class="text-muted">+91 97110 33445</small></td>
+                    <td>Term Life &bull; Pure Protection</td>
+                    <td>Home 2 Calculator</td>
+                    <td><span class="badge bg-primary text-white">Medium</span></td>
+                    <td>Rajesh Nair</td>
+                    <td><span class="badge bg-info text-dark">Consultation</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-ws-primary" onclick="alert('Connecting...');"><i class="bi bi-telephone-fill"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 08: DOCUMENTS MANAGEMENT (CENTRAL REPOSITORY)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminDocuments">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Central Document Repository</h3>
+              <p class="text-muted small mb-0">Customer identity KYC, policy agreements, claims evidence, and carrier schedules.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" onclick="alert('Secure document upload initialized.');">
+              <i class="bi bi-cloud-arrow-up-fill me-1"></i> Upload Dossier
+            </button>
+          </div>
+
+          <div class="admin-data-card">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                    <th>File Name</th>
+                    <th>Associated Client</th>
+                    <th>Category</th>
+                    <th>Uploaded Date</th>
+                    <th>Size</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.86rem;">
+                  <tr class="admin-searchable-row">
+                    <td><i class="bi bi-file-earmark-pdf-fill text-danger me-2"></i><strong>Care_Master_Policy_Schedule_2481.pdf</strong></td>
+                    <td>Alex Morgan (#WS-1048)</td>
+                    <td><span class="badge bg-success-subtle text-success">Policy Schedule</span></td>
+                    <td>Dec 15, 2025</td>
+                    <td>2.4 MB</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border" onclick="alert('Downloading file...');"><i class="bi bi-download"></i></button>
+                    </td>
+                  </tr>
+                  <tr class="admin-searchable-row">
+                    <td><i class="bi bi-file-earmark-medical-fill text-warning me-2"></i><strong>Apollo_Discharge_Summary_CLM49102.pdf</strong></td>
+                    <td>Alex Morgan (#WS-1048)</td>
+                    <td><span class="badge bg-warning-subtle text-warning-emphasis">Claim Evidence</span></td>
+                    <td>Nov 09, 2026</td>
+                    <td>1.2 MB</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border" onclick="alert('Downloading file...');"><i class="bi bi-download"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 09: APPOINTMENTS MANAGEMENT
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminAppointments">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Consultation Schedule &amp; Bookings</h3>
+              <p class="text-muted small mb-0">Manage customer video discovery sessions and office meetings.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" onclick="alert('Schedule consultation window opened.');">
+              <i class="bi bi-calendar-plus me-1"></i> Book Appointment
+            </button>
+          </div>
+
+          <div class="admin-data-card">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                    <th>Customer Name</th>
+                    <th>Assigned Advisor</th>
+                    <th>Date &amp; Time</th>
+                    <th>Consultation Mode</th>
+                    <th>Status</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.86rem;">
+                  <tr class="admin-searchable-row">
+                    <td><strong>Alex Morgan</strong></td>
+                    <td>Priya Sharma</td>
+                    <td>Nov 26, 2026 &bull; 4:00 PM IST</td>
+                    <td><span class="badge bg-primary-subtle text-primary">Google Meet</span></td>
+                    <td><span class="badge bg-success text-white">Confirmed</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Meeting reminder sent.');">Send Reminder</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 10: PAYMENTS & RENEWALS (MONITORING)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminPayments">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Payments &amp; Policy Renewal Monitoring</h3>
+              <p class="text-muted small mb-0">Track upcoming policy expiries, premium payment notifications, and renewal audits.</p>
+            </div>
+          </div>
+
+          <div class="admin-data-card">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                    <th>Policy Ref</th>
+                    <th>Customer Name</th>
+                    <th>Carrier</th>
+                    <th>Annual Premium</th>
+                    <th>Due Date</th>
+                    <th>Reminder Status</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.86rem;">
+                  <tr class="admin-searchable-row">
+                    <td><strong class="text-terracotta">CARE-FLTR-2481</strong></td>
+                    <td>Alex Morgan</td>
+                    <td>Care Health</td>
+                    <td><strong>₹14,500.00</strong></td>
+                    <td><strong class="text-danger">15 Dec 2026 (27 days)</strong></td>
+                    <td><span class="badge bg-success-subtle text-success">Automated Reminder Sent</span></td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-ws-primary" onclick="alert('Customized renewal breakdown sent via WhatsApp & Email.');">Send Invoice Notice</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 11: REPORTS & ANALYTICS (BUSINESS PERFORMANCE)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminReports">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Reports &amp; Business Intelligence</h3>
+              <p class="text-muted small mb-0">Customer acquisition trends, insurance distribution, and advisor conversion ratios.</p>
+            </div>
+            <button type="button" class="btn btn-ws-outline-green" onclick="alert('Generating comprehensive audit report PDF...');">
+              <i class="bi bi-file-earmark-pdf me-1"></i> Export Executive Report
+            </button>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="admin-data-card">
+                <h6 class="fw-bold text-olive mb-3">Application Volume by Insurance Category</h6>
+                <div class="p-3 rounded-3 mb-3" style="background: var(--color-dash-bg);">
+                  <div class="d-flex justify-content-between mb-1 small">
+                    <span>Family Health Cover</span>
+                    <strong class="text-terracotta">48% (60 Apps)</strong>
+                  </div>
+                  <div class="progress mb-3" style="height: 8px;">
+                    <div class="progress-bar bg-terracotta" style="width: 48%;"></div>
+                  </div>
+
+                  <div class="d-flex justify-content-between mb-1 small">
+                    <span>Term Life Insurance</span>
+                    <strong class="text-success">32% (40 Apps)</strong>
+                  </div>
+                  <div class="progress mb-3" style="height: 8px;">
+                    <div class="progress-bar bg-success" style="width: 32%;"></div>
+                  </div>
+
+                  <div class="d-flex justify-content-between mb-1 small">
+                    <span>Senior Citizen Protection</span>
+                    <strong class="text-primary">20% (26 Apps)</strong>
+                  </div>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" style="width: 20%;"></div>
+                  </div>
+                </div>
+                <small class="text-muted">*Illustrative demo analytics reflecting production CRM models.</small>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="admin-data-card">
+                <h6 class="fw-bold text-olive mb-3">Advisor Conversion &amp; SLA Performance</h6>
+                <div class="table-responsive">
+                  <table class="table table-sm align-middle mb-0">
+                    <thead class="table-light">
+                      <tr style="font-size: 0.78rem;">
+                        <th>Advisor</th>
+                        <th>Assigned Leads</th>
+                        <th>Conversion Rate</th>
+                        <th>Avg Response Time</th>
+                      </tr>
+                    </thead>
+                    <tbody style="font-size: 0.84rem;">
+                      <tr>
+                        <td><strong>Priya Sharma</strong></td>
+                        <td>64</td>
+                        <td><span class="badge bg-success-subtle text-success">34%</span></td>
+                        <td>28 mins</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Rajesh Nair</strong></td>
+                        <td>52</td>
+                        <td><span class="badge bg-success-subtle text-success">29%</span></td>
+                        <td>35 mins</td>
+                      </tr>
+                      <tr>
+                        <td><strong>Kavitha R.</strong></td>
+                        <td>48</td>
+                        <td><span class="badge bg-success-subtle text-success">31%</span></td>
+                        <td>24 mins</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 12: BLOG & WEBSITE CONTENT MANAGEMENT (CMS)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminBlog">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Website Content &amp; Blog CMS</h3>
+              <p class="text-muted small mb-0">Publish editorial articles, manage FAQ sections, and update public brokerage announcements.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" data-bs-toggle="modal" data-bs-target="#addPostModal">
+              <i class="bi bi-pencil-square me-1"></i> New Publication
+            </button>
+          </div>
+
+          <div class="admin-data-card">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr style="font-size: 0.8rem; text-transform: uppercase;">
+                    <th>Article Title</th>
+                    <th>Category</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                    <th>Last Modified</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.86rem;">
+                  <tr class="admin-searchable-row">
+                    <td><strong>Life Insurance Explained: A Complete Guide to Protecting Your Family</strong></td>
+                    <td><span class="badge bg-warning-subtle text-warning-emphasis">Life Insurance</span></td>
+                    <td>WellSure Editorial Team</td>
+                    <td><span class="badge bg-success text-white">Published</span></td>
+                    <td>Nov 15, 2026</td>
+                    <td class="text-end">
+                      <a href="blog-details.html?id=life-guide" target="_blank" class="btn btn-sm btn-light border me-1"><i class="bi bi-box-arrow-up-right"></i></a>
+                      <button type="button" class="btn btn-sm btn-light border"><i class="bi bi-pencil"></i></button>
+                    </td>
+                  </tr>
+
+                  <tr class="admin-searchable-row">
+                    <td><strong>Term Life vs Whole Life Insurance: Which One Is Right for You?</strong></td>
+                    <td><span class="badge bg-success-subtle text-success">Policy Guides</span></td>
+                    <td>Dr. Rachel Green</td>
+                    <td><span class="badge bg-success text-white">Published</span></td>
+                    <td>Nov 12, 2026</td>
+                    <td class="text-end">
+                      <a href="blog-details.html?id=term-vs-whole-life" target="_blank" class="btn btn-sm btn-light border me-1"><i class="bi bi-box-arrow-up-right"></i></a>
+                      <button type="button" class="btn btn-sm btn-light border"><i class="bi bi-pencil"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 13: NOTIFICATIONS & SYSTEM ALERTS
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminNotifications">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Notifications &amp; System Alerts</h3>
+              <p class="text-muted small mb-0">Real-time alerts regarding client claims, underwriter query notices, and portal activities.</p>
+            </div>
+            <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Marked all alerts as read.');">
+              <i class="bi bi-check2-all me-1"></i> Mark All as Read
+            </button>
+          </div>
+
+          <div class="admin-data-card" style="max-width: 800px;">
+            <div class="list-group list-group-flush">
+              <div class="list-group-item p-3 d-flex justify-content-between align-items-start border-bottom">
+                <div class="d-flex gap-3">
+                  <div class="stat-compact-icon terracotta" style="width: 40px; height: 40px; font-size: 1.1rem;"><i class="bi bi-file-earmark-text"></i></div>
+                  <div>
+                    <strong class="d-block text-olive">126 Applications Pending Underwriter Audit</strong>
+                    <p class="small text-muted mb-0">Care Health and HDFC Life batch submissions require medical tele-check sign-offs.</p>
+                  </div>
+                </div>
+                <small class="text-muted">15 mins ago</small>
+              </div>
+
+              <div class="list-group-item p-3 d-flex justify-content-between align-items-start border-bottom">
+                <div class="d-flex gap-3">
+                  <div class="stat-compact-icon olive" style="width: 40px; height: 40px; font-size: 1.1rem;"><i class="bi bi-hospital"></i></div>
+                  <div>
+                    <strong class="d-block text-olive">Emergency Cashless Approval Issued</strong>
+                    <p class="small text-muted mb-0">Pre-auth voucher sanctioned for Apollo Hospital claim #CLM-49102 (₹85,000).</p>
+                  </div>
+                </div>
+                <small class="text-muted">45 mins ago</small>
+              </div>
+
+              <div class="list-group-item p-3 d-flex justify-content-between align-items-start">
+                <div class="d-flex gap-3">
+                  <div class="stat-compact-icon peach" style="width: 40px; height: 40px; font-size: 1.1rem;"><i class="bi bi-calendar-event"></i></div>
+                  <div>
+                    <strong class="d-block text-olive">22 Policy Renewals Due Next 30 Days</strong>
+                    <p class="small text-muted mb-0">Automated Section 80D tax receipts and renewal invoices dispatched.</p>
+                  </div>
+                </div>
+                <small class="text-muted">2 hours ago</small>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 14: SETTINGS & RBAC (ROLES, PERMISSIONS & AUDIT)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAdminSettings">
+          <div class="card border-0 shadow-sm p-4 rounded-4" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important; max-width: 750px;">
+            <h4 class="fw-bold text-olive mb-1">Administrative Security &amp; RBAC</h4>
+            <p class="text-muted small mb-4">Manage role-based access control, security parameters, and broker compliance rules.</p>
+
+            <h6 class="fw-bold text-olive mb-3">Role-Based Access Hierarchy</h6>
+            <div class="row g-2 mb-4">
+              <div class="col-sm-6">
+                <div class="p-3 rounded-3 border" style="background: var(--color-dash-bg);">
+                  <strong class="d-block text-olive small">Super Admin (Active)</strong>
+                  <small class="text-muted">Full administrative permissions across CRM, claims, and insurer API credentials.</small>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 rounded-3 border" style="background: var(--color-dash-bg);">
+                  <strong class="d-block text-olive small">Staff Advisor / Agent</strong>
+                  <small class="text-muted">Access limited to assigned customer accounts, consultation scheduler, and messages.</small>
+                </div>
+              </div>
+            </div>
+
+            <h6 class="fw-bold text-olive mb-3">System Compliance &amp; Audit Logging</h6>
+            <div class="form-check form-switch mb-2">
+              <input class="form-check-input" type="checkbox" id="auditLogSwitch" checked>
+              <label class="form-check-label small" for="auditLogSwitch">Record immutable tamper-evident logs for policy or nominee changes</label>
+            </div>
+            <div class="form-check form-switch mb-4">
+              <input class="form-check-input" type="checkbox" id="dataEncryptSwitch" checked>
+              <label class="form-check-label small" for="dataEncryptSwitch">Enforce AES-256 at-rest encryption on client diagnostic uploads</label>
+            </div>
+
+            <button type="button" class="btn btn-ws-primary" onclick="alert('Administrative security parameters updated.');">
+              <span>Save Control Parameters</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             11. MINIMAL ADMIN FOOTER
+             No Mega Global Footer! Clean Control Center Status & Audit Signoff
+             =================================================================== -->
+        <footer class="dashboard-minimal-footer">
+          <div>
+            &copy; <span class="current-year">2026</span> WellSure Insurance Brokerage LLC &bull; Control Center Operations v2.4 &bull; Licensed Fiduciary Intermediary.
+          </div>
+          <div class="d-flex gap-3">
+            <a href="privacy.html">Privacy Audit</a>
+            <span>&bull;</span>
+            <a href="terms.html">Broker Terms</a>
+            <span>&bull;</span>
+            <a href="#" data-target-tab="tabAdminSettings">Security Matrix</a>
+            <span>&bull;</span>
+            <a href="index.html" target="_blank">Live Website ↗</a>
+          </div>
+        </footer>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- ===================================================================
+       ADMIN INTERACTIVE MODALS
+       =================================================================== -->
+
+  <!-- Modal 1: Add Customer Modal -->
+  <div class="modal fade" id="addCustomerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ws-modal-content border-0 shadow-lg rounded-4 p-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-olive">Add New Customer Record</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form onsubmit="handleAddCustomerSubmit(event)">
+          <div class="modal-body py-3">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Full Legal Name</label>
+              <input type="text" class="form-control" placeholder="e.g. Liam Henderson" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Email Address</label>
+              <input type="email" class="form-control" placeholder="e.g. liam@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Mobile Number</label>
+              <input type="tel" class="form-control" placeholder="+91 98400 12345" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Assign Primary Advisor</label>
+              <select class="form-select">
+                <option selected>Priya Sharma (Senior Fiduciary Broker)</option>
+                <option>Rajesh Nair (Term Life Specialist)</option>
+                <option>Kavitha R. (Claims Lead)</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ws-primary btn-sm">Create Customer &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Add Insurance Plan Modal -->
+  <div class="modal fade" id="addPlanModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ws-modal-content border-0 shadow-lg rounded-4 p-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-olive">Register New Insurance Plan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form onsubmit="handleAddPlanSubmit(event)">
+          <div class="modal-body py-3">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Plan Title</label>
+              <input type="text" class="form-control" placeholder="e.g. Shield Advantage Floater" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Insurance Category</label>
+              <select class="form-select" required>
+                <option>Health Insurance</option>
+                <option>Life Insurance</option>
+                <option>Family Floater Plans</option>
+                <option>Senior Citizen Insurance</option>
+                <option>Term Insurance</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Associated Carrier / Insurer</label>
+              <input type="text" class="form-control" placeholder="e.g. Care Health Insurance Co." required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Upload Policy Brochure (PDF)</label>
+              <input type="file" class="form-control" accept=".pdf">
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ws-primary btn-sm">Save Plan &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Add Blog Post Modal -->
+  <div class="modal fade" id="addPostModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ws-modal-content border-0 shadow-lg rounded-4 p-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-olive">Draft Website Publication</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form onsubmit="handleAddPostSubmit(event)">
+          <div class="modal-body py-3">
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Article Title</label>
+              <input type="text" class="form-control" placeholder="e.g. Five Things to Audit in Your Policy" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Topic Category</label>
+              <select class="form-select">
+                <option>Life Insurance</option>
+                <option>Health Insurance</option>
+                <option>Family Protection</option>
+                <option>Policy Guides</option>
+                <option>Claims &amp; Support</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Author Designation</label>
+              <input type="text" class="form-control" value="WellSure Editorial Team" required>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ws-primary btn-sm">Save as Draft &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Essential JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

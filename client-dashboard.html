@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Portal Dashboard | WellSure Insurance Brokerage</title>
+  <meta name="description" content="Manage your family insurance policies, compare new coverage, track applications, monitor claims, and connect with your dedicated fiduciary advisor.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E67543'><path d='M12 2L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3zm-1 14.5l-3.5-3.5 1.41-1.41L11 13.67l5.59-5.59L18 9.5 11 16.5z'/></svg>">
+  
+  <!-- Google Fonts: Syne & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5.3.3 & Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <!-- Core Stylesheets & Dashboard Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-app-layout">
+    
+    <!-- ===================================================================
+         1. FIXED LEFT SIDEBAR (MAIN MENU & PREFERENCES)
+         Brand Logo • 8 Main Menu Items • Preferences • Profile Footer
+         =================================================================== -->
+    <aside class="dashboard-sidebar-fixed" id="dashboardSidebar" aria-label="Client Portal Navigation">
+      
+      <!-- Brand Box (Clicking Logo goes to Home Page) -->
+      <div class="sidebar-brand-box">
+        <a class="sidebar-brand-link" href="index.html" aria-label="WellSure Homepage">
+          <div class="ws-logo-icon">
+            <i class="bi bi-shield-fill-check"></i>
+          </div>
+          <div class="ws-logo-text">
+            <span class="ws-logo-title text-white">Well<span class="text-terracotta">Sure</span></span>
+            <span class="ws-logo-tagline text-white-50">Client Portal</span>
+          </div>
+        </a>
+        <button type="button" class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Close Navigation Sidebar">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Menu Container -->
+      <div class="sidebar-nav-container">
+        
+        <!-- SECTION 1: MAIN MENU -->
+        <div class="sidebar-section-label">
+          <span>Main Menu</span>
+          <i class="bi bi-three-dots"></i>
+        </div>
+
+        <ul class="sidebar-nav-menu">
+          <!-- 01: Overview -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn active" data-target-tab="tabOverview" data-tab-title="Overview">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-grid-fill"></i>
+                <span>Overview</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 02: My Policies -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabPolicies" data-tab-title="My Policies">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-shield-check"></i>
+                <span>My Policies</span>
+              </div>
+              <span class="sidebar-badge">2</span>
+            </button>
+          </li>
+
+          <!-- 03: Explore Plans -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabExplore" data-tab-title="Explore Plans">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-compass-fill"></i>
+                <span>Explore Plans</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 04: Applications -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabApplications" data-tab-title="Applications">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-file-earmark-text-fill"></i>
+                <span>Applications</span>
+              </div>
+              <span class="sidebar-badge highlight">1 Pending</span>
+            </button>
+          </li>
+
+          <!-- 05: Claims & Assistance -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabClaims" data-tab-title="Claims & Assistance">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-life-preserver"></i>
+                <span>Claims &amp; Assistance</span>
+              </div>
+              <span class="sidebar-badge">1 Open</span>
+            </button>
+          </li>
+
+          <!-- 06: Documents -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabDocuments" data-tab-title="Documents & Downloads">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-folder2-open"></i>
+                <span>Documents</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 07: Appointments -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabAppointments" data-tab-title="Appointments">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-calendar-check-fill"></i>
+                <span>Appointments</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 08: Messages -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabMessages" data-tab-title="Advisor Messages">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-chat-dots-fill"></i>
+                <span>Messages</span>
+              </div>
+              <span class="sidebar-badge highlight">1 New</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- SECTION 2: PREFERENCES -->
+        <div class="sidebar-section-label mt-4">
+          <span>Preferences</span>
+          <i class="bi bi-gear-fill"></i>
+        </div>
+
+        <ul class="sidebar-nav-menu">
+          <!-- 09: My Profile -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabProfile" data-tab-title="My Profile">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-person-circle"></i>
+                <span>My Profile</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 10: Settings -->
+          <li class="sidebar-nav-item">
+            <button type="button" class="sidebar-nav-btn" data-target-tab="tabSettings" data-tab-title="Portal Settings">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-sliders"></i>
+                <span>Settings</span>
+              </div>
+            </button>
+          </li>
+
+          <!-- 11: Logout -->
+          <li class="sidebar-nav-item">
+            <a href="login.html" class="sidebar-nav-btn text-danger" onclick="handleDashboardLogout(event)">
+              <div class="sidebar-nav-btn-content">
+                <i class="bi bi-box-arrow-right text-danger"></i>
+                <span>Logout</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- User Profile Footer in Sidebar -->
+      <div class="sidebar-user-footer">
+        <a href="#" class="sidebar-user-info" data-target-tab="tabProfile" data-tab-title="My Profile">
+          <img src="assets/images/avatar-1.jpg" alt="Client Avatar" class="sidebar-avatar-img">
+          <div class="sidebar-user-meta">
+            <strong class="user-display-name">Alex Morgan</strong>
+            <small>Policyholder #WS-2481</small>
+          </div>
+        </a>
+        <button type="button" class="sidebar-logout-btn" onclick="handleDashboardLogout(event)" title="Sign Out">
+          <i class="bi bi-power"></i>
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- ===================================================================
+         2. WORKSPACE CONTAINER (TOPBAR & MAIN SCROLLABLE CONTENT)
+         =================================================================== -->
+    <div class="dashboard-workspace">
+      
+      <!-- Top Dashboard Header Bar (No Global Navbar) -->
+      <header class="dashboard-topbar">
+        
+        <!-- Left: Mobile Hamburger & Dynamic Breadcrumb -->
+        <div class="topbar-left-cluster">
+          <button type="button" class="sidebar-toggle-btn" id="sidebarToggleBtn" aria-label="Toggle Navigation Drawer">
+            <i class="bi bi-list"></i>
+          </button>
+          <div class="topbar-breadcrumb">
+            <i class="bi bi-house text-peach"></i>
+            <span>Portal</span>
+            <i class="bi bi-chevron-right small text-muted"></i>
+            <span class="active-crumb" id="dashBreadcrumbCurrent">Overview</span>
+          </div>
+        </div>
+
+        <!-- Center: Universal Global Search -->
+        <div class="topbar-search-wrap">
+          <i class="bi bi-search topbar-search-icon"></i>
+          <input 
+            type="text" 
+            class="topbar-search-input" 
+            id="topbarSearchInput" 
+            placeholder="Search policies, claims, documents..." 
+            aria-label="Universal Dashboard Search"
+          >
+        </div>
+
+        <!-- Right: Actions, Theme Toggle & Profile Dropdown -->
+        <div class="topbar-actions-cluster">
+          
+          <!-- Notifications Dropdown -->
+          <div class="dropdown">
+            <button class="topbar-icon-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Notifications">
+              <i class="bi bi-bell"></i>
+              <span class="notification-unread-dot"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg p-2 rounded-3" style="width: 320px; font-size: 0.88rem;">
+              <li class="dropdown-header fw-bold text-olive d-flex justify-content-between align-items-center">
+                <span>Notifications</span>
+                <span class="badge bg-danger-subtle text-danger rounded-pill">2 New</span>
+              </li>
+              <li><hr class="dropdown-divider my-1"></li>
+              <li>
+                <a class="dropdown-item p-2 rounded-2" href="#" data-target-tab="tabRenewals">
+                  <div class="fw-bold text-terracotta small"><i class="bi bi-calendar-event me-1"></i> Renewal in 27 Days</div>
+                  <div class="text-muted small" style="font-size: 0.78rem;">Family Health Policy is due for auto-renewal on Dec 15, 2026.</div>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item p-2 rounded-2" href="#" data-target-tab="tabClaims">
+                  <div class="fw-bold text-success small"><i class="bi bi-check-circle me-1"></i> Claim Pre-Auth Approved</div>
+                  <div class="text-muted small" style="font-size: 0.78rem;">Cashless pre-auth of ₹85,000 sanctioned for Apollo Hospitalization.</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Theme Toggle Button -->
+          <button class="topbar-icon-btn theme-toggle-btn" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+
+          <!-- RTL Direction Toggle -->
+          <button class="topbar-icon-btn ws-dir-btn direction-toggle-btn" aria-label="Toggle Direction" title="Toggle RTL/LTR">
+            RTL
+          </button>
+
+          <!-- Help / Support Icon -->
+          <button class="topbar-icon-btn" data-target-tab="tabMessages" title="Help &amp; Advisory Support">
+            <i class="bi bi-question-circle"></i>
+          </button>
+
+          <!-- User Profile Avatar with Dropdown -->
+          <div class="dropdown">
+            <div class="topbar-profile-trigger" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="assets/images/avatar-1.jpg" alt="User Avatar" class="topbar-avatar-small">
+              <span class="d-none d-md-inline small fw-bold user-display-name">Alex Morgan</span>
+              <i class="bi bi-chevron-down small text-muted"></i>
+            </div>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg rounded-3 py-2">
+              <li class="px-3 py-2 border-bottom">
+                <strong class="d-block user-display-name">Alex Morgan</strong>
+                <small class="text-muted">client@wellsure.demo</small>
+              </li>
+              <li><a class="dropdown-item" href="#" data-target-tab="tabProfile"><i class="bi bi-person me-2"></i> My Profile</a></li>
+              <li><a class="dropdown-item" href="#" data-target-tab="tabSettings"><i class="bi bi-gear me-2"></i> Settings</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="login.html" onclick="handleDashboardLogout(event)"><i class="bi bi-box-arrow-right me-2"></i> Sign Out</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+      </header>
+
+      <!-- ===================================================================
+           3. MAIN SCROLLABLE CONTENT BODY (TAB PANES)
+           =================================================================== -->
+      <main class="dashboard-main-scroll">
+        
+        <!-- =================================================================
+             TAB 1: OVERVIEW (THE RICH MAIN DASHBOARD)
+             Large Welcome Area • 4 Stats • 2-Column Core Layout
+             ================================================================= -->
+        <section class="dash-tab-pane active" id="tabOverview">
+          
+          <!-- 02. WELCOME HERO SECTION -->
+          <div class="dash-welcome-hero">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-8">
+                <h1 class="dash-welcome-title" id="heroUserGreeting">Good morning, Alex!</h1>
+                <p class="dash-welcome-lead">
+                  Your protection journey is looking good. Here's a quick overview of your insurance and what's coming next.
+                </p>
+
+                <!-- Profile Completion Indicator (80% Complete) -->
+                <div class="profile-completion-box">
+                  <i class="bi bi-person-check-fill text-terracotta fs-5"></i>
+                  <div>
+                    <div class="d-flex justify-content-between align-items-center gap-3 mb-1">
+                      <span class="small fw-bold text-olive">Profile 80% Complete</span>
+                      <small class="text-terracotta fw-bold">1 Step Remaining</small>
+                    </div>
+                    <div class="completion-bar-track">
+                      <div class="completion-bar-fill"></div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-link p-0 small text-terracotta fw-bold text-decoration-none" data-target-tab="tabProfile">
+                    Add Nominee &rarr;
+                  </button>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+                  <button type="button" class="btn btn-ws-primary" data-target-tab="tabExplore">
+                    <i class="bi bi-compass-fill me-1"></i>
+                    <span>Explore Insurance</span>
+                  </button>
+                  <button type="button" class="btn btn-ws-outline-green" data-target-tab="tabMessages">
+                    <i class="bi bi-chat-dots-fill me-1"></i>
+                    <span>Contact Advisor</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Reassuring Illustration/Badge on Right -->
+              <div class="col-lg-4 text-center d-none d-lg-block">
+                <div class="p-3 rounded-4 dash-inner-card shadow-sm d-inline-block text-start" style="max-width: 280px;">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <i class="bi bi-patch-check-fill text-success fs-4"></i>
+                    <strong class="text-olive small">Active Fiduciary Shield</strong>
+                  </div>
+                  <p class="small text-muted mb-2" style="font-size: 0.82rem; line-height: 1.5;">
+                    Your policies are continuously monitored against new carrier rate revisions and regulatory claim settlement benchmarks.
+                  </p>
+                  <small class="badge bg-success-subtle text-success">Verified Fiduciary Brokerage</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 03. KEY STATISTICS OVERVIEW (FOUR COMPACT STAT CARDS) -->
+          <div class="row g-3 g-xl-4 mb-4">
+            
+            <!-- Stat 1: Active Policies -->
+            <div class="col-xl-3 col-sm-6">
+              <div class="stat-card-compact searchable-entry" data-target-tab="tabPolicies">
+                <div class="stat-compact-icon olive">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <div>
+                  <div class="stat-compact-val">02</div>
+                  <div class="stat-compact-label">Active Policies</div>
+                  <div class="stat-compact-sub">Your current coverage</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 2: Pending Applications -->
+            <div class="col-xl-3 col-sm-6">
+              <div class="stat-card-compact searchable-entry" data-target-tab="tabApplications">
+                <div class="stat-compact-icon terracotta">
+                  <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <div>
+                  <div class="stat-compact-val">01</div>
+                  <div class="stat-compact-label">Pending Applications</div>
+                  <div class="stat-compact-sub">Awaiting insurer review</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 3: Open Claims -->
+            <div class="col-xl-3 col-sm-6">
+              <div class="stat-card-compact searchable-entry" data-target-tab="tabClaims">
+                <div class="stat-compact-icon peach">
+                  <i class="bi bi-life-preserver"></i>
+                </div>
+                <div>
+                  <div class="stat-compact-val">01</div>
+                  <div class="stat-compact-label">Open Claims</div>
+                  <div class="stat-compact-sub">Cashless in progress</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stat 4: Upcoming Renewals -->
+            <div class="col-xl-3 col-sm-6">
+              <div class="stat-card-compact searchable-entry" data-target-tab="tabRenewals">
+                <div class="stat-compact-icon blue">
+                  <i class="bi bi-calendar-event"></i>
+                </div>
+                <div>
+                  <div class="stat-compact-val">01</div>
+                  <div class="stat-compact-label">Upcoming Renewals</div>
+                  <div class="stat-compact-sub">Next 30 days (Dec 15)</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CORE TWO-COLUMN DASHBOARD LAYOUT -->
+          <div class="row g-4 align-items-start">
+            
+            <!-- LEFT COLUMN (7 COLS): POLICIES, APPLICATION TRACKING & RECOMMENDED PLANS -->
+            <div class="col-lg-7">
+              
+              <!-- 04. MY INSURANCE POLICIES SECTION -->
+              <div class="card border-0 shadow-sm p-4 rounded-4 mb-4" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h5 class="fw-bold mb-1 text-olive">My Insurance Policies</h5>
+                    <p class="text-muted small mb-0">Your coverage at a glance</p>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-ws-outline-green" data-target-tab="tabPolicies">
+                    View All Policies &rarr;
+                  </button>
+                </div>
+
+                <!-- Policy Card 1: Family Health Cover -->
+                <div class="policy-card-horizontal searchable-entry" onclick="openPolicyModal('health')">
+                  <div class="policy-card-header">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="stat-compact-icon olive" style="width: 44px; height: 44px; font-size: 1.25rem;">
+                        <i class="bi bi-heart-pulse-fill"></i>
+                      </div>
+                      <div>
+                        <h6 class="fw-bold mb-1 text-olive">Family Health Cover</h6>
+                        <small class="text-muted">Insurer: Care Health Insurance Co. &bull; Policy No: XXXX-XXXX-2481</small>
+                      </div>
+                    </div>
+                    <span class="policy-badge-active"><i class="bi bi-check-circle-fill me-1"></i> Active</span>
+                  </div>
+
+                  <div class="policy-info-grid">
+                    <div class="policy-info-item">
+                      <small>Coverage Amount</small>
+                      <strong class="text-terracotta">₹10,00,000</strong>
+                    </div>
+                    <div class="policy-info-item">
+                      <small>Renewal Date</small>
+                      <strong>15 Dec 2026</strong>
+                    </div>
+                    <div class="policy-info-item">
+                      <small>Co-Pay Option</small>
+                      <strong class="text-success">0% (Zero Co-Pay)</strong>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                    <span class="small text-muted"><i class="bi bi-hospital me-1"></i> 10,400+ Cashless Network Hospitals</span>
+                    <button type="button" class="btn btn-sm btn-link text-terracotta fw-bold p-0 text-decoration-none">
+                      View Policy Details &rarr;
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Policy Card 2: Horizon Life Insurance -->
+                <div class="policy-card-horizontal searchable-entry" onclick="openPolicyModal('life')">
+                  <div class="policy-card-header">
+                    <div class="d-flex align-items-center gap-3">
+                      <div class="stat-compact-icon terracotta" style="width: 44px; height: 44px; font-size: 1.25rem;">
+                        <i class="bi bi-shield-lock-fill"></i>
+                      </div>
+                      <div>
+                        <h6 class="fw-bold mb-1 text-olive">Term Life Protection</h6>
+                        <small class="text-muted">Insurer: HDFC Life Insurance Co. &bull; Policy No: XXXX-XXXX-7315</small>
+                      </div>
+                    </div>
+                    <span class="policy-badge-active"><i class="bi bi-check-circle-fill me-1"></i> Active</span>
+                  </div>
+
+                  <div class="policy-info-grid">
+                    <div class="policy-info-item">
+                      <small>Sum Assured</small>
+                      <strong class="text-terracotta">₹50,00,000</strong>
+                    </div>
+                    <div class="policy-info-item">
+                      <small>Renewal Date</small>
+                      <strong>20 Jan 2027</strong>
+                    </div>
+                    <div class="policy-info-item">
+                      <small>Payout Structure</small>
+                      <strong>Guaranteed Lump-Sum</strong>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+                    <span class="small text-muted"><i class="bi bi-person-heart me-1"></i> Primary Beneficiary: Sarah Morgan</span>
+                    <button type="button" class="btn btn-sm btn-link text-terracotta fw-bold p-0 text-decoration-none">
+                      View Policy Details &rarr;
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- 05. APPLICATION TRACKING SECTION -->
+              <div class="app-progress-card searchable-entry">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div>
+                    <h5 class="fw-bold mb-1 text-olive">Health Insurance Application</h5>
+                    <small class="text-muted">Application Ref: #WS-APP-89214 &bull; Senior Citizen Care Extension</small>
+                  </div>
+                  <span class="badge rounded-pill px-3 py-2 fw-bold" style="background: rgba(230, 117, 67, 0.15); color: var(--color-terracotta); border: 1px solid rgba(230, 117, 67, 0.35);">
+                    <i class="bi bi-hourglass-split me-1"></i> Under Review
+                  </span>
+                </div>
+
+                <!-- 4-Stage Visual Progress Tracker -->
+                <div class="tracker-timeline-bar">
+                  
+                  <!-- Stage 1 -->
+                  <div class="tracker-step-node completed">
+                    <div class="tracker-step-icon">
+                      <i class="bi bi-check-lg"></i>
+                    </div>
+                    <div>
+                      <div class="tracker-step-title">Application Submitted</div>
+                      <div class="tracker-step-status text-success fw-bold">Completed &bull; Nov 10</div>
+                    </div>
+                  </div>
+
+                  <!-- Stage 2 -->
+                  <div class="tracker-step-node completed">
+                    <div class="tracker-step-icon">
+                      <i class="bi bi-check-lg"></i>
+                    </div>
+                    <div>
+                      <div class="tracker-step-title">Documents Verified</div>
+                      <div class="tracker-step-status text-success fw-bold">Completed &bull; Nov 12</div>
+                    </div>
+                  </div>
+
+                  <!-- Stage 3 -->
+                  <div class="tracker-step-node in-progress">
+                    <div class="tracker-step-icon">
+                      <i class="bi bi-arrow-repeat"></i>
+                    </div>
+                    <div>
+                      <div class="tracker-step-title">Insurer Review</div>
+                      <div class="tracker-step-status text-terracotta fw-bold">Currently in progress</div>
+                    </div>
+                  </div>
+
+                  <!-- Stage 4 -->
+                  <div class="tracker-step-node">
+                    <div class="tracker-step-icon">
+                      <i class="bi bi-file-earmark-check"></i>
+                    </div>
+                    <div>
+                      <div class="tracker-step-title">Policy Issuance</div>
+                      <div class="tracker-step-status">Awaiting approval</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
+                  <small class="text-muted">Expected decision window: <strong>Within 48 hours</strong></small>
+                  <button type="button" class="btn btn-sm btn-ws-primary" data-target-tab="tabApplications">
+                    <span>Track Application</span>
+                    <i class="bi bi-arrow-up-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 07. RECOMMENDED INSURANCE PLANS -->
+              <div class="card border-0 shadow-sm p-4 rounded-4" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h5 class="fw-bold mb-1 text-olive">Recommended Insurance Plans</h5>
+                    <p class="text-muted small mb-0">Personalized suggestions based on your profile &amp; coverage gaps</p>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-link text-terracotta p-0 fw-bold text-decoration-none" data-target-tab="tabExplore">
+                    Explore All &rarr;
+                  </button>
+                </div>
+
+                <div class="row g-3">
+                  <!-- Suggestion 1: Family Health Cover -->
+                  <div class="col-md-6">
+                    <div class="p-3 rounded-3 border h-100 d-flex flex-column justify-content-between" style="background: var(--color-dash-bg);">
+                      <div>
+                        <span class="badge bg-success-subtle text-success mb-2">High Value Match</span>
+                        <h6 class="fw-bold mb-1 text-olive">Comprehensive Critical Illness Cover</h6>
+                        <p class="small text-muted mb-3">Add lump-sum payout security for 40+ medical conditions without hospital bill receipts.</p>
+                      </div>
+                      <button type="button" class="btn btn-sm btn-ws-outline-green w-100 justify-content-center" data-target-tab="tabExplore">
+                        <span>Explore Plans &rarr;</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Suggestion 2: Term Life Protection -->
+                  <div class="col-md-6">
+                    <div class="p-3 rounded-3 border h-100 d-flex flex-column justify-content-between" style="background: var(--color-dash-bg);">
+                      <div>
+                        <span class="badge bg-warning-subtle text-warning-emphasis mb-2">Tax Saver &bull; 80C</span>
+                        <h6 class="fw-bold mb-1 text-olive">Whole Life &amp; Pension Builder</h6>
+                        <p class="small text-muted mb-3">Build guaranteed cash reserves alongside lifetime protection for retirement peace of mind.</p>
+                      </div>
+                      <button type="button" class="btn btn-sm btn-ws-outline-green w-100 justify-content-center" data-target-tab="tabExplore">
+                        <span>Explore Plans &rarr;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN (5 COLS): RENEWALS, ADVISOR SUPPORT & CLAIMS TRACKER -->
+            <div class="col-lg-5">
+              
+              <!-- 09. UPCOMING RENEWALS & REMINDERS -->
+              <div class="dash-renewal-card searchable-entry">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge rounded-pill px-3 py-1 fw-bold" style="background: var(--color-terracotta); color: #FFFFFF;">
+                    <i class="bi bi-clock-history me-1"></i> Reminder
+                  </span>
+                  <span class="badge bg-warning text-dark px-3 py-1 fw-bold rounded-pill">27 Days Left</span>
+                </div>
+
+                <h5 class="fw-bold mb-1 text-olive">Family Health Policy Renewal</h5>
+                <p class="small text-muted mb-3">Due date: <strong>15 December 2026</strong> &bull; Insurer: Care Health</p>
+
+                <div class="d-flex justify-content-between align-items-center p-3 rounded-3 mb-3 dash-inner-card">
+                  <div>
+                    <small class="text-muted d-block">Renewal Premium Amount</small>
+                    <strong class="text-terracotta fs-5">₹14,500.00</strong>
+                    <small class="text-muted d-block">Annual Cycle &bull; Incl. 18% GST</small>
+                  </div>
+                  <span class="badge bg-success-subtle text-success">Guaranteed Zero Rate Hike</span>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-ws-primary btn-sm flex-grow-1 justify-content-center" onclick="alert('Proceeding to renewal payment gateway...');">
+                    <span>Pay Renewal Now</span>
+                  </button>
+                  <button type="button" class="btn btn-ws-outline-green btn-sm" onclick="openPolicyModal('health')">
+                    <span>View Details</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 10. MY ADVISOR & MESSAGES -->
+              <div class="dash-advisor-card searchable-entry">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="fw-bold mb-0 text-olive">Your WellSure Advisor</h5>
+                  <span class="badge bg-success-subtle text-success rounded-pill px-2 py-1 small">
+                    <i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i> Online
+                  </span>
+                </div>
+
+                <div class="advisor-presence-box">
+                  <div class="advisor-portrait-wrap">
+                    <img src="assets/images/advisor-3.jpg" alt="Priya Sharma" class="advisor-portrait-img">
+                    <span class="advisor-online-dot"></span>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold mb-1 text-olive">Priya Sharma</h6>
+                    <small class="text-muted d-block">Senior Fiduciary Insurance Advisor</small>
+                    <small class="text-success fw-bold"><i class="bi bi-chat-check me-1"></i> Available for enquiries</small>
+                  </div>
+                </div>
+
+                <!-- Advisor Action Buttons -->
+                <div class="d-grid gap-2 mb-3">
+                  <button type="button" class="btn btn-ws-primary btn-sm justify-content-center" data-target-tab="tabMessages">
+                    <i class="bi bi-chat-dots-fill me-2"></i>
+                    <span>Send a Message</span>
+                  </button>
+                  <div class="d-flex gap-2">
+                    <button type="button" class="btn btn-ws-outline-green btn-sm flex-grow-1 justify-content-center" onclick="alert('Callback request logged! Priya Sharma will phone you at your registered number within 45 minutes.');">
+                      <i class="bi bi-telephone-inbound-fill me-1"></i>
+                      <span>Request Callback</span>
+                    </button>
+                    <button type="button" class="btn btn-ws-outline-green btn-sm flex-grow-1 justify-content-center" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                      <i class="bi bi-calendar-event me-1"></i>
+                      <span>Schedule Call</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="pt-2 border-top">
+                  <a href="#" class="small text-muted text-decoration-none fw-bold" data-target-tab="tabMessages">
+                    <i class="bi bi-chat-quote me-1"></i> View previous conversations (3 messages)
+                  </a>
+                </div>
+              </div>
+
+              <!-- 06. CLAIMS & ASSISTANCE SUMMARY -->
+              <div class="dash-claims-summary-card searchable-entry">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="fw-bold mb-0 text-olive">Track Your Claim</h5>
+                  <span class="badge bg-warning-subtle text-warning-emphasis fw-bold rounded-pill">Claim In Progress</span>
+                </div>
+
+                <p class="small text-muted mb-3">Follow claim progress and view the latest updates from the insurer.</p>
+
+                <div class="p-3 rounded-3 mb-3 dash-inner-card">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <strong class="text-terracotta small">Ref: #CLM-49102</strong>
+                    <span class="badge bg-light text-muted border small">Inpatient Cashless</span>
+                  </div>
+                  <div class="small fw-bold text-olive mb-1">Apollo Hospitalization — Planned Procedure</div>
+                  <small class="text-muted d-block mb-2">Submitted on Nov 08, 2026 &bull; ₹85,000 Requested</small>
+                  
+                  <div class="p-2 rounded-2" style="background: rgba(64, 103, 27, 0.08); font-size: 0.78rem;">
+                    <strong>Latest Update:</strong> Pre-authorization sanctioned. Final discharge summary awaited from hospital TPA desk.
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-ws-primary btn-sm flex-grow-1 justify-content-center" data-target-tab="tabClaims">
+                    <span>View All Claims</span>
+                  </button>
+                  <button type="button" class="btn btn-ws-outline-green btn-sm" onclick="alert('Upload window opened. Attach hospital discharge summaries or diagnostic bills.');">
+                    <i class="bi bi-upload me-1"></i>
+                    <span>Upload Docs</span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- 08. DOCUMENTS & DOWNLOADS SECTION -->
+          <div class="dash-doc-table-card mt-4 searchable-entry">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+              <div>
+                <h5 class="fw-bold mb-1 text-olive">Documents &amp; Downloads</h5>
+                <p class="text-muted small mb-0">Secure repository for policy contracts, premium receipts, and claim files</p>
+              </div>
+              <button type="button" class="btn btn-sm btn-ws-primary" onclick="alert('Secure upload dialog opened. Select PDF or image files to attach to your policyholder vault.');">
+                <i class="bi bi-cloud-arrow-up-fill me-1"></i>
+                <span>Upload New Document</span>
+              </button>
+            </div>
+
+            <!-- Category Filter Pills -->
+            <div class="doc-filter-pills-wrap">
+              <button class="doc-filter-btn active" data-doc-filter="all">All Documents</button>
+              <button class="doc-filter-btn" data-doc-filter="policy">Policy PDFs</button>
+              <button class="doc-filter-btn" data-doc-filter="receipt">Payment Receipts</button>
+              <button class="doc-filter-btn" data-doc-filter="claim">Claim Files</button>
+              <button class="doc-filter-btn" data-doc-filter="kyc">KYC &amp; Identity</button>
+            </div>
+
+            <!-- Documents Table -->
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr style="font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                    <th>Document Name</th>
+                    <th>Category</th>
+                    <th>Date Issued</th>
+                    <th>File Size</th>
+                    <th class="text-end">Actions</th>
+                  </tr>
+                </thead>
+                <tbody style="font-size: 0.88rem;">
+                  <!-- Doc 1 -->
+                  <tr class="doc-entry-row" data-doc-category="policy">
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-file-earmark-pdf-fill text-danger fs-5"></i>
+                        <div>
+                          <strong class="d-block text-olive">Care_Family_Health_Policy_Contract_2026.pdf</strong>
+                          <small class="text-muted">Certified Policy Schedule &bull; Masked ID: #2481</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge bg-success-subtle text-success">Policy PDF</span></td>
+                    <td>15 Dec 2025</td>
+                    <td>2.4 MB</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border me-1" onclick="alert('Previewing verified policy certificate PDF...');" title="Preview Document"><i class="bi bi-eye"></i></button>
+                      <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Downloading Care_Family_Health_Policy_Contract_2026.pdf to your device...');" title="Download Document"><i class="bi bi-download"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Doc 2 -->
+                  <tr class="doc-entry-row" data-doc-category="policy">
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-file-earmark-pdf-fill text-danger fs-5"></i>
+                        <div>
+                          <strong class="d-block text-olive">HDFC_Term_Life_Protection_Schedule.pdf</strong>
+                          <small class="text-muted">Master Life Insurance Agreement &bull; Masked ID: #7315</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge bg-success-subtle text-success">Policy PDF</span></td>
+                    <td>20 Jan 2026</td>
+                    <td>3.1 MB</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border me-1" onclick="alert('Previewing verified life policy document...');"><i class="bi bi-eye"></i></button>
+                      <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Downloading HDFC_Term_Life_Protection_Schedule.pdf...');"><i class="bi bi-download"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Doc 3 -->
+                  <tr class="doc-entry-row" data-doc-category="receipt">
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-receipt text-primary fs-5"></i>
+                        <div>
+                          <strong class="d-block text-olive">Tax_Exemption_Receipt_80D_2025_26.pdf</strong>
+                          <small class="text-muted">Official GST &amp; Section 80D Premium Certificate</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge bg-primary-subtle text-primary">Receipt</span></td>
+                    <td>16 Dec 2025</td>
+                    <td>450 KB</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border me-1" onclick="alert('Previewing Tax Exemption Receipt...');"><i class="bi bi-eye"></i></button>
+                      <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Downloading Tax_Exemption_Receipt_80D_2025_26.pdf...');"><i class="bi bi-download"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Doc 4 -->
+                  <tr class="doc-entry-row" data-doc-category="claim">
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-file-earmark-medical-fill text-warning fs-5"></i>
+                        <div>
+                          <strong class="d-block text-olive">Apollo_Cashless_PreAuth_Sanction_Letter.pdf</strong>
+                          <small class="text-muted">TPA Cashless Approval Authorization Letter &bull; Ref #CLM-49102</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge bg-warning-subtle text-warning-emphasis">Claim File</span></td>
+                    <td>09 Nov 2026</td>
+                    <td>1.2 MB</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border me-1" onclick="alert('Previewing TPA Cashless Sanction Letter...');"><i class="bi bi-eye"></i></button>
+                      <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Downloading Apollo_Cashless_PreAuth_Sanction_Letter.pdf...');"><i class="bi bi-download"></i></button>
+                    </td>
+                  </tr>
+
+                  <!-- Doc 5 -->
+                  <tr class="doc-entry-row" data-doc-category="kyc">
+                    <td>
+                      <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-shield-check text-success fs-5"></i>
+                        <div>
+                          <strong class="d-block text-olive">CKYC_Identity_Verification_Dossier.pdf</strong>
+                          <small class="text-muted">Central KYC Registry Compliant Fiduciary Dossier</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td><span class="badge bg-secondary-subtle text-secondary">KYC &amp; Identity</span></td>
+                    <td>01 Dec 2025</td>
+                    <td>820 KB</td>
+                    <td class="text-end">
+                      <button type="button" class="btn btn-sm btn-light border me-1" onclick="alert('Previewing KYC Dossier...');"><i class="bi bi-eye"></i></button>
+                      <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Downloading CKYC_Identity_Verification_Dossier.pdf...');"><i class="bi bi-download"></i></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- =================================================================
+             TAB 2: MY POLICIES (DEDICATED FULL VIEW)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabPolicies">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">My Active Insurance Policies</h3>
+              <p class="text-muted small mb-0">Comprehensive breakdown of all active family protections and carrier terms.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" data-target-tab="tabExplore">
+              <i class="bi bi-plus-circle me-1"></i> Add New Policy
+            </button>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <div class="card border-0 shadow-sm p-4 rounded-4 h-100" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-success-subtle text-success px-3 py-1 fw-bold rounded-pill">Active &bull; Health</span>
+                  <small class="text-muted">Care Health Insurance Co.</small>
+                </div>
+                <h4 class="fw-bold text-olive mb-2">Family Health Cover</h4>
+                <p class="small text-muted mb-4">Policy No: <strong>CARE-FLTR-2026-2481</strong> &bull; Issue Date: Dec 15, 2025</p>
+
+                <div class="p-3 rounded-3 mb-4 border" style="background: var(--color-dash-bg);">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="small text-muted">Total Sum Insured:</span>
+                    <strong class="text-terracotta">₹10,00,000 / year</strong>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="small text-muted">Insured Persons:</span>
+                    <strong>4 Members (Self, Spouse, 2 Children)</strong>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="small text-muted">Next Renewal Date:</span>
+                    <strong class="text-danger">15 Dec 2026 (27 days)</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2 mt-auto">
+                  <button type="button" class="btn btn-ws-primary btn-sm flex-grow-1" onclick="openPolicyModal('health')">View Policy Details</button>
+                  <button type="button" class="btn btn-ws-outline-green btn-sm" onclick="alert('Downloading Cashless E-Health Card...');"><i class="bi bi-credit-card me-1"></i> E-Card</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card border-0 shadow-sm p-4 rounded-4 h-100" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="badge bg-success-subtle text-success px-3 py-1 fw-bold rounded-pill">Active &bull; Life</span>
+                  <small class="text-muted">HDFC Life Insurance Co.</small>
+                </div>
+                <h4 class="fw-bold text-olive mb-2">Term Life Protection</h4>
+                <p class="small text-muted mb-4">Policy No: <strong>HDFC-LIFE-2026-7315</strong> &bull; Issue Date: Jan 20, 2026</p>
+
+                <div class="p-3 rounded-3 mb-4 border" style="background: var(--color-dash-bg);">
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="small text-muted">Total Sum Assured:</span>
+                    <strong class="text-terracotta">₹50,00,000</strong>
+                  </div>
+                  <div class="d-flex justify-content-between mb-2">
+                    <span class="small text-muted">Policy Term:</span>
+                    <strong>35 Years (Up to Age 70)</strong>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <span class="small text-muted">Next Renewal Date:</span>
+                    <strong>20 Jan 2027</strong>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2 mt-auto">
+                  <button type="button" class="btn btn-ws-primary btn-sm flex-grow-1" onclick="openPolicyModal('life')">View Policy Details</button>
+                  <button type="button" class="btn btn-ws-outline-green btn-sm" onclick="alert('Downloading Policy Bond PDF...');"><i class="bi bi-file-earmark-pdf me-1"></i> Policy Bond</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 3: EXPLORE PLANS (BROWSE & COMPARE)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabExplore">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Explore Insurance Plans</h3>
+              <p class="text-muted small mb-0">Benchmark vetted plans across 40+ certified carriers with unbiased broker guidance.</p>
+            </div>
+            <a href="pricing.html#featured-plans" class="btn btn-ws-primary btn-sm">
+              <i class="bi bi-calculator me-1"></i> Premium Calculator
+            </a>
+          </div>
+
+          <div class="row g-4">
+            <!-- Plan 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm p-4 rounded-4 h-100" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <span class="badge bg-success-subtle text-success align-self-start mb-2">Family Health</span>
+                <h5 class="fw-bold text-olive">Shield Comprehensive Floater</h5>
+                <p class="small text-muted">Zero room-rent capping, restore benefit, maternity &amp; newborn care included.</p>
+                <div class="my-3">
+                  <small class="text-muted d-block">Starting from</small>
+                  <strong class="fs-4 text-terracotta">₹1,150</strong> <small class="text-muted">/ month</small>
+                </div>
+                <button type="button" class="btn btn-ws-primary btn-sm w-100 justify-content-center" onclick="alert('Personalized quote generated! Check your email inbox for comparative analysis.');">Get Free Comparison &rarr;</button>
+              </div>
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm p-4 rounded-4 h-100" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <span class="badge bg-warning-subtle text-warning-emphasis align-self-start mb-2">Term Life</span>
+                <h5 class="fw-bold text-olive">Horizon Pure Risk Shield</h5>
+                <p class="small text-muted">Guaranteed ₹1 Crore death benefit with terminal illness accelerator and waiver of premium.</p>
+                <div class="my-3">
+                  <small class="text-muted d-block">Starting from</small>
+                  <strong class="fs-4 text-terracotta">₹890</strong> <small class="text-muted">/ month</small>
+                </div>
+                <button type="button" class="btn btn-ws-primary btn-sm w-100 justify-content-center" onclick="alert('Quote saved to your profile.');">Get Free Comparison &rarr;</button>
+              </div>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card border-0 shadow-sm p-4 rounded-4 h-100" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+                <span class="badge bg-info-subtle text-info-emphasis align-self-start mb-2">Senior Care</span>
+                <h5 class="fw-bold text-olive">Golden Age Senior Shield</h5>
+                <p class="small text-muted">Tailored for parents aged 60–85. Pre-existing diseases covered after 12 months.</p>
+                <div class="my-3">
+                  <small class="text-muted d-block">Starting from</small>
+                  <strong class="fs-4 text-terracotta">₹1,850</strong> <small class="text-muted">/ month</small>
+                </div>
+                <button type="button" class="btn btn-ws-primary btn-sm w-100 justify-content-center" onclick="alert('Senior plan details dispatched.');">Get Free Comparison &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 4: APPLICATIONS (PROGRESS & AUDIT)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabApplications">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Application Tracking</h3>
+              <p class="text-muted small mb-0">Review live underwriting milestones and missing document requests.</p>
+            </div>
+            <button type="button" class="btn btn-ws-outline-green btn-sm" onclick="alert('Contacting carrier underwriting desk...');">
+              <i class="bi bi-clock-history me-1"></i> Underwriting Hotline
+            </button>
+          </div>
+
+          <div class="card border-0 shadow-sm p-4 rounded-4 mb-4" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+              <div>
+                <strong class="text-olive fs-5">Senior Health Insurance Application</strong>
+                <div class="small text-muted">Application ID: #WS-APP-89214 &bull; Insurer: Metro Care</div>
+              </div>
+              <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold">Underwriter Medical Review</span>
+            </div>
+
+            <!-- Milestone Tracker -->
+            <div class="tracker-timeline-bar my-4">
+              <div class="tracker-step-node completed">
+                <div class="tracker-step-icon"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <div class="tracker-step-title">Submitted</div>
+                  <small class="text-muted">Nov 10, 2026</small>
+                </div>
+              </div>
+              <div class="tracker-step-node completed">
+                <div class="tracker-step-icon"><i class="bi bi-check-lg"></i></div>
+                <div>
+                  <div class="tracker-step-title">KYC Verified</div>
+                  <small class="text-muted">Nov 12, 2026</small>
+                </div>
+              </div>
+              <div class="tracker-step-node in-progress">
+                <div class="tracker-step-icon"><i class="bi bi-arrow-repeat"></i></div>
+                <div>
+                  <div class="tracker-step-title">Insurer Review</div>
+                  <small class="text-terracotta fw-bold">Medical Tele-Check</small>
+                </div>
+              </div>
+              <div class="tracker-step-node">
+                <div class="tracker-step-icon"><i class="bi bi-check2-circle"></i></div>
+                <div>
+                  <div class="tracker-step-title">Policy Dispatch</div>
+                  <small class="text-muted">Awaiting Approval</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-3 border" style="background: var(--color-dash-bg);">
+              <strong class="small d-block text-olive mb-1"><i class="bi bi-info-circle text-terracotta me-1"></i> Fiduciary Desk Action Note:</strong>
+              <p class="small text-muted mb-0">Our broker officer verified all ECG and diagnostic records. The insurer has waived physical medical checkups. Expected dispatch within 48 hours.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 5: CLAIMS & ASSISTANCE (TRACKING & DISPUTE DESK)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabClaims">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Claims &amp; Assistance Desk</h3>
+              <p class="text-muted small mb-0">24/7 fiduciary emergency cashless pre-authorizations and reimbursement assistance.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" data-bs-toggle="modal" data-bs-target="#newClaimModal">
+              <i class="bi bi-plus-circle me-1"></i> File New Claim
+            </button>
+          </div>
+
+          <div class="card border-0 shadow-sm p-4 rounded-4 mb-4" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+              <div>
+                <span class="badge bg-warning-subtle text-warning-emphasis fw-bold mb-1">Pre-Auth Approved</span>
+                <h5 class="fw-bold text-olive mb-0">Claim Ticket #CLM-49102 &bull; Inpatient Cashless</h5>
+              </div>
+              <div class="text-end">
+                <span class="small text-muted d-block">Claim Amount Sanctioned</span>
+                <strong class="text-success fs-5">₹85,000.00</strong>
+              </div>
+            </div>
+
+            <div class="row g-3 p-3 rounded-3 mb-3 border" style="background: var(--color-dash-bg);">
+              <div class="col-md-3">
+                <small class="text-muted d-block">Hospital Name:</small>
+                <strong>Apollo Hospital, Chennai</strong>
+              </div>
+              <div class="col-md-3">
+                <small class="text-muted d-block">Patient Name:</small>
+                <strong>Alex Morgan (Self)</strong>
+              </div>
+              <div class="col-md-3">
+                <small class="text-muted d-block">TPA Reference:</small>
+                <strong>MEDI-ASSIST-9812</strong>
+              </div>
+              <div class="col-md-3">
+                <small class="text-muted d-block">Assigned Advocate:</small>
+                <strong class="text-terracotta">Kavitha R. (Claims Officer)</strong>
+              </div>
+            </div>
+
+            <p class="small text-muted mb-3">Hospital pre-authorization approved with zero deduction on eligible room rent. If the hospital requests deposit, contact our advocacy hotline immediately.</p>
+            
+            <div class="d-flex gap-2">
+              <a href="tel:18009355787" class="btn btn-ws-outline-green btn-sm">
+                <i class="bi bi-telephone-fill me-1"></i> Claims Escalation Hotline
+              </a>
+              <button type="button" class="btn btn-ws-primary btn-sm" onclick="alert('Attach final discharge summary or diagnostic invoices.');">
+                <i class="bi bi-upload me-1"></i> Upload Final Invoices
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 6: DOCUMENTS (SECURE VAULT)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabDocuments">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Documents &amp; Downloads Vault</h3>
+              <p class="text-muted small mb-0">Encrypted digital copies of policy bonds, premium certificates, and medical records.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" onclick="alert('Upload document window opened.');">
+              <i class="bi bi-cloud-arrow-up-fill me-1"></i> Upload File
+            </button>
+          </div>
+
+          <div class="p-4 rounded-4 border-2 border-dashed text-center mb-4" style="background: var(--color-dash-surface); border: 2px dashed var(--color-dash-border); cursor: pointer;" onclick="alert('File picker opened. Select PDF or image files to upload.');">
+            <i class="bi bi-file-earmark-arrow-up text-terracotta fs-1 d-block mb-2"></i>
+            <h6 class="fw-bold text-olive mb-1">Drag and drop documents here, or click to browse</h6>
+            <p class="small text-muted mb-0">Supported formats: PDF, JPEG, PNG (Up to 25MB). Protected by 256-bit encryption.</p>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 7: APPOINTMENTS (CONSULTATION SCHEDULER)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabAppointments">
+          <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+            <div>
+              <h3 class="fw-bold mb-1 text-olive">Advisor Consultations</h3>
+              <p class="text-muted small mb-0">Schedule and manage 1-on-1 discovery and policy review video sessions.</p>
+            </div>
+            <button type="button" class="btn btn-ws-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+              <i class="bi bi-calendar-plus me-1"></i> Schedule New Meeting
+            </button>
+          </div>
+
+          <div class="card border-0 shadow-sm p-4 rounded-4" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important;">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill fw-bold">Confirmed Session</span>
+              <small class="text-muted">Google Meet ID: meet.google.com/ws-advisor</small>
+            </div>
+            <h5 class="fw-bold text-olive mb-1">Annual Coverage Review &amp; Health Upgrade</h5>
+            <p class="small text-muted mb-3">With Priya Sharma &bull; Fiduciary Advisory Desk</p>
+
+            <div class="d-flex align-items-center gap-3 p-3 rounded-3 mb-3 border" style="background: var(--color-dash-bg);">
+              <div class="stat-compact-icon olive" style="width: 44px; height: 44px; font-size: 1.25rem;">
+                <i class="bi bi-calendar2-check-fill"></i>
+              </div>
+              <div>
+                <strong>Thursday, November 26, 2026 &bull; 4:00 PM – 4:45 PM IST</strong>
+                <small class="text-muted d-block">Screen-sharing policy benchmark comparison</small>
+              </div>
+            </div>
+
+            <div class="d-flex gap-2">
+              <a href="https://meet.google.com" target="_blank" class="btn btn-ws-primary btn-sm">Join Video Call</a>
+              <button type="button" class="btn btn-ws-outline-green btn-sm" onclick="alert('Session invitation added to your Google/Outlook calendar.');">Add to Calendar</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 8: MESSAGES (LIVE ADVISOR CHAT)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabMessages">
+          <div class="card border-0 shadow-sm rounded-4 overflow-hidden" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important; height: 600px; display: flex; flex-direction: column;">
+            
+            <!-- Chat Header -->
+            <div class="p-3 border-bottom d-flex justify-content-between align-items-center" style="background: var(--color-dash-bg);">
+              <div class="d-flex align-items-center gap-3">
+                <img src="assets/images/advisor-3.jpg" class="rounded-circle border" style="width: 42px; height: 42px; object-fit: cover;" alt="Priya Sharma">
+                <div>
+                  <strong class="d-block text-olive">Priya Sharma &bull; WellSure Advisor</strong>
+                  <small class="text-success"><i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i> Active Now &bull; Typically responds in 5 minutes</small>
+                </div>
+              </div>
+              <button type="button" class="btn btn-sm btn-ws-outline-green" onclick="alert('Calling Priya Sharma...');">
+                <i class="bi bi-telephone-fill me-1"></i> Call Advisor
+              </button>
+            </div>
+
+            <!-- Chat Messages Thread -->
+            <div class="p-4 flex-grow-1 overflow-y-auto" id="advisorChatMessages">
+              <!-- Message 1 from Advisor -->
+              <div class="d-flex align-items-start gap-2 mb-3">
+                <img src="assets/images/advisor-3.jpg" class="rounded-circle border" style="width: 34px; height: 34px; object-fit: cover;" alt="Priya Sharma">
+                <div class="p-3 rounded-3" style="background: rgba(64, 103, 27, 0.08); border: 1px solid var(--color-dash-border); max-width: 75%; border-radius: 2px 16px 16px 16px !important;">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <strong class="small text-olive">Priya Sharma (Advisor)</strong>
+                    <span class="text-muted" style="font-size: 0.7rem;">Yesterday, 3:15 PM</span>
+                  </div>
+                  <p class="mb-0 small">Hello Alex! I conducted your policy review for the Family Health Cover. Your renewal on Dec 15 is locked in with zero rate increases. Let me know if you need any claim assistance for the Apollo visit.</p>
+                </div>
+              </div>
+
+              <!-- Message 2 from User -->
+              <div class="d-flex justify-content-end mb-3">
+                <div class="p-3 rounded-3 text-white" style="background: var(--color-terracotta); max-width: 75%; border-radius: 16px 16px 2px 16px !important;">
+                  <p class="mb-1 small">Hi Priya! Yes, Apollo hospital confirmed the cashless pre-authorization for ₹85,000. Thank you for following up so quickly.</p>
+                  <div class="text-end" style="font-size: 0.7rem; opacity: 0.85;">Yesterday, 3:24 PM &bull; Read</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Input Footer -->
+            <div class="p-3 border-top" style="background: var(--color-dash-surface);">
+              <form id="advisorChatForm" class="d-flex gap-2">
+                <input type="text" class="form-control" id="advisorChatInput" placeholder="Write a message to Priya Sharma..." required autocomplete="off">
+                <button type="submit" class="btn btn-ws-primary px-4">
+                  <span>Send</span>
+                  <i class="bi bi-send-fill ms-1"></i>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 9: MY PROFILE (DETAILS & NOMINEE)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabProfile">
+          <div class="card border-0 shadow-sm p-4 rounded-4" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important; max-width: 700px;">
+            <h4 class="fw-bold text-olive mb-1">Policyholder Profile &amp; Nominee Details</h4>
+            <p class="text-muted small mb-4">Keep your contact and nominee information up to date to ensure seamless claim payouts.</p>
+
+            <form onsubmit="event.preventDefault(); alert('Profile information updated successfully!');">
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Full Legal Name</label>
+                  <input type="text" class="form-control" id="profileFullName" value="Alex Morgan" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Email Address</label>
+                  <input type="email" class="form-control" id="profileEmail" value="client@wellsure.demo" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Mobile Number</label>
+                  <input type="tel" class="form-control" id="profilePhone" value="+91 98400 12345" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Central KYC Identifier (CKYC)</label>
+                  <input type="text" class="form-control" value="CKYC-9284-1029-44" disabled>
+                </div>
+              </div>
+
+              <h6 class="fw-bold text-olive mt-4 mb-2">Primary Nominee Allocation (100%)</h6>
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Nominee Name</label>
+                  <input type="text" class="form-control" value="Sarah Morgan" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label small fw-bold">Relationship to Insured</label>
+                  <select class="form-select">
+                    <option selected>Spouse</option>
+                    <option>Child</option>
+                    <option>Parent</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-ws-primary">
+                <span>Save Profile Changes</span>
+                <i class="bi bi-check-lg ms-1"></i>
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- =================================================================
+             TAB 10: SETTINGS (SECURITY & NOTIFICATIONS)
+             ================================================================= -->
+        <section class="dash-tab-pane" id="tabSettings">
+          <div class="card border-0 shadow-sm p-4 rounded-4" style="background: var(--color-dash-surface); border: 1.5px solid var(--color-dash-border) !important; max-width: 650px;">
+            <h4 class="fw-bold text-olive mb-1">Account &amp; Security Settings</h4>
+            <p class="text-muted small mb-4">Manage multi-factor authentication, security credentials, and communication channels.</p>
+
+            <div class="mb-4">
+              <h6 class="fw-bold text-olive mb-3">Notification Preferences</h6>
+              <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" id="notifyEmail" checked>
+                <label class="form-check-label small" for="notifyEmail">Email Policy Renewal Alerts &amp; Regulatory Bulletins</label>
+              </div>
+              <div class="form-check form-switch mb-2">
+                <input class="form-check-input" type="checkbox" id="notifySMS" checked>
+                <label class="form-check-label small" for="notifySMS">High-Priority SMS Cashless Pre-Auth Updates</label>
+              </div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="notifyWhatsApp" checked>
+                <label class="form-check-label small" for="notifyWhatsApp">WhatsApp Claim Concierge &amp; Direct Advisor Hotline</label>
+              </div>
+            </div>
+
+            <div class="pt-3 border-top mb-4">
+              <h6 class="fw-bold text-olive mb-3">Two-Factor Authentication (2FA)</h6>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="small d-block text-olive">SMS &amp; Email One-Time Passcodes</strong>
+                  <small class="text-muted">Protects policy documents and financial nominee changes.</small>
+                </div>
+                <span class="badge bg-success text-white px-3 py-2 rounded-pill">Active &bull; Enabled</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-ws-primary" onclick="alert('Security preferences saved successfully.');">
+              <span>Save Settings</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- ===================================================================
+             11. DASHBOARD MINIMAL FOOTER
+             No Mega Global Footer! Clean SaaS Links & Fiduciary Broker Identity
+             =================================================================== -->
+        <footer class="dashboard-minimal-footer">
+          <div>
+            &copy; <span class="current-year">2026</span> WellSure Insurance Brokerage LLC. Licensed Fiduciary Intermediary.
+          </div>
+          <div class="d-flex gap-3">
+            <a href="privacy.html">Privacy Policy</a>
+            <span>&bull;</span>
+            <a href="terms.html">Terms &amp; Conditions</a>
+            <span>&bull;</span>
+            <a href="#" data-target-tab="tabMessages">Help Center</a>
+            <span>&bull;</span>
+            <a href="contact.html">Contact Support</a>
+          </div>
+        </footer>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- ===================================================================
+       GLOBAL MODALS (POLICY DETAILS, NEW CLAIM, CONSULTATION SCHEDULER)
+       =================================================================== -->
+
+  <!-- Modal 1: Policy Details Modal -->
+  <div class="modal fade" id="policyDetailModal" tabindex="-1" aria-labelledby="modalPolicyTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content ws-modal-content border-0 shadow-lg rounded-4 p-4">
+        <div class="modal-header border-0 pb-0">
+          <div>
+            <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill fw-bold mb-1">Active Coverage Schedule</span>
+            <h4 class="modal-title fw-bold text-olive" id="modalPolicyTitle">Family Health Cover</h4>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body py-3">
+          <div class="row g-3 p-3 rounded-3 mb-3" style="background: var(--color-dash-bg);">
+            <div class="col-sm-6">
+              <small class="text-muted d-block">Carrier / Insurer:</small>
+              <strong id="modalInsurer" class="text-olive">Care Health Insurance Co.</strong>
+            </div>
+            <div class="col-sm-6">
+              <small class="text-muted d-block">Policy Contract ID:</small>
+              <strong id="modalPolicyNumber" class="text-terracotta">CARE-FLTR-2026-2481</strong>
+            </div>
+            <div class="col-sm-6">
+              <small class="text-muted d-block">Total Sum Insured:</small>
+              <strong id="modalSumInsured" class="fs-5 text-terracotta">₹10,00,000</strong>
+            </div>
+            <div class="col-sm-6">
+              <small class="text-muted d-block">Co-Payment / Deductible:</small>
+              <strong id="modalDeductible" class="text-success">Zero Co-Pay • 100% Cashless</strong>
+            </div>
+            <div class="col-12">
+              <small class="text-muted d-block">Covered Household Members:</small>
+              <strong id="modalMembers">4 Members (Self, Spouse, 2 Children)</strong>
+            </div>
+          </div>
+
+          <h6 class="fw-bold text-olive mb-2">Verified Fiduciary Policy Features</h6>
+          <ul class="list-unstyled small text-muted mb-3" style="line-height: 1.8;">
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>No Room Rent Capping:</strong> Single private AC room eligible without proportional deductions.</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Unlimited Automatic Recharge:</strong> Replenishes 100% sum insured upon exhaustion.</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i><strong>Pre &amp; Post Hospitalization:</strong> 60 days pre-admission and 180 days post-discharge medications.</li>
+          </ul>
+        </div>
+
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-ws-outline-green btn-sm" onclick="alert('Downloading full policy contract PDF...');"><i class="bi bi-download me-1"></i> Download Contract</button>
+          <button type="button" class="btn btn-ws-primary btn-sm" data-bs-dismiss="modal">Close Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Schedule Consultation Modal -->
+  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ws-modal-content border-0 shadow-lg rounded-4 p-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-olive">Schedule 1-on-1 Consultation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form onsubmit="handleBookAppointment(event)">
+          <div class="modal-body py-3">
+            <p class="small text-muted mb-3">Book a complimentary 30-minute discovery call with your assigned advisor, Priya Sharma.</p>
+            
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Select Date</label>
+              <input type="date" class="form-control" value="2026-11-26" required>
+            </div>
+            
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Preferred Time Slot</label>
+              <select class="form-select">
+                <option>10:00 AM – 10:30 AM</option>
+                <option selected>02:00 PM – 02:30 PM</option>
+                <option>04:30 PM – 05:00 PM</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Consultation Mode</label>
+              <select class="form-select">
+                <option selected>Google Meet Video Call (Recommended)</option>
+                <option>Direct Telephone Call</option>
+                <option>Office In-Person Visit (Chennai)</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ws-primary btn-sm">Confirm Booking &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: File New Claim Modal -->
+  <div class="modal fade" id="newClaimModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ws-modal-content border-0 shadow-lg rounded-4 p-4">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fw-bold text-olive">File New Insurance Claim</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form onsubmit="handleSubmitClaim(event)">
+          <div class="modal-body py-3">
+            <p class="small text-muted mb-3">Our 24/7 fiduciary emergency cashless desk coordinates with hospital TPAs directly.</p>
+            
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Select Active Policy</label>
+              <select class="form-select" required>
+                <option value="Family Health Cover" selected>Family Health Cover (Care Health #2481)</option>
+                <option value="Term Life Protection">Term Life Protection (HDFC Life #7315)</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Claim Type</label>
+              <select class="form-select">
+                <option selected>Cashless Hospitalization (Direct Settlement)</option>
+                <option>Reimbursement Claim (Post-Discharge)</option>
+                <option>Critical Illness Lump-Sum Claim</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Hospital Name &amp; City</label>
+              <input type="text" class="form-control" placeholder="e.g. Apollo Hospital, Greams Road" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label small fw-bold">Estimated Claim Amount (₹)</label>
+              <input type="number" class="form-control" placeholder="e.g. 50000" required>
+            </div>
+          </div>
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-ws-primary btn-sm">Submit Claim Ticket &rarr;</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Essential JS Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/direction.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

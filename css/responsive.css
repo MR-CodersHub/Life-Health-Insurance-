@@ -1,0 +1,233 @@
+/* ===================================================================
+   WELLSURE - RESPONSIVE STYLES (responsive.css)
+   Mobile, Tablet, and Desktop Breakpoint Optimizations
+   =================================================================== */
+
+@media (max-width: 1199.98px) {
+  .hero-float-play {
+    top: 8%;
+    left: 2%;
+  }
+  
+  .hero-float-right-review {
+    top: 8%;
+    right: 2%;
+  }
+
+  .hero-stage {
+    min-height: 480px;
+  }
+  
+  .hero-family-img {
+    max-height: 460px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* Navbar Collapse */
+  .ws-navbar .navbar-collapse {
+    background: var(--color-olive-dark);
+    border: 1px solid rgba(255, 211, 163, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .ws-navbar .navbar-nav {
+    margin-bottom: 20px;
+  }
+
+  .ws-navbar .nav-link {
+    padding: 10px 16px !important;
+    border-radius: var(--radius-md);
+  }
+
+  .ws-nav-controls {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 211, 163, 0.15);
+  }
+
+  /* Hero Section Adaptations - Clean Stacking with Family Image Directly Below Buttons */
+  .hero-stage {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    min-height: auto !important;
+    margin-top: 24px !important;
+    padding-bottom: 20px !important;
+    position: relative !important;
+  }
+
+  /* 01. The Family Cutout Image: Presented Immediately Below CTA Buttons */
+  .hero-family-wrapper {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 440px !important;
+    margin: 0 auto 22px auto !important;
+    text-align: center !important;
+    position: relative !important;
+    z-index: 5 !important;
+  }
+
+  .hero-family-img {
+    width: 100% !important;
+    max-height: 380px !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.55)) !important;
+  }
+
+  /* 02. Video Play Button Below Image */
+  .hero-float-play {
+    order: 2 !important;
+    position: static !important;
+    margin: 0 auto 20px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    z-index: 6 !important;
+  }
+
+  /* 03. Statistics Cards Below Play Button */
+  .hero-float-left-stats {
+    order: 3 !important;
+    position: static !important;
+    margin: 0 auto 16px auto !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    z-index: 6 !important;
+  }
+
+  .hero-card-glass {
+    max-width: 100% !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
+  }
+
+  /* 04. Customer Review Card */
+  .hero-float-right-review {
+    order: 4 !important;
+    position: static !important;
+    margin: 0 auto 16px auto !important;
+    width: 100% !important;
+    max-width: 330px !important;
+    z-index: 6 !important;
+  }
+
+  /* 05. Trust Badges */
+  .hero-float-right-badge {
+    order: 5 !important;
+    position: static !important;
+    margin: 0 auto 12px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    z-index: 6 !important;
+  }
+
+  .hero-float-bottom-right {
+    order: 6 !important;
+    position: static !important;
+    margin: 0 auto 16px auto !important;
+    display: flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    width: 100% !important;
+    z-index: 6 !important;
+  }
+
+  .hero-float-mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 8;
+  }
+
+  .trust-divider {
+    display: none;
+  }
+
+  .compare-card.featured {
+    transform: none;
+  }
+  
+  .why-image-wrapper img {
+    height: 380px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-py {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-title .headline-pill {
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  .hero-stage {
+    min-height: auto !important;
+  }
+
+  .hero-family-img {
+    max-height: 320px !important;
+  }
+
+  .trust-item {
+    border-bottom: 1px solid rgba(255, 211, 163, 0.1);
+    padding-bottom: 14px;
+  }
+
+  .trust-item:last-child {
+    border-bottom: none;
+  }
+
+  .cta-box {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .cta-actions {
+    justify-content: center;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn-ws-primary,
+  .hero-actions .btn-ws-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ws-brand {
+    gap: 8px;
+  }
+
+  .ws-logo-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.15rem;
+  }
+
+  .ws-logo-title {
+    font-size: 1.25rem;
+  }
+}
