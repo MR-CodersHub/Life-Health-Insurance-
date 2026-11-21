@@ -565,8 +565,17 @@
   background: var(--color-card-bg);
   border: 1.5px solid var(--color-border-subtle);
   border-radius: var(--radius-xl);
-  overflow: hidden;
+  overflow: hidden !important;
+  overflow: clip !important;
+  max-width: 100% !important;
   box-shadow: var(--shadow-md);
+}
+
+.compare-advisory-table-card .table-responsive {
+  max-width: 100% !important;
+  width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
 }
 
 [data-theme="dark"] .compare-advisory-table-card {

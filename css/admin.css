@@ -679,13 +679,21 @@
 .table-responsive {
   -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-sm);
-  overflow-x: auto;
+  overflow-x: auto !important;
   position: relative;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 .table-responsive > .table {
   min-width: 680px;
   margin-bottom: 0;
+}
+
+.admin-data-card {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
 }
 
 /* Tablet & Mobile Screens (â‰¤ 991.98px) */

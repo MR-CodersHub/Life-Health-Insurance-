@@ -87,6 +87,9 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -96,7 +99,25 @@ body {
   line-height: 1.65;
   letter-spacing: -0.01em;
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* Universal Row Gutter Protection on Mobile (Prevents 12-15px Horizontal Overflow) */
+@media (max-width: 991.98px) {
+  .row.g-5 {
+    --bs-gutter-x: 1.5rem !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .row.g-5,
+  .row.g-4 {
+    --bs-gutter-x: 1rem !important;
+  }
 }
 
 h1,
